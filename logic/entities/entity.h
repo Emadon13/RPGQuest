@@ -2,16 +2,16 @@
 #define ENTITY_H
 
 
-#include <string>
+#include <QString>
 #include <QVector>
-#include "logic/skills/Skill.h"
+#include "logic/skills/skill.h"
 
 
 class Entity
 {
 public:
     Entity();
-    Entity(std::string m_name,
+    Entity(QString m_name,
     int m_lvl,
     int m_hpMax,
     int m_mpMax,
@@ -23,7 +23,7 @@ public:
     QVector<Skill>m_skills);
     ~Entity();
 
-    std::string getName() const;
+    QString getName() const;
     int getLvl() const;
     int getHp() const;
     int getMp() const;
@@ -45,7 +45,7 @@ public:
 
 private:
 
-    std::string name;
+    QString name;
     int lvl;
     int hpMax;
     int mpMax;
