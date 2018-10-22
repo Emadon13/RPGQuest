@@ -9,7 +9,8 @@ SOURCES += \
     logic/skills/skill.cpp \
     logic/skills/recover.cpp \
     logic/skills/aftermath.cpp \
-    logic/battle.cpp
+    logic/battle.cpp \
+    gui/stage.cpp
 
 HEADERS += \
     logic/entities/entity.h \
@@ -18,4 +19,5 @@ HEADERS += \
     logic/skills/skill.h \
     logic/skills/recover.h \
     logic/skills/aftermath.h \
-    logic/battle.h
+    logic/battle.h \
+    gui/stage.h
