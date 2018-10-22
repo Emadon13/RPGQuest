@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 
     Entity e;
 
-    QPushButton bouton(e.getName());
+    QPushButton bouton("Bonjour Quentin");
     bouton.show();
 
     return app.exec();
