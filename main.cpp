@@ -1,15 +1,28 @@
 #include <QApplication>
 #include <QPushButton>
-#include "logic/entities/entity.h"
+#include <iostream>
+#include "io/entityloader.h"
+
+using namespace std;
 
 int main(int argc, char *argv[])
 {
-    QApplication app(argc, argv);
 
-    Entity e;
+// ----------------- TEST VINCENT -----------------------
+
+    cout << "test" << endl;
+
+
+
+
+// --------------- TEST QUENTIN ---------------------
+
+    QApplication app(argc, argv);
 
     QPushButton bouton("Bonjour Quentin");
     bouton.show();
+
+// --------------- FIN TEST -------------------------
 
     return app.exec();
 }

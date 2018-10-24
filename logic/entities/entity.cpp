@@ -1,5 +1,4 @@
 #include "entity.h"
-#include <QString>
 
 Entity::Entity() :
 	name("RandomMOB"),
@@ -14,9 +13,9 @@ Entity::Entity() :
 	skills(0)
 {}
 
-Entity::Entity(QString m_name, int m_lvl, int m_hpMax, int m_mpMax, int m_hp, int m_mp, int m_att, int m_def, int m_spd, QVector<Skill> m_skills)
+Entity::Entity(std::string m_name, int m_lvl, int m_hpMax, int m_mpMax, int m_hp, int m_mp, int m_att, int m_def, int m_spd, QVector<Skill> m_skills)
 {
-    QString name;
+    std::string name;
 	lvl = m_lvl;
 	hpMax = m_hpMax;
 	mpMax = m_mpMax;
@@ -33,7 +32,7 @@ Entity::~Entity()
 {}
 
 
-QString Entity::getName() const
+std::string Entity::getName() const
 {
 	return name;
 }

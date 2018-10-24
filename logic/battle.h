@@ -15,6 +15,8 @@ public:
 
 private:
 
+    Entity *order[8];
+
 };
 
 #endif // BATTLE_H

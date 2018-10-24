@@ -2,5 +2,6 @@
 
 Battle::Battle()
 {
-
+    //order = setOrder();
 }
+
