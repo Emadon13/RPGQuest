@@ -1,4 +1,5 @@
 #include "entity.h"
+#include <QString>
 
 Entity::Entity() :
 	name("RandomMOB"),
@@ -13,6 +14,7 @@ Entity::Entity() :
 	skills(0)
 {}
 
+<<<<<<< HEAD
 Entity::Entity(std::string m_name,
                int m_lvl,
                int m_hpMax,
@@ -25,6 +27,11 @@ Entity::Entity(std::string m_name,
                std::vector<Skill> m_skills)
 {
     name = m_name;
+=======
+Entity::Entity(QString m_name, int m_lvl, int m_hpMax, int m_mpMax, int m_hp, int m_mp, int m_att, int m_def, int m_spd, QVector<Skill> m_skills)
+{
+    QString name;
+>>>>>>> parent of 5f3c68b... entity loader
 	lvl = m_lvl;
 	hpMax = m_hpMax;
 	mpMax = m_mpMax;
@@ -41,7 +48,7 @@ Entity::~Entity()
 {}
 
 
-std::string Entity::getName() const
+QString Entity::getName() const
 {
 	return name;
 }
