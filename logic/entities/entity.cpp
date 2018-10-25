@@ -1,5 +1,7 @@
 #include "entity.h"
-#include <QString>
+#include <string>
+
+using namespace std;
 
 Entity::Entity() :
 	name("RandomMOB"),
@@ -14,9 +16,19 @@ Entity::Entity() :
 	skills(0)
 {}
 
-Entity::Entity(QString m_name, int m_lvl, int m_hpMax, int m_mpMax, int m_hp, int m_mp, int m_att, int m_def, int m_spd, QVector<Skill> m_skills)
+Entity::Entity(string m_name,
+               int m_lvl,
+               int m_hpMax,
+               int m_mpMax,
+               int m_hp,
+               int m_mp,
+               int m_att,
+               int m_def,
+               int m_spd,
+               vector<Skill> m_skills)
 {
-    QString name;
+
+    name = m_name;
 	lvl = m_lvl;
 	hpMax = m_hpMax;
 	mpMax = m_mpMax;
@@ -33,7 +45,7 @@ Entity::~Entity()
 {}
 
 
-QString Entity::getName() const
+string Entity::getName() const
 {
 	return name;
 }
@@ -95,12 +107,12 @@ int Entity::hitOpponent(Entity& target)
 
 	if (target.getDef() <= 0)
 	{
-		deg = (int)(att*lvl);
+        deg = int(att*lvl);
 	}
 
 	else
 	{
-		deg = (int)(att*lvl) / (target.getDef());
+        deg = int((att*lvl) / (target.getDef()));
 	}
 
 	if (deg > target.getHp()) deg = target.getHp();
@@ -115,12 +127,12 @@ int Entity::hitOpponent(Entity& target, const double coef)
 
 	if (target.getDef() <= 0)
 	{
-		deg = (int)(att*lvl*coef);
+        deg = int(att*lvl*coef);
 	}
 
 	else
 	{
-		deg = (int)(att*lvl*coef) / (target.getDef());
+        deg = int((att*lvl*coef) / (target.getDef()));
 	}
 	
 	if (deg > target.getHp()) deg = target.getHp();
