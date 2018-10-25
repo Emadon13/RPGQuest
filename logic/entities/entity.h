@@ -1,12 +1,9 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
-<<<<<<< HEAD
-=======
 
 #include <QString>
 #include <QVector>
->>>>>>> parent of 5f3c68b... entity loader
 #include "logic/skills/skill.h"
 
 
@@ -23,7 +20,7 @@ public:
     int m_att,
     int m_def,
     int m_spd,
-    std::vector<Skill>m_skills);
+    QVector<Skill>m_skills);
     ~Entity();
 
     QString getName() const;
@@ -57,7 +54,7 @@ private:
     int att;
     int def;
     int spd;
-    std::vector<Skill>skills;
+    QVector<Skill>skills;
 
 
 

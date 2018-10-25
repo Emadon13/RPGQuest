@@ -41,9 +41,8 @@ Aftermath::~Aftermath()
 
 int Aftermath::call(Entity& attacker, Entity& target)
 {
-    int drain = 0;
-
-    drain = int (attacker.hitOpponent(target,coef) * rate);
-    attacker.takeDamage(drain);
+    int drain;
+    //drain = (int)(attacker.hitOpponent(target,coef) * rate);
+    //attacker.takeDamage(drain);
     return drain;
 }
