@@ -12,4 +12,5 @@ int main(int argc, char *argv[])
     bouton.show();
 
     return app.exec();
+//t bo
 }
