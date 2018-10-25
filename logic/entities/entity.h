@@ -1,9 +1,6 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
-
-#include <string>
-#include <QVector>
 #include "logic/skills/skill.h"
 
 
@@ -20,7 +17,7 @@ public:
     int m_att,
     int m_def,
     int m_spd,
-    QVector<Skill>m_skills);
+    std::vector<Skill>m_skills);
     ~Entity();
 
     std::string getName() const;
@@ -54,7 +51,7 @@ private:
     int att;
     int def;
     int spd;
-    QVector<Skill>skills;
+    std::vector<Skill>skills;
 
 
 

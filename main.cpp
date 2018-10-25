@@ -1,7 +1,7 @@
 #include <QApplication>
 #include <QPushButton>
 #include <iostream>
-#include "io/entityloader.h"
+#include "logic/entities/entity.h"
 
 using namespace std;
 
@@ -9,8 +9,9 @@ int main(int argc, char *argv[])
 {
 
 // ----------------- TEST VINCENT -----------------------
+    Entity test;
 
-    cout << "test" << endl;
+    cout << test.getName() << endl;
 
 
 

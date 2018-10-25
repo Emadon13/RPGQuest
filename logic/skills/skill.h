@@ -2,8 +2,8 @@
 #define SKILL_H
 
 
-#include<QString>
-#include<QVector>
+#include <string>
+#include <vector>
 
 enum category { powerfull, powerless, heal, drain, recoil, group, all, several };
 
@@ -20,7 +20,7 @@ protected:
     std::string name;
     std::string description;
     int mpCost;
-    QVector <category> categories;
+    std::vector <category> categories;
 
 };
 
