@@ -10,7 +10,11 @@ SOURCES += \
     logic/skills/recover.cpp \
     logic/skills/aftermath.cpp \
     logic/battle.cpp \
+<<<<<<< HEAD
+    gui/stage.cpp \
+=======
     gui/stage.cpp
+>>>>>>> parent of 5f3c68b... entity loader
 
 HEADERS += \
     logic/entities/entity.h \
@@ -21,3 +25,11 @@ HEADERS += \
     logic/skills/aftermath.h \
     logic/battle.h \
     gui/stage.h
+<<<<<<< HEAD
+
+DISTFILES += \
+    files/goblin \
+    files/spider \
+    files/troll
+=======
+>>>>>>> parent of 5f3c68b... entity loader
