@@ -1,5 +1,7 @@
 #include "aftermath.h"
 
+using namespace std;
+
 Aftermath::Aftermath()
 {
     name = "Vampipoutou";
@@ -26,7 +28,7 @@ Aftermath::Aftermath(double m_coef, double m_rate)
     rate = m_rate;
 }
 
-Aftermath::Aftermath(std::string m_name, std::string m_description, double m_coef, double m_rate)
+Aftermath::Aftermath(string m_name, string m_description, double m_coef, double m_rate)
 {
     name = m_name;
     description = m_description;
@@ -42,7 +44,7 @@ Aftermath::~Aftermath()
 int Aftermath::call(Entity& attacker, Entity& target)
 {
     int drain;
-    //drain = (int)(attacker.hitOpponent(target,coef) * rate);
-    //attacker.takeDamage(drain);
+    drain = int(attacker.hitOpponent(target,coef) * rate);
+    attacker.takeDamage(drain);
     return drain;
 }

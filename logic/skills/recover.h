@@ -1,12 +1,9 @@
 #ifndef RECOVER_H
 #define RECOVER_H
 
-
 #include<QString>
 #include"Skill.h"
 #include "logic/entities/entity.h"
-
-using namespace std;
 
 class Recover : public Skill
 {
