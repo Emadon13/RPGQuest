@@ -1,9 +1,9 @@
 #include <QApplication>
 #include <QPushButton>
 #include <iostream>
-#include "logic/entities/entity.h"
-#include "io/test.h"
-
+#include <iostream>
+#include <fstream>
+#include "io/entityloader.h"
 
 using namespace std;
 
@@ -12,9 +12,12 @@ int main(int argc, char *argv[])
 
     // ------------ TEST VINCENT -----------------
 
-    test t;
-    Entity e;
-    cout << t.generate() << endl;
+    EntityLoader el;
+
+    ofstream flux("../jeveuxtest.txt");
+    if(flux) cout << "tout va bien" << endl;
+    else cout << "MARCHE PAAAAS" << endl;
+
 
     // ------------TEST QUENTIN ------------------
     QApplication app(argc, argv);

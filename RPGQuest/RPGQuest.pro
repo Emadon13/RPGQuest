@@ -11,7 +11,7 @@ SOURCES += \
     logic/skills/aftermath.cpp \
     logic/battle.cpp \
     gui/stage.cpp \
-    io/test.cpp
+    io/entityloader.cpp
 
 HEADERS += \
     logic/entities/entity.h \
@@ -22,7 +22,7 @@ HEADERS += \
     logic/skills/aftermath.h \
     logic/battle.h \
     gui/stage.h \
-    io/test.h
+    io/entityloader.h
 
 DISTFILES += \
     files/goblin
