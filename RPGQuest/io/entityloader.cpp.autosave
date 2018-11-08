@@ -32,6 +32,8 @@ Entity EntityLoader::generate(string path)
     int spd;
 
     string skillName;
+    string skillDescription;
+    
 
     vector<Skill> skills(0);
 
@@ -57,4 +59,8 @@ Entity EntityLoader::generate(string path)
         Entity e;
         return e;
     }
+}
+
+skillConstruct(){
+    
 }

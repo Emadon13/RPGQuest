@@ -13,11 +13,8 @@ int main(int argc, char *argv[])
     // ------------ TEST VINCENT -----------------
 
     EntityLoader el;
-
-    ofstream flux("../jeveuxtest.txt");
-    if(flux) cout << "tout va bien" << endl;
-    else cout << "MARCHE PAAAAS" << endl;
-
+    Entity e = el.generate("../ressources/goblin.txt");
+    cout << e.getName() << endl;
 
     // ------------TEST QUENTIN ------------------
     QApplication app(argc, argv);
