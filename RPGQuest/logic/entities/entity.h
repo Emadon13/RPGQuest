@@ -4,8 +4,9 @@
 
 #include <QString>
 #include <QVector>
-#include "logic/skills/skill.h"
+#include "../skills/skill.h"
 
+class Skill;
 
 class Entity
 {

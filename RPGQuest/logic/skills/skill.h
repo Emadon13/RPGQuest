@@ -7,6 +7,7 @@
 
 enum category { powerfull, powerless, heal, drain, recoil, group, all, several };
 
+class Entity;
 class Skill
 {
 public:

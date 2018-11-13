@@ -41,10 +41,16 @@ Aftermath::~Aftermath()
 {
 }
 
-int Aftermath::call(Entity& attacker, Entity& target)
+int Aftermath::call()
 {
-    int drain;
-    drain = int(attacker.hitOpponent(target,coef) * rate);
-    attacker.takeDamage(drain);
-    return drain;
+    /*
+    for(int i =0; i < sizeof(target) ; i++){
+        int drain;
+        drain = int(attacker.hitOpponent(target,coef) * rate);
+        attacker.takeDamage(drain);
+        return drain;
+    }
+    */
+    return 0;
+
 }
