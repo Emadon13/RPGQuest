@@ -25,3 +25,17 @@ Recover::Recover(string m_name, string m_description, double m_coef)
     coef = m_coef;
     categories.push_back(heal);
 }
+
+vector<int> Recover::call(Entity& user, vector<Entity> targets)
+{
+    vector<int> hpHeals;
+    for (unsigned long long i=0 ; i<targets.size() ; i++)
+    {
+        int hpHeal;
+        hpHeal = int((user.getLvl() * 2 + targets.at(i).getLvl()) * coef);
+        hpHeals.push_back(hpHeal);
+    }
+
+    return hpHeals;
+
+}

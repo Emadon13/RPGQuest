@@ -8,6 +8,8 @@ Aftermath::Aftermath()
     description = "Baiser qui restaure 1/2 des dégats infligés";
     coef = 1.;
     rate = -0.5;
+    categories.push_back(drain);
+
 }
 
 Aftermath::Aftermath(double m_coef, double m_rate)
@@ -41,16 +43,17 @@ Aftermath::~Aftermath()
 {
 }
 
-int Aftermath::call()
+vector<int> Aftermath::call(Entity& user, vector <Entity> targets)
 {
-    /*
-    for(int i =0; i < sizeof(target) ; i++){
-        int drain;
-        drain = int(attacker.hitOpponent(target,coef) * rate);
-        attacker.takeDamage(drain);
-        return drain;
-    }
-    */
-    return 0;
+    vector<int> drains;
 
+    for(unsigned long long i=0 ; i < targets.size() ; i++)
+    {
+        int drain;
+        drain = int(user.hitOpponent(targets.at(i)) * rate);
+        user.takeDamage(drain);
+        drains.push_back(drain);
+    }
+
+    return drains;
 }
