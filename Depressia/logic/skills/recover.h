@@ -13,8 +13,7 @@ public:
     Recover(std::string m_name, std::string m_description, double m_coef);
     ~Recover();
 
-    int call(Entity& attacker);
-    int call(Entity& attacker, Entity& target);
+    std::vector<int> call(Entity& user, std::vector<Entity> targets);
 
 private:
     double coef;

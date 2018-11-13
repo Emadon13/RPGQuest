@@ -1,5 +1,7 @@
 #include "skill.h"
 
+using namespace std;
+
 Skill::Skill() :
     mpCost(0),
     categories(0)

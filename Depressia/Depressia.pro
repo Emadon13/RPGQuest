@@ -1,3 +1,5 @@
+TARGET = "Depressia"
+
 QT += core \
     widgets
 
@@ -7,10 +9,10 @@ SOURCES += \
     logic/skills/skill.cpp \
     logic/skills/recover.cpp \
     logic/skills/aftermath.cpp \
-    logic/battle.cpp \
     gui/stage.cpp \
     io/entityloader.cpp \
-    main.cpp
+    main.cpp \
+    logic/fight.cpp
 
 HEADERS += \
     logic/entities/entity.h \
@@ -18,9 +20,7 @@ HEADERS += \
     logic/skills/skill.h \
     logic/skills/recover.h \
     logic/skills/aftermath.h \
-    logic/battle.h \
     gui/stage.h \
-    io/entityloader.h
+    io/entityloader.h \
+    logic/fight.h
 
-DISTFILES += \
-    files/goblin
