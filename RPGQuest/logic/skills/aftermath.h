@@ -14,7 +14,7 @@ public:
     Aftermath(std::string m_name, std::string m_description, double m_coef, double m_rate);
     ~Aftermath();
 
-    int call(Entity& attacker, Entity& target);
+    int call(Entity& attacker, Entity *target);
 
 private:
     double coef;
