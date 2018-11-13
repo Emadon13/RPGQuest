@@ -4,8 +4,11 @@
 #include <iostream>
 #include <fstream>
 #include "io/entityloader.h"
+#include "gui/globalspec.h"
 
 using namespace std;
+
+GlobalSpec * globalSpec;
 
 int main(int argc, char *argv[])
 {
@@ -17,10 +20,14 @@ int main(int argc, char *argv[])
     cout << e.getName() << endl;
 
     // ------------TEST QUENTIN ------------------
-    QApplication app(argc, argv);
+    QApplication app (argc, argv);
+    QApplication::setFont(QFont("Fixedsys"));
 
-    QPushButton bouton("a");
-    bouton.show();
+    globalSpec = new GlobalSpec();
+
+    //set up start Screen
+    StartScreen * start = new StartScreen(*global);
+    start->show();
 
     return app.exec();
 //t bo
