@@ -1,4 +1,3 @@
-/*
 #include <QApplication>
 #include <QPushButton>
 #include <iostream>
@@ -7,12 +6,14 @@
 #include "io/entityloader.h"
 #include "gui/globalspec.h"
 
+
 using namespace std;
 
 GlobalSpec * globalSpec;
 
 int main(int argc, char *argv[])
 {
+
 
     // ------------ TEST VINCENT -----------------
 
@@ -25,12 +26,16 @@ int main(int argc, char *argv[])
     QApplication::setFont(QFont("Fixedsys"));
 
     globalSpec = new GlobalSpec();
-
-    //set up start Screen
+/*
+    set up start Screen
     StartScreen * start = new StartScreen(*global);
     start->show();
-
+*/
     return app.exec();
+
+
+
+    cout << "ugfsuyfiulaxkuy" << endl;
 //t bo
 }
-*/
+
