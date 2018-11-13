@@ -8,9 +8,9 @@ SOURCES += \
     logic/skills/recover.cpp \
     logic/skills/aftermath.cpp \
     logic/battle.cpp \
-    gui/stage.cpp \
     io/entityloader.cpp \
-    main.cpp
+    main.cpp \
+    gui/globalspec.cpp
 
 HEADERS += \
     logic/entities/entity.h \
@@ -19,8 +19,8 @@ HEADERS += \
     logic/skills/recover.h \
     logic/skills/aftermath.h \
     logic/battle.h \
-    gui/stage.h \
-    io/entityloader.h
+    io/entityloader.h \
+    gui/globalspec.h
 
 DISTFILES += \
     files/goblin
