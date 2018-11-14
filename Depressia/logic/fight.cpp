@@ -4,3 +4,9 @@ Fight::Fight()
 {
 
 }
+
+Fight::Fight(Entity h[], Entity o[])
+{
+    heroes = h;
+    opponents = o;
+}
