@@ -4,9 +4,11 @@ Fight::Fight()
 {
 
 }
-
-Fight::Fight(Entity h[], Entity o[])
+/*
+Fight::Fight(vector<Entity> h, vector<Entity> o)
 {
     heroes = h;
-    opponents = o;
+    oppenents = o;
+
 }
+*/
