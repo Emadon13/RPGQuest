@@ -1,26 +1,32 @@
 #ifndef FIGHT_H
 #define FIGHT_H
 
+#include<array>
 #include"logic/entities/entity.h"
 
-using namespace std;
 
 class Fight
 {
 public:
     Fight();
-    Fight(vector<Entity> h, vector<Entity> o);
+    Fight(std::vector<Entity>, std::vector<Entity> o);
+
+    std::vector<Entity> getHeroes();
+    std::vector<Entity> getOppenents();
+    std::vector<Entity> getAll_e();
 
 
 
 
 private:
-    //static const int ne;
-    vector <Entity> heroes;
-    vector <Entity> opponents;
 
-    void setOrder(Entity fighters[]);
+    static const int nb_e = 2;
+    Entity heroes[nb_e];
+    std::vector<Entity> opponents;
+    std::vector<Entity> all_e;
 
+
+    void setOrder(std::vector <Entity> fighters);
 };
 
 #endif // FIGHT_H

@@ -10,7 +10,9 @@ SOURCES += \
     logic/skills/recover.cpp \
     logic/skills/aftermath.cpp \
     gui/stage.cpp \
-    gui/globalspec.cpp
+    gui/globalspec.cpp \
+    logic/world/window.cpp \
+    logic/world/map.cpp
 
 
 
@@ -23,4 +25,6 @@ HEADERS += \
     logic/skills/recover.h \
     logic/skills/aftermath.h \
     gui/stage.h \
-    gui/globalspec.h
+    gui/globalspec.h \
+    logic/world/window.h \
+    logic/world/map.h
