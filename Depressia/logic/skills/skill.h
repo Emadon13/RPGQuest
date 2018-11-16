@@ -4,7 +4,7 @@
 #include<string>
 #include<vector>
 
-enum category { powerfull, powerless, heal, drain, recoil, group, all, several };
+enum Category { powerfull, powerless, heal, drain, recoil, group, all, several };
 
 class Entity;
 class Skill
@@ -20,7 +20,7 @@ protected:
     std::string name;
     std::string description;
     int mpCost;
-    std::vector <category> categories;
+    std::vector <Category> categories;
 
 };
 

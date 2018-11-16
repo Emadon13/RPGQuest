@@ -11,6 +11,8 @@ public:
 
 private:
     Inventory bag;
+    Hero h1, h2, h3, h4;
+    Hero* team_members[4];
 };
 
 #endif // TEAM_H

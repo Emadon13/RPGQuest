@@ -3,7 +3,7 @@
 #include <iostream>
 #include <iostream>
 #include <fstream>
-#include "io/entityloader.h"
+
 #include "gui/globalspec.h"
 #include "logic/events/fight.h"
 #include "logic/world/map.h"

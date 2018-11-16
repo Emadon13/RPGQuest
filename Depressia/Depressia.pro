@@ -3,7 +3,6 @@ QT += core \
 
 SOURCES += \
     main.cpp \
-    io/entityloader.cpp \
     logic/events/fight.cpp \
     logic/entities/entity.cpp \
     logic/skills/skill.cpp \
@@ -17,13 +16,18 @@ SOURCES += \
     logic/items/inventory.cpp \
     logic/entities/team.cpp \
     logic/entities/hero.cpp \
-    logic/world/mapelement.cpp
+    logic/world/mapelement.cpp \
+    logic/game.cpp \
+    io/skillloader.cpp \
+    io/loader.cpp \
+    io/qpixmaploader.cpp \
+    logic/events/dialog.cpp \
+    logic/events/dialogelement.cpp
 
 
 
 
 HEADERS += \
-    io/entityloader.h \
     logic/events/fight.h \
     logic/entities/entity.h \
     logic/skills/skill.h \
@@ -37,4 +41,10 @@ HEADERS += \
     logic/items/inventory.h \
     logic/entities/team.h \
     logic/entities/hero.h \
-    logic/world/mapelement.h
+    logic/world/mapelement.h \
+    logic/game.h \
+    io/skillloader.h \
+    io/loader.h \
+    io/qpixmaploader.h \
+    logic/events/dialog.h \
+    logic/events/dialogelement.h

@@ -1,6 +1,7 @@
 #include "team.h"
 
-Team::Team()
+Team::Team():
+    h1()
 {
 
 }
