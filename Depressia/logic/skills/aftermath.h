@@ -3,7 +3,7 @@
 
 
 #include<QString>
-#include"Skill.h"
+#include"logic/skills/skill.h"
 #include "logic/entities/entity.h"
 
 class Aftermath : public Skill

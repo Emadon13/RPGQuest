@@ -1,21 +1,18 @@
 #ifndef MAP_H
 #define MAP_H
 
-#include"logic/world/window.h"
+#include"logic/world/mapelement.h"
 
 
 class Map
 {
 public:
     Map();
-    Window* getCurrentWindow();
-
-    Window w1;
-    Window w2;
+    MapElement* getCurrentWindow();
 
 private:
-    Window* currentWindow;
-    Window worldMap[2];
+    MapElement* currentWindow;
+    MapElement worldMap[100];
 
 };
 

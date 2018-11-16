@@ -5,9 +5,9 @@
 #include <fstream>
 #include "io/entityloader.h"
 #include "gui/globalspec.h"
-#include "logic/fight.h"
+#include "logic/events/fight.h"
 #include "logic/world/map.h"
-#include"logic/world/window.h"
+#include"logic/world/mapelement.h"
 
 using namespace std;
 
@@ -22,14 +22,7 @@ int main(int argc, char *argv[])
 
 
     Map map;
-    Window w;
-
-    cout << map.w1.getTitle() << endl;
-    cout << map.w2.getTitle() << endl;
-    if(map.getCurrentWindow()->getDown() != nullptr) cout << map.getCurrentWindow()->getDown()->getTitle() << endl;
-    if(map.getCurrentWindow()->getLeft() != nullptr) cout << map.getCurrentWindow()->getLeft()->getTitle() << endl;
-    else cout << "exixte pas" << endl;
-    cout << "qvqmzbvm" << endl;
+    MapElement w;
 
 
     // ------------TEST QUENTIN ------------------
