@@ -1,5 +1,4 @@
-QT += core \
-    widgets
+QT += core widgets gui multimedia multimediawidgets
 
 SOURCES += \
     main.cpp \
@@ -24,7 +23,13 @@ SOURCES += \
     logic/events/dialog.cpp \
     logic/events/dialogelement.cpp \
     io/dialogloader.cpp \
-    io/maploader.cpp
+    io/maploader.cpp \
+    gui/mainwindow.cpp \
+    gui/gamewindow.cpp \
+    gui/gameframe.cpp \
+    gui/dialogframe.cpp \
+    gui/clickablelabel.cpp \
+    gui/battleframe.cpp
 
 
 
@@ -51,4 +56,10 @@ HEADERS += \
     logic/events/dialog.h \
     logic/events/dialogelement.h \
     io/dialogloader.h \
-    io/maploader.h
+    io/maploader.h \
+    gui/mainwindow.h \
+    gui/gamewindow.h \
+    gui/gameframe.h \
+    gui/dialogframe.h \
+    gui/clickablelabel.h \
+    gui/battleframe.h

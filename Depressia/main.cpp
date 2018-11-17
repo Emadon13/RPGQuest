@@ -5,6 +5,8 @@
 #include <fstream>
 
 #include "gui/globalspec.h"
+#include "gui/mainwindow.h"
+#include "gui/gamewindow.h"
 #include "logic/events/fight.h"
 #include "logic/world/map.h"
 #include"io/dialogloader.h"
@@ -21,6 +23,8 @@ int main(int argc, char *argv[])
     DialogLoader dl;
     vector<Dialog> d = dl.generate("../ressources/loaders/dialogs.txt");
 
+    cout << d.at(0).getSize();
+
     cout << d.at(0).getElement(0).getText() << endl;
     cout << d.at(0).getElement(1).getText() << endl;
     cout << d.at(0).getElement(2).getText() << endl;
@@ -32,17 +36,18 @@ int main(int argc, char *argv[])
 
 
     // ------------TEST QUENTIN ------------------
-    QApplication app (argc, argv);
+    QApplication app(argc, argv);
     QApplication::setFont(QFont("Fixedsys"));
 
-    globalSpec = new GlobalSpec();
-/*
-    set up start Screen
-    StartScreen * start = new StartScreen(*global);
-    start->show();
-*/
-    return app.exec();
+    MainWindow w;
+    w.show();
 
-//t bo
+    return app.exec();
+}
+
+void launchGame()
+{
+    GameWindow game;
+    game.show();
 }
 

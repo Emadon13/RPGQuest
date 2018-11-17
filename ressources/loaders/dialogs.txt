@@ -1,23 +1,23 @@
-left
+right
 Quentin
 Vincent ?
-image.png
-right
+../ressources/images/fille-normale.png
+left
 Vincent
 Oui ?
-image2.png
-left
+../ressources/images/homme-demande.png
+right
 Quentin
 Rien lol
-image.png
+../ressources/images/fille-rire.png
 end_dial
 left
 Vincent
 Omae wa mou shindeiru
-image.png
+../ressources/images/fille-colere.png
 right
 Quentin
 N A N I ????????????
-image2.png
+../ressources/images/homme-normal.png
 end_dial
 end
