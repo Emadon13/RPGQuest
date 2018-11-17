@@ -5,6 +5,7 @@ using namespace std;
 
 Map::Map()
 {
+    /*
     MapElement w1("Forêt", "La forêt est calme et sereine...", "");
     MapElement w2("Montagne", "Une falaise escarpée vous bloque le passage", "");
     MapElement w3("Mer", "Une mer bleutée s'étend à perte de vue","");
@@ -21,7 +22,7 @@ Map::Map()
     
 
     currentWindow = &worldMap[0];
-
+*/
 
 }
 

@@ -3,11 +3,15 @@
 
 #include"logic/entities/entity.h"
 
+enum EventType {fight, dialog, item_found, final_screen};
+
 class Event
 {
 public:
     Event();
-    void happend(Entity* team);
- };
+    EventType getEventType();
+protected:
+    EventType eventType;
+};
 
 #endif // EVENT_H

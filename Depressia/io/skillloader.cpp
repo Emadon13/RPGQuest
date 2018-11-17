@@ -6,7 +6,7 @@ SkillLoader::SkillLoader()
 {
 
 }
-
+/*
 vector<Skill> generate()
 {
 
@@ -16,3 +16,4 @@ vector<Skill> generate(string path)
 {
 
 }
+*/

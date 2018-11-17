@@ -3,11 +3,12 @@
 
 using namespace std;
 
-MapElement::MapElement()
+MapElement::MapElement():
+    name("titre nul"),
+    text("rien à dire..."),
+    image(""),
+    events(0)
 {
-    title = "titre nul";
-    text = "rien à dire...";
-    background = "";
 
     MapElement *left(this);
     MapElement *up(this);
@@ -20,12 +21,12 @@ MapElement::MapElement()
     links[3] = down;
 }
 
-MapElement::MapElement(string ti, string te, string img)
+MapElement::MapElement(string n, string t, string i, vector<Event> e):
+    name(n),
+    text(t),
+    image(i),
+    events(e)
 {
-    title = ti;
-    text = te;
-    background = img;
-
     MapElement *left(this);
     MapElement *up(this);
     MapElement *right(this);
@@ -37,11 +38,21 @@ MapElement::MapElement(string ti, string te, string img)
     links[3] = down;
 }
 
-string MapElement::getTitle()
+
+string MapElement::getName()
 {
-    return title;
+    return name;
 }
 
+string MapElement::getText()
+{
+    return text;
+}
+
+string MapElement::getImage()
+{
+    return image;
+}
 
 MapElement* MapElement::getLeft()
 {

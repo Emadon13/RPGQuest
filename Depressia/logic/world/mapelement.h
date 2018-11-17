@@ -1,33 +1,35 @@
 #ifndef MAPELEMENT_H
 #define MAPELEMENT_H
 
-#include<string>
+#include"logic/events/event.h"
 
 class MapElement
 {
 public:
     MapElement();
-    MapElement(std::string ti, std::string te, std::string img);
+    MapElement(std::string n, std::string t, std::string i, std::vector<Event> e);
 
-    std::string getTitle();
+    std::string getName();
     std::string getText();
+    std::string getImage();
 
     MapElement* getLeft();
     MapElement* getUp();
     MapElement* getRight();
     MapElement* getDown();
 
+
+private:
+    std::string name;
+    std::string text;
+    std::string image;
+    std::vector<Event> events;
+    MapElement *links[4];
+
     void setLeft(MapElement& w);
     void setUp(MapElement& w);
     void setRight(MapElement& w);
     void setDown(MapElement& w);
-
-private:
-    std::string title;
-    std::string text;
-    std::string background;
-
-    MapElement *links[4];
 };
 
 #endif // MAPELEMENT_H

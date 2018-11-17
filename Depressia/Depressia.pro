@@ -22,7 +22,9 @@ SOURCES += \
     io/loader.cpp \
     io/qpixmaploader.cpp \
     logic/events/dialog.cpp \
-    logic/events/dialogelement.cpp
+    logic/events/dialogelement.cpp \
+    io/dialogloader.cpp \
+    io/maploader.cpp
 
 
 
@@ -47,4 +49,6 @@ HEADERS += \
     io/loader.h \
     io/qpixmaploader.h \
     logic/events/dialog.h \
-    logic/events/dialogelement.h
+    logic/events/dialogelement.h \
+    io/dialogloader.h \
+    io/maploader.h

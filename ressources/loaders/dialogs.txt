@@ -1,0 +1,23 @@
+left
+Quentin
+Vincent ?
+image.png
+right
+Vincent
+Oui ?
+image2.png
+left
+Quentin
+Rien lol
+image.png
+end_dial
+left
+Vincent
+Omae wa mou shindeiru
+image.png
+right
+Quentin
+N A N I ????????????
+image2.png
+end_dial
+end
