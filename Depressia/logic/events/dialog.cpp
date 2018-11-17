@@ -29,3 +29,7 @@ DialogElement Dialog::getElement(int i)
         return elements.at(unsigned(i));
 }
 
+int Dialog::getSize()
+{
+    return int(elements.size());
+}

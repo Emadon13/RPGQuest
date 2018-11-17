@@ -12,7 +12,9 @@ class Dialog : public Event
 public:
     Dialog();
     Dialog(std::vector<DialogElement> de);
+
     DialogElement getElement(int i);
+    int getSize();
 
 private:
 
