@@ -1674,6 +1674,18 @@ release\main.obj: ..\Depressia\main.cpp C:\Qt\5.11.2\msvc2017_64\include\QtWidge
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qicon.h \
+		..\Depressia\logic\game.h \
+		..\Depressia\io\maploader.h \
+		..\Depressia\io\loader.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QString \
+		..\Depressia\logic\entities\entity.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QVector \
+		..\Depressia\logic\skills\skill.h \
+		..\Depressia\logic\events\event.h \
+		..\Depressia\logic\items\item.h \
+		..\Depressia\logic\world\map.h \
+		..\Depressia\logic\world\mapelement.h \
 		..\Depressia\gui\globalspec.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QWidget \
@@ -1809,7 +1821,6 @@ release\main.obj: ..\Depressia\main.cpp C:\Qt\5.11.2\msvc2017_64\include\QtWidge
 		C:\Qt\5.11.2\msvc2017_64\include\QtNetwork\qabstractnetworkcache.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QSharedDataPointer \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QString \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QUrl \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QVariant \
 		C:\Qt\5.11.2\msvc2017_64\include\QtNetwork\qabstractsocket.h \
@@ -1825,7 +1836,6 @@ release\main.obj: ..\Depressia\main.cpp C:\Qt\5.11.2\msvc2017_64\include\QtWidge
 		C:\Qt\5.11.2\msvc2017_64\include\QtNetwork\qlocalserver.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtNetwork\qlocalsocket.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtNetwork\qnetworkaccessmanager.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QVector \
 		C:\Qt\5.11.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
 		C:\Qt\5.11.2\msvc2017_64\include\QtNetwork\qsslconfiguration.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtNetwork\qsslsocket.h \
@@ -2174,15 +2184,7 @@ release\main.obj: ..\Depressia\main.cpp C:\Qt\5.11.2\msvc2017_64\include\QtWidge
 		C:\Qt\5.11.2\msvc2017_64\include\QtMultimediaWidgets\qtmultimediawidgetsversion.h \
 		..\Depressia\gui\gamewindow.h \
 		..\Depressia\logic\events\fight.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\world\map.h \
-		..\Depressia\logic\world\mapelement.h \
-		..\Depressia\logic\events\event.h \
 		..\Depressia\io\dialogloader.h \
-		..\Depressia\io\loader.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
-		..\Depressia\logic\items\item.h \
 		..\Depressia\logic\events\dialog.h \
 		..\Depressia\logic\events\dialogelement.h
 

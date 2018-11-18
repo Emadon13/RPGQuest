@@ -3,7 +3,7 @@
 
 #include"logic/entities/entity.h"
 
-enum EventType {fight, dialog, item_found, final_screen};
+enum EventType {none, fight, dialog, item_found, final_screen};
 
 class Event
 {
