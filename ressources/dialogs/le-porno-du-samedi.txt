@@ -13,7 +13,7 @@ Oui, vas-y poupée
 right
 Bonasse
 Ha ha ! Quel coquin ! <br>Si tu instites je vais te montrer...
-../ressources/images/homme-normal.png
+../ressources/images/fille-colere.png
 right
 Bonasse
 MON PETIT OISEAU !!!!!!

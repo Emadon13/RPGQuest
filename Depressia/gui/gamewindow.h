@@ -18,20 +18,17 @@ public:
     explicit GameWindow(QWidget *parent = nullptr);
     ~GameWindow();
 
+    void ClearWidget();
+
 public slots:
     void CreateBattleFrame();
     void CreateGameFrame();
     void CreateDialogFrame();
+    void CreateVideoFrame();
 
 private:
-    QLabel *boutonHaut;
-    QLabel *boutonBas;
-    QLabel *boutonDroite;
-    QLabel *boutonGauche;
 
     QPalette *p;
-
-    void ClearWidget();
 };
 
 #endif // GAMEWINDOW_H

@@ -71,7 +71,7 @@ GameFrame::GameFrame(GameWindow *game)
     zoneInfoImage->show();
     QLabel *zoneInfoText = new QLabel(game);
     zoneInfoText->setFixedSize(InfoWidth,InfoHeight);
-    zoneInfoText->setText("Vincent la grande Tata !");
+    zoneInfoText->setText("Non c'est pas une foret !");
     zoneInfoText->setAlignment(Qt::AlignCenter);
     zoneInfoText->move(0,0);
     zoneInfoText->show();
@@ -83,13 +83,14 @@ GameFrame::GameFrame(GameWindow *game)
     zoneTitleImage->show();
     QLabel *zoneTitleText = new QLabel(game);
     zoneTitleText->setFixedSize(TitleWidth,TitleHeight);
-    zoneTitleText->setText("Tata.exe");
+    zoneTitleText->setText("La foret");
     zoneTitleText->setAlignment(Qt::AlignCenter);
     zoneTitleText->move(0,WindowHeight-TitleHeight);
     zoneTitleText->show();
 
     QObject::connect(boutonHaut, SIGNAL(clicked()), game, SLOT(CreateBattleFrame()));
     QObject::connect(boutonBas, SIGNAL(clicked()), game, SLOT(CreateDialogFrame()));
+    QObject::connect(boutonDroite, SIGNAL(clicked()), game, SLOT(CreateVideoFrame()));
 
 }
 

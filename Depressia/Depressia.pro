@@ -29,7 +29,8 @@ SOURCES += \
     gui/gameframe.cpp \
     gui/dialogframe.cpp \
     gui/clickablelabel.cpp \
-    gui/battleframe.cpp
+    gui/battleframe.cpp \
+    gui/videoframe.cpp
 
 
 
@@ -62,4 +63,5 @@ HEADERS += \
     gui/gameframe.h \
     gui/dialogframe.h \
     gui/clickablelabel.h \
-    gui/battleframe.h
+    gui/battleframe.h \
+    gui/videoframe.h

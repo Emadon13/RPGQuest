@@ -14,7 +14,7 @@ MainWindow::MainWindow(Game *game, QWidget *parent) :
     this->game=game;
 
     QMediaPlaylist *playlist = new QMediaPlaylist();
-    playlist->addMedia(QUrl("../ressources/images/theme.mp3"));
+    playlist->addMedia(QUrl("../ressources/musics/theme-principal.mp3"));
     playlist->setPlaybackMode(QMediaPlaylist::Loop);
 
     QMediaPlayer *music = new QMediaPlayer();

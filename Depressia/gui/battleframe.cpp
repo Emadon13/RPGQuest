@@ -5,14 +5,16 @@
 #include <QPushButton>
 #include <QHBoxLayout>
 #include <QLabel>
-#include <QTimer>
 #include <iostream>
 #include <vector>
+#include <QMediaPlayer>
+#include <QMediaPlaylist>
+#include <QVideoWidget>
 
-BattleFrame::BattleFrame(GameWindow *game)
+BattleFrame::BattleFrame(GameWindow *g) : QObject()
 {
-    int WindowWidth(1920);
-    int WindowHeight(1080);
 
+    game=g;
 
 }
+

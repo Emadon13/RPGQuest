@@ -1,6 +1,7 @@
 #include "gamewindow.h"
 #include "gameframe.h"
 #include "dialogframe.h"
+#include "videoframe.h"
 #include "battleframe.h"
 #include "mainwindow.h"
 #include "clickablelabel.h"
@@ -70,6 +71,13 @@ void GameWindow::CreateDialogFrame()
     setPalette(p);
 
     DialogFrame *gf = new DialogFrame(this);
+}
+
+void GameWindow::CreateVideoFrame()
+{
+    ClearWidget();
+
+    VideoFrame *vf = new VideoFrame(this);
 }
 
 GameWindow::~GameWindow(){

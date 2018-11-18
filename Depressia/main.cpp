@@ -45,8 +45,8 @@ int main(int argc, char *argv[])
 
     Game *game = new Game();
 
-    //MainWindow w(game);
-    //w.show();
+    MainWindow w(game);
+    w.show();
 
     return app.exec();
 }

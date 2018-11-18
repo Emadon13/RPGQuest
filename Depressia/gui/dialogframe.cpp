@@ -53,7 +53,7 @@ DialogFrame::DialogFrame(GameWindow *g) : QObject()
 vector<Dialog> DialogFrame::getDialog()
 {
 
-    Dialog dial = DialogLoader::generate("../ressources/dialogs/rien-lol.txt");  // J'ai changé un peu le contenu de ça
+    Dialog dial = DialogLoader::generate("../ressources/dialogs/nani.txt");  // J'ai changé un peu le contenu de ça
     vector<Dialog> dials;
     dials.push_back(dial);
 
