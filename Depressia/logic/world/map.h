@@ -22,9 +22,9 @@ public:
     bool existLeft();
     bool existDown();
 
-private:
-    unsigned int nbElements;
     unsigned int currentPosition;
+private:
+
     std::vector<MapElement> elements;
     std::vector<unsigned int> rights;
     std::vector<unsigned int> ups;

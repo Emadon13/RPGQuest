@@ -6,7 +6,23 @@ Event::Event():
 
 }
 
+Event::Event(EventType et, Dialog d):
+    eventType(et)
+{
+    dialog = d;
+}
+
+Event::~Event()
+{
+
+}
+
 EventType Event::getEventType()
 {
     return eventType;
+}
+
+Dialog Event::getDialog()
+{
+    return dialog;
 }

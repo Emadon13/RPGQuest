@@ -19,6 +19,8 @@ none
 Lac Omae Wa
 On dit que Quentin le pokémaniac habite ces terres...
 ../ressources/image/background.png
+dialog
+../ressources/dialogs/le-porno-du-samedi.txt
 0 2 3 3 4
 1 1 4 2 4
 0 1 1 2 4

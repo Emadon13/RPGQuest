@@ -7,13 +7,11 @@ Dialog::Dialog():
 {
     DialogElement de;
     elements.push_back(de);
-    eventType = dialog;
 }
 
 Dialog::Dialog(vector<DialogElement> de):
     elements(de)
 {
-    eventType =dialog;
 }
 
 DialogElement Dialog::getElement(int i)

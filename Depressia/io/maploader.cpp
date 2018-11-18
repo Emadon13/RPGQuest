@@ -18,8 +18,6 @@ Map MapLoader::generate(string path)
 {
     ifstream file(path);
     string line, name, text, image, et, e;
-    Event event;
-    vector<Event> events(0);
     vector<MapElement> mapElements;
     MapElement mapElement;
     unsigned int nb_elements;
@@ -28,7 +26,8 @@ Map MapLoader::generate(string path)
 
     if(file)
     {
-        file >> nb_elements;
+        getline(file,line);
+        nb_elements = unsigned (stoi(line));
 
         for(unsigned i=0 ; i<nb_elements ; i++)
         {
@@ -37,25 +36,24 @@ Map MapLoader::generate(string path)
             getline(file,image);
             getline(file,et);
 
-            if(et != "none")
-                while(et != "end_event")
-                {
-                    if(et == "dialog")
-                    {
-                        getline(file,e);
-                        event = DialogLoader::generate(e);
-                        events.push_back(event);
-                        getline(file,et);
-                    }
-                    else
-                    {
-                        cout << "ERREUR : type d'évènement non reconnu" << endl;
+            if(et == "none")
+                mapElement = MapElement(name, text, image, Event());
 
-                    }
-                }
-            mapElement = MapElement(name, text, image, event);
+            else if(et == "dialog")
+            {
+                getline(file,e);
+                mapElement = MapElement(name, text, image, Event(dialog, DialogLoader::generate(e)));
+            }
+            else
+            {
+                cout << "ERREUR : type d'évènement non reconnu :" << e << endl;
+                mapElement = MapElement(name, text, image, Event());
+
+            }
+
+
+
             mapElements.push_back(mapElement);
-            getline(file,line);
 
         }
 

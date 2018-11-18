@@ -3,11 +3,10 @@
 
 #include<vector>
 #include<iostream>
-#include"logic/events/event.h"
 #include"logic/events/dialogelement.h"
 
 
-class Dialog : public Event
+class Dialog
 {
 public:
     Dialog();

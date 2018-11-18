@@ -48,7 +48,7 @@ Map::Map(vector<MapElement> wm, vector<unsigned int> r, vector<unsigned int> u, 
 
 MapElement Map::getCurrentPosition()
 {
-    if(currentPosition >= elements.size())
+    if(currentPosition < elements.size())
         return elements.at(currentPosition);
     else
         cout << "ERREUR : currentPosition a dépasser la taille d'elements" << endl;
@@ -57,7 +57,7 @@ MapElement Map::getCurrentPosition()
 
 int Map::getNbElements()
 {
-    return int(nbElements);
+    return int(elements.size());
 }
 
 MapElement Map::goRight()
