@@ -55,10 +55,11 @@ DialogFrame::DialogFrame(GameWindow *g) : QObject()
 vector<Dialog> DialogFrame::getDialog()
 {
 
-    DialogLoader dl;
-    vector<Dialog> d = dl.generate("../ressources/loaders/dialogs.txt");
+    Dialog dial = DialogLoader::generate("../ressources/dialogs/rien-lol.txt");  // J'ai changé un peu le contenu de ça
+    vector<Dialog> dials;
+    dials.push_back(dial);
 
-    return d;
+    return dials;
 }
 
 void DialogFrame::UpdateDialog()

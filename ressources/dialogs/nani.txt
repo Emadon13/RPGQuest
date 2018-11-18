@@ -1,0 +1,9 @@
+left
+Vincent
+Omae wa mou shindeiru
+../ressources/images/fille-colere.png
+right
+Quentin
+N A N I ????????????
+../ressources/images/homme-normal.png
+end

@@ -1,0 +1,13 @@
+right
+Quentin
+Vincent ?
+../ressources/images/fille-normale.png
+left
+Vincent
+Oui ?
+../ressources/images/homme-demande.png
+right
+Quentin
+Rien lol
+../ressources/images/fille-rire.png
+end

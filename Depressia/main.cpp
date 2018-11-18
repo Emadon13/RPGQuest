@@ -20,6 +20,8 @@ int main(int argc, char *argv[])
 
 
     // ------------ TEST VINCENT -----------------
+
+    /*
     DialogLoader dl;
     vector<Dialog> d = dl.generate("../ressources/loaders/dialogs.txt");
 
@@ -33,7 +35,7 @@ int main(int argc, char *argv[])
     cout << d.at(1).getElement(1).getText() << endl;
 
     cout << d.at(1).getElement(2).getText() << endl;
-
+    */
 
     // ------------TEST QUENTIN ------------------
     QApplication app(argc, argv);

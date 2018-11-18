@@ -1,0 +1,29 @@
+right
+Bonasse
+Tu veux que je te montre quelque-chose de... <br>Sensuel ?
+../ressources/images/fille-normale.png
+left
+Musclor
+Hum...
+../ressources/images/homme-demande.png
+left
+Musclor
+Oui, vas-y poupée
+../ressources/images/homme-normal.png
+right
+Bonasse
+Ha ha ! Quel coquin ! <br>Si tu instites je vais te montrer...
+../ressources/images/homme-normal.png
+right
+Bonasse
+MON PETIT OISEAU !!!!!!
+../ressources/images/fille-colere.png
+right
+Natoo
+piou
+../ressources/images/icone.png
+left
+Musclor
+Oh brother
+../ressources/images/homme-normal.png
+end

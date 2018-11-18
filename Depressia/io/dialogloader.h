@@ -9,8 +9,8 @@ class DialogLoader : public Loader
 public:
     DialogLoader();
 
-    std::vector<Dialog> generate();
-    std::vector<Dialog> generate(std::string path);
+    static Dialog generate();
+    static Dialog generate(std::string path);
 
 };
 

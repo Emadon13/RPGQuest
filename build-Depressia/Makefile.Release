@@ -554,7 +554,7 @@ release\moc_globalspec.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		..\Depressia\gui\globalspec.h \
 		release\moc_predefs.h \
 		C:\Qt\5.11.2\msvc2017_64\bin\moc.exe
-	C:\Qt\5.11.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include "C:/Users/Quentin/Desktop/Cours Prog/C++/RPGQuest/build-Depressia/release/moc_predefs.h" -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -I"C:/Users/Quentin/Desktop/Cours Prog/C++/RPGQuest/Depressia" -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimedia -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\Depressia\gui\globalspec.h -o release\moc_globalspec.cpp
+	C:\Qt\5.11.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Vincent/Documents/dev/C++/RPGQuest/build-Depressia/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/Vincent/Documents/dev/C++/RPGQuest/Depressia -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimedia -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\Depressia\gui\globalspec.h -o release\moc_globalspec.cpp
 
 release\moc_mainwindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWindow \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qmainwindow.h \
@@ -1168,7 +1168,7 @@ release\moc_mainwindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWind
 		..\Depressia\gui\mainwindow.h \
 		release\moc_predefs.h \
 		C:\Qt\5.11.2\msvc2017_64\bin\moc.exe
-	C:\Qt\5.11.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include "C:/Users/Quentin/Desktop/Cours Prog/C++/RPGQuest/build-Depressia/release/moc_predefs.h" -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -I"C:/Users/Quentin/Desktop/Cours Prog/C++/RPGQuest/Depressia" -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimedia -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\Depressia\gui\mainwindow.h -o release\moc_mainwindow.cpp
+	C:\Qt\5.11.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Vincent/Documents/dev/C++/RPGQuest/build-Depressia/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/Vincent/Documents/dev/C++/RPGQuest/Depressia -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimedia -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\Depressia\gui\mainwindow.h -o release\moc_mainwindow.cpp
 
 release\moc_gamewindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWindow \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qmainwindow.h \
@@ -1290,7 +1290,7 @@ release\moc_gamewindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWind
 		..\Depressia\gui\gamewindow.h \
 		release\moc_predefs.h \
 		C:\Qt\5.11.2\msvc2017_64\bin\moc.exe
-	C:\Qt\5.11.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include "C:/Users/Quentin/Desktop/Cours Prog/C++/RPGQuest/build-Depressia/release/moc_predefs.h" -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -I"C:/Users/Quentin/Desktop/Cours Prog/C++/RPGQuest/Depressia" -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimedia -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\Depressia\gui\gamewindow.h -o release\moc_gamewindow.cpp
+	C:\Qt\5.11.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Vincent/Documents/dev/C++/RPGQuest/build-Depressia/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/Vincent/Documents/dev/C++/RPGQuest/Depressia -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimedia -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\Depressia\gui\gamewindow.h -o release\moc_gamewindow.cpp
 
 release\moc_dialogframe.cpp: ..\Depressia\gui\gamewindow.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWindow \
@@ -1429,7 +1429,7 @@ release\moc_dialogframe.cpp: ..\Depressia\gui\gamewindow.h \
 		..\Depressia\gui\dialogframe.h \
 		release\moc_predefs.h \
 		C:\Qt\5.11.2\msvc2017_64\bin\moc.exe
-	C:\Qt\5.11.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include "C:/Users/Quentin/Desktop/Cours Prog/C++/RPGQuest/build-Depressia/release/moc_predefs.h" -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -I"C:/Users/Quentin/Desktop/Cours Prog/C++/RPGQuest/Depressia" -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimedia -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\Depressia\gui\dialogframe.h -o release\moc_dialogframe.cpp
+	C:\Qt\5.11.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Vincent/Documents/dev/C++/RPGQuest/build-Depressia/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/Vincent/Documents/dev/C++/RPGQuest/Depressia -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimedia -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\Depressia\gui\dialogframe.h -o release\moc_dialogframe.cpp
 
 release\moc_clickablelabel.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QLabel \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qlabel.h \
@@ -1541,7 +1541,7 @@ release\moc_clickablelabel.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QLabe
 		..\Depressia\gui\clickablelabel.h \
 		release\moc_predefs.h \
 		C:\Qt\5.11.2\msvc2017_64\bin\moc.exe
-	C:\Qt\5.11.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include "C:/Users/Quentin/Desktop/Cours Prog/C++/RPGQuest/build-Depressia/release/moc_predefs.h" -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -I"C:/Users/Quentin/Desktop/Cours Prog/C++/RPGQuest/Depressia" -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimedia -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\Depressia\gui\clickablelabel.h -o release\moc_clickablelabel.cpp
+	C:\Qt\5.11.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Vincent/Documents/dev/C++/RPGQuest/build-Depressia/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/Vincent/Documents/dev/C++/RPGQuest/Depressia -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimedia -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\Depressia\gui\clickablelabel.h -o release\moc_clickablelabel.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -2740,6 +2740,7 @@ release\mapelement.obj: ..\Depressia\logic\world\mapelement.cpp ..\Depressia\log
 		..\Depressia\logic\skills\skill.h
 
 release\game.obj: ..\Depressia\logic\game.cpp ..\Depressia\logic\game.h \
+		..\Depressia\io\maploader.h \
 		..\Depressia\io\loader.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
@@ -3237,7 +3238,97 @@ release\dialogloader.obj: ..\Depressia\io\dialogloader.cpp ..\Depressia\io\dialo
 		..\Depressia\logic\events\dialog.h \
 		..\Depressia\logic\events\dialogelement.h
 
-release\maploader.obj: ..\Depressia\io\maploader.cpp ..\Depressia\io\maploader.h
+release\maploader.obj: ..\Depressia\io\maploader.cpp ..\Depressia\io\maploader.h \
+		..\Depressia\io\loader.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qglobal.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtcore-config.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsystemdetection.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qprocessordetection.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcompilerdetection.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtypeinfo.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsysinfo.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlogging.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qflags.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qatomic.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbasicatomic.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qatomic_bootstrap.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qgenericatomic.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qatomic_cxx11.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qatomic_msvc.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qglobalstatic.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmutex.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnumeric.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qversiontagging.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstring.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qchar.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearray.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringliteral.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringalgorithms.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringview.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringbuilder.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpair.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearraylist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qregexp.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcoreevent.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qscopedpointer.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmetatype.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QString \
+		..\Depressia\logic\entities\entity.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QVector \
+		..\Depressia\logic\skills\skill.h \
+		..\Depressia\logic\events\event.h \
+		..\Depressia\logic\items\item.h \
+		..\Depressia\logic\world\map.h \
+		..\Depressia\logic\world\mapelement.h \
+		..\Depressia\io\dialogloader.h \
+		..\Depressia\logic\events\dialog.h \
+		..\Depressia\logic\events\dialogelement.h
 
 release\mainwindow.obj: ..\Depressia\gui\mainwindow.cpp ..\Depressia\gui\mainwindow.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWindow \
