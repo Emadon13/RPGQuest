@@ -8,19 +8,18 @@ class MapElement
 {
 public:
     MapElement();
-    MapElement(std::string n, std::string t, std::string i, Event e);
+    MapElement(std::string n, std::string t, std::string i, std::vector<Event> e);
 
     std::string getName();
     std::string getText();
     std::string getImage();
-    Event getEvent();
 
 
 private:
     std::string name;
     std::string text;
     std::string image;
-    Event event;
+    std::vector<Event> events;
 };
 
 #endif // MAPELEMENT_H

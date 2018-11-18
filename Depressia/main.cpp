@@ -4,7 +4,6 @@
 #include <iostream>
 #include <fstream>
 
-#include "logic/game.h"
 #include "gui/globalspec.h"
 #include "gui/mainwindow.h"
 #include "gui/gamewindow.h"
@@ -22,8 +21,21 @@ int main(int argc, char *argv[])
 
     // ------------ TEST VINCENT -----------------
 
-    Game g;
-    cout << g.getMap().getCurrentPosition().getName() << endl;
+    /*
+    DialogLoader dl;
+    vector<Dialog> d = dl.generate("../ressources/loaders/dialogs.txt");
+
+    cout << d.at(0).getSize();
+
+    cout << d.at(0).getElement(0).getText() << endl;
+    cout << d.at(0).getElement(1).getText() << endl;
+    cout << d.at(0).getElement(2).getText() << endl;
+
+    cout << d.at(1).getElement(0).getText() << endl;
+    cout << d.at(1).getElement(1).getText() << endl;
+
+    cout << d.at(1).getElement(2).getText() << endl;
+    */
 
     // ------------TEST QUENTIN ------------------
     QApplication app(argc, argv);

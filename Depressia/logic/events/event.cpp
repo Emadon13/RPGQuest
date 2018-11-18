@@ -2,7 +2,7 @@
 
 Event::Event()
 {
-    eventType = none;
+
 }
 
 EventType Event::getEventType()

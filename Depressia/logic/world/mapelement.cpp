@@ -7,16 +7,16 @@ MapElement::MapElement():
     name("titre nul"),
     text("rien à dire..."),
     image(""),
-    event()
+    events(0)
 {
 
 }
 
-MapElement::MapElement(string n, string t, string i, Event e):
+MapElement::MapElement(string n, string t, string i, vector<Event> e):
     name(n),
     text(t),
     image(i),
-    event(e)
+    events(e)
 {
 
 }
@@ -37,7 +37,3 @@ string MapElement::getImage()
     return image;
 }
 
-Event MapElement::getEvent()
-{
-    return event;
-}
