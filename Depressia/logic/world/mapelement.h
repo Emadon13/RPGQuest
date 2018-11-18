@@ -3,6 +3,7 @@
 
 #include"logic/events/event.h"
 
+
 class MapElement
 {
 public:
@@ -13,23 +14,12 @@ public:
     std::string getText();
     std::string getImage();
 
-    MapElement* getLeft();
-    MapElement* getUp();
-    MapElement* getRight();
-    MapElement* getDown();
-
 
 private:
     std::string name;
     std::string text;
     std::string image;
     std::vector<Event> events;
-    MapElement *links[4];
-
-    void setLeft(MapElement& w);
-    void setUp(MapElement& w);
-    void setRight(MapElement& w);
-    void setDown(MapElement& w);
 };
 
 #endif // MAPELEMENT_H
