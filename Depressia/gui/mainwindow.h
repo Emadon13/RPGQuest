@@ -8,29 +8,27 @@
 #include <QtMultimedia>
 #include <QtMultimediaWidgets>
 #include "gamewindow.h"
+#include "logic/game.h"
 
-namespace Ui {
-class MainWindow;
-}
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(Game *game,QWidget *parent = nullptr);
     ~MainWindow();
 
 public slots:
     void launchGame();
 
 private:
-    Ui::MainWindow *ui;
+    Game *game;
 
     QMediaPlaylist *playlist;
     QMediaPlayer *music;
 
-    GameWindow *game;
+    GameWindow *gameWindow;
 
     QPushButton *boutonPlay;
     QPushButton *boutonOption;

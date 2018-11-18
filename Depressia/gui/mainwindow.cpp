@@ -5,11 +5,13 @@
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QMediaPlayer>
+#include "logic/game.h"
 
-MainWindow::MainWindow(QWidget *parent) :
+MainWindow::MainWindow(Game *game, QWidget *parent) :
     QMainWindow(parent)
 {
     //ui->setupUi(this);
+    this->game=game;
 
     QMediaPlaylist *playlist = new QMediaPlaylist();
     playlist->addMedia(QUrl("../ressources/images/theme.mp3"));
@@ -80,7 +82,7 @@ MainWindow::MainWindow(QWidget *parent) :
     imageLeft->move(espacementH,WindowHeight-espacementV-ImageHeight);
     imageRight->move(espacementH*3+ImageWidth+BoutonWidth,WindowHeight-espacementV-ImageHeight);
 
-    GameWindow game;
+    GameWindow gameWindow;
 
     QObject::connect(boutonPlay, SIGNAL(clicked()), this, SLOT(launchGame()));
     QObject::connect(boutonPlay, SIGNAL(clicked()), this, SLOT(close()));
@@ -91,11 +93,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
 void MainWindow::launchGame()
 {
-    game=new GameWindow();
-    game->show();
+    gameWindow=new GameWindow();
+    gameWindow->show();
 }
 
 MainWindow::~MainWindow()
 {
-    delete ui;
 }

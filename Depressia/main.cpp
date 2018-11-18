@@ -10,6 +10,7 @@
 #include "logic/events/fight.h"
 #include "logic/world/map.h"
 #include"io/dialogloader.h"
+#include"logic/game.h"
 
 using namespace std;
 
@@ -41,15 +42,11 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
     QApplication::setFont(QFont("Fixedsys"));
 
-    MainWindow w;
+    Game *game = new Game();
+
+    MainWindow w(game);
     w.show();
 
     return app.exec();
-}
-
-void launchGame()
-{
-    GameWindow game;
-    game.show();
 }
 
