@@ -11,7 +11,7 @@ Map::Map():
     downs(0)
 {
 
-    MapElement w1("Forêt", "La forêt est calme et sereine...", "../ressources/images/background.png", vector<Event>(0));
+    MapElement w1("Forêt", "La forêt est calme et sereine...", "../ressources/images/background.png", Event());
     elements.push_back(w1);
     rights.push_back(0);
     ups.push_back(0);
@@ -31,7 +31,7 @@ Map::Map(vector<MapElement> wm, vector<unsigned int> r, vector<unsigned int> u, 
 {
     if(elements.empty())
     {
-        MapElement w1("Forêt", "La forêt est calme et sereine...", "", vector<Event>(0));
+        MapElement w1("Forêt", "La forêt est calme et sereine...", "", Event());
         elements.push_back(w1);
         rights.push_back(0);
         ups.push_back(0);
@@ -83,3 +83,27 @@ MapElement Map::goDown()
     currentPosition = downs.at(currentPosition);
     return elements.at(currentPosition);
 }
+
+bool Map::existRight()
+{
+    return(rights.at(currentPosition) != currentPosition);
+}
+
+bool Map::existUp()
+{
+    return(ups.at(currentPosition) != currentPosition);
+}
+
+bool Map::existLeft()
+{
+    return(lefts.at(currentPosition) != currentPosition);
+}
+
+bool Map::existDown()
+{
+    return(downs.at(currentPosition) != currentPosition);
+}
+
+
+
+

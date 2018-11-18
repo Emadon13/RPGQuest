@@ -17,6 +17,11 @@ public:
     MapElement goLeft();
     MapElement goDown();
 
+    bool existRight();
+    bool existUp();
+    bool existLeft();
+    bool existDown();
+
 private:
     unsigned int nbElements;
     unsigned int currentPosition;

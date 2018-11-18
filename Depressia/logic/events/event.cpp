@@ -1,6 +1,7 @@
 #include "event.h"
 
-Event::Event()
+Event::Event():
+    eventType(none)
 {
 
 }
