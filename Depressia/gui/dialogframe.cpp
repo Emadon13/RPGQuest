@@ -16,8 +16,6 @@ DialogFrame::DialogFrame(GameWindow *g) : QObject()
 
     tableau=getDialog();
 
-    int DialogNumber=0;
-
     int WindowWidth(1920);
     int WindowHeight(1080);
 
