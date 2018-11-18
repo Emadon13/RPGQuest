@@ -53,7 +53,7 @@ Map MapLoader::generate(string path)
 
                     }
                 }
-            mapElement = MapElement(name, text, image, events);
+            mapElement = MapElement(name, text, image, event);
             mapElements.push_back(mapElement);
             getline(file,line);
 
