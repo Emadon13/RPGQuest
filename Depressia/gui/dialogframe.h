@@ -1,5 +1,3 @@
-#pragma once
-
 #ifndef DIALOGFRAME_H
 #define DIALOGFRAME_H
 #include "gamewindow.h"

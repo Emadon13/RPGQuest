@@ -17,11 +17,15 @@ Ha ha ! Quel coquin ! <br>Si tu instites je vais te montrer...
 right
 Bonasse
 MON PETIT OISEAU !!!!!!
-../ressources/images/fille-normale.png
+../ressources/images/fille-colere.png
 right
 Natoo
 piou
 ../ressources/images/icone.png
+left
+Musclor
+...
+../ressources/images/homme-demande.png
 left
 Musclor
 Oh brother
