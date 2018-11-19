@@ -32,7 +32,9 @@ SOURCES += \
     gui/frame/battleframe.cpp \
     gui/frame/videoframe.cpp \
     io/mapelementloader.cpp \
-    gui/clickable/clikablevideowidget.cpp
+    gui/clickable/clikablevideowidget.cpp \
+    io/itemloader.cpp \
+    logic/events/itemfound.cpp
 
 
 
@@ -68,4 +70,6 @@ HEADERS += \
     gui/frame/battleframe.h \
     gui/frame/videoframe.h \
     io/mapelementloader.h \
-    gui/clickable/clikablevideowidget.h
+    gui/clickable/clikablevideowidget.h \
+    io/itemloader.h \
+    logic/events/itemfound.h

@@ -3,6 +3,7 @@
 
 #include"logic/entities/entity.h"
 #include"logic/events/dialog.h"
+#include"logic/items/item.h"
 
 enum EventType {none, dialog, video, item_found, fight, final_screen};
 
@@ -10,18 +11,21 @@ class Event
 {
 public:
     Event();
-    Event(EventType et, Dialog d);
-    Event(EventType et, std::string v);
+    Event(Dialog d);
+    Event(std::string v);
+    Event(Item i);
     ~Event();
 
     EventType getEventType();
     Dialog getDialog();
     std::string getVideo();
+    Item getItem();
 
 private:
     EventType eventType;
-    Dialog dialog;
-    std::string video;
+    Dialog dial;
+    std::string vid;
+    Item itm;
 };
 
 #endif // EVENT_H

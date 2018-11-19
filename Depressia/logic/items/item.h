@@ -11,15 +11,15 @@ public:
     Item(std::string n, std::string d, std::string i);
 
     std::string getName();
-    std::string getDescription();
-    std::string getIcon();
+    std::string getText();
+    std::string getImage();
     void use();
 
 
 private:
     std::string name;
-    std::string description;
-    std::string icon;
+    std::string text;
+    std::string image;
 };
 
 #endif // ITEM_H

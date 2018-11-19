@@ -1,4 +1,5 @@
 Combat !
 Nan je dec c'est pas encore implemente mdr
 ../ressources/images/ff.jpg
-none
+item_found
+../ressources/items/pokeball.txt

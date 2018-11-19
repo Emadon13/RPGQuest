@@ -1,6 +1,7 @@
 #include "mapelementloader.h"
 #include "io/mapelementloader.h"
 #include"io/dialogloader.h"
+#include"io/itemloader.h"
 
 using namespace std;
 
@@ -32,13 +33,19 @@ MapElement MapElementLoader::generate(string path)
         else if(et == "dialog")
         {
             getline(file,e);
-            return MapElement(name, text, image, Event(dialog, DialogLoader::generate(e)));
+            return MapElement(name, text, image, Event(DialogLoader::generate(e)));
         }
 
         else if(et == "video")
         {
             getline(file,e);
-            return MapElement(name, text, image, Event(video, e));
+            return MapElement(name, text, image, Event(e));
+        }
+
+        else if(et == "item_found")
+        {
+            getline(file, e);
+            return MapElement(name, text, image, Event(ItemLoader::generate(e)))
         }
 
         else

@@ -8,18 +8,27 @@ Event::Event():
 
 }
 
-Event::Event(EventType et, Dialog d):
-    eventType(et)
-{
-    dialog = d;
-}
-
-Event::Event(EventType et, string v):
-    eventType(et),
-    video(v)
+Event::Event(Dialog d):
+    eventType(dialog),
+    dial(d)
 {
 
 }
+
+Event::Event(string v):
+    eventType(video),
+    vid(v)
+{
+
+}
+
+Event::Event(Item i):
+    eventType(item_found),
+    itm(i)
+{
+
+}
+
 Event::~Event()
 {
 
@@ -32,5 +41,15 @@ EventType Event::getEventType()
 
 Dialog Event::getDialog()
 {
-    return dialog;
+    return dial;
+}
+
+string Event::getVideo()
+{
+    return vid;
+}
+
+Item Event::getItem()
+{
+    return itm;
 }

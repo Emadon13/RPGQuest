@@ -1,0 +1,3 @@
+Boite coeur
+Une boite rose.<br>Elle doit appartenir a la Grande Tata.
+../ressources/image/girly-box.png

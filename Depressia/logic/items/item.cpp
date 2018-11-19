@@ -4,16 +4,16 @@ using namespace std;
 
 Item::Item():
     name("objet_nul"),
-    description("aussi utile qu'une trempette stabbée sans z move"),
-    icon("")
+    text("aussi utile qu'une trempette stabbée sans z move"),
+    image("")
 {
 
 }
 
 Item::Item(string n, string d, string i):
     name(n),
-    description(d),
-    icon(i)
+    text(d),
+    image(i)
 {
 
 }
@@ -23,14 +23,14 @@ string Item::getName()
     return name;
 }
 
-string Item::getDescription()
+string Item::getText()
 {
-    return description;
+    return text;
 }
 
-string Item::getIcon()
+string Item::getImage()
 {
-    return icon;
+    return image;
 }
 
 void Item::use()
