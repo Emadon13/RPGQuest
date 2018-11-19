@@ -1,6 +1,7 @@
 #ifndef VIDEOFRAME_H
 #define VIDEOFRAME_H
 #include "gamewindow.h"
+#include "clickablelabel.h"
 #include <QMediaPlayer>
 #include <QMediaPlaylist>
 #include <QVideoWidget>
@@ -18,6 +19,8 @@ public:
 
     QMediaPlayer *player;
     QVideoWidget *videoWidget;
+
+    ClickableLabel *clicker;
 };
 
 #endif // VIDEOFRAME_H
