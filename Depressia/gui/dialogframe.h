@@ -13,7 +13,9 @@ public slots:
     void UpdateDialog();
 
 public:
-    DialogFrame(GameWindow *g,MapElement mapElement);
+    DialogFrame(GameWindow *g,Map *m);
+
+    Map *map;
 
     MapElement mapElement;
 

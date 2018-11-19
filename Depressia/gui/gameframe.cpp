@@ -10,9 +10,9 @@
 #include <iostream>
 #include <vector>
 
-GameFrame::GameFrame(GameWindow *g,MapElement mE)
+GameFrame::GameFrame(GameWindow *g,Map *m)
 {
-    MapElement mapElement=mE;
+    map=m;
     game=g;
 
     int WindowWidth(1920);
@@ -28,7 +28,8 @@ GameFrame::GameFrame(GameWindow *g,MapElement mE)
     int TitleWidth(500);
     int TitleHeight(100);
 
-
+    if(map->existUp())
+    {
     ClickableLabel *boutonHaut = new ClickableLabel(game);
     boutonHaut->setPixmap(QPixmap("../ressources/images/fleche-haut.png"));
     boutonHaut->setFixedSize(BoutonWidth,BoutonHeight);
@@ -37,6 +38,11 @@ GameFrame::GameFrame(GameWindow *g,MapElement mE)
     boutonHaut->setCursor(QCursor(QPixmap("../ressources/images/cursor.png"), 0, 0));
     boutonHaut->show();
 
+    QObject::connect(boutonHaut, SIGNAL(clicked()), game, SLOT(GoUp()));
+    }
+
+    if(map->existDown())
+    {
     ClickableLabel *boutonBas = new ClickableLabel(game);
     boutonBas->setPixmap(QPixmap("../ressources/images/fleche-bas.png"));
     boutonBas->setFixedSize(BoutonWidth,BoutonHeight);
@@ -45,6 +51,11 @@ GameFrame::GameFrame(GameWindow *g,MapElement mE)
     boutonBas->setCursor(QCursor(QPixmap("../ressources/images/cursor.png"), 0, 0));
     boutonBas->show();
 
+    QObject::connect(boutonBas, SIGNAL(clicked()), game, SLOT(GoDown()));
+    }
+
+    if(map->existRight())
+    {
     ClickableLabel *boutonDroite = new ClickableLabel(game);
     boutonDroite->setPixmap(QPixmap("../ressources/images/fleche-droite.png"));
     boutonDroite->setFixedSize(BoutonWidth,BoutonHeight);
@@ -53,6 +64,11 @@ GameFrame::GameFrame(GameWindow *g,MapElement mE)
     boutonDroite->setCursor(QCursor(QPixmap("../ressources/images/cursor.png"), 0, 0));
     boutonDroite->show();
 
+    QObject::connect(boutonDroite, SIGNAL(clicked()), game, SLOT(GoRight()));
+    }
+
+    if(map->existLeft())
+    {
     ClickableLabel *boutonGauche = new ClickableLabel(game);
     boutonGauche->setPixmap(QPixmap("../ressources/images/fleche-gauche.png"));
     boutonGauche->setFixedSize(BoutonWidth,BoutonHeight);
@@ -60,6 +76,9 @@ GameFrame::GameFrame(GameWindow *g,MapElement mE)
     boutonGauche->move(BoutonMarge,(WindowHeight-BoutonHeight)/2);
     boutonGauche->setCursor(QCursor(QPixmap("../ressources/images/cursor.png"), 0, 0));
     boutonGauche->show();
+
+    QObject::connect(boutonGauche, SIGNAL(clicked()), game, SLOT(GoLeft()));
+    }
 
     ClickableLabel *teamInfo = new ClickableLabel(game);
     teamInfo->setPixmap(QPixmap("../ressources/images/info-box.png"));
@@ -76,7 +95,7 @@ GameFrame::GameFrame(GameWindow *g,MapElement mE)
     zoneInfoImage->show();
     QLabel *zoneInfoText = new QLabel(game);
     zoneInfoText->setFixedSize(InfoWidth,InfoHeight);
-    zoneInfoText->setText("Non c'est pas une foret !");
+    zoneInfoText->setText(QString::fromStdString(map->getCurrentPosition().getText()));
     zoneInfoText->setAlignment(Qt::AlignCenter);
     zoneInfoText->move(0,0);
     zoneInfoText->show();
@@ -88,14 +107,9 @@ GameFrame::GameFrame(GameWindow *g,MapElement mE)
     zoneTitleImage->show();
     QLabel *zoneTitleText = new QLabel(game);
     zoneTitleText->setFixedSize(TitleWidth,TitleHeight);
-    zoneTitleText->setText("La foret");
+    zoneTitleText->setText(QString::fromStdString(map->getCurrentPosition().getName()));
     zoneTitleText->setAlignment(Qt::AlignCenter);
     zoneTitleText->move(0,WindowHeight-TitleHeight);
     zoneTitleText->show();
-
-    QObject::connect(boutonHaut, SIGNAL(clicked()), game, SLOT(CreateGameFrame()));
-    QObject::connect(boutonBas, SIGNAL(clicked()), game, SLOT(CreateDialogFrame()));
-    QObject::connect(boutonDroite, SIGNAL(clicked()), game, SLOT(CreateVideoFrame()));
-
 }
 

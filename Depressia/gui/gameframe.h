@@ -9,10 +9,11 @@ class GameFrame : QObject
     Q_OBJECT
 
 public:
-    GameFrame(GameWindow *game, MapElement mapElement);
+    GameFrame(GameWindow *game, Map *map);
 
 private :
 
+    Map *map;
     MapElement mapElement;
     GameWindow *game;
 

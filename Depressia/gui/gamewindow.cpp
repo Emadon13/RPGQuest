@@ -18,7 +18,7 @@ using namespace std;
 GameWindow::GameWindow(Map *m,QWidget *parent) :
     QMainWindow (parent)
 {
-    this->map=m;
+    map=m;
 
     setCursor(Qt::CrossCursor);
 
@@ -75,10 +75,12 @@ void GameWindow::CreateGameFrame()
     ClearWidget();
 
     QPalette p( palette() );
-    p.setBrush(QPalette::Window, QBrush(QPixmap("../ressources/images/backgroundMap.png")));
+    p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage()))));
     setPalette(p);
 
-    GameFrame gf(this, mapElement);
+    std::cout<<map->getCurrentPosition().getImage();
+
+    GameFrame gf(this, map);
 }
 
 void GameWindow::CreateBattleFrame()
@@ -86,10 +88,10 @@ void GameWindow::CreateBattleFrame()
     ClearWidget();
 
     QPalette p( palette() );
-    p.setBrush(QPalette::Window, QBrush(QPixmap("../ressources/images/backgroundMap.png")));
+    p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage()))));
     setPalette(p);
 
-    BattleFrame gf(this,mapElement);
+    BattleFrame gf(this,map);
 }
 
 void GameWindow::CreateDialogFrame()
@@ -97,10 +99,10 @@ void GameWindow::CreateDialogFrame()
     ClearWidget();
 
     QPalette p( palette() );
-    p.setBrush(QPalette::Window, QBrush(QPixmap("../ressources/images/background.png")));
+    p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage()))));
     setPalette(p);
 
-    DialogFrame *df = new DialogFrame(this,mapElement);
+    DialogFrame *df = new DialogFrame(this,map);
 }
 
 void GameWindow::CreateVideoFrame()
@@ -115,6 +117,30 @@ Map* GameWindow::GetMap()
     return this->map;
 }
 
+void GameWindow::GoRight()
+{
+    mapElement = map->goRight();
+    ShowFrame();
+}
+
+
+void GameWindow::GoUp()
+{
+    mapElement = map->goUp();
+    ShowFrame();
+}
+
+void GameWindow::GoLeft()
+{
+    mapElement = map->goLeft();
+    ShowFrame();
+}
+
+void GameWindow::GoDown()
+{
+    mapElement = map->goDown();
+    ShowFrame();
+}
 GameWindow::~GameWindow(){
 
 }

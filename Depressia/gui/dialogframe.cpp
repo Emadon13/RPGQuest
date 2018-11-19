@@ -10,10 +10,11 @@
 #include <iostream>
 #include <vector>
 
-DialogFrame::DialogFrame(GameWindow *g, MapElement mapElement) : QObject()
+DialogFrame::DialogFrame(GameWindow *g, Map *m) : QObject()
 {
     this->mapElement=mapElement;
 
+    map=m;
     game=g;
 
     tableau=getDialog();
@@ -55,7 +56,7 @@ DialogFrame::DialogFrame(GameWindow *g, MapElement mapElement) : QObject()
 vector<Dialog> DialogFrame::getDialog()
 {
 
-    Dialog dial = DialogLoader::generate("../ressources/dialogs/le-porno-du-samedi.txt");  // J'ai changé un peu le contenu de ça
+    Dialog dial = map->getCurrentPosition().getEvent().getDialog();  // J'ai changé un peu le contenu de ça
     vector<Dialog> dials;
     dials.push_back(dial);
 

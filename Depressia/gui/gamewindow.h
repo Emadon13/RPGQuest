@@ -29,6 +29,10 @@ public slots:
     void CreateGameFrame();
     void CreateDialogFrame();
     void CreateVideoFrame();
+    void GoUp();
+    void GoDown();
+    void GoRight();
+    void GoLeft();
 
 private:
     Map *map;
