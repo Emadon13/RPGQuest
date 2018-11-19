@@ -1,5 +1,7 @@
 #include "event.h"
 
+using namespace std;
+
 Event::Event():
     eventType(none)
 {
@@ -12,6 +14,12 @@ Event::Event(EventType et, Dialog d):
     dialog = d;
 }
 
+Event::Event(EventType et, string v):
+    eventType(et),
+    video(v)
+{
+
+}
 Event::~Event()
 {
 

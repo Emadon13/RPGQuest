@@ -1,4 +1,4 @@
 Combat !
-Nan je dec c'est pas encore implémenté mdr
+Nan je dec c'est pas encore implemente mdr
 ../ressources/images/ff.jpg
 none

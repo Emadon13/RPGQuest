@@ -34,6 +34,13 @@ MapElement MapElementLoader::generate(string path)
             getline(file,e);
             return MapElement(name, text, image, Event(dialog, DialogLoader::generate(e)));
         }
+
+        else if(et == "video")
+        {
+            getline(file,e);
+            return MapElement(name, text, image, Event(video, e));
+        }
+
         else
         {
             cout << "ERREUR : type d'evenement non reconnu :" << e  << " " << name << endl;

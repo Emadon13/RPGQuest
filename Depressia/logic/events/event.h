@@ -11,14 +11,17 @@ class Event
 public:
     Event();
     Event(EventType et, Dialog d);
+    Event(EventType et, std::string v);
     ~Event();
 
     EventType getEventType();
     Dialog getDialog();
+    std::string getVideo();
 
 private:
     EventType eventType;
     Dialog dialog;
+    std::string video;
 };
 
 #endif // EVENT_H
