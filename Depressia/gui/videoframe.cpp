@@ -24,6 +24,7 @@ VideoFrame::VideoFrame(GameWindow *g, Map *m) : QObject()
     clicker = new ClickableLabel(game);
     clicker->setFixedSize(WindowWidth,WindowHeight);
     clicker->move(0,0);
+    clicker->show();
 
     videoWidget->setGeometry(0,0,WindowWidth,WindowHeight);
     videoWidget->showFullScreen();
