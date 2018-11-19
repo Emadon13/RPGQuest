@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "gamewindow.h"
-#include "clickablelabel.h"
+#include "gui/clickable/clickablelabel.h"
 #include <QPushButton>
 #include <QHBoxLayout>
 #include <QLabel>

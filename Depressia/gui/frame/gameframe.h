@@ -1,6 +1,6 @@
 #ifndef GAMEFRAME_H
 #define GAMEFRAME_H
-#include "gamewindow.h"
+#include "gui/window/gamewindow.h"
 #include "logic/world/mapelement.h"
 
 

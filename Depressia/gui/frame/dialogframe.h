@@ -1,7 +1,7 @@
 #ifndef DIALOGFRAME_H
 #define DIALOGFRAME_H
-#include "gamewindow.h"
-#include "clickablelabel.h"
+#include "gui/window/gamewindow.h"
+#include "gui/clickable/clickablelabel.h"
 #include"io/dialogloader.h"
 
 

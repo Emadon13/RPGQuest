@@ -1,8 +1,8 @@
 #include "dialogframe.h"
-#include "gamewindow.h"
-#include "mainwindow.h"
+#include "gui/window/gamewindow.h"
+#include "gui/window/mainwindow.h"
 #include"io/dialogloader.h"
-#include "clickablelabel.h"
+#include "gui/clickable/clickablelabel.h"
 #include <QPushButton>
 #include <QHBoxLayout>
 #include <QLabel>

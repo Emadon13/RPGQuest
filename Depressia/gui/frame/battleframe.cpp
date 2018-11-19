@@ -1,7 +1,7 @@
 #include "battleframe.h"
-#include "gamewindow.h"
-#include "mainwindow.h"
-#include "clickablelabel.h"
+#include "gui/window/gamewindow.h"
+#include "gui/window/mainwindow.h"
+#include "gui/clickable/clickablelabel.h"
 #include <QPushButton>
 #include <QHBoxLayout>
 #include <QLabel>

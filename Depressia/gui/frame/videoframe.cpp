@@ -2,8 +2,8 @@
 #include <QMediaPlayer>
 #include <QMediaPlaylist>
 #include <QVideoWidget>
-#include "gamewindow.h"
-#include "mainwindow.h"
+#include "gui/window/gamewindow.h"
+#include "gui/window/mainwindow.h"
 
 VideoFrame::VideoFrame(GameWindow *g, Map *m) : QObject()
 {

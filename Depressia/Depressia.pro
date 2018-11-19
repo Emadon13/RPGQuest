@@ -24,15 +24,15 @@ SOURCES += \
     logic/events/dialogelement.cpp \
     io/dialogloader.cpp \
     io/maploader.cpp \
-    gui/mainwindow.cpp \
-    gui/gamewindow.cpp \
-    gui/gameframe.cpp \
-    gui/dialogframe.cpp \
-    gui/clickablelabel.cpp \
-    gui/battleframe.cpp \
-    gui/videoframe.cpp \
+    gui/window/mainwindow.cpp \
+    gui/window/gamewindow.cpp \
+    gui/frame/gameframe.cpp \
+    gui/frame/dialogframe.cpp \
+    gui/clickable/clickablelabel.cpp \
+    gui/frame/battleframe.cpp \
+    gui/frame/videoframe.cpp \
     io/mapelementloader.cpp \
-    gui/clikablevideowidget.cpp
+    gui/clickable/clikablevideowidget.cpp
 
 
 
@@ -60,12 +60,12 @@ HEADERS += \
     logic/events/dialogelement.h \
     io/dialogloader.h \
     io/maploader.h \
-    gui/mainwindow.h \
-    gui/gamewindow.h \
-    gui/gameframe.h \
-    gui/dialogframe.h \
-    gui/clickablelabel.h \
-    gui/battleframe.h \
-    gui/videoframe.h \
+    gui/window/mainwindow.h \
+    gui/window/gamewindow.h \
+    gui/frame/gameframe.h \
+    gui/frame/dialogframe.h \
+    gui/clickable/clickablelabel.h \
+    gui/frame/battleframe.h \
+    gui/frame/videoframe.h \
     io/mapelementloader.h \
-    gui/clikablevideowidget.h
+    gui/clickable/clikablevideowidget.h

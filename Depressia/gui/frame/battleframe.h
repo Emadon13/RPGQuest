@@ -1,6 +1,6 @@
 #ifndef BATTLEFRAME_H
 #define BATTLEFRAME_H
-#include "gamewindow.h"
+#include "gui/window/gamewindow.h"
 #include <QMediaPlayer>
 #include <QMediaPlaylist>
 #include <QVideoWidget>

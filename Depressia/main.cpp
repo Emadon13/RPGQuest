@@ -5,8 +5,8 @@
 #include <fstream>
 
 #include "gui/globalspec.h"
-#include "gui/mainwindow.h"
-#include "gui/gamewindow.h"
+#include "gui/window/mainwindow.h"
+#include "gui/window/gamewindow.h"
 #include "logic/events/fight.h"
 #include "logic/world/map.h"
 #include"io/dialogloader.h"

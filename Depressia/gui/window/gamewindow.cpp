@@ -1,10 +1,10 @@
 #include "gamewindow.h"
-#include "gameframe.h"
-#include "dialogframe.h"
-#include "videoframe.h"
-#include "battleframe.h"
+#include "gui/frame/gameframe.h"
+#include "gui/frame/dialogframe.h"
+#include "gui/frame/videoframe.h"
+#include "gui/frame/battleframe.h"
 #include "mainwindow.h"
-#include "clickablelabel.h"
+#include "gui/clickable/clickablelabel.h"
 #include <QPushButton>
 #include <QHBoxLayout>
 #include <QLabel>

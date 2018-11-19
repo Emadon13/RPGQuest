@@ -1,8 +1,8 @@
 #include "gameframe.h"
-#include "gamewindow.h"
-#include "mainwindow.h"
+#include "gui/window/gamewindow.h"
+#include "gui/window/mainwindow.h"
 #include "logic/world/mapelement.h"
-#include "clickablelabel.h"
+#include "gui/clickable/clickablelabel.h"
 #include <QPushButton>
 #include <QHBoxLayout>
 #include <QLabel>

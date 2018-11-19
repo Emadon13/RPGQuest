@@ -1,8 +1,8 @@
 #ifndef VIDEOFRAME_H
 #define VIDEOFRAME_H
-#include "gamewindow.h"
-#include "clickablelabel.h"
-#include "clikablevideowidget.h"
+#include "gui/window/gamewindow.h"
+#include "gui/clickable/clickablelabel.h"
+#include "gui/clickable/clikablevideowidget.h"
 #include <QMediaPlayer>
 #include <QMediaPlaylist>
 #include <QVideoWidget>
