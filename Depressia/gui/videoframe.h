@@ -11,9 +11,10 @@ class VideoFrame : QObject
     Q_OBJECT
 
 public:
-    VideoFrame(GameWindow *game);
+    VideoFrame(GameWindow *game, Map *m);
 
     GameWindow *game;
+    Map *map;
 
     QMediaPlayer *player;
     QVideoWidget *videoWidget;

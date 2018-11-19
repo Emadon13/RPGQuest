@@ -5,9 +5,10 @@
 #include "gamewindow.h"
 #include "mainwindow.h"
 
-VideoFrame::VideoFrame(GameWindow *g) : QObject()
+VideoFrame::VideoFrame(GameWindow *g, Map *m) : QObject()
 {
 
+    map=m;
     game=g;
 
     int WindowWidth(1920);

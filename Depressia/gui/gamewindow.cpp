@@ -123,7 +123,7 @@ void GameWindow::CreateVideoFrame()
 {
     ClearWidget();
 
-    VideoFrame *vf = new VideoFrame(this);
+    VideoFrame *vf = new VideoFrame(this,map);
 }
 
 Map* GameWindow::GetMap()
