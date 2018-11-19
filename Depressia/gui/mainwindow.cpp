@@ -6,12 +6,15 @@
 #include <QLabel>
 #include <QMediaPlayer>
 #include "logic/game.h"
+#include "logic/world/map.h"
 
-MainWindow::MainWindow(Game *game, QWidget *parent) :
+MainWindow::MainWindow(Game *game, Map &m, QWidget *parent) :
     QMainWindow(parent)
 {
     //ui->setupUi(this);
     this->game=game;
+
+    this->map=&m;
 
     QMediaPlaylist *playlist = new QMediaPlaylist();
     playlist->addMedia(QUrl("../ressources/musics/theme-principal.mp3"));
@@ -82,8 +85,6 @@ MainWindow::MainWindow(Game *game, QWidget *parent) :
     imageLeft->move(espacementH,WindowHeight-espacementV-ImageHeight);
     imageRight->move(espacementH*3+ImageWidth+BoutonWidth,WindowHeight-espacementV-ImageHeight);
 
-    GameWindow gameWindow;
-
     QObject::connect(boutonPlay, SIGNAL(clicked()), this, SLOT(launchGame()));
     QObject::connect(boutonPlay, SIGNAL(clicked()), this, SLOT(close()));
     QObject::connect(boutonQuit, SIGNAL(clicked()), this, SLOT(close()));
@@ -93,7 +94,7 @@ MainWindow::MainWindow(Game *game, QWidget *parent) :
 
 void MainWindow::launchGame()
 {
-    gameWindow=new GameWindow();
+    GameWindow *gameWindow=new GameWindow(map);
     gameWindow->show();
 }
 

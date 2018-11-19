@@ -9,6 +9,7 @@
 #include <QtMultimediaWidgets>
 #include "gamewindow.h"
 #include "logic/game.h"
+#include "logic/world/map.h"
 
 
 class MainWindow : public QMainWindow
@@ -16,7 +17,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(Game *game,QWidget *parent = nullptr);
+    explicit MainWindow(Game *game,Map &m,QWidget *parent = nullptr);
     ~MainWindow();
 
 public slots:
@@ -24,6 +25,8 @@ public slots:
 
 private:
     Game *game;
+
+    Map *map;
 
     QMediaPlaylist *playlist;
     QMediaPlayer *music;

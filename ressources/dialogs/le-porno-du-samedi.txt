@@ -1,6 +1,6 @@
 right
 Bonasse
-Tu veux que je te montre quelque-chose de... <br>Sensuel ?
+Tu veux que je te montre quelque-chose de... <br>sensuel ?
 ../ressources/images/fille-normale.png
 left
 Musclor
@@ -8,16 +8,16 @@ Hum...
 ../ressources/images/homme-demande.png
 left
 Musclor
-Oui, vas-y poupée
+Oui, vas-y poupee
 ../ressources/images/homme-normal.png
 right
 Bonasse
 Ha ha ! Quel coquin ! <br>Si tu instites je vais te montrer...
-../ressources/images/fille-colere.png
+../ressources/images/fille-rire.png
 right
 Bonasse
 MON PETIT OISEAU !!!!!!
-../ressources/images/fille-colere.png
+../ressources/images/fille-normale.png
 right
 Natoo
 piou

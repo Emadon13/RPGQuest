@@ -1,5 +1,6 @@
 #include "mapelement.h"
 #include <iostream>
+#include <QObject>
 
 using namespace std;
 

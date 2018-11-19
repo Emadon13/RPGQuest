@@ -11,12 +11,15 @@
 #include <QTimer>
 #include <iostream>
 #include <vector>
+#include "logic/world/map.h"
 
 using namespace std;
 
-GameWindow::GameWindow(QWidget *parent) :
+GameWindow::GameWindow(Map *m,QWidget *parent) :
     QMainWindow (parent)
 {
+    this->map=m;
+
     setCursor(Qt::CrossCursor);
 
     int WindowWidth(1920);
@@ -28,7 +31,34 @@ GameWindow::GameWindow(QWidget *parent) :
 
     showFullScreen();
 
-    CreateGameFrame();
+    mapElement=map->getCurrentPosition();
+
+    ShowFrame();
+}
+
+void GameWindow::ShowFrame()
+{
+    EventType eventType = mapElement.getEvent().getEventType();
+    if(eventType == dialog)
+    {
+        CreateDialogFrame();
+    }
+    else if(eventType == item_found)
+    {
+        CreateGameFrame();
+    }
+    else if(eventType == fight)
+    {
+        CreateGameFrame();
+    }
+    else if(eventType == final_screen)
+    {
+        CreateGameFrame();
+    }
+    else
+    {
+        CreateGameFrame();
+    }
 }
 
 void GameWindow::ClearWidget()
@@ -48,7 +78,7 @@ void GameWindow::CreateGameFrame()
     p.setBrush(QPalette::Window, QBrush(QPixmap("../ressources/images/backgroundMap.png")));
     setPalette(p);
 
-    GameFrame gf(this);
+    GameFrame gf(this, mapElement);
 }
 
 void GameWindow::CreateBattleFrame()
@@ -59,7 +89,7 @@ void GameWindow::CreateBattleFrame()
     p.setBrush(QPalette::Window, QBrush(QPixmap("../ressources/images/backgroundMap.png")));
     setPalette(p);
 
-    BattleFrame gf(this);
+    BattleFrame gf(this,mapElement);
 }
 
 void GameWindow::CreateDialogFrame()
@@ -70,7 +100,7 @@ void GameWindow::CreateDialogFrame()
     p.setBrush(QPalette::Window, QBrush(QPixmap("../ressources/images/background.png")));
     setPalette(p);
 
-    DialogFrame *gf = new DialogFrame(this);
+    DialogFrame *df = new DialogFrame(this,mapElement);
 }
 
 void GameWindow::CreateVideoFrame()
@@ -78,6 +108,11 @@ void GameWindow::CreateVideoFrame()
     ClearWidget();
 
     VideoFrame *vf = new VideoFrame(this);
+}
+
+Map* GameWindow::GetMap()
+{
+    return this->map;
 }
 
 GameWindow::~GameWindow(){

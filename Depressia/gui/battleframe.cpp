@@ -11,7 +11,7 @@
 #include <QMediaPlaylist>
 #include <QVideoWidget>
 
-BattleFrame::BattleFrame(GameWindow *g) : QObject()
+BattleFrame::BattleFrame(GameWindow *g, MapElement mapElement) : QObject()
 {
 
     game=g;

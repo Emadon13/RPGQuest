@@ -44,8 +44,9 @@ int main(int argc, char *argv[])
     QApplication::setFont(QFont("Fixedsys"));
 
     Game *game = new Game();
+    Map map = game->getMap();
 
-    MainWindow w(game);
+    MainWindow w(game,map);
     w.show();
 
     return app.exec();

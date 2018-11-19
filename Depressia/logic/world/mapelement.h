@@ -2,10 +2,12 @@
 #define MAPELEMENT_H
 
 #include"logic/events/event.h"
+#include <QObject>
 
 
 class MapElement
 {
+
 public:
     MapElement();
     MapElement(std::string n, std::string t, std::string i, Event e);

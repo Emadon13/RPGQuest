@@ -7,6 +7,8 @@
 #include <QLabel>
 #include <iostream>
 #include <vector>
+#include "logic/world/map.h"
+#include "logic/world/mapelement.h"
 
 using namespace std;
 
@@ -15,18 +17,23 @@ class GameWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit GameWindow(QWidget *parent = nullptr);
+    explicit GameWindow(Map *m, QWidget *parent = nullptr);
     ~GameWindow();
 
     void ClearWidget();
+    Map* GetMap();
 
 public slots:
+    void ShowFrame();
     void CreateBattleFrame();
     void CreateGameFrame();
     void CreateDialogFrame();
     void CreateVideoFrame();
 
 private:
+    Map *map;
+
+    MapElement mapElement;
 
     QPalette *p;
 };

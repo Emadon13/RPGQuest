@@ -1,6 +1,7 @@
 #include "gameframe.h"
 #include "gamewindow.h"
 #include "mainwindow.h"
+#include "logic/world/mapelement.h"
 #include "clickablelabel.h"
 #include <QPushButton>
 #include <QHBoxLayout>
@@ -9,8 +10,11 @@
 #include <iostream>
 #include <vector>
 
-GameFrame::GameFrame(GameWindow *game)
+GameFrame::GameFrame(GameWindow *g,MapElement mE)
 {
+    MapElement mapElement=mE;
+    game=g;
+
     int WindowWidth(1920);
     int WindowHeight(1080);
 
@@ -23,6 +27,8 @@ GameFrame::GameFrame(GameWindow *game)
 
     int TitleWidth(500);
     int TitleHeight(100);
+
+    if()
 
     ClickableLabel *boutonHaut = new ClickableLabel(game);
     boutonHaut->setPixmap(QPixmap("../ressources/images/fleche-haut.png"));
@@ -88,7 +94,7 @@ GameFrame::GameFrame(GameWindow *game)
     zoneTitleText->move(0,WindowHeight-TitleHeight);
     zoneTitleText->show();
 
-    QObject::connect(boutonHaut, SIGNAL(clicked()), game, SLOT(CreateBattleFrame()));
+    QObject::connect(boutonHaut, SIGNAL(clicked()), game, SLOT(CreateGameFrame()));
     QObject::connect(boutonBas, SIGNAL(clicked()), game, SLOT(CreateDialogFrame()));
     QObject::connect(boutonDroite, SIGNAL(clicked()), game, SLOT(CreateVideoFrame()));
 
