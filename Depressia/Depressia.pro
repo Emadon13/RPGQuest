@@ -31,7 +31,8 @@ SOURCES += \
     gui/clickablelabel.cpp \
     gui/battleframe.cpp \
     gui/videoframe.cpp \
-    io/mapelementloader.cpp
+    io/mapelementloader.cpp \
+    gui/clikablevideowidget.cpp
 
 
 
@@ -66,4 +67,5 @@ HEADERS += \
     gui/clickablelabel.h \
     gui/battleframe.h \
     gui/videoframe.h \
-    io/mapelementloader.h
+    io/mapelementloader.h \
+    gui/clikablevideowidget.h

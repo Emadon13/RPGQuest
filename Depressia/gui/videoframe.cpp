@@ -18,19 +18,14 @@ VideoFrame::VideoFrame(GameWindow *g, Map *m) : QObject()
 
     player->setMedia(QUrl(QUrl::fromLocalFile("../ressources/videos/trailer.wmv")));
 
-    videoWidget = new QVideoWidget(game);
+    videoWidget = new ClikableVideoWidget(game);
     player->setVideoOutput(videoWidget);
-
-    clicker = new ClickableLabel(game);
-    clicker->setFixedSize(WindowWidth,WindowHeight);
-    clicker->move(0,0);
-    clicker->show();
 
     videoWidget->setGeometry(0,0,WindowWidth,WindowHeight);
     videoWidget->showFullScreen();
     player->play();
 
     QObject::connect(player, SIGNAL(stateChanged(QMediaPlayer::State)), game, SLOT(CreateGameFrame()));
-    QObject::connect(clicker, SIGNAL(clicked()), game, SLOT(CreateGameFrame()));
+    QObject::connect(videoWidget, SIGNAL(clicked()), game, SLOT(CreateGameFrame()));
 
 }
