@@ -28,7 +28,6 @@ GameFrame::GameFrame(GameWindow *g,MapElement mE)
     int TitleWidth(500);
     int TitleHeight(100);
 
-    if()
 
     ClickableLabel *boutonHaut = new ClickableLabel(game);
     boutonHaut->setPixmap(QPixmap("../ressources/images/fleche-haut.png"));

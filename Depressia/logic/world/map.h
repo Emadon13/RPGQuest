@@ -1,14 +1,16 @@
+#pragma once
 #ifndef MAP_H
 #define MAP_H
 
 #include"logic/world/mapelement.h"
+#include"io/mapelementloader.h"
 
 
 class Map
 {
 public:
     Map();
-    Map(std::vector<MapElement> wm, std::vector<unsigned int> r, std::vector<unsigned int> u, std::vector<unsigned int> l, std::vector<unsigned int> d);
+    Map(std::vector<std::string> wm, std::vector<unsigned int> r, std::vector<unsigned int> u, std::vector<unsigned int> l, std::vector<unsigned int> d);
     MapElement getCurrentPosition();
     int getNbElements();
 
@@ -25,7 +27,7 @@ public:
     unsigned int currentPosition;
 private:
 
-    std::vector<MapElement> elements;
+    std::vector<std::string> elements;
     std::vector<unsigned int> rights;
     std::vector<unsigned int> ups;
     std::vector<unsigned int> lefts;

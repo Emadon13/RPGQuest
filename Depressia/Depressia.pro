@@ -30,7 +30,8 @@ SOURCES += \
     gui/dialogframe.cpp \
     gui/clickablelabel.cpp \
     gui/battleframe.cpp \
-    gui/videoframe.cpp
+    gui/videoframe.cpp \
+    io/mapelementloader.cpp
 
 
 
@@ -64,4 +65,5 @@ HEADERS += \
     gui/dialogframe.h \
     gui/clickablelabel.h \
     gui/battleframe.h \
-    gui/videoframe.h
+    gui/videoframe.h \
+    io/mapelementloader.h

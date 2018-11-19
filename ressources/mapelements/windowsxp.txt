@@ -1,0 +1,5 @@
+windowsxp
+Mais où sont donc passés les Télétubbies ?
+../ressources/images/windowsxp.jepg
+dialog
+../ressources/dialogs/nani.txt

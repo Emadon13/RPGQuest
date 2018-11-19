@@ -22,7 +22,6 @@ int main(int argc, char *argv[])
 
     // ------------ TEST VINCENT -----------------
 
-    /*
 
     Game g;
     Map m = g.getMap();
@@ -35,8 +34,6 @@ int main(int argc, char *argv[])
     if(m.getCurrentPosition().getEvent().getEventType() == dialog)
         for(int i=0 ; i<m.getCurrentPosition().getEvent().getDialog().getSize() ; i++)
             cout << m.getCurrentPosition().getEvent().getDialog().getElement(i).getText() << endl;
-
-    */
 
 
     // ------------TEST QUENTIN ------------------

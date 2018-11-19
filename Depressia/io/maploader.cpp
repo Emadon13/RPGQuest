@@ -10,16 +10,14 @@ MapLoader::MapLoader()
 
 Map MapLoader::generate()
 {
-    Map map;
-    return map;
+    return Map();
 }
 
 Map MapLoader::generate(string path)
 {
     ifstream file(path);
-    string line, name, text, image, et, e;
-    vector<MapElement> mapElements;
-    MapElement mapElement;
+    string line, mapElementAdd;
+    vector<string> mapElementsAdd;
     unsigned int nb_elements;
     unsigned int transit;
     vector<unsigned int> rights, ups, lefts, downs;
@@ -31,29 +29,8 @@ Map MapLoader::generate(string path)
 
         for(unsigned i=0 ; i<nb_elements ; i++)
         {
-            getline(file,name);
-            getline(file,text);
-            getline(file,image);
-            getline(file,et);
-
-            if(et == "none")
-                mapElement = MapElement(name, text, image, Event());
-
-            else if(et == "dialog")
-            {
-                getline(file,e);
-                mapElement = MapElement(name, text, image, Event(dialog, DialogLoader::generate(e)));
-            }
-            else
-            {
-                cout << "ERREUR : type d'évènement non reconnu :" << e << endl;
-                mapElement = MapElement(name, text, image, Event());
-
-            }
-
-
-
-            mapElements.push_back(mapElement);
+            getline(file,mapElementAdd);
+            mapElementsAdd.push_back(mapElementAdd);
 
         }
 
@@ -82,7 +59,7 @@ Map MapLoader::generate(string path)
         }
 
 
-        return Map(mapElements, rights, ups, lefts, downs);
+        return Map(mapElementsAdd, rights, ups, lefts, downs);
 
     }
 

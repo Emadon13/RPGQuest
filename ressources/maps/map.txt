@@ -1,28 +1,10 @@
 5
-Mt Tibidaboo-doobadi
-On dit que la Grande Tata vit cachée au coeur <br> de cette montagne...
-../ressources/images/backgroundMap.png
-none
-windowsxp
-Mais où sont donc passés les Télétubbies ?
-../ressources/images/windowsxp.jepg
-dialog
-../ressources/dialogs/nani.txt
-Combat !
-Nan je déconne c'est pas encore implémenté mdr
-../ressources/images/ff.jpg
-none
-Le Royaume des B-O-O-B-I-E-S
-Ca part trop loin, j'assume plus <br>*quitte le projet*
-../ressources/images/toloveru.jpg
-none
-Lac Omae Wa
-On dit que Quentin le pokémaniac habite ces terres...
-../ressources/image/background.png
-dialog
-../ressources/dialogs/le-porno-du-samedi.txt
+../ressources/mapelements/mt.txt
+../ressources/mapelements/windowsxp.txt
+../ressources/mapelements/combat.txt
+../ressources/mapelements/boobies.txt
+../ressources/mapelements/omaewa.txt
 0 2 3 3 4
 1 1 4 2 4
 0 1 1 2 4
-0 0 3 3 2 
-end
+0 0 3 3 2

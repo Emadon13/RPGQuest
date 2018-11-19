@@ -11,8 +11,7 @@ Map::Map():
     downs(0)
 {
 
-    MapElement w1("Forêt", "La forêt est calme et sereine...", "../ressources/images/background.png", Event());
-    elements.push_back(w1);
+    elements.push_back("");
     rights.push_back(0);
     ups.push_back(0);
     lefts.push_back(0);
@@ -22,7 +21,7 @@ Map::Map():
 }
 
 
-Map::Map(vector<MapElement> wm, vector<unsigned int> r, vector<unsigned int> u, vector<unsigned int> l, vector<unsigned int> d):
+Map::Map(vector<string> wm, vector<unsigned int> r, vector<unsigned int> u, vector<unsigned int> l, vector<unsigned int> d):
     elements(wm),
     rights(r),
     ups(u),
@@ -31,8 +30,7 @@ Map::Map(vector<MapElement> wm, vector<unsigned int> r, vector<unsigned int> u, 
 {
     if(elements.empty())
     {
-        MapElement w1("Forêt", "La forêt est calme et sereine...", "", Event());
-        elements.push_back(w1);
+        elements.push_back("");
         rights.push_back(0);
         ups.push_back(0);
         lefts.push_back(0);
@@ -49,7 +47,7 @@ Map::Map(vector<MapElement> wm, vector<unsigned int> r, vector<unsigned int> u, 
 MapElement Map::getCurrentPosition()
 {
     if(currentPosition < elements.size())
-        return elements.at(currentPosition);
+        return MapElementLoader::generate(elements.at(currentPosition));
     else
         cout << "ERREUR : currentPosition a dépasser la taille d'elements" << endl;
         return MapElement();
@@ -63,25 +61,25 @@ int Map::getNbElements()
 MapElement Map::goRight()
 {
     currentPosition = rights.at(currentPosition);
-    return elements.at(currentPosition);
+    return MapElementLoader::generate(elements.at(currentPosition));
 }
 
 MapElement Map::goUp()
 {
     currentPosition = ups.at(currentPosition);
-    return elements.at(currentPosition);
+    return MapElementLoader::generate(elements.at(currentPosition));
 }
 
 MapElement Map::goLeft()
 {
     currentPosition = lefts.at(currentPosition);
-    return elements.at(currentPosition);
+    return MapElementLoader::generate(elements.at(currentPosition));
 }
 
 MapElement Map::goDown()
 {
     currentPosition = downs.at(currentPosition);
-    return elements.at(currentPosition);
+    return MapElementLoader::generate(elements.at(currentPosition));
 }
 
 bool Map::existRight()
