@@ -24,9 +24,13 @@ public:
     bool existLeft();
     bool existDown();
 
+    bool isEventHapp();
+    void setEventHapp();
+
     unsigned int currentPosition;
 private:
 
+    std::vector<bool> eventHapp;
     std::vector<std::string> elements;
     std::vector<unsigned int> rights;
     std::vector<unsigned int> ups;

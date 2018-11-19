@@ -22,6 +22,7 @@ Map::Map():
 
 
 Map::Map(vector<string> wm, vector<unsigned int> r, vector<unsigned int> u, vector<unsigned int> l, vector<unsigned int> d):
+    eventHapp(wm.size(), false),
     elements(wm),
     rights(r),
     ups(u),
@@ -102,6 +103,12 @@ bool Map::existDown()
     return(downs.at(currentPosition) != currentPosition);
 }
 
+bool Map::isEventHapp()
+{
+    return eventHapp.at(currentPosition);
+}
 
-
-
+void Map::setEventHapp()
+{
+    eventHapp.at(currentPosition) = true;
+}
