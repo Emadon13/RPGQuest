@@ -39,21 +39,35 @@ GameWindow::GameWindow(Map *m,QWidget *parent) :
 void GameWindow::ShowFrame()
 {
     EventType eventType = mapElement.getEvent().getEventType();
-    if(eventType == dialog)
+
+    if(!map->isEventHapp())
     {
-        CreateDialogFrame();
-    }
-    else if(eventType == item_found)
-    {
-        CreateGameFrame();
-    }
-    else if(eventType == fight)
-    {
-        CreateGameFrame();
-    }
-    else if(eventType == final_screen)
-    {
-        CreateGameFrame();
+        if(eventType == dialog)
+        {
+            CreateDialogFrame();
+            map->setEventHapp();
+        }
+        else if(eventType == item_found)
+        {
+            CreateGameFrame();
+        }
+        else if(eventType == fight)
+        {
+            CreateGameFrame();
+        }
+        else if(eventType == final_screen)
+        {
+            CreateGameFrame();
+        }
+        else if(eventType == video)
+        {
+            CreateVideoFrame();
+            map->setEventHapp();
+        }
+        else
+        {
+            CreateGameFrame();
+        }
     }
     else
     {
