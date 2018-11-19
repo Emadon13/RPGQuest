@@ -26,6 +26,6 @@ VideoFrame::VideoFrame(GameWindow *g, Map *m) : QObject()
     player->play();
 
     QObject::connect(player, SIGNAL(stateChanged(QMediaPlayer::State)), game, SLOT(CreateGameFrame()));
-    QObject::connect(videoWidget, SIGNAL(clicked()), game, SLOT(CreateGameFrame()));
+    QObject::connect(videoWidget, SIGNAL(clicked()), player, SLOT(stop()));
 
 }

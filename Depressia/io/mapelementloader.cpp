@@ -45,7 +45,7 @@ MapElement MapElementLoader::generate(string path)
         else if(et == "item_found")
         {
             getline(file, e);
-            return MapElement(name, text, image, Event(ItemLoader::generate(e)))
+            return MapElement(name, text, image, Event(ItemLoader::generate(e)));
         }
 
         else
