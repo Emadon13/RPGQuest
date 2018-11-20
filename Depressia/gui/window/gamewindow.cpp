@@ -80,10 +80,16 @@ void GameWindow::ShowFrame()
 
 void GameWindow::afficheItem()
 {
-    ItemWindow *itemWindow=new ItemWindow(map);
+    ItemWindow *itemWindow=new ItemWindow(this,map);
     itemWindow->show();
     map->setEventHapp();
     CreateGameFrame();
+    setDisabled(true);
+}
+
+void GameWindow::resetFocus()
+{
+    setEnabled(true);
 }
 
 void GameWindow::ClearWidget()

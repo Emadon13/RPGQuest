@@ -35,6 +35,7 @@ public slots:
     void GoRight();
     void GoLeft();
     void afficheItem();
+    void resetFocus();
 
 private:
     Map *map;

@@ -1,8 +1,9 @@
 #include "itemwindow.h"
 #include "logic/game.h"
+#include "gui/window/gamewindow.h"
 #include <QLabel>
 
-ItemWindow::ItemWindow(Map *m, QWidget *parent) :
+ItemWindow::ItemWindow(GameWindow *game,Map *m, QWidget *parent) :
     QMainWindow(parent)
 {
 
@@ -30,9 +31,17 @@ ItemWindow::ItemWindow(Map *m, QWidget *parent) :
     setWindowIcon(QIcon("../ressources/images/icone.png"));
     setFixedSize(WindowWidth,WindowHeight);
 
-    QPalette p( palette() );
-    p.setBrush(QPalette::Window, QBrush(QPixmap("../ressources/images/itemBackground.png")));
-    setPalette(p);
+
+    setCursor(Qt::CrossCursor);
+
+    setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
+    setAttribute(Qt::WA_TranslucentBackground);
+
+    QLabel *background = new QLabel(this);
+    background->setPixmap(QPixmap("../ressources/images/itemBackground.png"));
+    background->setFixedSize(WindowWidth,WindowHeight);
+    background->move(0,0);
+    background->show();
 
     ok = new QPushButton("OK !", this);
     ok->setFixedSize(BoutonWidth,BoutonHeight);
@@ -41,7 +50,7 @@ ItemWindow::ItemWindow(Map *m, QWidget *parent) :
     ok->show();
 
     QLabel *image = new QLabel(this);
-    image->setPixmap(QPixmap(QString::fromStdString(mapElement.getEvent().getItem().getImage())));
+    image->setPixmap(QPixmap(QString::fromStdString(mapElement.getEvent().getItem().getImage())).scaled(ImageWidth,ImageHeight));
     image->setFixedSize(ImageWidth,ImageHeight);
     image->move(espacement,(WindowHeight-ImageHeight)/2);
     image->show();
@@ -57,11 +66,12 @@ ItemWindow::ItemWindow(Map *m, QWidget *parent) :
     info->setText(QString::fromStdString(mapElement.getEvent().getItem().getText()));
     info->setFixedSize(InfoWidth,InfoHeight);
     info->setAlignment(Qt::AlignCenter);
-    info->move(espacement*2+ImageWidth,espacement*2+TitreHeight);
+    info->move(espacement*2+ImageWidth,espacement+TitreHeight);
     info->show();
 
 std::cout<<mapElement.getEvent().getItem().getImage();
 
     QObject::connect(ok, SIGNAL(clicked()), this, SLOT(close()));
+    QObject::connect(ok, SIGNAL(clicked()), game, SLOT(resetFocus()));
 
 }
