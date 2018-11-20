@@ -6,7 +6,7 @@ Recover::Recover():
     Skill()
 {
     name = "Soin";
-    description = "Un sort de soin basique";
+    text = "Un sort de soin basique";
     coef = 1.;
     categories.push_back(heal);
 }

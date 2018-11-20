@@ -18,7 +18,7 @@ public:
 
 protected:
     std::string name;
-    std::string description;
+    std::string text;
     int mpCost;
     std::vector <Category> categories;
 
