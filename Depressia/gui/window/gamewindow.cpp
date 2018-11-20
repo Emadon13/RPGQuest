@@ -3,6 +3,7 @@
 #include "gui/frame/dialogframe.h"
 #include "gui/frame/videoframe.h"
 #include "gui/frame/battleframe.h"
+#include "gui/frame/itemframe.h"
 #include "mainwindow.h"
 #include "gui/clickable/clickablelabel.h"
 #include <QPushButton>
@@ -12,6 +13,7 @@
 #include <iostream>
 #include <vector>
 #include "logic/world/map.h"
+#include "gui/window/itemwindow.h"
 
 using namespace std;
 
@@ -49,7 +51,7 @@ void GameWindow::ShowFrame()
         }
         else if(eventType == item_found)
         {
-            CreateGameFrame();
+            CreateItemFrame();
         }
         else if(eventType == fight)
         {
@@ -75,6 +77,14 @@ void GameWindow::ShowFrame()
     }
 }
 
+
+void GameWindow::afficheItem()
+{
+    ItemWindow *itemWindow=new ItemWindow(map);
+    itemWindow->show();
+    map->setEventHapp();
+}
+
 void GameWindow::ClearWidget()
 {
     QList<QWidget*> list = findChildren<QWidget*>();
@@ -95,6 +105,17 @@ void GameWindow::CreateGameFrame()
     std::cout<<map->getCurrentPosition().getImage();
 
     GameFrame gf(this, map);
+}
+
+void GameWindow::CreateItemFrame()
+{
+    ClearWidget();
+
+    QPalette p( palette() );
+    p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage()))));
+    setPalette(p);
+
+    ItemFrame itemFrame(this, map);
 }
 
 void GameWindow::CreateBattleFrame()

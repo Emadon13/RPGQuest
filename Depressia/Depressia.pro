@@ -34,7 +34,9 @@ SOURCES += \
     io/mapelementloader.cpp \
     gui/clickable/clikablevideowidget.cpp \
     io/itemloader.cpp \
-    logic/events/itemfound.cpp
+    logic/events/itemfound.cpp \
+    gui/frame/itemframe.cpp \
+    gui/window/itemwindow.cpp
 
 
 
@@ -72,4 +74,6 @@ HEADERS += \
     io/mapelementloader.h \
     gui/clickable/clikablevideowidget.h \
     io/itemloader.h \
-    logic/events/itemfound.h
+    logic/events/itemfound.h \
+    gui/frame/itemframe.h \
+    gui/window/itemwindow.h
