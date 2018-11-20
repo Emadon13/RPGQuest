@@ -1,4 +1,4 @@
 Mt Tibidaboo-dabida
 On dit que la Grande Tata vit cachee au coeur <br> de cette montagne...
-../ressources/images/backgroundMap.png
+../ressources/images/background.gif
 none
