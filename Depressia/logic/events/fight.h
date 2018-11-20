@@ -10,6 +10,8 @@ class Fight
 {
 public:
     Fight();
+
+    /*
     Fight(Entity* o[]);
 
     Entity** getHeroes();
@@ -28,6 +30,8 @@ private:
 
 
     void setOrder(std::vector <Entity> fighters);
+
+    */
 };
 
 #endif // FIGHT_H

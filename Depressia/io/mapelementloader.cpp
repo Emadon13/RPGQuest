@@ -1,7 +1,10 @@
 #include "mapelementloader.h"
 #include "io/mapelementloader.h"
-#include"io/dialogloader.h"
-#include"io/itemloader.h"
+#include "io/dialogloader.h"
+#include "io/itemloader.h"
+#include "logic/events/itemfound.h"
+#include "logic/events/save.h"
+#include "logic/events/video.h"
 
 using namespace std;
 
@@ -28,30 +31,33 @@ MapElement MapElementLoader::generate(string path)
         getline(file,et);
 
         if(et == "none")
-            return MapElement(name, text, image, Event());
+            return MapElement(name, text, image, NULL);
+
+        else if(et == "save")
+            return MapElement(name, text, image, new Save());
 
         else if(et == "dialog")
         {
             getline(file,e);
-            return MapElement(name, text, image, Event(DialogLoader::generate(e)));
+            return MapElement(name, text, image, new Dialog(DialogLoader::generate(e)));
         }
 
         else if(et == "video")
         {
             getline(file,e);
-            return MapElement(name, text, image, Event(e));
+            return MapElement(name, text, image, new Video(e));
         }
 
         else if(et == "item_found")
         {
             getline(file, e);
-            return MapElement(name, text, image, Event(ItemLoader::generate(e)));
+            return MapElement(name, text, image, new ItemFound(ItemLoader::generate(e)));
         }
 
         else
         {
             cout << "ERREUR : type d'evenement non reconnu :" << e  << " " << name << endl;
-            return MapElement(name, text, image, Event());
+            return MapElement(name, text, image, new Event());
 
         }
     }

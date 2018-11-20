@@ -37,7 +37,9 @@ SOURCES += \
     logic/events/itemfound.cpp \
     gui/frame/itemframe.cpp \
     gui/window/itemwindow.cpp \
-    logic/entities/enemy.cpp
+    logic/entities/enemy.cpp \
+    logic/events/video.cpp \
+    logic/events/save.cpp
 
 
 
@@ -78,4 +80,6 @@ HEADERS += \
     logic/events/itemfound.h \
     gui/frame/itemframe.h \
     gui/window/itemwindow.h \
-    logic/entities/enemy.h
+    logic/entities/enemy.h \
+    logic/events/video.h \
+    logic/events/save.h

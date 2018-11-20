@@ -8,12 +8,12 @@ MapElement::MapElement():
     name("titre nul"),
     text("rien à dire..."),
     image(""),
-    event()
+    event(0)
 {
 
 }
 
-MapElement::MapElement(string n, string t, string i, Event e):
+MapElement::MapElement(string n, string t, string i, Event* e):
     name(n),
     text(t),
     image(i),
@@ -38,7 +38,7 @@ string MapElement::getImage()
     return image;
 }
 
-Event MapElement::getEvent()
+Event* MapElement::getEvent()
 {
     return event;
 }

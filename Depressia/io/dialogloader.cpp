@@ -9,8 +9,7 @@ DialogLoader::DialogLoader()
 
 Dialog DialogLoader::generate()
 {
-    Dialog dialog;
-    return dialog;
+    return Dialog();
 }
 
 Dialog DialogLoader::generate(string path)

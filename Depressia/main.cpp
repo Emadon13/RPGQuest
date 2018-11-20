@@ -31,10 +31,6 @@ int main(int argc, char *argv[])
 
     cout << m.getCurrentPosition().getName() << endl;
 
-    if(m.getCurrentPosition().getEvent().getEventType() == dialog)
-        for(int i=0 ; i<m.getCurrentPosition().getEvent().getDialog().getSize() ; i++)
-            cout << m.getCurrentPosition().getEvent().getDialog().getElement(i).getText() << endl;
-
 
     // ------------TEST QUENTIN ------------------
     QApplication app(argc, argv);

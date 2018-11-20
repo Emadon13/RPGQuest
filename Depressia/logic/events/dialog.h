@@ -4,9 +4,10 @@
 #include<vector>
 #include<iostream>
 #include"logic/events/dialogelement.h"
+#include"logic/events/event.h"
 
 
-class Dialog
+class Dialog : public Event
 {
 public:
     Dialog();
@@ -16,7 +17,6 @@ public:
     int getSize();
 
 private:
-
     std::vector<DialogElement> elements;
 };
 
