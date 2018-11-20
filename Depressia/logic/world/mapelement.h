@@ -11,6 +11,7 @@ class MapElement
 public:
     MapElement();
     MapElement(std::string n, std::string t, std::string i, Event* e);
+    ~MapElement();
 
     std::string getName();
     std::string getText();
