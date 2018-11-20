@@ -31,7 +31,7 @@ ItemWindow::ItemWindow(Map *m, QWidget *parent) :
     setFixedSize(WindowWidth,WindowHeight);
 
     QPalette p( palette() );
-    p.setBrush(QPalette::Window, QBrush(QPixmap("../ressources/images/dialog.png")));
+    p.setBrush(QPalette::Window, QBrush(QPixmap("../ressources/images/itemBackground.png")));
     setPalette(p);
 
     ok = new QPushButton("OK !", this);
