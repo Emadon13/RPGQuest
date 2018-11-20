@@ -1,5 +1,7 @@
 #include "game.h"
 
+using namespace std;
+
 Game::Game()
 {
     map = MapLoader::generate("../ressources/maps/map.txt");
@@ -8,4 +10,46 @@ Game::Game()
 Map Game::getMap()
 {
     return map;
+}
+
+int Game::getWindowHeight()
+{
+    return windowHeight;
+}
+
+int Game::getWindowWidth()
+{
+    return windowWidth;
+}
+
+float Game::getRatio()
+{
+    return ratio;
+}
+
+void Game::setWindowHeight(int i)
+{
+    if(i!=1080 && i!=720)
+        cout << "ERREUR : windowHeight invalide" << endl;
+
+    else
+        windowHeight = i;
+}
+
+void Game::setWindowWidth(int i)
+{
+    if(i!=1920 && i!=1280)
+        cout << "ERREUR : windowWidth invalide" << endl;
+
+    else
+        windowWidth = i;
+}
+
+void Game::setRatio(long l)
+{
+    if(l!=1.0 && l!=1.5)
+        cout << "ERREUR : windowWidth invalide" << endl;
+
+    else
+        windowWidth = l;
 }
