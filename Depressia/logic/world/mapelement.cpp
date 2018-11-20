@@ -22,11 +22,6 @@ MapElement::MapElement(string n, string t, string i, Event* e):
 
 }
 
-MapElement::~MapElement()
-{
-    delete event;
-}
-
 string MapElement::getName()
 {
     return name;
