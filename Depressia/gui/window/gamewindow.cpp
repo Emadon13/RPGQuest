@@ -83,6 +83,7 @@ void GameWindow::afficheItem()
     ItemWindow *itemWindow=new ItemWindow(map);
     itemWindow->show();
     map->setEventHapp();
+    CreateGameFrame();
 }
 
 void GameWindow::ClearWidget()
