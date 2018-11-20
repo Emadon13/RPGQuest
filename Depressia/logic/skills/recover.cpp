@@ -2,7 +2,8 @@
 
 using namespace std;
 
-Recover::Recover()
+Recover::Recover():
+    Skill()
 {
     name = "Soin";
     description = "Un sort de soin basique";
@@ -10,18 +11,10 @@ Recover::Recover()
     categories.push_back(heal);
 }
 
-Recover::Recover(double m_coef)
-{
-    name = "Soin";
-    description = "Un sort de soin basique";
-    coef = m_coef;
-    categories.push_back(heal);
-}
-
-Recover::Recover(string m_name, string m_description, double m_coef)
+Recover::Recover(string m_name, string m_text, double m_coef)
 {
     name = m_name;
-    description = m_description;
+    text = m_text;
     coef = m_coef;
     categories.push_back(heal);
 }

@@ -2,7 +2,7 @@
 ../ressources/mapelements/mt.txt
 ../ressources/mapelements/windowsxp.txt
 ../ressources/mapelements/combat.txt
-../ressources/mapelements/boobies.txt
+../ressources/mapelements/cheval.txt
 ../ressources/mapelements/omaewa.txt
 0 2 3 3 4
 1 1 4 2 4

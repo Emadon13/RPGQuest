@@ -1,0 +1,5 @@
+Le cheval c'est trop génial
+Hue dia ma belle
+../ressources/images/cheval.jpg
+video
+../ressources/videos/trailer.wmv
