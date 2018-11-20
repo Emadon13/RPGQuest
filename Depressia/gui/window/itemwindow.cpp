@@ -2,6 +2,7 @@
 #include "logic/game.h"
 #include "gui/window/gamewindow.h"
 #include <QLabel>
+#include "logic/events/itemfound.h"
 
 ItemWindow::ItemWindow(GameWindow *game,Map *m, QWidget *parent) :
     QMainWindow(parent)
@@ -49,27 +50,26 @@ ItemWindow::ItemWindow(GameWindow *game,Map *m, QWidget *parent) :
     ok->move((WindowWidth-BoutonWidth)/2,(WindowHeight-espacement-BoutonHeight));
     ok->show();
 
+
     QLabel *image = new QLabel(this);
-    image->setPixmap(QPixmap(QString::fromStdString(mapElement.getEvent().getItem().getImage())).scaled(ImageWidth,ImageHeight));
+    image->setPixmap(QPixmap(QString::fromStdString(((dynamic_cast<ItemFound*>(mapElement.getEvent()))->getItem().getImage()))).scaled(ImageWidth,ImageHeight));
     image->setFixedSize(ImageWidth,ImageHeight);
     image->move(espacement,(WindowHeight-ImageHeight)/2);
     image->show();
 
     QLabel *titre = new QLabel(this);
-    titre->setText(QString::fromStdString(mapElement.getEvent().getItem().getName()));
+    titre->setText(QString::fromStdString(((dynamic_cast<ItemFound*>(mapElement.getEvent()))->getItem().getName())));
     titre->setFixedSize(TitreWidth,TitreHeight);
     titre->setAlignment(Qt::AlignCenter);
     titre->move(espacement*2+ImageWidth,espacement);
     titre->show();
 
     QLabel *info = new QLabel(this);
-    info->setText(QString::fromStdString(mapElement.getEvent().getItem().getText()));
+    info->setText(QString::fromStdString(((dynamic_cast<ItemFound*>(mapElement.getEvent()))->getItem().getText())));
     info->setFixedSize(InfoWidth,InfoHeight);
     info->setAlignment(Qt::AlignCenter);
     info->move(espacement*2+ImageWidth,espacement+TitreHeight);
     info->show();
-
-std::cout<<mapElement.getEvent().getItem().getImage();
 
     QObject::connect(ok, SIGNAL(clicked()), this, SLOT(close()));
     QObject::connect(ok, SIGNAL(clicked()), game, SLOT(resetFocus()));

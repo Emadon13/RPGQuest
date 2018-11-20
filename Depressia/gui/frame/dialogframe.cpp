@@ -56,7 +56,7 @@ DialogFrame::DialogFrame(GameWindow *g, Map *m) : QObject()
 vector<Dialog> DialogFrame::getDialog()
 {
 
-    Dialog dial = map->getCurrentPosition().getEvent().getDialog();  // J'ai changé un peu le contenu de ça
+    Dialog dial = *(dynamic_cast<Dialog*> (map->getCurrentPosition().getEvent()));  // J'ai changé un peu le contenu de ça
     vector<Dialog> dials;
     dials.push_back(dial);
 

@@ -14,6 +14,9 @@
 #include <vector>
 #include "logic/world/map.h"
 #include "gui/window/itemwindow.h"
+#include "logic/events/itemfound.h"
+#include "logic/events/fight.h"
+#include "logic/events/video.h"
 
 using namespace std;
 
@@ -40,28 +43,28 @@ GameWindow::GameWindow(Map *m,QWidget *parent) :
 
 void GameWindow::ShowFrame()
 {
-    EventType eventType = mapElement.getEvent().getEventType();
+    Event *event = mapElement.getEvent();
 
     if(!map->isEventHapp())
     {
-        if(eventType == dialog)
+        if(dynamic_cast<Dialog*>(event) != NULL)
         {
             CreateDialogFrame();
             map->setEventHapp();
         }
-        else if(eventType == item_found)
+        else if(dynamic_cast<ItemFound*>(event) != NULL)
         {
             CreateItemFrame();
         }
-        else if(eventType == fight)
+        else if(dynamic_cast<Fight*>(event) != NULL)
         {
             CreateGameFrame();
         }
-        else if(eventType == final_screen)
+        /*else if(dynamic_cast<FinalScreen*>(event) != NULL)
         {
             CreateGameFrame();
-        }
-        else if(eventType == video)
+        }*/
+        else if(dynamic_cast<Video*>(event) != NULL)
         {
             CreateVideoFrame();
             map->setEventHapp();
