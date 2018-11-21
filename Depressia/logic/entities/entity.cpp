@@ -25,19 +25,19 @@ Entity::Entity(string m_name,
                int m_att,
                int m_def,
                int m_spd,
-               vector<Skill> m_skills)
+               vector<Skill*> m_skills):
+    name(m_name),
+    lvl(m_lvl),
+    hpMax(m_hpMax),
+    mpMax(m_mpMax),
+    hp(m_hp),
+    mp(m_mp),
+    att(m_att),
+    def(m_def),
+    spd(m_spd),
+    skills(m_skills)
 {
 
-    name = m_name;
-    lvl = m_lvl;
-    hpMax = m_hpMax;
-    mpMax = m_mpMax;
-    hp = m_hp;
-    mp = m_mp;
-    att = m_att;
-    def = m_def;
-    spd = m_spd;
-    skills = m_skills;
 }
 
 

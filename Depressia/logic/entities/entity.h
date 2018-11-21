@@ -2,9 +2,9 @@
 #define ENTITY_H
 
 
-#include <QString>
-#include <QVector>
-#include "../skills/skill.h"
+#include <string>
+#include <vector>
+#include "logic/skills/skill.h"
 
 class Skill;
 
@@ -21,7 +21,7 @@ public:
     int m_att,
     int m_def,
     int m_spd,
-    std::vector<Skill>m_skills);
+    std::vector<Skill*>m_skills);
     ~Entity();
 
     std::string getName() const;
@@ -31,6 +31,7 @@ public:
     int getAtt() const;
     int getDef() const;
     int getSpd() const;
+    std::vector<Skill*> getSkills() const;
 
     void takeDamage(const int deg);
     void restaureHp(const int hpHeal);
@@ -55,7 +56,7 @@ private:
     int att;
     int def;
     int spd;
-    std::vector<Skill>skills;
+    std::vector<Skill*>skills;
 
 
 
