@@ -9,7 +9,7 @@ class GameFrame : QObject
     Q_OBJECT
 
 public:
-    GameFrame(GameWindow *game, Map *map);
+    GameFrame(GameWindow *game);
 
 private :
 

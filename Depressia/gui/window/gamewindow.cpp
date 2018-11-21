@@ -20,15 +20,16 @@
 
 using namespace std;
 
-GameWindow::GameWindow(Map *m,QWidget *parent) :
+GameWindow::GameWindow(Game *g,QWidget *parent) :
     QMainWindow (parent)
 {
-    map=m;
+    game=g;
+    map=game->getMap();
 
     setCursor(Qt::CrossCursor);
 
-    int WindowWidth(1920);
-    int WindowHeight(1080);
+    int WindowWidth(game->getWindowWidth());
+    int WindowHeight(game->getWindowHeight());
 
     setWindowTitle("Depressia");
     setWindowIcon(QIcon("../ressources/images/icone.png"));
@@ -83,7 +84,7 @@ void GameWindow::ShowFrame()
 
 void GameWindow::afficheItem()
 {
-    ItemWindow *itemWindow=new ItemWindow(this,map);
+    ItemWindow *itemWindow=new ItemWindow(this);
     itemWindow->show();
     map->setEventHapp();
     CreateGameFrame();
@@ -114,7 +115,7 @@ void GameWindow::CreateGameFrame()
 
     std::cout<<map->getCurrentPosition().getImage();
 
-    GameFrame gf(this, map);
+    GameFrame gf(this);
 }
 
 void GameWindow::CreateItemFrame()
@@ -136,7 +137,7 @@ void GameWindow::CreateBattleFrame()
     p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage()))));
     setPalette(p);
 
-    BattleFrame gf(this,map);
+    BattleFrame gf(this, map);
 }
 
 void GameWindow::CreateDialogFrame()
@@ -160,6 +161,11 @@ void GameWindow::CreateVideoFrame()
 Map* GameWindow::GetMap()
 {
     return this->map;
+}
+
+Game* GameWindow::GetGame()
+{
+    return this->game;
 }
 
 void GameWindow::GoRight()

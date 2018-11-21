@@ -11,7 +11,7 @@ class ItemWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    ItemWindow(GameWindow *g,Map *m, QWidget *parent = nullptr);
+    ItemWindow(GameWindow *g, QWidget *parent = nullptr);
 
 private:
     QPalette *p;

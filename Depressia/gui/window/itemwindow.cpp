@@ -4,11 +4,11 @@
 #include <QLabel>
 #include "logic/events/itemfound.h"
 
-ItemWindow::ItemWindow(GameWindow *game,Map *m, QWidget *parent) :
+ItemWindow::ItemWindow(GameWindow *game, QWidget *parent) :
     QMainWindow(parent)
 {
 
-    this->map=m;
+    this->map=game->GetMap();
     this->mapElement=map->getCurrentPosition();
 
     int WindowWidth(640);

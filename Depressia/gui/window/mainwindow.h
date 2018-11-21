@@ -17,16 +17,15 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(Game *game,Map &m,QWidget *parent = nullptr);
+    explicit MainWindow(Game *game, QWidget *parent = nullptr);
     ~MainWindow();
 
 public slots:
     void launchGame();
+    void changeResolution();
 
 private:
     Game *game;
-
-    Map *map;
 
     QMediaPlaylist *playlist;
     QMediaPlayer *music;

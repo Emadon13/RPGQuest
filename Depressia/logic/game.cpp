@@ -2,14 +2,17 @@
 
 using namespace std;
 
-Game::Game()
+Game::Game():
+    windowHeight(1080),
+    windowWidth(1920),
+    ratio(1.0)
 {
     map = MapLoader::generate("../ressources/maps/map.txt");
 }
 
-Map Game::getMap()
+Map* Game::getMap()
 {
-    return map;
+    return &map;
 }
 
 int Game::getWindowHeight()
@@ -22,7 +25,7 @@ int Game::getWindowWidth()
     return windowWidth;
 }
 
-float Game::getRatio()
+double Game::getRatio()
 {
     return ratio;
 }
@@ -45,11 +48,11 @@ void Game::setWindowWidth(int i)
         windowWidth = i;
 }
 
-void Game::setRatio(long l)
+void Game::setRatio(double l)
 {
     if(l!=1.0 && l!=1.5)
         cout << "ERREUR : windowWidth invalide" << endl;
 
     else
-        windowWidth = l;
+        ratio = l;
 }

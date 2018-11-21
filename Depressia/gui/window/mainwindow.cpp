@@ -8,13 +8,10 @@
 #include "logic/game.h"
 #include "logic/world/map.h"
 
-MainWindow::MainWindow(Game *game, Map &m, QWidget *parent) :
+MainWindow::MainWindow(Game *g, QWidget *parent) :
     QMainWindow(parent)
 {
-    //ui->setupUi(this);
-    this->game=game;
-
-    this->map=&m;
+    this->game=g;
 
     QMediaPlaylist *playlist = new QMediaPlaylist();
     playlist->addMedia(QUrl("../ressources/musics/theme-principal.mp3"));
@@ -90,11 +87,21 @@ MainWindow::MainWindow(Game *game, Map &m, QWidget *parent) :
     QObject::connect(boutonQuit, SIGNAL(clicked()), this, SLOT(close()));
     QObject::connect(boutonPlay, SIGNAL(clicked()), music, SLOT(stop()));
     QObject::connect(boutonQuit, SIGNAL(clicked()), music, SLOT(stop()));
+    QObject::connect(boutonOption, SIGNAL(clicked()), this, SLOT(changeResolution()));
+}
+
+void MainWindow::changeResolution()
+{
+    std::cout<<"test";
+    game->setRatio(1.5);
+    game->setWindowHeight(720);
+    game->setWindowWidth(1280);
+    std::cout<<game->getRatio();
 }
 
 void MainWindow::launchGame()
 {
-    GameWindow *gameWindow=new GameWindow(map);
+    GameWindow *gameWindow=new GameWindow(game);
     gameWindow->show();
 }
 
