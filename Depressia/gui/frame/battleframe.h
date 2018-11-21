@@ -11,7 +11,7 @@ class BattleFrame : QObject
     Q_OBJECT
 
 public:
-    BattleFrame(GameWindow *game,Map *map);
+    BattleFrame(GameWindow *game);
 
     GameWindow *game;
 };

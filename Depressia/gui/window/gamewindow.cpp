@@ -28,8 +28,8 @@ GameWindow::GameWindow(Game *g,QWidget *parent) :
 
     setCursor(Qt::CrossCursor);
 
-    int WindowWidth(game->getWindowWidth());
-    int WindowHeight(game->getWindowHeight());
+    WindowWidth=game->getWindowWidth();
+    WindowHeight=game->getWindowHeight();
 
     setWindowTitle("Depressia");
     setWindowIcon(QIcon("../ressources/images/icone.png"));
@@ -110,7 +110,7 @@ void GameWindow::CreateGameFrame()
     ClearWidget();
 
     QPalette p( palette() );
-    p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage()))));
+    p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage())).scaled(WindowWidth,WindowHeight)));
     setPalette(p);
 
     std::cout<<map->getCurrentPosition().getImage();
@@ -123,10 +123,10 @@ void GameWindow::CreateItemFrame()
     ClearWidget();
 
     QPalette p( palette() );
-    p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage()))));
+    p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage())).scaled(WindowWidth,WindowHeight)));
     setPalette(p);
 
-    ItemFrame itemFrame(this, map);
+    ItemFrame itemFrame(this);
 }
 
 void GameWindow::CreateBattleFrame()
@@ -134,10 +134,10 @@ void GameWindow::CreateBattleFrame()
     ClearWidget();
 
     QPalette p( palette() );
-    p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage()))));
+    p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage())).scaled(WindowWidth,WindowHeight)));
     setPalette(p);
 
-    BattleFrame gf(this, map);
+    BattleFrame bf(this);
 }
 
 void GameWindow::CreateDialogFrame()
@@ -145,17 +145,17 @@ void GameWindow::CreateDialogFrame()
     ClearWidget();
 
     QPalette p( palette() );
-    p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage()))));
+    p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage())).scaled(WindowWidth,WindowHeight)));
     setPalette(p);
 
-    DialogFrame *df = new DialogFrame(this,map);
+    DialogFrame *df = new DialogFrame(this);
 }
 
 void GameWindow::CreateVideoFrame()
 {
     ClearWidget();
 
-    VideoFrame *vf = new VideoFrame(this,map);
+    VideoFrame *vf = new VideoFrame(this);
 }
 
 Map* GameWindow::GetMap()

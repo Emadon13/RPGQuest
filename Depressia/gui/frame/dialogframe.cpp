@@ -10,23 +10,25 @@
 #include <iostream>
 #include <vector>
 
-DialogFrame::DialogFrame(GameWindow *g, Map *m) : QObject()
+DialogFrame::DialogFrame(GameWindow *g) : QObject()
 {
     this->mapElement=mapElement;
 
-    map=m;
     game=g;
+    map=game->GetMap();
 
     tableau=getDialog();
 
-    int WindowWidth(1920);
-    int WindowHeight(1080);
+    int WindowWidth(game->GetGame()->getWindowWidth());
+    int WindowHeight(game->GetGame()->getWindowHeight());
 
-    int DialogWidth(800);
-    int DialogHeight(400);
+    double ratio = game->GetGame()->getRatio();
 
-    int ImageWidth(600);
-    int ImageHeight(800);
+    int DialogWidth(int(800/ratio));
+    int DialogHeight(int(400/ratio));
+
+    int ImageWidth(int(600/ratio));
+    int ImageHeight(int(800/ratio));
 
     image = new QLabel(game);
     //image->setPixmap(QPixmap(QString::fromStdString(tableau.at(0).getElement(currentPhase).getImage())));
@@ -34,7 +36,7 @@ DialogFrame::DialogFrame(GameWindow *g, Map *m) : QObject()
     image->setAlignment(Qt::AlignCenter);
 
     dialogImage = new QLabel(game);
-    dialogImage->setPixmap(QPixmap("../ressources/images/dialog.png"));
+    dialogImage->setPixmap(QPixmap("../ressources/images/dialog.png").scaled(DialogWidth,DialogHeight));
     dialogImage->setFixedSize(DialogWidth,DialogHeight);
 
     dialogText = new QLabel(game);
@@ -65,23 +67,25 @@ vector<Dialog> DialogFrame::getDialog()
 
 void DialogFrame::UpdateDialog()
 {
-    int WindowWidth(1920);
-    int WindowHeight(1080);
+    int WindowWidth(game->GetGame()->getWindowWidth());
+    int WindowHeight(game->GetGame()->getWindowHeight());
 
-    int DialogWidth(800);
-    int DialogHeight(400);
+    double ratio = game->GetGame()->getRatio();
 
-    int ImageWidth(600);
-    int ImageHeight(800);
+    int DialogWidth(int(800/ratio));
+    int DialogHeight(int(400/ratio));
 
-    int Espacement(100);
+    int ImageWidth(int(600/ratio));
+    int ImageHeight(int(800/ratio));
+
+    int Espacement(int(100/ratio));
 
     if((currentPhase) >= int(tableau.at(0).getSize())){
         game->CreateGameFrame();
     }
     else{
 
-        image->setPixmap(QPixmap(QString::fromStdString(tableau.at(0).getElement(currentPhase).getImage())));
+        image->setPixmap(QPixmap(QString::fromStdString(tableau.at(0).getElement(currentPhase).getImage())).scaled(ImageWidth,ImageHeight));
         dialogText->setText(QString::fromStdString((tableau.at(0).getElement(currentPhase).getName())+" : "+(tableau.at(0).getElement(currentPhase).getText())));
 
         if((tableau.at(0).getElement(currentPhase).getDirection())==direction_right){

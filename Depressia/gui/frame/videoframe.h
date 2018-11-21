@@ -13,7 +13,7 @@ class VideoFrame : QObject
     Q_OBJECT
 
 public:
-    VideoFrame(GameWindow *game, Map *m);
+    VideoFrame(GameWindow *game);
 
     GameWindow *game;
     Map *map;

@@ -40,6 +40,9 @@ public slots:
     void resetFocus();
 
 private:
+    int WindowWidth;
+    int WindowHeight;
+
     Game *game;
 
     Map *map;

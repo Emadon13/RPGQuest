@@ -5,14 +5,14 @@
 #include "gui/window/gamewindow.h"
 #include "gui/window/mainwindow.h"
 
-VideoFrame::VideoFrame(GameWindow *g, Map *m) : QObject()
+VideoFrame::VideoFrame(GameWindow *g) : QObject()
 {
 
-    map=m;
     game=g;
+    map=game->GetMap();
 
-    int WindowWidth(1920);
-    int WindowHeight(1080);
+    int WindowWidth(game->GetGame()->getWindowWidth());
+    int WindowHeight(game->GetGame()->getWindowHeight());
 
     player = new QMediaPlayer(game);
 

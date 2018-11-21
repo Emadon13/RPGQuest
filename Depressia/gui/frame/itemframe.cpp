@@ -1,29 +1,31 @@
 #include "itemframe.h"
 #include "gui/clickable/clickablelabel.h"
 
-ItemFrame::ItemFrame(GameWindow *g,Map *m)
+ItemFrame::ItemFrame(GameWindow *g)
 {
-    map=m;
     game=g;
+    map=game->GetMap();
 
-    int WindowWidth(1920);
-    int WindowHeight(1080);
+    int WindowWidth(game->GetGame()->getWindowWidth());
+    int WindowHeight(game->GetGame()->getWindowHeight());
 
-    int BoutonWidth(96);
-    int BoutonHeight(96);
-    int BoutonMarge(100);
+    double ratio(game->GetGame()->getRatio());
 
-    int ImageWidth(250);
-    int ImageHeight(250);
+    int BoutonWidth(int(96/ratio));
+    int BoutonHeight(int(96/ratio));
+    int BoutonMarge(int(100/ratio));
 
-    int InfoWidth(750);
-    int InfoHeight(200);
+    int ImageWidth(int(250/ratio));
+    int ImageHeight(int(250/ratio));
 
-    int TitleWidth(500);
-    int TitleHeight(100);
+    int InfoWidth(int(750/ratio));
+    int InfoHeight(int(200/ratio));
+
+    int TitleWidth(int(500/ratio));
+    int TitleHeight(int(100/ratio));
 
     ClickableLabel *item = new ClickableLabel(game);
-    item->setPixmap(QPixmap("../ressources/images/icone.png"));
+    item->setPixmap(QPixmap("../ressources/images/icone.png").scaled(ImageWidth,ImageWidth));
     item->setFixedSize(ImageWidth,ImageHeight);
     item->installEventFilter(game);
     item->move((WindowWidth-ImageWidth)/2,(WindowHeight-ImageHeight)/2);
@@ -35,7 +37,7 @@ ItemFrame::ItemFrame(GameWindow *g,Map *m)
     if(map->existUp())
     {
     ClickableLabel *boutonHaut = new ClickableLabel(game);
-    boutonHaut->setPixmap(QPixmap("../ressources/images/fleche-haut.png"));
+    boutonHaut->setPixmap(QPixmap("../ressources/images/fleche-haut.png").scaled(BoutonWidth,BoutonHeight));
     boutonHaut->setFixedSize(BoutonWidth,BoutonHeight);
     boutonHaut->installEventFilter(game);
     boutonHaut->move((WindowWidth-BoutonWidth)/2,BoutonMarge);
@@ -48,7 +50,7 @@ ItemFrame::ItemFrame(GameWindow *g,Map *m)
     if(map->existDown())
     {
     ClickableLabel *boutonBas = new ClickableLabel(game);
-    boutonBas->setPixmap(QPixmap("../ressources/images/fleche-bas.png"));
+    boutonBas->setPixmap(QPixmap("../ressources/images/fleche-bas.png").scaled(BoutonWidth,BoutonHeight));
     boutonBas->setFixedSize(BoutonWidth,BoutonHeight);
     boutonBas->installEventFilter(game);
     boutonBas->move((WindowWidth-BoutonWidth)/2,(WindowHeight-BoutonHeight-BoutonMarge));
@@ -61,7 +63,7 @@ ItemFrame::ItemFrame(GameWindow *g,Map *m)
     if(map->existRight())
     {
     ClickableLabel *boutonDroite = new ClickableLabel(game);
-    boutonDroite->setPixmap(QPixmap("../ressources/images/fleche-droite.png"));
+    boutonDroite->setPixmap(QPixmap("../ressources/images/fleche-droite.png").scaled(BoutonWidth,BoutonHeight));
     boutonDroite->setFixedSize(BoutonWidth,BoutonHeight);
     boutonDroite->installEventFilter(game);
     boutonDroite->move((WindowWidth-BoutonWidth-BoutonMarge),(WindowHeight-BoutonHeight)/2);
@@ -74,7 +76,7 @@ ItemFrame::ItemFrame(GameWindow *g,Map *m)
     if(map->existLeft())
     {
     ClickableLabel *boutonGauche = new ClickableLabel(game);
-    boutonGauche->setPixmap(QPixmap("../ressources/images/fleche-gauche.png"));
+    boutonGauche->setPixmap(QPixmap("../ressources/images/fleche-gauche.png").scaled(BoutonWidth,BoutonHeight));
     boutonGauche->setFixedSize(BoutonWidth,BoutonHeight);
     boutonGauche->installEventFilter(game);
     boutonGauche->move(BoutonMarge,(WindowHeight-BoutonHeight)/2);
@@ -85,7 +87,7 @@ ItemFrame::ItemFrame(GameWindow *g,Map *m)
     }
 
     ClickableLabel *teamInfo = new ClickableLabel(game);
-    teamInfo->setPixmap(QPixmap("../ressources/images/info-box.png"));
+    teamInfo->setPixmap(QPixmap("../ressources/images/info-box.png").scaled(InfoWidth,InfoHeight));
     teamInfo->setFixedSize(InfoWidth,InfoHeight);
     teamInfo->installEventFilter(game);
     teamInfo->move(WindowWidth-InfoWidth,0);
@@ -93,7 +95,7 @@ ItemFrame::ItemFrame(GameWindow *g,Map *m)
     teamInfo->show();
 
     QLabel *zoneInfoImage = new QLabel(game);
-    zoneInfoImage->setPixmap(QPixmap("../ressources/images/info-box.png"));
+    zoneInfoImage->setPixmap(QPixmap("../ressources/images/info-box.png").scaled(InfoWidth,InfoHeight));
     zoneInfoImage->setFixedSize(InfoWidth,InfoHeight);
     zoneInfoImage->move(0,0);
     zoneInfoImage->show();
@@ -105,7 +107,7 @@ ItemFrame::ItemFrame(GameWindow *g,Map *m)
     zoneInfoText->show();
 
     QLabel *zoneTitleImage = new QLabel(game);
-    zoneTitleImage->setPixmap(QPixmap("../ressources/images/dialog-box.png"));
+    zoneTitleImage->setPixmap(QPixmap("../ressources/images/dialog-box.png").scaled(TitleWidth,TitleHeight));
     zoneTitleImage->setFixedSize(TitleWidth,TitleHeight);
     zoneTitleImage->move(0,WindowHeight-TitleHeight);
     zoneTitleImage->show();
