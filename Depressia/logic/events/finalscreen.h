@@ -1,8 +1,10 @@
 #ifndef FINALSCREEN_H
 #define FINALSCREEN_H
 
+#include "logic/events/event.h"
 
-class FinalScreen
+
+class FinalScreen : public Event
 {
 public:
     FinalScreen();

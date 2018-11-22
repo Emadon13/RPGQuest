@@ -5,6 +5,7 @@
 #include "logic/events/itemfound.h"
 #include "logic/events/save.h"
 #include "logic/events/video.h"
+#include "logic/events/finalscreen.h"
 
 using namespace std;
 
@@ -26,9 +27,13 @@ MapElement MapElementLoader::generate(string path)
     if(file)
     {
         getline(file,name);
+        std::cout<<name<<endl;
         getline(file,text);
+        std::cout<<text<<endl;
         getline(file,image);
+        std::cout<<image<<endl;
         getline(file,et);
+        std::cout<<et<<endl;
 
         if(et == "none")
             return MapElement(name, text, image, NULL);
@@ -52,6 +57,11 @@ MapElement MapElementLoader::generate(string path)
         {
             getline(file, e);
             return MapElement(name, text, image, new ItemFound(ItemLoader::generate(e)));
+        }
+
+        else if(et == "final_screen")
+        {
+            return MapElement(name, text, image, new FinalScreen());
         }
 
         else

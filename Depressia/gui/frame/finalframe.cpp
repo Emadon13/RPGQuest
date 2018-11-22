@@ -8,6 +8,7 @@ FinalFrame::FinalFrame(GameWindow *g) : QObject()
     clicker = new ClickableLabel(game);
     clicker->setFixedSize(game->GetGame()->getWindowWidth(),game->GetGame()->getWindowHeight());
     clicker->move(0,0);
+    clicker->show();
 
     QObject::connect(clicker, SIGNAL(clicked()), game, SLOT(close()));
 }

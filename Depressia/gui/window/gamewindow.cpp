@@ -204,6 +204,7 @@ void GameWindow::GoDown()
     mapElement = map->goDown();
     ShowFrame();
 }
+
 GameWindow::~GameWindow(){
 
 }
