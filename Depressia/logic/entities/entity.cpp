@@ -81,6 +81,23 @@ int Entity::getSpd() const
     return spd;
 }
 
+Skill Entity::getSkill(int i)
+{
+    if(skills.at(unsigned (i)) != NULL)
+        return *(skills.at(unsigned(i)));
+
+    else
+    {
+        cout << "ERREUR : Le " << i << "-ième sort de " << name << " n'existe pas" << endl;
+        return Skill();
+    }
+}
+
+int Entity::getSkillsSize()
+{
+    return int(skills.size());
+}
+
 void Entity::takeDamage(const int deg)
 {
     hp -= deg;
@@ -113,26 +130,6 @@ int Entity::hitOpponent(Entity& target)
     else
     {
         deg = int((att*lvl) / (target.getDef()));
-    }
-
-    if (deg > target.getHp()) deg = target.getHp();
-
-    target.takeDamage(deg);
-    return deg;
-}
-
-int Entity::hitOpponent(Entity& target, const double coef)
-{
-    int deg;
-
-    if (target.getDef() <= 0)
-    {
-        deg = int(att*lvl*coef);
-    }
-
-    else
-    {
-        deg = int((att*lvl*coef) / (target.getDef()));
     }
 
     if (deg > target.getHp()) deg = target.getHp();

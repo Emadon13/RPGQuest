@@ -4,6 +4,7 @@
 
 #include <string>
 #include <vector>
+#include <iostream>
 #include "logic/skills/skill.h"
 
 class Skill;
@@ -31,18 +32,16 @@ public:
     int getAtt() const;
     int getDef() const;
     int getSpd() const;
-    std::vector<Skill*> getSkills() const;
+
+    Skill getSkill(int i);
+    int getSkillsSize();
 
     void takeDamage(const int deg);
     void restaureHp(const int hpHeal);
     void restaureMp(const int mpHeal);
     int hitOpponent(Entity& target);
-    int hitOpponent(Entity& target, const double coef);
 
     bool isAlive() const;
-
-
-
 
 
 private:
