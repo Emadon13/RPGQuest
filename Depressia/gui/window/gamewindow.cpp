@@ -61,7 +61,7 @@ void GameWindow::ShowFrame()
         }
         else if(dynamic_cast<Fight*>(event) != NULL)
         {
-            CreateGameFrame();
+            CreateBattleFrame();
         }
         else if(dynamic_cast<FinalScreen*>(event) != NULL)
         {

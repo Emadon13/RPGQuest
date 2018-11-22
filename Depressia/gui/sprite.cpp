@@ -1,6 +1,6 @@
 #include "sprite.h"
 
-Sprite::Sprite() : QObject(), QGraphicsItem()
+Sprite::Sprite(QWidget* parent, Qt::WindowFlags f) : QObject(), QGraphicsItem()
 {
     currentFrame = 0;
     spriteImage = new QPixmap("../ressources/sprites/sprite_seraphina.png");
@@ -37,4 +37,8 @@ void Sprite::nextFrame()
     currentFrame += 112;
     if (currentFrame >= 672 ) currentFrame = 0;
     this->update(0,0,112,192);
+}
+
+void Sprite::mousePressEvent(QMouseEvent* event) {
+    emit clicked();
 }

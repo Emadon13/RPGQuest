@@ -3420,6 +3420,19 @@ release\moc_sprite.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QWidget \
+		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qwidget.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpalette.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qsizepolicy.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcursor.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qkeysequence.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qevent.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qurl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qurlquery.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qfile.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qfiledevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qvector2d.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtouchdevice.h \
 		..\Depressia\gui\sprite.h \
 		release\moc_predefs.h \
 		C:\Qt\5.11.2\msvc2017_64\bin\moc.exe
@@ -6865,10 +6878,7 @@ release\gameframe.obj: ..\Depressia\gui\frame\gameframe.cpp ..\Depressia\gui\fra
 		C:\Qt\5.11.2\msvc2017_64\include\QtMultimediaWidgets\qtmultimediawidgetsversion.h \
 		..\Depressia\gui\clickable\clickablelabel.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\Qt \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
-		..\Depressia\gui\sprite.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer
 
 release\dialogframe.obj: ..\Depressia\gui\frame\dialogframe.cpp ..\Depressia\gui\frame\dialogframe.h \
 		..\Depressia\gui\window\gamewindow.h \
@@ -8234,7 +8244,11 @@ release\battleframe.obj: ..\Depressia\gui\frame\battleframe.cpp ..\Depressia\gui
 		C:\Qt\5.11.2\msvc2017_64\include\QtMultimediaWidgets\qvideowidgetcontrol.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtMultimediaWidgets\qtmultimediawidgetsversion.h \
 		..\Depressia\gui\clickable\clickablelabel.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\Qt
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\Qt \
+		..\Depressia\gui\sprite.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter
 
 release\videoframe.obj: ..\Depressia\gui\frame\videoframe.cpp ..\Depressia\gui\frame\videoframe.h \
 		..\Depressia\gui\window\gamewindow.h \
@@ -10313,7 +10327,20 @@ release\sprite.obj: ..\Depressia\gui\sprite.cpp ..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qbrush.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QWidget \
+		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qwidget.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpalette.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qsizepolicy.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcursor.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qkeysequence.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qevent.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qurl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qurlquery.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qfile.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qfiledevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qvector2d.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtouchdevice.h
 
 release\moc_globalspec.obj: release\moc_globalspec.cpp 
 
