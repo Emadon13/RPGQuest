@@ -40,7 +40,8 @@ SOURCES += \
     logic/entities/enemy.cpp \
     logic/events/video.cpp \
     logic/events/save.cpp \
-    logic/events/finalscreen.cpp
+    logic/events/finalscreen.cpp \
+    gui/frame/optionframe.cpp
 
 
 
@@ -84,4 +85,5 @@ HEADERS += \
     logic/entities/enemy.h \
     logic/events/video.h \
     logic/events/save.h \
-    logic/events/finalscreen.h
+    logic/events/finalscreen.h \
+    gui/frame/optionframe.h

@@ -22,9 +22,16 @@ public:
 
 public slots:
     void launchGame();
-    void changeResolution();
+    void changeResolution(int w, int h, double r);
+    void setMainMenu();
+    void CreateOptionFrame();
+    void loadResolution720();
+    void loadResolution768();
+    void loadResolution1080();
 
 private:
+    void ClearWidget();
+
     Game *game;
 
     QMediaPlaylist *playlist;

@@ -32,7 +32,7 @@ double Game::getRatio()
 
 void Game::setWindowHeight(int i)
 {
-    if(i!=1080 && i!=720)
+    if(i!=1080 && i!=720 && i!=768)
         cout << "ERREUR : windowHeight invalide" << endl;
 
     else
@@ -41,7 +41,7 @@ void Game::setWindowHeight(int i)
 
 void Game::setWindowWidth(int i)
 {
-    if(i!=1920 && i!=1280)
+    if(i!=1920 && i!=1280 && i!= 1366)
         cout << "ERREUR : windowWidth invalide" << endl;
 
     else
@@ -50,7 +50,7 @@ void Game::setWindowWidth(int i)
 
 void Game::setRatio(double l)
 {
-    if(l!=1.0 && l!=1.5)
+    if(l!=1.0 && l!=1.5 && l!=1.406)
         cout << "ERREUR : windowWidth invalide" << endl;
 
     else
