@@ -31,6 +31,7 @@ public slots:
     void CreateGameFrame();
     void CreateDialogFrame();
     void CreateVideoFrame();
+    void CreateFinalFrame();
     void CreateItemFrame();
     void GoUp();
     void GoDown();

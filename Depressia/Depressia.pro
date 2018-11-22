@@ -41,7 +41,8 @@ SOURCES += \
     logic/events/video.cpp \
     logic/events/save.cpp \
     logic/events/finalscreen.cpp \
-    gui/frame/optionframe.cpp
+    gui/frame/optionframe.cpp \
+    gui/frame/finalframe.cpp
 
 
 
@@ -86,4 +87,5 @@ HEADERS += \
     logic/events/video.h \
     logic/events/save.h \
     logic/events/finalscreen.h \
-    gui/frame/optionframe.h
+    gui/frame/optionframe.h \
+    gui/frame/finalframe.h

@@ -17,6 +17,8 @@
 #include "logic/events/itemfound.h"
 #include "logic/events/fight.h"
 #include "logic/events/video.h"
+#include "logic/events/finalscreen.h"
+#include "gui/frame/finalframe.h"
 
 using namespace std;
 
@@ -61,10 +63,10 @@ void GameWindow::ShowFrame()
         {
             CreateGameFrame();
         }
-        /*else if(dynamic_cast<FinalScreen*>(event) != NULL)
+        else if(dynamic_cast<FinalScreen*>(event) != NULL)
         {
-            CreateGameFrame();
-        }*/
+            CreateFinalFrame();
+        }
         else if(dynamic_cast<Video*>(event) != NULL)
         {
             CreateVideoFrame();
@@ -113,9 +115,19 @@ void GameWindow::CreateGameFrame()
     p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage())).scaled(WindowWidth,WindowHeight)));
     setPalette(p);
 
-    std::cout<<map->getCurrentPosition().getImage();
-
     GameFrame gf(this);
+}
+
+void GameWindow::CreateFinalFrame()
+{
+    ClearWidget();
+
+    QPalette p( palette() );
+    p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage())).scaled(WindowWidth,WindowHeight)));
+    setPalette(p);
+
+    FinalFrame ff(this);
+
 }
 
 void GameWindow::CreateItemFrame()
