@@ -9,6 +9,7 @@
 #include <QTimer>
 #include <iostream>
 #include <vector>
+#include "gui/sprite.h"
 
 GameFrame::GameFrame(GameWindow *g)
 {
@@ -29,6 +30,29 @@ GameFrame::GameFrame(GameWindow *g)
 
     int TitleWidth(int(500/ratio));
     int TitleHeight(int(100/ratio));
+
+
+    QGraphicsScene *scene = new QGraphicsScene(game);
+    QGraphicsView *graphicsView = new QGraphicsView(game);
+    Sprite *sprite = new Sprite();
+    Sprite *sprite2 = new Sprite();
+
+    graphicsView->setScene(scene);
+    scene->addItem(sprite);
+    scene->addItem(sprite2);
+
+    graphicsView->setScene(scene);
+    graphicsView->show();
+    graphicsView->move(0,0);
+    graphicsView->setStyleSheet("background-color: transparent;");
+    graphicsView->setFrameStyle(QFrame::NoFrame);
+    graphicsView->setFixedSize(WindowWidth,WindowHeight);
+
+    sprite->setPos(QPointF(500,500));
+    sprite2->setPos(QPointF(1500,200));
+    sprite2->setRotation(45);
+    scene->setSceneRect(0, 0, 1920, 1080);
+
 
     if(map->existUp())
     {
@@ -113,5 +137,6 @@ GameFrame::GameFrame(GameWindow *g)
     zoneTitleText->setAlignment(Qt::AlignCenter);
     zoneTitleText->move(0,WindowHeight-TitleHeight);
     zoneTitleText->show();
+
 }
 
