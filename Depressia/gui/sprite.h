@@ -16,7 +16,7 @@ signals:
     void killed(Sprite*);
 
 public:
-    Sprite();
+    Sprite(QString normalSprite, QString damageSprite);
 
 public slots :
     void kill();
@@ -28,6 +28,8 @@ private slots:
 private:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     QRectF boundingRect() const;
+    QString damageSprite;
+    QString normalSprite;
 
 private:
     QTimer *timer;

@@ -21,10 +21,12 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     int WindowWidth(game->GetGame()->getWindowWidth());
     int WindowHeight(game->GetGame()->getWindowHeight());
 
+    double ratio(game->GetGame()->getRatio());
+
     scene = new QGraphicsScene(game);
     view = new QGraphicsView(game);
-    sprite = new Sprite();
-    sprite2 = new Sprite();
+    sprite = new Sprite("../ressources/sprites/sprite_seraphina.png","../ressources/sprites/sprite_seraphina_damage.png");
+    sprite2 = new Sprite("../ressources/sprites/sprite_rozalin.png","../ressources/sprites/sprite_rozalin_damage.png");
 
     view->setScene(scene);
     scene->addItem(sprite);
@@ -37,16 +39,16 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     view->setFrameStyle(QFrame::NoFrame);
     view->setFixedSize(WindowWidth,WindowHeight);
 
-    sprite->setPos(QPointF(500,500));
+    sprite->setPos(QPointF(int(500/ratio),int(500/ratio)));
     sprite->setToolTip("Bonasse");
 
-    sprite2->setPos(QPointF(1500,200));
+    sprite2->setPos(QPointF(int(1300/ratio),int(200/ratio)));
 
-    scene->setSceneRect(0, 0, 1920, 1080);
+    scene->setSceneRect(0, 0, WindowWidth, WindowHeight);
 
     QPushButton *test = new QPushButton("attack", game);
     test->setFixedSize(100,100);
-    test->move(800,800);
+    test->move(100,100);
     test->show();
 
     QObject::connect(test, SIGNAL(clicked()), game , SLOT(ShowFrame()));

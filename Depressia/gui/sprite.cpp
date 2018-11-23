@@ -1,12 +1,16 @@
 #include "sprite.h"
 
-Sprite::Sprite() : QObject(), QGraphicsItem()
+Sprite::Sprite(QString nS, QString dS) : QObject(), QGraphicsItem()
 {
+    this->damageSprite=dS;
+    this->normalSprite=nS;
+
     currentFrame = 0;
-    spriteImage = new QPixmap("../ressources/sprites/sprite_seraphina.png");
+    spriteImage = new QPixmap(normalSprite);
     timer = new QTimer();
     connect(timer, &QTimer::timeout, this, &Sprite::nextFrame);
     timer->start(100);
+
 
 }
 
@@ -42,7 +46,7 @@ void Sprite::nextFrame()
 void Sprite::kill()
 {
     timer->stop();
-    spriteImage = new QPixmap("../ressources/sprites/sprite_seraphina_damage.png");
+    spriteImage = new QPixmap(damageSprite);
     currentFrame=0;
     timerD = new QTimer();
     connect(timerD, &QTimer::timeout, this, &Sprite::nextKillFrame);
