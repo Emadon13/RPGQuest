@@ -3,26 +3,30 @@
 using namespace std;
 
 Recover::Recover():
-    Skill()
+    Skill("Soin",
+          "Un sort de soin basique",
+          2,
+          vector<Category>(1,heal)),
+    coef(1)
 {
-    name = "Soin";
-    text = "Un sort de soin basique";
-    coef = 1.;
-    categories.push_back(heal);
+
 }
 
-Recover::Recover(string m_name, string m_text, double m_coef)
+Recover::Recover(string n,
+                 string t,
+                 int mp,
+                 vector<Category> cat,
+                 double c):
+    Skill(n,t,mp,cat),
+    coef(c)
 {
-    name = m_name;
-    text = m_text;
-    coef = m_coef;
-    categories.push_back(heal);
+
 }
 
 vector<int> Recover::call(Entity& user, vector<Entity> targets)
 {
     vector<int> hpHeals;
-    for (unsigned long long i=0 ; i<targets.size() ; i++)
+    for (unsigned i=0 ; i<targets.size() ; i++)
     {
         int hpHeal;
         hpHeal = int((user.getLvl() * 2 + targets.at(i).getLvl()) * coef);

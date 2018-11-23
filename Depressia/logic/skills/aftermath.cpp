@@ -11,7 +11,7 @@ Aftermath::Aftermath()
     categories.push_back(drain);
 
 }
-
+/*
 Aftermath::Aftermath(double m_coef, double m_rate)
 {
     if (m_rate >= 0)
@@ -57,3 +57,4 @@ vector<int> Aftermath::call(Entity& user, vector <Entity> targets)
 
     return drains;
 }
+*/

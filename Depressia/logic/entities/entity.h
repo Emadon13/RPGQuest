@@ -17,8 +17,6 @@ public:
     int m_lvl,
     int m_hpMax,
     int m_mpMax,
-    int m_hp,
-    int m_mp,
     int m_att,
     int m_def,
     int m_spd,
@@ -44,8 +42,7 @@ public:
     bool isAlive() const;
 
 
-private:
-
+protected:
     std::string name;
     int lvl;
     int hpMax;
@@ -56,6 +53,8 @@ private:
     int def;
     int spd;
     std::vector<Skill*>skills;
+
+    int static const max_lvl = 10;
 
 
 

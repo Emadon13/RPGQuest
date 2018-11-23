@@ -7,14 +7,34 @@ Skill::Skill() :
     categories(0)
 {}
 
-Skill::Skill(int m_mpCost):
+Skill::Skill(string n,
+             string t,
+             int m_mpCost,
+             vector<Category> c):
+    name(n),
+    text(t),
     mpCost(m_mpCost),
-    categories(0)
+    categories(c)
 {}
 
 
 Skill::~Skill()
 {
+}
+
+string Skill::getName()
+{
+    return name;
+}
+
+string Skill::getText()
+{
+    return text;
+}
+
+int Skill::getMpCost()
+{
+    return mpCost;
 }
 
 void Skill::call()

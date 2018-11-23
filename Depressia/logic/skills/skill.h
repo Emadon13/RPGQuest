@@ -11,8 +11,12 @@ class Skill
 {
 public:
     Skill();
-    Skill(int m_mpCost);
+    Skill(std::string n, std::string t, int m_mpCost, std::vector<Category>);
     ~Skill();
+
+    std::string getName();
+    std::string getText();
+    int getMpCost();
     void call();
 
 
