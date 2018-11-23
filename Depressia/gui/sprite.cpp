@@ -42,10 +42,11 @@ void Sprite::nextFrame()
 void Sprite::kill()
 {
     timer->stop();
-    spriteImage = new QPixmap("../ressources/sprites/sprite_seraphina_death.png");
+    spriteImage = new QPixmap("../ressources/sprites/sprite_seraphina_damage.png");
     currentFrame=0;
-    timer->start(100);
-    connect(timer, &QTimer::timeout, this, &Sprite::nextKillFrame);
+    timerD = new QTimer();
+    connect(timerD, &QTimer::timeout, this, &Sprite::nextKillFrame);
+    timerD->start(100);
 }
 
 void Sprite::nextKillFrame()
@@ -56,7 +57,7 @@ void Sprite::nextKillFrame()
     currentFrame += 112;
     if (currentFrame >= 672 ) {
         emit killed(this);
-        timer->stop();
+        currentFrame = 0;
     }
     else this->update(0,0,112,192);
 

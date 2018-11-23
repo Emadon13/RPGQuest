@@ -31,6 +31,7 @@ private:
 
 private:
     QTimer *timer;
+    QTimer *timerD;
     QPixmap *spriteImage;
     int currentFrame;
 
