@@ -19,6 +19,7 @@
 #include "logic/events/video.h"
 #include "logic/events/finalscreen.h"
 #include "gui/frame/finalframe.h"
+#include "logic/events/save.h"
 
 using namespace std;
 
@@ -59,7 +60,7 @@ void GameWindow::ShowFrame()
         {
             CreateItemFrame();
         }
-        else if(dynamic_cast<Fight*>(event) != NULL)
+        else if(dynamic_cast<Save*>(event) != NULL)
         {
             CreateBattleFrame();
         }
@@ -149,7 +150,7 @@ void GameWindow::CreateBattleFrame()
     p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage())).scaled(WindowWidth,WindowHeight)));
     setPalette(p);
 
-    BattleFrame bf(this);
+    BattleFrame *bf = new BattleFrame(this);
 }
 
 void GameWindow::CreateDialogFrame()

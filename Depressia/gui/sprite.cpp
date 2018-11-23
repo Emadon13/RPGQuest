@@ -1,6 +1,6 @@
 #include "sprite.h"
 
-Sprite::Sprite(QWidget* parent, Qt::WindowFlags f) : QObject(), QGraphicsItem()
+Sprite::Sprite() : QObject(), QGraphicsItem()
 {
     currentFrame = 0;
     spriteImage = new QPixmap("../ressources/sprites/sprite_seraphina.png");
@@ -39,6 +39,30 @@ void Sprite::nextFrame()
     this->update(0,0,112,192);
 }
 
-void Sprite::mousePressEvent(QMouseEvent* event) {
-    emit clicked();
+void Sprite::kill()
+{
+    timer->stop();
+    spriteImage = new QPixmap("../ressources/sprites/sprite_seraphina_death.png");
+    currentFrame=0;
+    timer->start(100);
+    connect(timer, &QTimer::timeout, this, &Sprite::nextKillFrame);
+}
+
+void Sprite::nextKillFrame()
+{
+    /* At a signal from the timer 20 to move the point of rendering pixels
+     * If currentFrame = 300 then zero out it as sprite sheet size of 300 pixels by 20
+     * */
+    currentFrame += 112;
+    if (currentFrame >= 672 ) {
+        emit killed(this);
+        timer->stop();
+    }
+    else this->update(0,0,112,192);
+
+}
+
+void Sprite::mousePressEvent(QGraphicsSceneMouseEvent *event)
+{
+    emit clicked(this);
 }

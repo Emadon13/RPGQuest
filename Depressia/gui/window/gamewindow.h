@@ -10,6 +10,7 @@
 #include "logic/game.h"
 #include "logic/world/map.h"
 #include "logic/world/mapelement.h"
+#include "gui/clickable/clickablelabel.h"
 
 using namespace std;
 

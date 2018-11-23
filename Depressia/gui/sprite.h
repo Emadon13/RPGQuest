@@ -6,30 +6,36 @@
 #include <QTimer>
 #include <QPixmap>
 #include <QPainter>
-#include <QWidget>
 
 class Sprite : public QObject, public QGraphicsItem
 {
     Q_OBJECT
 
-signals :
-    void clicked();
+signals:
+    void clicked(Sprite*);
+    void killed(Sprite*);
 
 public:
-    Sprite(QWidget* parent = Q_NULLPTR, Qt::WindowFlags f = Qt::WindowFlags());
+    Sprite();
+
+public slots :
+    void kill();
 
 private slots:
     void nextFrame();
+    void nextKillFrame();
 
 private:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     QRectF boundingRect() const;
+
+private:
     QTimer *timer;
     QPixmap *spriteImage;
     int currentFrame;
 
 protected:
-    void mousePressEvent(QMouseEvent* event);
+    void mousePressEvent(QGraphicsSceneMouseEvent *event);
 
 };
 
