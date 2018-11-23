@@ -1311,6 +1311,8 @@ release\moc_mainwindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWind
 		..\Depressia\logic\world\map.h \
 		..\Depressia\logic\world\mapelement.h \
 		..\Depressia\io\mapelementloader.h \
+		..\Depressia\gui\clickable\clickablelabel.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\Qt \
 		..\Depressia\gui\window\mainwindow.h \
 		release\moc_predefs.h \
 		C:\Qt\5.11.2\msvc2017_64\bin\moc.exe
@@ -1446,6 +1448,9 @@ release\moc_gamewindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWind
 		..\Depressia\logic\world\mapelement.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		..\Depressia\io\mapelementloader.h \
+		..\Depressia\gui\clickable\clickablelabel.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QWidget \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\Qt \
 		..\Depressia\gui\window\gamewindow.h \
 		release\moc_predefs.h \
 		C:\Qt\5.11.2\msvc2017_64\bin\moc.exe
@@ -1582,6 +1587,9 @@ release\moc_gameframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\logic\world\mapelement.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		..\Depressia\io\mapelementloader.h \
+		..\Depressia\gui\clickable\clickablelabel.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QWidget \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\Qt \
 		..\Depressia\gui\frame\gameframe.h \
 		release\moc_predefs.h \
 		C:\Qt\5.11.2\msvc2017_64\bin\moc.exe
@@ -1972,6 +1980,9 @@ release\moc_battleframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\logic\world\mapelement.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		..\Depressia\io\mapelementloader.h \
+		..\Depressia\gui\clickable\clickablelabel.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QWidget \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\Qt \
 		C:\Qt\5.11.2\msvc2017_64\include\QtMultimedia\QMediaPlayer \
 		C:\Qt\5.11.2\msvc2017_64\include\QtMultimedia\qmediaplayer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtMultimedia\qmediaobject.h \
@@ -2423,6 +2434,9 @@ release\moc_itemframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\logic\world\mapelement.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		..\Depressia\io\mapelementloader.h \
+		..\Depressia\gui\clickable\clickablelabel.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QWidget \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\Qt \
 		..\Depressia\gui\frame\itemframe.h \
 		release\moc_predefs.h \
 		C:\Qt\5.11.2\msvc2017_64\bin\moc.exe
@@ -2559,6 +2573,9 @@ release\moc_itemwindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWind
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qframe.h \
 		..\Depressia\logic\game.h \
 		..\Depressia\io\maploader.h \
+		..\Depressia\gui\clickable\clickablelabel.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QWidget \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\Qt \
 		..\Depressia\gui\window\itemwindow.h \
 		release\moc_predefs.h \
 		C:\Qt\5.11.2\msvc2017_64\bin\moc.exe
@@ -3185,6 +3202,8 @@ release\moc_optionframe.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		..\Depressia\logic\world\map.h \
 		..\Depressia\logic\world\mapelement.h \
 		..\Depressia\io\mapelementloader.h \
+		..\Depressia\gui\clickable\clickablelabel.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\Qt \
 		..\Depressia\gui\frame\optionframe.h \
 		release\moc_predefs.h \
 		C:\Qt\5.11.2\msvc2017_64\bin\moc.exe
@@ -4076,6 +4095,8 @@ release\main.obj: ..\Depressia\main.cpp C:\Qt\5.11.2\msvc2017_64\include\QtWidge
 		..\Depressia\logic\world\map.h \
 		..\Depressia\logic\world\mapelement.h \
 		..\Depressia\io\mapelementloader.h \
+		..\Depressia\gui\clickable\clickablelabel.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\Qt \
 		..\Depressia\logic\events\fight.h \
 		..\Depressia\io\dialogloader.h \
 		..\Depressia\logic\events\dialog.h \
@@ -5739,11 +5760,11 @@ release\gamewindow.obj: ..\Depressia\gui\window\gamewindow.cpp ..\Depressia\gui\
 		..\Depressia\logic\world\mapelement.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		..\Depressia\io\mapelementloader.h \
-		..\Depressia\gui\frame\gameframe.h \
-		..\Depressia\gui\frame\dialogframe.h \
 		..\Depressia\gui\clickable\clickablelabel.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QWidget \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\Qt \
+		..\Depressia\gui\frame\gameframe.h \
+		..\Depressia\gui\frame\dialogframe.h \
 		..\Depressia\io\dialogloader.h \
 		..\Depressia\logic\events\dialog.h \
 		..\Depressia\logic\events\dialogelement.h \
@@ -6387,6 +6408,9 @@ release\gameframe.obj: ..\Depressia\gui\frame\gameframe.cpp ..\Depressia\gui\fra
 		..\Depressia\logic\world\mapelement.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		..\Depressia\io\mapelementloader.h \
+		..\Depressia\gui\clickable\clickablelabel.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QWidget \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\Qt \
 		..\Depressia\gui\window\mainwindow.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtMultimedia\QtMultimedia \
 		C:\Qt\5.11.2\msvc2017_64\include\QtMultimedia\QtMultimediaDepends \
@@ -6828,7 +6852,6 @@ release\gameframe.obj: ..\Depressia\gui\frame\gameframe.cpp ..\Depressia\gui\fra
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qmouseeventtransition.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qopenglwidget.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QWidget \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qplaintextedit.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtextedit.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qprogressbar.h \
@@ -6877,8 +6900,6 @@ release\gameframe.obj: ..\Depressia\gui\frame\gameframe.cpp ..\Depressia\gui\fra
 		C:\Qt\5.11.2\msvc2017_64\include\QtMultimediaWidgets\qgraphicsvideoitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtMultimediaWidgets\qvideowidgetcontrol.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtMultimediaWidgets\qtmultimediawidgetsversion.h \
-		..\Depressia\gui\clickable\clickablelabel.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\Qt \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer
 
 release\dialogframe.obj: ..\Depressia\gui\frame\dialogframe.cpp ..\Depressia\gui\frame\dialogframe.h \
@@ -7751,6 +7772,9 @@ release\battleframe.obj: ..\Depressia\gui\frame\battleframe.cpp ..\Depressia\gui
 		..\Depressia\logic\world\mapelement.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		..\Depressia\io\mapelementloader.h \
+		..\Depressia\gui\clickable\clickablelabel.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QWidget \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\Qt \
 		C:\Qt\5.11.2\msvc2017_64\include\QtMultimedia\QMediaPlayer \
 		C:\Qt\5.11.2\msvc2017_64\include\QtMultimedia\qmediaplayer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtMultimedia\qmediaobject.h \
@@ -8201,7 +8225,6 @@ release\battleframe.obj: ..\Depressia\gui\frame\battleframe.cpp ..\Depressia\gui
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qmouseeventtransition.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qopenglwidget.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QWidget \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qplaintextedit.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtextedit.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qprogressbar.h \
@@ -8247,9 +8270,7 @@ release\battleframe.obj: ..\Depressia\gui\frame\battleframe.cpp ..\Depressia\gui
 		C:\Qt\5.11.2\msvc2017_64\include\QtMultimediaWidgets\qcameraviewfinder.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtMultimediaWidgets\qgraphicsvideoitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtMultimediaWidgets\qvideowidgetcontrol.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtMultimediaWidgets\qtmultimediawidgetsversion.h \
-		..\Depressia\gui\clickable\clickablelabel.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\Qt
+		C:\Qt\5.11.2\msvc2017_64\include\QtMultimediaWidgets\qtmultimediawidgetsversion.h
 
 release\videoframe.obj: ..\Depressia\gui\frame\videoframe.cpp ..\Depressia\gui\frame\videoframe.h \
 		..\Depressia\gui\window\gamewindow.h \
@@ -9453,6 +9474,9 @@ release\itemwindow.obj: ..\Depressia\gui\window\itemwindow.cpp ..\Depressia\gui\
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qframe.h \
 		..\Depressia\logic\game.h \
 		..\Depressia\io\maploader.h \
+		..\Depressia\gui\clickable\clickablelabel.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QWidget \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\Qt \
 		..\Depressia\logic\events\itemfound.h
 
 release\enemy.obj: ..\Depressia\logic\entities\enemy.cpp ..\Depressia\logic\entities\enemy.h \
@@ -10089,7 +10113,9 @@ release\optionframe.obj: ..\Depressia\gui\frame\optionframe.cpp ..\Depressia\gui
 		..\Depressia\logic\items\item.h \
 		..\Depressia\logic\world\map.h \
 		..\Depressia\logic\world\mapelement.h \
-		..\Depressia\io\mapelementloader.h
+		..\Depressia\io\mapelementloader.h \
+		..\Depressia\gui\clickable\clickablelabel.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\Qt
 
 release\finalframe.obj: ..\Depressia\gui\frame\finalframe.cpp ..\Depressia\gui\frame\finalframe.h \
 		..\Depressia\gui\window\gamewindow.h \

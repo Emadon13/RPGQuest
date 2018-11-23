@@ -49,6 +49,8 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     test->move(800,800);
     test->show();
 
+    QObject::connect(test, SIGNAL(clicked()), game , SLOT(ShowFrame()));
+
     QObject::connect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(killEntity(Sprite*)));
     QObject::connect(sprite2, SIGNAL(clicked(Sprite*)), this , SLOT(killEntity(Sprite*)));
 

@@ -63,6 +63,7 @@ void GameWindow::ShowFrame()
         else if(dynamic_cast<Save*>(event) != NULL)
         {
             CreateBattleFrame();
+            map->setEventHapp();
         }
         else if(dynamic_cast<FinalScreen*>(event) != NULL)
         {
