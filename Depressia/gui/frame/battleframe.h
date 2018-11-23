@@ -13,7 +13,12 @@ class BattleFrame : QObject
 
 public slots :
     void killEntity(Sprite *sprite);
+    void damageEntity(Sprite *sprite);
     void deleteEntity(Sprite *sprite);
+    void attackEntity(Sprite *sprite);
+    void Attack();
+    void Damage();
+    void Kill();
 
 public:
     BattleFrame(GameWindow *game);

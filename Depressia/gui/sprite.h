@@ -16,24 +16,32 @@ signals:
     void killed(Sprite*);
 
 public:
-    Sprite(QString normalSprite, QString damageSprite);
+    Sprite(QString normalSprite, QString damageSprite, QString attackSprite);
 
 public slots :
     void kill();
+    void damage();
+    void attack();
+    void normal();
 
 private slots:
     void nextFrame();
+    void nextAttackFrame();
     void nextKillFrame();
+    void nextDamageFrame();
 
 private:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     QRectF boundingRect() const;
     QString damageSprite;
     QString normalSprite;
+    QString attackSprite;
 
 private:
     QTimer *timer;
     QTimer *timerD;
+    QTimer *timerK;
+    QTimer *timerA;
     QPixmap *spriteImage;
     int currentFrame;
 

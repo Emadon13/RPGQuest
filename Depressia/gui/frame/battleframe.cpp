@@ -25,8 +25,8 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
     scene = new QGraphicsScene(game);
     view = new QGraphicsView(game);
-    sprite = new Sprite("../ressources/sprites/sprite_seraphina.png","../ressources/sprites/sprite_seraphina_damage.png");
-    sprite2 = new Sprite("../ressources/sprites/sprite_rozalin.png","../ressources/sprites/sprite_rozalin_damage.png");
+    sprite = new Sprite("../ressources/sprites/sprite_seraphina.png","../ressources/sprites/sprite_seraphina_damage.png","../ressources/sprites/sprite_rozalin_attack.png");
+    sprite2 = new Sprite("../ressources/sprites/sprite_rozalin.png","../ressources/sprites/sprite_rozalin_damage.png","../ressources/sprites/sprite_rozalin_attack.png");
 
     view->setScene(scene);
     scene->addItem(sprite);
@@ -46,18 +46,79 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
     scene->setSceneRect(0, 0, WindowWidth, WindowHeight);
 
-    QPushButton *test = new QPushButton("attack", game);
-    test->setFixedSize(100,100);
-    test->move(90,100);
-    test->show();
+    QPushButton *pass = new QPushButton("pass", game);
+    pass->setFixedSize(100,100);
+    pass->move(90,100);
+    pass->show();
+    QPushButton *damage = new QPushButton("damage", game);
+    damage->setFixedSize(100,100);
+    damage->move(200,100);
+    damage->show();
+    QPushButton *kill = new QPushButton("kill", game);
+    kill->setFixedSize(100,100);
+    kill->move(300,100);
+    kill->show();
+    QPushButton *attack = new QPushButton("attack", game);
+    attack->setFixedSize(100,100);
+    attack->move(400,100);
+    attack->show();
 
-    QObject::connect(test, SIGNAL(clicked()), game , SLOT(ShowFrame()));
+    QObject::connect(pass, SIGNAL(clicked()), game , SLOT(ShowFrame()));
 
-    QObject::connect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(killEntity(Sprite*)));
-    QObject::connect(sprite2, SIGNAL(clicked(Sprite*)), this , SLOT(killEntity(Sprite*)));
+    QObject::connect(attack, SIGNAL(clicked()), this , SLOT(Attack()));
+    QObject::connect(damage, SIGNAL(clicked()), this , SLOT(Damage()));
+    QObject::connect(kill, SIGNAL(clicked()), this , SLOT(Kill()));
 
 }
 
+void::BattleFrame::Attack()
+{
+    if(sprite!=Q_NULLPTR)
+    {
+     QObject::disconnect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(damageEntity(Sprite*)));
+     QObject::disconnect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(killEntity(Sprite*)));
+     QObject::connect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(attackEntity(Sprite*)));
+    }
+    if(sprite2!=Q_NULLPTR)
+    {
+     QObject::disconnect(sprite2, SIGNAL(clicked(Sprite*)), this , SLOT(damageEntity(Sprite*)));
+     QObject::disconnect(sprite2, SIGNAL(clicked(Sprite*)), this , SLOT(killEntity(Sprite*)));
+     QObject::connect(sprite2, SIGNAL(clicked(Sprite*)), this , SLOT(attackEntity(Sprite*)));
+    }
+}
+
+void::BattleFrame::Damage()
+{
+    if(sprite!=Q_NULLPTR)
+    {
+     QObject::connect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(damageEntity(Sprite*)));
+     QObject::disconnect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(killEntity(Sprite*)));
+     QObject::disconnect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(attackEntity(Sprite*)));
+    }
+    if(sprite2!=Q_NULLPTR)
+    {
+     QObject::connect(sprite2, SIGNAL(clicked(Sprite*)), this , SLOT(damageEntity(Sprite*)));
+     QObject::disconnect(sprite2, SIGNAL(clicked(Sprite*)), this , SLOT(killEntity(Sprite*)));
+     QObject::disconnect(sprite2, SIGNAL(clicked(Sprite*)), this , SLOT(attackEntity(Sprite*)));
+    }
+
+}
+
+void::BattleFrame::Kill()
+{
+    if(sprite!=Q_NULLPTR)
+    {
+     QObject::disconnect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(damageEntity(Sprite*)));
+     QObject::connect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(killEntity(Sprite*)));
+     QObject::disconnect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(attackEntity(Sprite*)));
+    }
+    if(sprite2!=Q_NULLPTR)
+    {
+     QObject::disconnect(sprite2, SIGNAL(clicked(Sprite*)), this , SLOT(damageEntity(Sprite*)));
+     QObject::connect(sprite2, SIGNAL(clicked(Sprite*)), this , SLOT(killEntity(Sprite*)));
+     QObject::disconnect(sprite2, SIGNAL(clicked(Sprite*)), this , SLOT(attackEntity(Sprite*)));
+    }
+}
 
 void BattleFrame::killEntity(Sprite *s)
 {
@@ -65,9 +126,21 @@ void BattleFrame::killEntity(Sprite *s)
     s->kill();
 }
 
+void BattleFrame::damageEntity(Sprite *s)
+{
+    s->damage();
+}
+
+void BattleFrame::attackEntity(Sprite *s)
+{
+    s->attack();
+}
 
 void BattleFrame::deleteEntity(Sprite *s)
 {
+    QObject::disconnect(s, SIGNAL(clicked(Sprite*)), this , SLOT(attackEntity(Sprite*)));
+    QObject::disconnect(s, SIGNAL(clicked(Sprite*)), this , SLOT(damageEntity(Sprite*)));
+    QObject::disconnect(s, SIGNAL(clicked(Sprite*)), this , SLOT(killEntity(Sprite*)));
     s->deleteLater();
 }
 
