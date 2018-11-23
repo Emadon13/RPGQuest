@@ -48,7 +48,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
     QPushButton *test = new QPushButton("attack", game);
     test->setFixedSize(100,100);
-    test->move(100,100);
+    test->move(90,100);
     test->show();
 
     QObject::connect(test, SIGNAL(clicked()), game , SLOT(ShowFrame()));
