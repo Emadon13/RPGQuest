@@ -69,6 +69,7 @@ ItemWindow::ItemWindow(GameWindow *game, QWidget *parent) :
     info->setFixedSize(InfoWidth,InfoHeight);
     info->setAlignment(Qt::AlignCenter);
     info->move(espacement*2+ImageWidth,espacement+TitreHeight);
+    info->setWordWrap(true);
     info->show();
 
     QObject::connect(ok, SIGNAL(clicked()), this, SLOT(close()));

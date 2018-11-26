@@ -25,7 +25,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
     scene = new QGraphicsScene(game);
     view = new QGraphicsView(game);
-    sprite = new Sprite("../ressources/sprites/sprite_seraphina.png","../ressources/sprites/sprite_seraphina_damage.png","../ressources/sprites/sprite_rozalin_attack.png");
+    sprite = new Sprite("../ressources/sprites/sprite_seraphina.png","../ressources/sprites/sprite_seraphina_damage.png","../ressources/sprites/sprite_seraphina_attack.png");
     sprite2 = new Sprite("../ressources/sprites/sprite_rozalin.png","../ressources/sprites/sprite_rozalin_damage.png","../ressources/sprites/sprite_rozalin_attack.png");
 
     view->setScene(scene);
