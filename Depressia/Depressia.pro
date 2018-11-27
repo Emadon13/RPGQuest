@@ -6,7 +6,6 @@ SOURCES += \
     logic/entities/entity.cpp \
     logic/skills/skill.cpp \
     logic/skills/recover.cpp \
-    logic/skills/aftermath.cpp \
     gui/stage.cpp \
     gui/globalspec.cpp \
     logic/world/map.cpp \
@@ -43,7 +42,11 @@ SOURCES += \
     logic/events/finalscreen.cpp \
     gui/frame/optionframe.cpp \
     gui/frame/finalframe.cpp \
-    gui/sprite.cpp
+    gui/sprite.cpp \
+    logic/skills/drain.cpp \
+    logic/skills/recoil.cpp \
+    logic/skills/sheet.cpp \
+    logic/skills/attack.cpp
 
 
 
@@ -53,7 +56,6 @@ HEADERS += \
     logic/entities/entity.h \
     logic/skills/skill.h \
     logic/skills/recover.h \
-    logic/skills/aftermath.h \
     gui/stage.h \
     gui/globalspec.h \
     logic/world/map.h \
@@ -90,4 +92,8 @@ HEADERS += \
     logic/events/finalscreen.h \
     gui/frame/optionframe.h \
     gui/frame/finalframe.h \
-    gui/sprite.h
+    gui/sprite.h \
+    logic/skills/drain.h \
+    logic/skills/recoil.h \
+    logic/skills/sheet.h \
+    logic/skills/attack.h

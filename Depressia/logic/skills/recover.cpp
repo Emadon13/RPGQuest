@@ -6,7 +6,7 @@ Recover::Recover():
     Skill("Soin",
           "Un sort de soin basique",
           2,
-          vector<Category>(1,heal)),
+          vector<Category>(1,one)),
     coef(1)
 {
 
@@ -23,7 +23,7 @@ Recover::Recover(string n,
 
 }
 
-vector<int> Recover::call(Entity& user, vector<Entity> targets)
+Sheet Recover::call(Entity& user, vector<Entity> targets)
 {
     vector<int> hpHeals;
     for (unsigned i=0 ; i<targets.size() ; i++)
@@ -33,6 +33,6 @@ vector<int> Recover::call(Entity& user, vector<Entity> targets)
         hpHeals.push_back(hpHeal);
     }
 
-    return hpHeals;
+    return Sheet();
 
 }

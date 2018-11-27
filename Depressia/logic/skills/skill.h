@@ -3,8 +3,9 @@
 
 #include<string>
 #include<vector>
+#include "logic/skills/sheet.h"
 
-enum Category { powerfull, powerless, heal, drain, recoil, group, all, several };
+enum Category { one, group, all, several };
 
 class Entity;
 class Skill
@@ -17,7 +18,7 @@ public:
     std::string getName();
     std::string getText();
     int getMpCost();
-    void call();
+    Sheet call();
 
 
 protected:

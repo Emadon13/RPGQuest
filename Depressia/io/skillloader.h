@@ -9,8 +9,8 @@ class SkillLoader : public Loader
 {
 public:
     SkillLoader();
-    static std::vector<Skill> generate();
-    static std::vector <Skill> generate(std::string path);
+    static Skill generate();
+    static Skill generate(std::string path);
 
 };
 

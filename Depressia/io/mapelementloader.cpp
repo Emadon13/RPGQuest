@@ -27,13 +27,9 @@ MapElement MapElementLoader::generate(string path)
     if(file)
     {
         getline(file,name);
-        std::cout<<name<<endl;
         getline(file,text);
-        std::cout<<text<<endl;
         getline(file,image);
-        std::cout<<image<<endl;
         getline(file,et);
-        std::cout<<et<<endl;
 
         if(et == "none")
             return MapElement(name, text, image, NULL);

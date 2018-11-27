@@ -37,7 +37,8 @@ int Skill::getMpCost()
     return mpCost;
 }
 
-void Skill::call()
+Sheet Skill::call()
 {
+    return Sheet();
 }
 
