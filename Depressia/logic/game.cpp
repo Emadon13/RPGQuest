@@ -5,7 +5,8 @@ using namespace std;
 Game::Game():
     windowHeight(1080),
     windowWidth(1920),
-    ratio(1.0)
+    ratio(1.0),
+    savePath("../ressources/save/save.bin")
 {
     map = MapLoader::generate("../ressources/maps/map.txt");
 }
@@ -56,3 +57,15 @@ void Game::setRatio(double l)
     else
         ratio = l;
 }
+
+void Game::save()
+{
+
+}
+
+Game* Game::load()
+{
+
+}
+
+

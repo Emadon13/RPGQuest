@@ -18,12 +18,16 @@ public:
     void setWindowWidth(int i);
     void setRatio(double l);
 
+    void save();
+    Game* load();
+
 
 private:
     Map map;
     int windowHeight;
     int windowWidth;
     double ratio;
+    std::string savePath;
 
 };
 
