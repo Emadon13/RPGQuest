@@ -43,6 +43,8 @@ GameWindow::GameWindow(Game *g,QWidget *parent) :
     mapElement=map->getCurrentPosition();
 
     ShowFrame();
+
+    game->save();
 }
 
 void GameWindow::ShowFrame()

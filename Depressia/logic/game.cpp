@@ -1,4 +1,7 @@
 #include "game.h"
+#include <QFile>
+#include <QDebug>
+#include <QString>
 
 using namespace std;
 
@@ -6,7 +9,7 @@ Game::Game():
     windowHeight(1080),
     windowWidth(1920),
     ratio(1.0),
-    savePath("../ressources/save/save.bin")
+    savePath("../ressources/save/save.vincent")
 {
     map = MapLoader::generate("../ressources/maps/map.txt");
 }
@@ -63,7 +66,7 @@ void Game::save()
 
 }
 
-Game* Game::load()
+void Game::load()
 {
 
 }

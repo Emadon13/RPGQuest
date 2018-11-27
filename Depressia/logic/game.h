@@ -2,6 +2,7 @@
 #define GAME_H
 
 #include"io/maploader.h"
+#include <QString>
 
 
 class Game
@@ -19,7 +20,7 @@ public:
     void setRatio(double l);
 
     void save();
-    Game* load();
+    void load();
 
 
 private:
@@ -27,7 +28,7 @@ private:
     int windowHeight;
     int windowWidth;
     double ratio;
-    std::string savePath;
+    QString savePath;
 
 };
 

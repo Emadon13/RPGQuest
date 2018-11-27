@@ -4541,7 +4541,18 @@ debug\game.obj: ..\Depressia\logic\game.cpp ..\Depressia\logic\game.h \
 		..\Depressia\logic\world\map.h \
 		..\Depressia\logic\world\mapelement.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
-		..\Depressia\io\mapelementloader.h
+		..\Depressia\io\mapelementloader.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QFile \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qfile.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qfiledevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QDebug \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdebug.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmap.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtextstream.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlocale.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvariant.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qset.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontiguouscache.h
 
 debug\skillloader.obj: ..\Depressia\io\skillloader.cpp ..\Depressia\io\skillloader.h \
 		..\Depressia\io\loader.h \
