@@ -79,10 +79,10 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     CharacterUI *character3=new CharacterUI(game,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*3+tailleUI*2,tailleUI,tailleUI);
     CharacterUI *character4=new CharacterUI(game,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*4+tailleUI*3,tailleUI,tailleUI);
 
-    CharacterUI *enemy1 = new CharacterUI(game,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI,tailleUI,tailleUI);
-    CharacterUI *enemy1 = new CharacterUI(game,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*2+tailleUI,tailleUI,tailleUI);
-    CharacterUI *enemy1 = new CharacterUI(game,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*3+tailleUI*2,tailleUI,tailleUI);
-    CharacterUI *enemy1 = new CharacterUI(game,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*4+tailleUI*3,tailleUI,tailleUI);
+    EnemyUI *enemy1 = new EnemyUI(game,espacementUI,espacementUI,tailleUI,tailleUI);
+    EnemyUI *enemy2 = new EnemyUI(game,espacementUI,espacementUI*2+tailleUI,tailleUI,tailleUI);
+    EnemyUI *enemy3 = new EnemyUI(game,espacementUI,espacementUI*3+tailleUI*2,tailleUI,tailleUI);
+    EnemyUI *enemy4 = new EnemyUI(game,espacementUI,espacementUI*4+tailleUI*3,tailleUI,tailleUI);
 
 }
 
