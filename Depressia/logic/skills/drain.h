@@ -11,7 +11,8 @@ public:
     Drain(std::string n, std::string t, int mp, std::vector<Category> cat, double c, double r);
     ~Drain();
 
-    std::vector<int> call(Entity& user, std::vector<Entity> targets);
+    Sheet call(Entity& user, Entity& target);
+    Sheet call(Entity& user, std::vector<Entity> targets);
 
 private:
     double coef;

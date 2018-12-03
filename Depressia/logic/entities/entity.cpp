@@ -13,7 +13,8 @@ Entity::Entity() :
     att(1),
     def(1),
     spd(1),
-    skills(0)
+    skills(0),
+    attack(Attack())
 {}
 
 Entity::Entity(string m_name,
@@ -33,7 +34,8 @@ Entity::Entity(string m_name,
     att(m_att),
     def(m_def),
     spd(m_spd),
-    skills(m_skills)
+    skills(m_skills),
+    attack(Attack())
 {
 
 }
@@ -116,24 +118,9 @@ void Entity::restaureMp(const int mpHeal)
     if (mp < 0) mp = mpMax;
 }
 
-int Entity::hitOpponent(Entity& target)
+Sheet Entity::hitOpponent(Entity& target)
 {
-    int deg;
-
-    if (target.getDef() <= 0)
-    {
-        deg = int(att*lvl);
-    }
-
-    else
-    {
-        deg = int((att*lvl) / (target.getDef()));
-    }
-
-    if (deg > target.getHp()) deg = target.getHp();
-
-    target.takeDamage(deg);
-    return deg;
+    return attack.call;
 }
 
 bool Entity::isAlive() const

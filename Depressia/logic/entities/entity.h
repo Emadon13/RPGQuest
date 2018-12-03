@@ -6,8 +6,7 @@
 #include <vector>
 #include <iostream>
 #include "logic/skills/skill.h"
-
-class Skill;
+#include "logic/skills/attack.h"
 
 class Entity
 {
@@ -37,7 +36,7 @@ public:
     void takeDamage(const int deg);
     void restaureHp(const int hpHeal);
     void restaureMp(const int mpHeal);
-    int hitOpponent(Entity& target);
+    Sheet hitOpponent(Entity& target);
 
     bool isAlive() const;
 
@@ -53,6 +52,7 @@ protected:
     int def;
     int spd;
     std::vector<Skill*>skills;
+    Attack attack;
 
     int static const max_lvl = 10;
 
