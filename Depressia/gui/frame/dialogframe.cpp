@@ -12,8 +12,6 @@
 
 DialogFrame::DialogFrame(GameWindow *g) : QObject()
 {
-    this->mapElement=mapElement;
-
     game=g;
     map=game->GetMap();
 

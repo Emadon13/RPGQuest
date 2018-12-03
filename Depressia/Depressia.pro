@@ -46,7 +46,9 @@ SOURCES += \
     logic/skills/drain.cpp \
     logic/skills/recoil.cpp \
     logic/skills/sheet.cpp \
-    logic/skills/attack.cpp
+    logic/skills/attack.cpp \
+    gui/frame/characterui.cpp \
+    gui/frame/enemyui.cpp
 
 
 
@@ -96,4 +98,6 @@ HEADERS += \
     logic/skills/drain.h \
     logic/skills/recoil.h \
     logic/skills/sheet.h \
-    logic/skills/attack.h
+    logic/skills/attack.h \
+    gui/frame/characterui.h \
+    gui/frame/enemyui.h

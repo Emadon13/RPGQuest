@@ -12,6 +12,8 @@
 #include <QVideoWidget>
 #include "gui/sprite.h"
 #include "gui/clickable/clickablelabel.h"
+#include "gui/frame/characterui.h"
+#include "gui/frame/enemyui.h"
 
 BattleFrame::BattleFrame(GameWindow *g) : QObject()
 {
@@ -68,6 +70,19 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     QObject::connect(attack, SIGNAL(clicked()), this , SLOT(Attack()));
     QObject::connect(damage, SIGNAL(clicked()), this , SLOT(Damage()));
     QObject::connect(kill, SIGNAL(clicked()), this , SLOT(Kill()));
+
+    int espacementUI=50;
+    int tailleUI = int((game->GetGame()->getWindowHeight()-espacementUI*5)/4);
+
+    CharacterUI *character1=new CharacterUI(game,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI,tailleUI,tailleUI);
+    CharacterUI *character2=new CharacterUI(game,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*2+tailleUI,tailleUI,tailleUI);
+    CharacterUI *character3=new CharacterUI(game,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*3+tailleUI*2,tailleUI,tailleUI);
+    CharacterUI *character4=new CharacterUI(game,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*4+tailleUI*3,tailleUI,tailleUI);
+
+    CharacterUI *enemy1 = new CharacterUI(game,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI,tailleUI,tailleUI);
+    CharacterUI *enemy1 = new CharacterUI(game,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*2+tailleUI,tailleUI,tailleUI);
+    CharacterUI *enemy1 = new CharacterUI(game,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*3+tailleUI*2,tailleUI,tailleUI);
+    CharacterUI *enemy1 = new CharacterUI(game,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*4+tailleUI*3,tailleUI,tailleUI);
 
 }
 
