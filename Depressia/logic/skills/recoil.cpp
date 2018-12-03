@@ -33,6 +33,7 @@ Recoil::~Recoil()
 {
 }
 
+/*
 vector<int> Recoil::call(Entity& user, vector <Entity> targets)
 {
     vector<int> recoils;
@@ -47,3 +48,4 @@ vector<int> Recoil::call(Entity& user, vector <Entity> targets)
 
     return recoils;
 }
+*/

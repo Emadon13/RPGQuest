@@ -13,8 +13,8 @@ Entity::Entity() :
     att(1),
     def(1),
     spd(1),
-    skills(0),
-    attack(Attack())
+    skills(0)
+    //attack(Attack())
 {}
 
 Entity::Entity(string m_name,
@@ -34,8 +34,8 @@ Entity::Entity(string m_name,
     att(m_att),
     def(m_def),
     spd(m_spd),
-    skills(m_skills),
-    attack(Attack())
+    skills(m_skills)
+    //attack(Attack())
 {
 
 }
@@ -120,7 +120,8 @@ void Entity::restaureMp(const int mpHeal)
 
 Sheet Entity::hitOpponent(Entity& target)
 {
-    return attack.call;
+    //return attack.call;
+    return Sheet();
 }
 
 bool Entity::isAlive() const

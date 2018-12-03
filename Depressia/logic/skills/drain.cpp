@@ -32,7 +32,7 @@ Drain::Drain(string n,
 Drain::~Drain()
 {
 }
-
+/*
 vector<int> Drain::call(Entity& user, vector <Entity> targets)
 {
     vector<int> drains;
@@ -47,3 +47,4 @@ vector<int> Drain::call(Entity& user, vector <Entity> targets)
 
     return drains;
 }
+*/

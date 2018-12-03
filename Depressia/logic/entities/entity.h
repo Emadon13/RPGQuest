@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef ENTITY_H
 #define ENTITY_H
 
@@ -52,7 +54,7 @@ protected:
     int def;
     int spd;
     std::vector<Skill*>skills;
-    Attack attack;
+    //Attack attack;
 
     int static const max_lvl = 10;
 

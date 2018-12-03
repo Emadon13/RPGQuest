@@ -23,16 +23,15 @@ Recover::Recover(string n,
 
 }
 
-Sheet Recover::call(Entity& user, vector<Entity> targets)
+string Recover::call(Entity& user, Entity& target)
 {
-    vector<int> hpHeals;
-    for (unsigned i=0 ; i<targets.size() ; i++)
-    {
-        int hpHeal;
-        hpHeal = int((user.getLvl() * 2 + targets.at(i).getLvl()) * coef);
-        hpHeals.push_back(hpHeal);
-    }
-
-    return Sheet();
-
+    stringstream sstr;
+    int hpHeal = int((user.getLvl() * 2 + target.getLvl()) * coef);
+    sstr << user.getName() << " utilise " << name << " sur " << target.getName() << " !<br>"
+         << hpHeal << " PVs soignés !";
+    return sstr.str();
 }
+
+
+
+

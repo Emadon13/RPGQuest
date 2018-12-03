@@ -39,19 +39,16 @@ Sheet Attack::call(Entity& user, Entity& target)
 
     target.takeDamage(deg);
 
-    vector<string> s;
-    s.push_back(target.getName());
-
-    vector<int> in;
-    in.push_back(deg);
+    
 
     if(coef == 1.0)
         return Sheet(user.getName(),
                      name,
-                     s,
+                      vector<string>(1,target.getName()),
                      false,
-                     in,
+                     vector<int>(1,deg),
                      0,
-                     normal,
+                     vector<HitEffect>(1,normal),
                      attack);
+        else return Sheet();
 }
