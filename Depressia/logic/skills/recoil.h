@@ -8,7 +8,7 @@ class Recoil : public Skill
 {
 public:
     Recoil();
-    Recoil(std::string n, std::string t, int mp, std::vector<Category> cat, double c, double r);
+    Recoil(std::string n, std::string t, int mp, Range rng, double c, double r);
     ~Recoil();
 
     std::vector<int> call(Entity& user, std::vector<Entity> targets);

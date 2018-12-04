@@ -1,20 +1,21 @@
 #include "skill.h"
+#include "logic/entities/entity.h"
 
 using namespace std;
 
 Skill::Skill() :
     mpCost(0),
-    categories(0)
+    range(one)
 {}
 
 Skill::Skill(string n,
              string t,
              int m_mpCost,
-             vector<Category> c):
+             Range c):
     name(n),
     text(t),
     mpCost(m_mpCost),
-    categories(c)
+    range(c)
 {}
 
 
@@ -37,8 +38,25 @@ int Skill::getMpCost()
     return mpCost;
 }
 
-Sheet Skill::call()
+int Skill::call()
 {
-    return Sheet();
+    return 0;
+}
+
+string Skill::getSummary()
+{
+    return summary;
+}
+
+string Skill::setSummary(string s)
+{
+    summary = s;
+    return summary;
+}
+
+void Skill::payMp(Entity& e)
+{
+    if(e.getMp() >= mpCost)
+        e.loseMp(mpCost);
 }
 

@@ -7,7 +7,6 @@
 #include <string>
 #include <vector>
 #include <iostream>
-#include "logic/skills/skill.h"
 #include "logic/skills/attack.h"
 
 class Entity
@@ -24,23 +23,24 @@ public:
     std::vector<Skill*>m_skills);
     ~Entity();
 
-    std::string getName() const;
-    int getLvl() const;
-    int getHp() const;
-    int getMp() const;
-    int getAtt() const;
-    int getDef() const;
-    int getSpd() const;
+    std::string getName();
+    int getLvl();
+    int getHp();
+    int getMp();
+    int getAtt();
+    int getDef();
+    int getSpd();
 
     Skill getSkill(int i);
     int getSkillsSize();
 
-    void takeDamage(const int deg);
-    void restaureHp(const int hpHeal);
-    void restaureMp(const int mpHeal);
-    Sheet hitOpponent(Entity& target);
+    void takeDamage(int deg);
+    void loseMp(int mp);
+    void restaureHp(int hpHeal);
+    void restaureMp(int mpHeal);
+    std::string hitOpponent(Entity& target);
 
-    bool isAlive() const;
+    bool isAlive();
 
 
 protected:
@@ -54,8 +54,7 @@ protected:
     int def;
     int spd;
     std::vector<Skill*>skills;
-    //Attack attack;
-
+    Skill* attack;
     int static const max_lvl = 10;
 
 

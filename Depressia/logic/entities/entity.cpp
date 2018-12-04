@@ -13,8 +13,8 @@ Entity::Entity() :
     att(1),
     def(1),
     spd(1),
-    skills(0)
-    //attack(Attack())
+    skills(0),
+    attack(new Attack())
 {}
 
 Entity::Entity(string m_name,
@@ -34,8 +34,8 @@ Entity::Entity(string m_name,
     att(m_att),
     def(m_def),
     spd(m_spd),
-    skills(m_skills)
-    //attack(Attack())
+    skills(m_skills),
+    attack(new Attack())
 {
 
 }
@@ -45,38 +45,38 @@ Entity::~Entity()
 {}
 
 
-string Entity::getName() const
+string Entity::getName()
 {
     return name;
 }
 
-int Entity::getLvl() const
+int Entity::getLvl()
 {
     return lvl;
 }
 
 
-int Entity::getHp() const
+int Entity::getHp()
 {
     return hp;
 }
 
-int Entity::getMp() const
+int Entity::getMp()
 {
     return mp;
 }
 
-int Entity::getAtt()  const
+int Entity::getAtt()
 {
     return att;
 }
 
-int Entity::getDef() const
+int Entity::getDef()
 {
     return def;
 }
 
-int Entity::getSpd() const
+int Entity::getSpd()
 {
     return spd;
 }
@@ -98,14 +98,21 @@ int Entity::getSkillsSize()
     return int(skills.size());
 }
 
-void Entity::takeDamage(const int deg)
+void Entity::takeDamage(int deg)
 {
     hp -= deg;
     if (hp < 0) hp = 0;
     else if (hp > hpMax) hp = hpMax;
 }
 
-void Entity::restaureHp(const int hpHeal)
+void Entity::loseMp(int m)
+{
+    mp-=m;
+    if (mp < 0) mp = 0;
+    else if (mp > mpMax) mp = mpMax;
+}
+
+void Entity::restaureHp(int hpHeal)
 {
     hp += hpHeal;
     if (hp < 0) hp = 0;
@@ -118,13 +125,14 @@ void Entity::restaureMp(const int mpHeal)
     if (mp < 0) mp = mpMax;
 }
 
-Sheet Entity::hitOpponent(Entity& target)
+string Entity::hitOpponent(Entity& target)
 {
-    //return attack.call;
-    return Sheet();
+    Attack* a = dynamic_cast<Attack*>(attack);
+    a->call(*this, target);
+    return a->getSummary();
 }
 
-bool Entity::isAlive() const
+bool Entity::isAlive()
 {
     return (hp == 0);
 }
