@@ -47,7 +47,8 @@ SOURCES += \
     logic/skills/recoil.cpp \
     logic/skills/attack.cpp \
     gui/frame/characterui.cpp \
-    gui/frame/enemyui.cpp
+    gui/frame/enemyui.cpp \
+    io/entityloader.cpp
 
 
 
@@ -98,4 +99,5 @@ HEADERS += \
     logic/skills/recoil.h \
     logic/skills/attack.h \
     gui/frame/characterui.h \
-    gui/frame/enemyui.h
+    gui/frame/enemyui.h \
+    io/entityloader.h
