@@ -27,7 +27,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
 
     QLabel *back = new QLabel(game);
-    back->setPixmap(QPixmap("../ressources/images/background-battle4.png"));
+    back->setPixmap(QPixmap("../ressources/images/background-battle4.png").scaled(WindowWidth,WindowHeight));
     back->setFixedSize(WindowWidth,WindowHeight);
     back->move(0,0);
     back->show();
