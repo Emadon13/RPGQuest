@@ -8,10 +8,15 @@ class CharacterUI: QObject
 {
     Q_OBJECT
 
+public slots:
+    void Update();
+
 public:
-    CharacterUI(GameWindow *g, int x, int y, int width, int height);
+    CharacterUI(GameWindow *g, Entity *e, int x, int y, int width, int height);
 
     GameWindow *game;
+
+    Entity *perso;
 
     int posX;
     int posY;

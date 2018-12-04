@@ -26,6 +26,10 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     double ratio(game->GetGame()->getRatio());
 
 
+    bonasse = game->GetGame()->team.at(0);
+    rozalin = game->GetGame()->team.at(1);
+
+
     QLabel *back = new QLabel(game);
     back->setPixmap(QPixmap("../ressources/images/background-battle4.png").scaled(WindowWidth,WindowHeight));
     back->setFixedSize(WindowWidth,WindowHeight);
@@ -35,8 +39,8 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
     scene = new QGraphicsScene(game);
     view = new QGraphicsView(game);
-    sprite = new Sprite("../ressources/sprites/sprite_seraphina.png","../ressources/sprites/sprite_seraphina_damage.png","../ressources/sprites/sprite_seraphina_attack.png");
-    sprite2 = new Sprite("../ressources/sprites/sprite_rozalin.png","../ressources/sprites/sprite_rozalin_damage.png","../ressources/sprites/sprite_rozalin_attack.png");
+    sprite = new Sprite(bonasse,"../ressources/sprites/sprite_seraphina.png","../ressources/sprites/sprite_seraphina_damage.png","../ressources/sprites/sprite_seraphina_attack.png");
+    sprite2 = new Sprite(rozalin,"../ressources/sprites/sprite_rozalin.png","../ressources/sprites/sprite_rozalin_damage.png","../ressources/sprites/sprite_rozalin_attack.png");
 
     view->setScene(scene);
     scene->addItem(sprite);
@@ -84,14 +88,14 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     int espacementUI=50;
     int tailleUI = int((game->GetGame()->getWindowHeight()-espacementUI*5)/4);
 
-    CharacterUI *character2=new CharacterUI(game,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*2+tailleUI,tailleUI,tailleUI);
+    character = new CharacterUI(game,bonasse,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*2+tailleUI,tailleUI,tailleUI);
 
-    EnemyUI *enemy2 = new EnemyUI(game,espacementUI,espacementUI*2+tailleUI,tailleUI,tailleUI);
+    enemy = new EnemyUI(game,rozalin,espacementUI,espacementUI*2+tailleUI,tailleUI,tailleUI);
 
     int dialogWidth(int(WindowWidth*0.4));
     int dialogHeight(int(WindowHeight*0.2));
 
-    QLabel *dialogInfo = new QLabel(game);
+    dialogInfo = new QLabel(game);
     dialogInfo->setPixmap(QPixmap("../ressources/images/jaugeHP.png").scaled(dialogWidth,dialogHeight));
     dialogInfo->setFixedSize(dialogWidth,dialogHeight);
     dialogInfo->move(WindowWidth/2-dialogWidth/2,0);
@@ -147,12 +151,28 @@ void BattleFrame::killEntity(Sprite *s)
 
 void BattleFrame::damageEntity(Sprite *s)
 {
-    s->damage();
+
 }
 
 void BattleFrame::attackEntity(Sprite *s)
 {
-    s->attack();
+    std::string test;
+
+    if(s->getEntity()==bonasse)
+    {
+        sprite->attack();
+        sprite2->damage();
+        test = bonasse->hitOpponent(*rozalin);
+    }
+    else
+    {
+        sprite2->attack();
+        sprite->damage();
+        test = rozalin->hitOpponent(*bonasse);
+    }
+    enemy->Update();
+    character->Update();
+    dialogInfo->setText(QString::fromStdString(test));
 }
 
 void BattleFrame::deleteEntity(Sprite *s)

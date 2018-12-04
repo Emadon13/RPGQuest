@@ -1,10 +1,11 @@
 #include "sprite.h"
 
-Sprite::Sprite(QString nS, QString dS, QString aS) : QObject(), QGraphicsItem()
+Sprite::Sprite(Entity *e, QString nS, QString dS, QString aS) : QObject(), QGraphicsItem()
 {
     this->damageSprite=dS;
     this->normalSprite=nS;
     this->attackSprite=aS;
+    this->perso=e;
 
     currentFrame = 0;
     spriteImage = new QPixmap(normalSprite);
@@ -129,4 +130,9 @@ void Sprite::nextKillFrame()
 void Sprite::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     emit clicked(this);
+}
+
+Entity* Sprite::getEntity()
+{
+    return this->perso;
 }

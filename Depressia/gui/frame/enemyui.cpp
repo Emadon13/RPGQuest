@@ -1,11 +1,12 @@
 #include "enemyui.h"
 #include <QProgressBar>
 
-EnemyUI::EnemyUI(GameWindow *g, int x, int y, int width, int height) : QObject()
+EnemyUI::EnemyUI(GameWindow *g, Entity *e, int x, int y, int width, int height) : QObject()
 {
     game=g;
     posX=x;
     posY=y;
+    perso=e;
 
     this->height=height;
     this->width=width;
@@ -44,7 +45,7 @@ EnemyUI::EnemyUI(GameWindow *g, int x, int y, int width, int height) : QObject()
     image->show();
 
     name = new QLabel(game);
-    name->setText("Rozalin");
+    name->setText(QString::fromStdString(perso->getName()));
     name->setAlignment(Qt::AlignCenter);
     name->setFixedSize(nameWidth,nameHeight);
     name->move(posX+boostAttack->width(),posY);
@@ -52,7 +53,7 @@ EnemyUI::EnemyUI(GameWindow *g, int x, int y, int width, int height) : QObject()
     name->setStyleSheet(styleGlobal);
 
     level = new QLabel(game);
-    level->setText("10");
+    level->setText(QString::fromStdString(std::to_string(perso->getLvl())));
     level->setAlignment(Qt::AlignCenter);
     level->setFixedSize(width-imageWidht,height-imageHeight);
     level->move(posX,posY+imageHeight);
@@ -61,15 +62,19 @@ EnemyUI::EnemyUI(GameWindow *g, int x, int y, int width, int height) : QObject()
     level->setWordWrap(true);
 
     jaugeHP = new QProgressBar(game);
-    jaugeHP->setMaximum(25);
+    jaugeHP->setMaximum(perso->getHpMax());
     jaugeHP->setMinimum(0);
     jaugeHP->setFixedSize(imageWidht,(height-imageHeight));
     jaugeHP->move(posX+level->width(),posY+imageHeight);
     jaugeHP->show();
-    jaugeHP->setValue(20);
-    jaugeHP->setFormat("PV : 20/25");
+    jaugeHP->setValue(perso->getHp());
+    jaugeHP->setFormat("");
     jaugeHP->setAlignment(Qt::AlignCenter);
     jaugeHP->setStyleSheet(styleHP);
-
-
 }
+
+void EnemyUI::Update()
+{
+    jaugeHP->setValue(perso->getHp());
+}
+

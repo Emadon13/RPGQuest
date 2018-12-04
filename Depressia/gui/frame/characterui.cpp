@@ -1,11 +1,12 @@
 #include "characterui.h"
 #include <QProgressBar>
 
-CharacterUI::CharacterUI(GameWindow *g, int x, int y, int width, int height) : QObject()
+CharacterUI::CharacterUI(GameWindow *g, Entity *e, int x, int y, int width, int height) : QObject()
 {
     game=g;
     posX=x;
     posY=y;
+    perso=e;
 
     this->height=height;
     this->width=width;
@@ -30,7 +31,7 @@ CharacterUI::CharacterUI(GameWindow *g, int x, int y, int width, int height) : Q
 
 
     name = new QLabel(game);
-    name->setText("Bonasse");
+    name->setText(QString::fromStdString(perso->getName()));
     name->setAlignment(Qt::AlignCenter);
     name->setFixedSize(nameWidth,nameHeight);
     name->move(posX+nameWidth,posY);
@@ -38,7 +39,7 @@ CharacterUI::CharacterUI(GameWindow *g, int x, int y, int width, int height) : Q
     name->setStyleSheet(styleGlobal);
 
     level = new QLabel(game);
-    level->setText("NIV 10");
+    level->setText("NIV " + QString::fromStdString(std::to_string(perso->getLvl())));
     level->setAlignment(Qt::AlignCenter);
     level->setFixedSize(width-imageWidht,height-imageHeight);
     level->move(posX+imageWidht,posY+imageHeight);
@@ -47,24 +48,24 @@ CharacterUI::CharacterUI(GameWindow *g, int x, int y, int width, int height) : Q
     level->setWordWrap(true);
 
     jaugeHP = new QProgressBar(game);
-    jaugeHP->setMaximum(25);
+    jaugeHP->setMaximum(perso->getHpMax());
     jaugeHP->setMinimum(0);
     jaugeHP->setFixedSize(imageWidht,(height-imageHeight)/2);
     jaugeHP->move(posX,posY+imageHeight);
     jaugeHP->show();
-    jaugeHP->setValue(20);
-    jaugeHP->setFormat("PV : 20/25");
+    jaugeHP->setValue(perso->getHp());
+    jaugeHP->setFormat("PV : "+QString::fromStdString(std::to_string(perso->getHp()))+"/"+QString::fromStdString(std::to_string(perso->getHpMax())));
     jaugeHP->setAlignment(Qt::AlignCenter);
     jaugeHP->setStyleSheet(styleHP);
 
     jaugeMP = new QProgressBar(game);
-    jaugeMP->setMaximum(12);
+    jaugeMP->setMaximum(perso->getMpMax());
     jaugeMP->setMinimum(0);
     jaugeMP->setFixedSize(imageWidht,(height-imageHeight)/2);
     jaugeMP->move(posX,posY+imageHeight+jaugeHP->height());
     jaugeMP->show();
-    jaugeMP->setValue(5);
-    jaugeMP->setFormat("PM : 5/12");
+    jaugeMP->setValue(perso->getMp());
+    jaugeMP->setFormat("PM : "+QString::fromStdString(std::to_string(perso->getMp()))+"/"+QString::fromStdString(std::to_string(perso->getMpMax())));
     jaugeMP->setAlignment(Qt::AlignCenter);
     jaugeMP->setStyleSheet(styleMP);
 
@@ -97,4 +98,13 @@ CharacterUI::CharacterUI(GameWindow *g, int x, int y, int width, int height) : Q
     boostSpeed->move(posX+imageWidht+jaugeEXP->width(),posY+boostAttack->height()+boostDefense->height());
     boostSpeed->show();
     boostSpeed->setStyleSheet(styleGlobal);
+}
+
+void CharacterUI::Update()
+{
+    jaugeHP->setValue(perso->getHp());
+    jaugeHP->setFormat("PV : "+QString::fromStdString(std::to_string(perso->getHp()))+"/"+QString::fromStdString(std::to_string(perso->getHpMax())));
+
+    jaugeMP->setValue(perso->getMp());
+    jaugeMP->setFormat("PM : "+QString::fromStdString(std::to_string(perso->getMp()))+"/"+QString::fromStdString(std::to_string(perso->getMpMax())));
 }

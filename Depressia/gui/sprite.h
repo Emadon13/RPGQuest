@@ -6,6 +6,7 @@
 #include <QTimer>
 #include <QPixmap>
 #include <QPainter>
+#include "logic/entities/entity.h"
 
 class Sprite : public QObject, public QGraphicsItem
 {
@@ -16,7 +17,8 @@ signals:
     void killed(Sprite*);
 
 public:
-    Sprite(QString normalSprite, QString damageSprite, QString attackSprite);
+    Sprite(Entity *e,QString normalSprite, QString damageSprite, QString attackSprite);
+    Entity* getEntity();
 
 public slots :
     void kill();
@@ -38,6 +40,7 @@ private:
     QString attackSprite;
 
 private:
+    Entity *perso;
     QTimer *timer;
     QTimer *timerD;
     QTimer *timerK;

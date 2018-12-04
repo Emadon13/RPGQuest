@@ -9,10 +9,15 @@ class EnemyUI : QObject
 {
    Q_OBJECT
 
+public slots:
+    void Update();
+
 public:
-    EnemyUI(GameWindow *g, int x, int y, int width, int height);
+    EnemyUI(GameWindow *g, Entity *e, int x, int y, int width, int height);
 
     GameWindow *game;
+
+    Entity *perso;
 
     int posX;
     int posY;

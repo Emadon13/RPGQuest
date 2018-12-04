@@ -5,6 +5,8 @@
 #include <QMediaPlaylist>
 #include <QVideoWidget>
 #include "gui/sprite.h"
+#include "gui/frame/characterui.h"
+#include "gui/frame/enemyui.h"
 
 
 class BattleFrame : QObject
@@ -25,8 +27,16 @@ public:
 
     GameWindow *game;
 
+    Entity *bonasse;
+    Entity *rozalin;
+
+    CharacterUI *character;
+    EnemyUI *enemy;
+
     Sprite *sprite;
     Sprite *sprite2;
+
+    QLabel *dialogInfo;
 
     QGraphicsScene *scene;
     QGraphicsView *view;
