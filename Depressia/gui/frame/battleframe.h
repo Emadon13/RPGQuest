@@ -32,7 +32,6 @@ public:
     QGraphicsView *view;
 
     ClickableLabel *c;
-
 };
 
 #endif // BATTLEFRAME_H
