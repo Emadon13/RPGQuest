@@ -25,6 +25,14 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
     double ratio(game->GetGame()->getRatio());
 
+
+    QLabel *back = new QLabel(game);
+    back->setPixmap(QPixmap("../ressources/images/background-battle4.png"));
+    back->setFixedSize(WindowWidth,WindowHeight);
+    back->move(0,0);
+    back->show();
+
+
     scene = new QGraphicsScene(game);
     view = new QGraphicsView(game);
     sprite = new Sprite("../ressources/sprites/sprite_seraphina.png","../ressources/sprites/sprite_seraphina_damage.png","../ressources/sprites/sprite_seraphina_attack.png");
@@ -71,6 +79,8 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     QObject::connect(damage, SIGNAL(clicked()), this , SLOT(Damage()));
     QObject::connect(kill, SIGNAL(clicked()), this , SLOT(Kill()));
 
+
+
     int espacementUI=50;
     int tailleUI = int((game->GetGame()->getWindowHeight()-espacementUI*5)/4);
 
@@ -83,6 +93,21 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     EnemyUI *enemy2 = new EnemyUI(game,espacementUI,espacementUI*2+tailleUI,tailleUI,tailleUI);
     EnemyUI *enemy3 = new EnemyUI(game,espacementUI,espacementUI*3+tailleUI*2,tailleUI,tailleUI);
     EnemyUI *enemy4 = new EnemyUI(game,espacementUI,espacementUI*4+tailleUI*3,tailleUI,tailleUI);
+
+    int dialogWidth(int(WindowWidth*0.4));
+    int dialogHeight(int(WindowHeight*0.2));
+
+    QLabel *dialogInfo = new QLabel(game);
+    dialogInfo->setPixmap(QPixmap("../ressources/images/jaugeHP.png").scaled(dialogWidth,dialogHeight));
+    dialogInfo->setFixedSize(dialogWidth,dialogHeight);
+    dialogInfo->move(WindowWidth/2-dialogWidth/2,0);
+    dialogInfo->show();
+
+    QLabel *dialogSelection = new QLabel(game);
+    dialogSelection->setPixmap(QPixmap("../ressources/images/jaugeHP.png").scaled(dialogWidth,dialogHeight));
+    dialogSelection->setFixedSize(dialogWidth,dialogHeight);
+    dialogSelection->move(WindowWidth/2-dialogWidth/2,WindowHeight-dialogHeight);
+    dialogSelection->show();
 
 }
 

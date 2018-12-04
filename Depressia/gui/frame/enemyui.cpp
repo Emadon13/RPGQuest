@@ -10,8 +10,8 @@ EnemyUI::EnemyUI(GameWindow *g, int x, int y, int width, int height) : QObject()
     this->height=height;
     this->width=width;
 
-    int imageWidht=int(width*0.75);
-    int imageHeight=int(height*0.75);
+    int imageWidht=int(width*0.85);
+    int imageHeight=int(height*0.85);
 
     int nameWidth=imageWidht/2;
     int nameHeight=25;
@@ -63,7 +63,7 @@ EnemyUI::EnemyUI(GameWindow *g, int x, int y, int width, int height) : QObject()
     jaugeHP = new QProgressBar(game);
     jaugeHP->setMaximum(25);
     jaugeHP->setMinimum(0);
-    jaugeHP->setFixedSize(imageWidht,(height-imageHeight)/2);
+    jaugeHP->setFixedSize(imageWidht,(height-imageHeight));
     jaugeHP->move(posX+level->width(),posY+imageHeight);
     jaugeHP->show();
     jaugeHP->setValue(20);
