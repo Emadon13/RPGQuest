@@ -12,8 +12,8 @@ Game::Game():
     savePath("../ressources/save/save.vincent")
 {
     map = MapLoader::generate("../ressources/maps/map.txt");
-    //team[0] = new Entity("Bonasse", 1, 10, 5, 3, 2, 2, vector<Skill*>(0));
-    //team[1] = new Entity("Rozalin", 10, 100, 50, 3, 2, 2, vector<Skill*>(0));
+    team.push_back(new Entity("Bonasse", 1, 10, 5, 3, 2, 2, vector<Skill*>(0)));
+    team.push_back(new Entity("Rozalin", 10, 100, 50, 3, 2, 2, vector<Skill*>(0)));
 }
 
 Map* Game::getMap()
