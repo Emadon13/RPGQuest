@@ -40,7 +40,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     scene = new QGraphicsScene(game);
     view = new QGraphicsView(game);
     sprite = new Sprite(bonasse,"../ressources/sprites/sprite_seraphina.png","../ressources/sprites/sprite_seraphina_damage.png","../ressources/sprites/sprite_seraphina_attack.png");
-    sprite2 = new Sprite(rozalin,"../ressources/sprites/sprite_rozalin.png","../ressources/sprites/sprite_rozalin_damage.png","../ressources/sprites/sprite_rozalin_attack.png");
+    sprite2 = new Sprite(rozalin,"../ressources/sprites/sprite_tata_reverse.png","../ressources/sprites/sprite_rozalin_damage.png","../ressources/sprites/sprite_rozalin_attack.png");
 
     view->setScene(scene);
     scene->addItem(sprite);
