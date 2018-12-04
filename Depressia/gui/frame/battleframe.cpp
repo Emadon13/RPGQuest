@@ -49,10 +49,10 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     view->setFrameStyle(QFrame::NoFrame);
     view->setFixedSize(WindowWidth,WindowHeight);
 
-    sprite->setPos(QPointF(int(500/ratio),int(500/ratio)));
+    sprite->setPos(QPointF(int(1300/ratio),int(500/ratio)));
     sprite->setToolTip("Bonasse");
 
-    sprite2->setPos(QPointF(int(1300/ratio),int(200/ratio)));
+    sprite2->setPos(QPointF(int(500/ratio),int(500/ratio)));
 
     scene->setSceneRect(0, 0, WindowWidth, WindowHeight);
 
@@ -84,15 +84,9 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     int espacementUI=50;
     int tailleUI = int((game->GetGame()->getWindowHeight()-espacementUI*5)/4);
 
-    CharacterUI *character1=new CharacterUI(game,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI,tailleUI,tailleUI);
     CharacterUI *character2=new CharacterUI(game,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*2+tailleUI,tailleUI,tailleUI);
-    CharacterUI *character3=new CharacterUI(game,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*3+tailleUI*2,tailleUI,tailleUI);
-    CharacterUI *character4=new CharacterUI(game,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*4+tailleUI*3,tailleUI,tailleUI);
 
-    EnemyUI *enemy1 = new EnemyUI(game,espacementUI,espacementUI,tailleUI,tailleUI);
     EnemyUI *enemy2 = new EnemyUI(game,espacementUI,espacementUI*2+tailleUI,tailleUI,tailleUI);
-    EnemyUI *enemy3 = new EnemyUI(game,espacementUI,espacementUI*3+tailleUI*2,tailleUI,tailleUI);
-    EnemyUI *enemy4 = new EnemyUI(game,espacementUI,espacementUI*4+tailleUI*3,tailleUI,tailleUI);
 
     int dialogWidth(int(WindowWidth*0.4));
     int dialogHeight(int(WindowHeight*0.2));

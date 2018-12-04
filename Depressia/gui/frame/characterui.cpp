@@ -16,9 +16,9 @@ CharacterUI::CharacterUI(GameWindow *g, int x, int y, int width, int height) : Q
     int nameWidth=imageWidht/2;
     int nameHeight=25;
 
-    QString styleHP = "QProgressBar {border: 2px solid black; border-radius: 5px; background-color: #2d2d2d;} QProgressBar::chunk {background-color: #3df920;}";
-    QString styleMP = "QProgressBar {border: 2px solid black; border-radius: 5px; background-color: #2d2d2d;} QProgressBar::chunk {background-color: #05B8CC;}";
-    QString styleEXP = "QProgressBar {border: 2px solid black; border-radius: 5px; background-color: #2d2d2d;} QProgressBar::chunk {background-color: #f9f920;}";
+    QString styleHP = "QProgressBar {border: 2px solid black; border-radius: 5px; background-color: #666666;} QProgressBar::chunk {background-color: #3df920;}";
+    QString styleMP = "QProgressBar {border: 2px solid black; border-radius: 5px; background-color: #666666;} QProgressBar::chunk {background-color: #05B8CC;}";
+    QString styleEXP = "QProgressBar {border: 2px solid black; border-radius: 5px; background-color: #666666;} QProgressBar::chunk {background-color: #f9f920;}";
     QString styleGlobal = "QLabel { color: #ffffff; background-color : #2d2d2d; border: 2px solid black; border-radius: 5px;}";
 
 
