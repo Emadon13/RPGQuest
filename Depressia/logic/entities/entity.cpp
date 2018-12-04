@@ -66,6 +66,16 @@ int Entity::getMp()
     return mp;
 }
 
+int Entity::getHpMax()
+{
+    return hpMax;
+}
+
+int Entity::getMpMax()
+{
+    return mpMax;
+}
+
 int Entity::getAtt()
 {
     return att;
