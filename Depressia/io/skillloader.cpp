@@ -8,16 +8,16 @@ SkillLoader::SkillLoader()
 {
 
 }
-/*
+
 Skill* SkillLoader::generate()
 {
-    return Skill();
+    return new Skill();
 }
 
 Skill* SkillLoader::generate(string path)
 {
     ifstream file(path);
-    string name, text, mpc, skill, c, r, cat;
+    string name, text, mpc, skill, co, ra, rng;
     int mpCost, coef, rate;
 
     if(file)
@@ -29,19 +29,23 @@ Skill* SkillLoader::generate(string path)
 
         getline(file,skill);
 
+        if(skill == "attack")
+        {
+            getline(file, rng);
+            getline(file, co);
+        }
+
         if(skill == "recover")
         {
-            getline(file,c);
-            getline(file, r);
+            getline(file,rng);
+            getline(file, co);
 
-            coef = int(stoi(c));
+            coef = int(stoi(co));
+            return new Skill();
 
-            getline(file, cat);
-            while (cat != "end")
-
-            return new Recover(name, text, mpCost, coef);
+            //return new Recover(name, text, mpCost, coef);
         }
     }
 
 }
-*/
+
