@@ -2,6 +2,7 @@
 #define GAME_H
 
 #include"io/maploader.h"
+#include "logic/entities/entity.h"
 #include <QString>
 
 
@@ -22,9 +23,13 @@ public:
     void save();
     void load();
 
+    std::vector<Entity*> team;
+
 
 private:
     Map map;
+
+
     int windowHeight;
     int windowWidth;
     double ratio;
