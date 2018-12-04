@@ -27,6 +27,8 @@ public:
     int getLvl();
     int getHp();
     int getMp();
+    int getHpMax();
+    int getMpMax();
     int getAtt();
     int getDef();
     int getSpd();
