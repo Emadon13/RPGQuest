@@ -3,11 +3,11 @@
 using namespace std;
 
 Drain::Drain():
-    Skill("Vampipoutou",
+    Attack("Vampipoutou",
           "Baiser qui restaure 1/2 des dégats infligés",
           3,
-          vector<Category>(1,one)),
-    coef(1),
+          one,
+          1.0),
     rate(1.2)
 {
 
@@ -17,11 +17,10 @@ Drain::Drain():
 Drain::Drain(string n,
                      string t,
                      int mp,
-                     vector<Category> cat,
+                     Range rng,
                      double c,
                      double r):
-    Skill(n, t, mp, cat),
-    coef(c),
+    Attack(n, t, mp, rng, c),
     rate(r)
 {
 
@@ -32,7 +31,7 @@ Drain::Drain(string n,
 Drain::~Drain()
 {
 }
-/*
+
 vector<int> Drain::call(Entity& user, vector <Entity> targets)
 {
     vector<int> drains;
@@ -40,11 +39,11 @@ vector<int> Drain::call(Entity& user, vector <Entity> targets)
     for(unsigned long long i=0 ; i < targets.size() ; i++)
     {
         int drain;
-        drain = int(user.hitOpponent(targets.at(i)) * rate);
+        //drain = int(user.hitOpponent(targets.at(i)) * rate);
         user.takeDamage(drain);
         drains.push_back(drain);
     }
 
     return drains;
 }
-*/
+

@@ -1,7 +1,7 @@
 #include "recoil.h"
 
 using namespace std;
-
+/*
 Recoil::Recoil():
     Skill("Vampipoutou",
           "Baiser qui restaure 1/2 des dégats infligés",
@@ -33,7 +33,7 @@ Recoil::~Recoil()
 {
 }
 
-/*
+
 vector<int> Recoil::call(Entity& user, vector <Entity> targets)
 {
     vector<int> recoils;
