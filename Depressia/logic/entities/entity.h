@@ -8,7 +8,6 @@
 #include <vector>
 #include <iostream>
 #include "logic/skills/attack.h"
-#include "gui/sprite.h"
 
 class Entity
 {

@@ -15,7 +15,7 @@ Entity* EntityLoader::generate()
 Entity* EntityLoader::generate(string path)
 {
     ifstream file(path);
-    string name, lvl, hpMax, mpMax, att, def, spd, spriteN, spriteD, spriteA, spriteS, spriteK, skill;
+    string name, lvl, hpMax, mpMax, att, def, spd, sprite, icon, skill;
     vector<Skill*> skills;
 
     if(file)
@@ -27,11 +27,8 @@ Entity* EntityLoader::generate(string path)
         getline(file, att);
         getline(file, def);
         getline(file, spd);
-        getline(file, spriteN);
-        getline(file, spriteD);
-        getline(file, spriteA);
-        getline(file, spriteS);
-        getline(file, spriteK);
+        getline(file, sprite);
+        getline(file, icon);
 
         getline(file, skill);
 
@@ -45,7 +42,8 @@ Entity* EntityLoader::generate(string path)
                       int(stoi(att)),
                       int(stoi(def)),
                       int(stoi(spd)),
-                      new Sprite(spriteN, spriteD, spriteA, spriteS, spriteK),
+                      sprite,
+                      icon,
                       skills);
     }
 
