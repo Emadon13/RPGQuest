@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef SPRITE_H
 #define SPRITE_H
 
@@ -17,8 +19,12 @@ signals:
     void killed(Sprite*);
 
 public:
-    Sprite(Entity *e,QString normalSprite, QString damageSprite, QString attackSprite);
-    Entity* getEntity();
+    Sprite();
+    Sprite(std::string normal,
+           std::string damage,
+           std::string attack,
+           std::string skill,
+           std::string killed);
 
 public slots :
     void kill();
@@ -38,6 +44,8 @@ private:
     QString damageSprite;
     QString normalSprite;
     QString attackSprite;
+    QString skillSprite;
+    QString killedSprite;
 
 private:
     Entity *perso;

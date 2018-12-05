@@ -14,8 +14,10 @@ Entity::Entity() :
     def(1),
     spd(1),
     skills(0),
-    attack(new Attack())
-{}
+    attack(new Attack()),
+    sprites(new Sprite("", "", "", "", ""))
+{
+}
 
 Entity::Entity(string m_name,
                int m_lvl,
@@ -24,6 +26,7 @@ Entity::Entity(string m_name,
                int m_att,
                int m_def,
                int m_spd,
+               Sprite* s,
                vector<Skill*> m_skills):
     name(m_name),
     lvl(m_lvl),
@@ -35,9 +38,9 @@ Entity::Entity(string m_name,
     def(m_def),
     spd(m_spd),
     skills(m_skills),
-    attack(new Attack())
+    attack(new Attack()),
+    sprites(s)
 {
-
 }
 
 

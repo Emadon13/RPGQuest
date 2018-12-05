@@ -2,6 +2,7 @@
 #include <QFile>
 #include <QDebug>
 #include <QString>
+#include <time.h>
 
 using namespace std;
 
@@ -9,11 +10,11 @@ Game::Game():
     windowHeight(1080),
     windowWidth(1920),
     ratio(1.0),
-    savePath("../ressources/save/save.vincent")
+    savePath("../ressources/save/save.vincent"),
+    team(Team())
 {
     map = MapLoader::generate("../ressources/maps/map.txt");
-    team.push_back(new Entity("Bonasse", 1, 10, 5, 3, 2, 2, vector<Skill*>(0)));
-    team.push_back(new Entity("Rozalin", 10, 100, 50, 3, 2, 2, vector<Skill*>(0)));
+    srand (time(NULL));
 }
 
 Map* Game::getMap()

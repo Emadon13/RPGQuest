@@ -22,4 +22,6 @@ vector<Entity> Fight::getHeroes()
 {
     return heroes;
 }
+ v
+
 */

@@ -1,0 +1,14 @@
+Rozalin
+3
+20
+10
+2
+4
+2
+../ressources/sprites/sprite_rozalin.png
+../ressources/sprites/sprite_rozalin_damage.png
+../ressources/sprites/sprite_rozalin_attack.png
+../ressources/sprites/sprite_rozalin_attack.png
+../ressources/sprites/sprite_rozalin_damage.png
+../ressources/skills/recovers/e-coque.txt
+end

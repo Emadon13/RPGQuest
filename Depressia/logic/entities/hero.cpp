@@ -1,7 +1,7 @@
 #include "hero.h"
 
 using namespace std;
-
+/*
 Hero::Hero():
     xp(0),
     base_hp(100),
@@ -65,4 +65,4 @@ void Hero::calculateNextLevel()
 {
     next_level = lvl*lvl*10;
 }
-
+*/

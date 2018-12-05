@@ -1,8 +1,8 @@
 #ifndef SKILLLOADER_H
 #define SKILLLOADER_H
 
-#include"loader.h"
-#include"logic/skills/skill.h"
+#include "loader.h"
+#include "logic/skills/skill.h"
 #include "logic/skills/attack.h"
 #include "logic/skills/recover.h"
 

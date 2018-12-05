@@ -22,8 +22,8 @@ Skill* SkillLoader::generate(string path)
         getline(file, name);
         getline(file, text);
         getline(file, mpc);
-        getline(file,skill);
-        getline(file, rng);
+        getline(file,rng);
+        getline(file, skill);
 
         if(skill == "attack")
         {

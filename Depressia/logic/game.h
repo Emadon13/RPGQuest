@@ -1,8 +1,8 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include"io/maploader.h"
-#include "logic/entities/entity.h"
+#include "io/maploader.h"
+#include "logic/entities/team.h"
 #include <QString>
 
 
@@ -23,7 +23,7 @@ public:
     void save();
     void load();
 
-    std::vector<Entity*> team;
+    Team team;
 
 
 private:

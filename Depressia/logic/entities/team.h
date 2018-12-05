@@ -1,7 +1,7 @@
 #ifndef TEAM_H
 #define TEAM_H
 
-#include"logic/entities/hero.h"
+#include"io/entityloader.h"
 #include"logic/items/inventory.h"
 
 class Team
@@ -9,10 +9,14 @@ class Team
 public:
     Team();
 
+    int getTeamSize();
+    Entity* getHero(int i);
+
 private:
     Inventory bag;
-    Hero h1, h2, h3, h4;
-    Hero* team_members[4];
+
+    static const int teamSize = 1;
+    Entity* hero[teamSize];
 };
 
 #endif // TEAM_H

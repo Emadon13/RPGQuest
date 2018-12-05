@@ -8,6 +8,7 @@
 #include <vector>
 #include <iostream>
 #include "logic/skills/attack.h"
+#include "gui/sprite.h"
 
 class Entity
 {
@@ -20,6 +21,7 @@ public:
     int m_att,
     int m_def,
     int m_spd,
+    Sprite* sprite,
     std::vector<Skill*>m_skills);
     ~Entity();
 
@@ -58,6 +60,8 @@ protected:
     std::vector<Skill*>skills;
     Skill* attack;
     int static const max_lvl = 10;
+
+    Sprite* sprites;
 
 
 

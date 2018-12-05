@@ -1,0 +1,14 @@
+Bonasse
+1
+10
+5
+3
+2
+2
+../ressources/sprites/sprite_seraphina.png
+../ressources/sprites/sprite_seraphina_damage.png
+../ressources/sprites/sprite_seraphina_attack.png
+../ressources/sprites/sprite_seraphina_attack.png
+../ressources/sprites/sprite_seraphina_damage.png
+../ressources/skills/attacks/mitra-poing.txt
+end

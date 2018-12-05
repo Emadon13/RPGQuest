@@ -1,0 +1,6 @@
+../ressources/entities/mobs/rozalin.txt
+none
+none
+none
+../ressources/images/battle_background.png
+../ressources/musics/cynthia.mp3
