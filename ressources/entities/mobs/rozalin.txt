@@ -5,10 +5,6 @@ Rozalin
 2
 4
 2
-../ressources/sprites/sprite_rozalin.png
-../ressources/sprites/sprite_rozalin_damage.png
-../ressources/sprites/sprite_rozalin_attack.png
-../ressources/sprites/sprite_rozalin_attack.png
-../ressources/sprites/sprite_rozalin_damage.png
+../ressources/sprites/rozalin.txt
 ../ressources/skills/recovers/e-coque.txt
 end
