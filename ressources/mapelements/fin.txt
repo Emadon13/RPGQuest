@@ -1,4 +1,4 @@
 C'est très la fin
 Oh mon deus on a finit le jeu de la grande TATA
-../ressources/images/win_screen.jpg
+../ressources/images/backgrounds/win_screen.jpg
 final_screen

@@ -1,5 +1,5 @@
 Lac Omae Wa
 On dit que Quentin le Pokemaniac reside en ces lieux...
-../ressources/images/backgroundMap.png
+../ressources/images/backgrounds/backgroundMap.png
 dialog
 ../ressources/dialogs/le-porno-du-samedi.txt

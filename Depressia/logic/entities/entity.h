@@ -10,7 +10,6 @@
 #include "logic/skills/attack.h"
 #include "gui/sprite.h"
 
-class Sprite;
 class Entity
 {
 public:
@@ -22,7 +21,8 @@ public:
     int m_att,
     int m_def,
     int m_spd,
-    Sprite* sprite,
+    std::string sprite,
+    std::string battleIcon,
     std::vector<Skill*>m_skills);
     ~Entity();
 
@@ -47,6 +47,9 @@ public:
 
     bool isAlive();
 
+    std::string getSprite();
+    std::string getBattleIcon();
+
 
 protected:
     std::string name;
@@ -62,7 +65,8 @@ protected:
     Skill* attack;
     int static const max_lvl = 10;
 
-    Sprite* sprites;
+    std::string sprite;
+    std::string battleIcon;
 
 
 

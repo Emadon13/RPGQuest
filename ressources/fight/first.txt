@@ -2,5 +2,5 @@
 none
 none
 none
-../ressources/images/battle_background.png
+../ressources/images/backgrounds/battle_background.png
 ../ressources/musics/cynthia.mp3

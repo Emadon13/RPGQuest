@@ -15,7 +15,8 @@ Entity::Entity() :
     spd(1),
     skills(0),
     attack(new Attack()),
-    sprites(new Sprite("", "", "", "", ""))
+    sprite(""),
+    battleIcon("")
 {
 }
 
@@ -26,7 +27,8 @@ Entity::Entity(string m_name,
                int m_att,
                int m_def,
                int m_spd,
-               Sprite* s,
+               string s,
+               string bi,
                vector<Skill*> m_skills):
     name(m_name),
     lvl(m_lvl),
@@ -39,7 +41,8 @@ Entity::Entity(string m_name,
     spd(m_spd),
     skills(m_skills),
     attack(new Attack()),
-    sprites(s)
+    sprite(s),
+    battleIcon(bi)
 {
 }
 
@@ -148,4 +151,14 @@ string Entity::hitOpponent(Entity& target)
 bool Entity::isAlive()
 {
     return (hp == 0);
+}
+
+std::string Entity::getSprite()
+{
+    return sprite;
+}
+
+std::string Entity::getBattleIcon()
+{
+    return battleIcon;
 }

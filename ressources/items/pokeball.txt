@@ -1,3 +1,3 @@
 Etrange objet rond
 Je n'ai pas<br>la moindre idee<br>de ce a quoi<br>ca peut servir...
-../ressources/images/pokeball.png
+../ressources/images/items/pokeball.png
