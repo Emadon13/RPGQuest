@@ -36,7 +36,6 @@ SOURCES += \
     logic/events/itemfound.cpp \
     gui/frame/itemframe.cpp \
     gui/window/itemwindow.cpp \
-    logic/entities/enemy.cpp \
     logic/events/video.cpp \
     logic/events/save.cpp \
     logic/events/finalscreen.cpp \
@@ -48,7 +47,9 @@ SOURCES += \
     logic/skills/attack.cpp \
     gui/frame/characterui.cpp \
     gui/frame/enemyui.cpp \
-    io/entityloader.cpp
+    io/entityloader.cpp \
+    io/spriteloader.cpp \
+    logic/entities/mob.cpp
 
 
 
@@ -88,7 +89,6 @@ HEADERS += \
     logic/events/itemfound.h \
     gui/frame/itemframe.h \
     gui/window/itemwindow.h \
-    logic/entities/enemy.h \
     logic/events/video.h \
     logic/events/save.h \
     logic/events/finalscreen.h \
@@ -100,4 +100,6 @@ HEADERS += \
     logic/skills/attack.h \
     gui/frame/characterui.h \
     gui/frame/enemyui.h \
-    io/entityloader.h
+    io/entityloader.h \
+    io/spriteloader.h \
+    logic/entities/mob.h
