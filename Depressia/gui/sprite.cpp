@@ -1,11 +1,12 @@
 #include "sprite.h"
 
-Sprite::Sprite(Entity *e, QString nS, QString dS, QString aS) : QObject(), QGraphicsItem()
+Sprite::Sprite(std::string nS, std::string dS, std::string aS, std::string sS, std::string kS) : QObject(), QGraphicsItem()
 {
-    this->damageSprite=dS;
-    this->normalSprite=nS;
-    this->attackSprite=aS;
-    this->perso=e;
+    this->damageSprite=QString::fromStdString(dS);
+    this->normalSprite=QString::fromStdString(nS);
+    this->attackSprite=QString::fromStdString(aS);
+    this->killedSprite=QString::fromStdString(kS);
+    this->skillSprite=QString::fromStdString(sS);
 
     currentFrame = 0;
     spriteImage = new QPixmap(normalSprite);
@@ -14,6 +15,7 @@ Sprite::Sprite(Entity *e, QString nS, QString dS, QString aS) : QObject(), QGrap
     timerK = new QTimer();
     timerD = new QTimer();
     timerA = new QTimer();
+    timerS = new QTimer();
 
     connect(timer, &QTimer::timeout, this, &Sprite::nextFrame);
     connect(timerK, &QTimer::timeout, this, &Sprite::nextKillFrame);
@@ -130,9 +132,4 @@ void Sprite::nextKillFrame()
 void Sprite::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     emit clicked(this);
-}
-
-Entity* Sprite::getEntity()
-{
-    return this->perso;
 }

@@ -48,11 +48,11 @@ private:
     QString killedSprite;
 
 private:
-    Entity *perso;
     QTimer *timer;
     QTimer *timerD;
     QTimer *timerK;
     QTimer *timerA;
+    QTimer *timerS;
     QPixmap *spriteImage;
     int currentFrame;
 

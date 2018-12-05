@@ -26,8 +26,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     double ratio(game->GetGame()->getRatio());
 
 
-    bonasse = game->GetGame()->team.at(0);
-    rozalin = game->GetGame()->team.at(1);
+    bonasse = game->GetGame()->team.getHero(0);
 
 
     QLabel *back = new QLabel(game);
@@ -39,12 +38,10 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
     scene = new QGraphicsScene(game);
     view = new QGraphicsView(game);
-    sprite = new Sprite(bonasse,"../ressources/sprites/sprite_seraphina.png","../ressources/sprites/sprite_seraphina_damage.png","../ressources/sprites/sprite_seraphina_attack.png");
-    sprite2 = new Sprite(rozalin,"../ressources/sprites/sprite_rozalin.png","../ressources/sprites/sprite_rozalin_damage.png","../ressources/sprites/sprite_rozalin_attack.png");
+    sprite = new Sprite("../ressources/sprites/sprite_seraphina.png","../ressources/sprites/sprite_seraphina_damage.png","../ressources/sprites/sprite_seraphina_attack.png","","");
 
     view->setScene(scene);
     scene->addItem(sprite);
-    scene->addItem(sprite2);
 
     view->setScene(scene);
     view->show();
@@ -55,8 +52,6 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
     sprite->setPos(QPointF(int(1300/ratio),int(500/ratio)));
     sprite->setToolTip("Bonasse");
-
-    sprite2->setPos(QPointF(int(500/ratio),int(500/ratio)));
 
     scene->setSceneRect(0, 0, WindowWidth, WindowHeight);
 
@@ -90,8 +85,6 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
     character = new CharacterUI(game,bonasse,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*2+tailleUI,tailleUI,tailleUI);
 
-    enemy = new EnemyUI(game,rozalin,espacementUI,espacementUI*2+tailleUI,tailleUI,tailleUI);
-
     int dialogWidth(int(WindowWidth*0.4));
     int dialogHeight(int(WindowHeight*0.2));
 
@@ -114,10 +107,6 @@ void::BattleFrame::Attack()
      QObject::disconnect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(damageEntity(Sprite*)));
      QObject::disconnect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(killEntity(Sprite*)));
      QObject::connect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(attackEntity(Sprite*)));
-
-     QObject::disconnect(sprite2, SIGNAL(clicked(Sprite*)), this , SLOT(damageEntity(Sprite*)));
-     QObject::disconnect(sprite2, SIGNAL(clicked(Sprite*)), this , SLOT(killEntity(Sprite*)));
-     QObject::connect(sprite2, SIGNAL(clicked(Sprite*)), this , SLOT(attackEntity(Sprite*)));
 }
 
 void::BattleFrame::Damage()
@@ -125,10 +114,6 @@ void::BattleFrame::Damage()
      QObject::connect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(damageEntity(Sprite*)));
      QObject::disconnect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(killEntity(Sprite*)));
      QObject::disconnect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(attackEntity(Sprite*)));
-
-     QObject::connect(sprite2, SIGNAL(clicked(Sprite*)), this , SLOT(damageEntity(Sprite*)));
-     QObject::disconnect(sprite2, SIGNAL(clicked(Sprite*)), this , SLOT(killEntity(Sprite*)));
-     QObject::disconnect(sprite2, SIGNAL(clicked(Sprite*)), this , SLOT(attackEntity(Sprite*)));
 }
 
 void::BattleFrame::Kill()
@@ -136,11 +121,6 @@ void::BattleFrame::Kill()
      QObject::disconnect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(damageEntity(Sprite*)));
      QObject::connect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(killEntity(Sprite*)));
      QObject::disconnect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(attackEntity(Sprite*)));
-
-
-     QObject::disconnect(sprite2, SIGNAL(clicked(Sprite*)), this , SLOT(damageEntity(Sprite*)));
-     QObject::connect(sprite2, SIGNAL(clicked(Sprite*)), this , SLOT(killEntity(Sprite*)));
-     QObject::disconnect(sprite2, SIGNAL(clicked(Sprite*)), this , SLOT(attackEntity(Sprite*)));
 }
 
 void BattleFrame::killEntity(Sprite *s)
@@ -158,7 +138,7 @@ void BattleFrame::attackEntity(Sprite *s)
 {
     std::string test;
 
-    if(s->getEntity()==bonasse)
+    /*if(s->getEntity()==bonasse)
     {
         sprite->attack();
         sprite2->damage();
@@ -172,7 +152,7 @@ void BattleFrame::attackEntity(Sprite *s)
     }
     enemy->Update();
     character->Update();
-    dialogInfo->setText(QString::fromStdString(test));
+    dialogInfo->setText(QString::fromStdString(test));*/
 }
 
 void BattleFrame::deleteEntity(Sprite *s)
