@@ -10,6 +10,7 @@
 #include "logic/skills/attack.h"
 #include "gui/sprite.h"
 
+class Sprite;
 class Entity
 {
 public:
