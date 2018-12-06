@@ -8,7 +8,6 @@
 #include <QTimer>
 #include <QPixmap>
 #include <QPainter>
-#include "logic/entities/entity.h"
 
 class Sprite : public QObject, public QGraphicsItem
 {

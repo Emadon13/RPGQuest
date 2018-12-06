@@ -3561,18 +3561,6 @@ release\moc_sprite.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\skills\skill.h \
-		..\Depressia\io\spriteloader.h \
-		..\Depressia\io\loader.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QString \
-		..\Depressia\logic\events\event.h \
-		..\Depressia\logic\items\item.h \
-		..\Depressia\logic\world\map.h \
-		..\Depressia\logic\world\mapelement.h \
-		..\Depressia\io\mapelementloader.h \
-		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\gui\sprite.h \
 		release\moc_predefs.h \
 		C:\Qt\5.11.2\msvc2017_64\bin\moc.exe
@@ -11394,19 +11382,7 @@ release\sprite.obj: ..\Depressia\gui\sprite.cpp ..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qbrush.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\skills\skill.h \
-		..\Depressia\io\spriteloader.h \
-		..\Depressia\io\loader.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QString \
-		..\Depressia\logic\events\event.h \
-		..\Depressia\logic\items\item.h \
-		..\Depressia\logic\world\map.h \
-		..\Depressia\logic\world\mapelement.h \
-		..\Depressia\io\mapelementloader.h \
-		..\Depressia\io\qpixmaploader.h
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h
 
 release\drain.obj: ..\Depressia\logic\skills\drain.cpp ..\Depressia\logic\skills\drain.h \
 		..\Depressia\logic\skills\attack.h \

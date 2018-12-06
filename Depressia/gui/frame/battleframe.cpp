@@ -39,7 +39,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
     scene = new QGraphicsScene(game);
     view = new QGraphicsView(game);
-    sprite = bonasse->getSprite();
+    sprite = new Sprite(6,130,200,"../ressources/images/sprites/sprite_seraphina.png",0,0,0,"",0,0,0,"",0,0,0,"",0,0,0,"");
     view->setScene(scene);
     scene->addItem(sprite);
 
