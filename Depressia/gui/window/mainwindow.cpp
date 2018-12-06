@@ -28,11 +28,11 @@ MainWindow::MainWindow(Game *g, QWidget *parent) :
     int WindowHeight(720);
 
     setWindowTitle("Depressia");
-    setWindowIcon(QIcon("../ressources/images/icone.png"));
+    setWindowIcon(QIcon("../ressources/images/hud/icone.png"));
     setFixedSize(WindowWidth,WindowHeight);
 
     QPalette p( palette() );
-    p.setBrush(QPalette::Window, QBrush(QPixmap("../ressources/images/background.png")));
+    p.setBrush(QPalette::Window, QBrush(QPixmap("../ressources/images/backgrounds/background.png")));
     setPalette(p);
 
 
@@ -94,7 +94,7 @@ void MainWindow::setMainMenu()
     boutonQuit->setFixedSize(BoutonWidth,BoutonHeight);
 
     boutonPlay->setCursor(Qt::PointingHandCursor);
-    boutonOption->setCursor(QCursor(QPixmap("../ressources/images/cursor.png"), 0, 0));
+    boutonOption->setCursor(QCursor(QPixmap("../ressources/images/hud/cursor.png"), 0, 0));
     boutonQuit->setCursor(Qt::PointingHandCursor);
 
     boutonPlay->show();
@@ -102,17 +102,17 @@ void MainWindow::setMainMenu()
     boutonQuit->show();
 
     QLabel *titre = new QLabel(this);
-    titre->setPixmap(QPixmap("../ressources/images/titre.png"));
+    titre->setPixmap(QPixmap("../ressources/images/hud/titre.png"));
     titre->setFixedSize(TitreWidth,TitreHeight);
     titre->show();
 
     QLabel *imageRight = new QLabel(this);
-    imageRight->setPixmap(QPixmap("../ressources/images/icone.png"));
+    imageRight->setPixmap(QPixmap("../ressources/images/hud/icone.png"));
     imageRight->setFixedSize(ImageWidth,ImageHeight);
     imageRight->show();
 
     ClickableLabel *imageLeft = new ClickableLabel(this);
-    imageLeft->setPixmap(QPixmap("../ressources/images/icone.png"));
+    imageLeft->setPixmap(QPixmap("../ressources/images/hud/icone.png"));
     imageLeft->setFixedSize(ImageWidth,ImageHeight);
     imageLeft->installEventFilter(this);
     imageLeft->show();

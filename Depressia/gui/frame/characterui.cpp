@@ -24,7 +24,7 @@ CharacterUI::CharacterUI(GameWindow *g, Entity *e, int x, int y, int width, int 
 
 
     image = new QLabel(game);
-    image->setPixmap(QPixmap(QString::fromStdString("../ressources/images/bonasse-icon.png")).scaled(imageWidht,imageHeight));
+    image->setPixmap(QPixmap(QString::fromStdString("../ressources/images/icons/bonasse-icon.png")).scaled(imageWidht,imageHeight));
     image->setFixedSize(imageWidht,imageHeight);
     image->move(posX,posY);
     image->show();

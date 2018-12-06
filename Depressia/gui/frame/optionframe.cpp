@@ -27,7 +27,7 @@ OptionFrame::OptionFrame(MainWindow *m) : QObject()
     Resolution1->setCursor(Qt::PointingHandCursor);
     Resolution2->setCursor(Qt::PointingHandCursor);
     Resolution3->setCursor(Qt::PointingHandCursor);
-    Quitter->setCursor(QCursor(QPixmap("../ressources/images/cursor.png"), 0, 0));
+    Quitter->setCursor(QCursor(QPixmap("../ressources/images/hud/cursor.png"), 0, 0));
 
     Resolution1->move((WindowWidth-BoutonWidth)/2,espacement);
     Resolution2->move((WindowWidth-BoutonWidth)/2,espacement*2+BoutonHeight);

@@ -29,7 +29,7 @@ ItemWindow::ItemWindow(GameWindow *game, QWidget *parent) :
     int espacement=30;
 
     setWindowTitle("Item Found");
-    setWindowIcon(QIcon("../ressources/images/icone.png"));
+    setWindowIcon(QIcon("../ressources/images/hud/icone.png"));
     setFixedSize(WindowWidth,WindowHeight);
 
 
@@ -39,14 +39,14 @@ ItemWindow::ItemWindow(GameWindow *game, QWidget *parent) :
     setAttribute(Qt::WA_TranslucentBackground);
 
     QLabel *background = new QLabel(this);
-    background->setPixmap(QPixmap("../ressources/images/itemBackground.png"));
+    background->setPixmap(QPixmap("../ressources/images/hud/itemBackground.png"));
     background->setFixedSize(WindowWidth,WindowHeight);
     background->move(0,0);
     background->show();
 
     ok = new QPushButton("OK !", this);
     ok->setFixedSize(BoutonWidth,BoutonHeight);
-    ok->setCursor(QCursor(QPixmap("../ressources/images/cursor.png"), 0, 0));
+    ok->setCursor(QCursor(QPixmap("../ressources/images/hud/cursor.png"), 0, 0));
     ok->move((WindowWidth-BoutonWidth)/2,(WindowHeight-espacement-BoutonHeight));
     ok->show();
 

@@ -35,7 +35,7 @@ GameWindow::GameWindow(Game *g,QWidget *parent) :
     WindowHeight=game->getWindowHeight();
 
     setWindowTitle("Depressia");
-    setWindowIcon(QIcon("../ressources/images/icone.png"));
+    setWindowIcon(QIcon("../ressources/images/hud/icone.png"));
     setFixedSize(WindowWidth,WindowHeight);
 
     showFullScreen();
