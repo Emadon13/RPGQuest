@@ -1,7 +1,7 @@
 #include "hero.h"
 
 using namespace std;
-/*
+
 Hero::Hero():
     xp(0),
     base_hp(100),
@@ -18,9 +18,11 @@ Hero::Hero():
            int(base_att*(lvl/max_lvl)),
            int(base_def*(lvl/max_lvl)),
            int(base_spd*(lvl/max_lvl)),
+           "",
+           "",
            vector<Skill*>(0));
 
-    calculateNextLevel();
+    calculateLevel();
 
 }
 
@@ -31,6 +33,8 @@ Hero::Hero(string n,
            int b_att,
            int b_def,
            int b_spd,
+           string spr,
+           string bi,
            vector<Skill*> s,
            string stl[max_lvl]):
     xp(0),
@@ -52,17 +56,41 @@ Hero::Hero(string n,
            int(base_att*(lvl/max_lvl)),
            int(base_def*(lvl/max_lvl)),
            int(base_spd*(lvl/max_lvl)),
+           spr,
+           bi,
            vector<Skill*>(s));
 
-    calculateNextLevel();
+    calculateLevel();
 
 }
 
-
-
-
-void Hero::calculateNextLevel()
+int Hero::getXp()
 {
+    return xp;
+}
+
+bool Hero::addXp(int i)
+{
+    xp += i;
+    if(xp>=next_level)
+    {
+        lvl++;
+        calculateLevel();
+        return true;
+    }
+
+    return false;
+}
+
+
+void Hero::calculateLevel()
+{
+
+    hpMax = int(base_hp*0.1*lvl) ;
+    mpMax = int(base_mp*0.1*lvl) ;
+    att = int(base_att*0.1*lvl) ;
+    def = int(base_def*0.1*lvl) ;
+    spd = int(base_spd*0.1*lvl) ;
     next_level = lvl*lvl*10;
 }
-*/
+

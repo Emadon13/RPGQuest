@@ -1335,6 +1335,7 @@ debug\moc_mainwindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWindow
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -1481,6 +1482,7 @@ debug\moc_gamewindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWindow
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -1636,6 +1638,7 @@ debug\moc_gameframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -1791,6 +1794,7 @@ debug\moc_dialogframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -2061,6 +2065,7 @@ debug\moc_battleframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -2244,6 +2249,7 @@ debug\moc_videoframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -2541,6 +2547,7 @@ debug\moc_itemframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -2687,6 +2694,7 @@ debug\moc_itemwindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWindow
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
@@ -3342,6 +3350,7 @@ debug\moc_optionframe.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -3489,6 +3498,7 @@ debug\moc_finalframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -3622,6 +3632,14 @@ debug\moc_sprite.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
+		..\Depressia\io\loader.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QString \
+		..\Depressia\logic\events\event.h \
+		..\Depressia\logic\items\item.h \
+		..\Depressia\logic\world\map.h \
+		..\Depressia\logic\world\mapelement.h \
+		..\Depressia\io\mapelementloader.h \
 		..\Depressia\gui\sprite.h \
 		..\Depressia\gui\sprite.h \
 		debug\moc_predefs.h \
@@ -3755,6 +3773,7 @@ debug\moc_characterui.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
@@ -3912,6 +3931,7 @@ debug\moc_enemyui.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
@@ -4579,6 +4599,7 @@ debug\main.obj: ..\Depressia\main.cpp C:\Qt\5.11.2\msvc2017_64\include\QtWidgets
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -4604,11 +4625,11 @@ debug\fight.obj: ..\Depressia\logic\events\fight.cpp ..\Depressia\logic\events\f
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\gui\sprite.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
+		..\Depressia\io\spriteloader.h \
+		..\Depressia\io\loader.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qglobal.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig.h \
@@ -4630,74 +4651,82 @@ debug\fight.obj: ..\Depressia\logic\events\fight.cpp ..\Depressia\logic\events\f
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmutex.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnumeric.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qversiontagging.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstring.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qchar.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearray.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringliteral.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringalgorithms.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringview.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringbuilder.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpair.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearraylist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qregexp.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcoreevent.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qscopedpointer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmetatype.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QString \
+		..\Depressia\logic\events\event.h \
+		..\Depressia\logic\items\item.h \
+		..\Depressia\logic\world\map.h \
+		..\Depressia\logic\world\mapelement.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
+		..\Depressia\io\mapelementloader.h \
+		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvariant.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmap.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdebug.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtextstream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlocale.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qset.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtimer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbasictimer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
@@ -4710,11 +4739,11 @@ debug\fight.obj: ..\Depressia\logic\events\fight.cpp ..\Depressia\logic\events\f
 debug\entity.obj: ..\Depressia\logic\entities\entity.cpp ..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\gui\sprite.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
+		..\Depressia\io\spriteloader.h \
+		..\Depressia\io\loader.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qglobal.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig.h \
@@ -4736,74 +4765,82 @@ debug\entity.obj: ..\Depressia\logic\entities\entity.cpp ..\Depressia\logic\enti
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmutex.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnumeric.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qversiontagging.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstring.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qchar.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearray.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringliteral.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringalgorithms.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringview.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringbuilder.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpair.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearraylist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qregexp.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcoreevent.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qscopedpointer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmetatype.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QString \
+		..\Depressia\logic\events\event.h \
+		..\Depressia\logic\items\item.h \
+		..\Depressia\logic\world\map.h \
+		..\Depressia\logic\world\mapelement.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
+		..\Depressia\io\mapelementloader.h \
+		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvariant.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmap.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdebug.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtextstream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlocale.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qset.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtimer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbasictimer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
@@ -4816,11 +4853,11 @@ debug\entity.obj: ..\Depressia\logic\entities\entity.cpp ..\Depressia\logic\enti
 debug\skill.obj: ..\Depressia\logic\skills\skill.cpp ..\Depressia\logic\skills\skill.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
-		..\Depressia\gui\sprite.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
+		..\Depressia\io\spriteloader.h \
+		..\Depressia\io\loader.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qglobal.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig.h \
@@ -4842,74 +4879,82 @@ debug\skill.obj: ..\Depressia\logic\skills\skill.cpp ..\Depressia\logic\skills\s
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmutex.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnumeric.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qversiontagging.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstring.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qchar.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearray.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringliteral.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringalgorithms.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringview.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringbuilder.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpair.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearraylist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qregexp.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcoreevent.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qscopedpointer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmetatype.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QString \
+		..\Depressia\logic\events\event.h \
+		..\Depressia\logic\items\item.h \
+		..\Depressia\logic\world\map.h \
+		..\Depressia\logic\world\mapelement.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
+		..\Depressia\io\mapelementloader.h \
+		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvariant.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmap.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdebug.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtextstream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlocale.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qset.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtimer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbasictimer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
@@ -4923,11 +4968,11 @@ debug\recover.obj: ..\Depressia\logic\skills\recover.cpp ..\Depressia\logic\skil
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
-		..\Depressia\gui\sprite.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
+		..\Depressia\io\spriteloader.h \
+		..\Depressia\io\loader.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qglobal.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig.h \
@@ -4949,74 +4994,82 @@ debug\recover.obj: ..\Depressia\logic\skills\recover.cpp ..\Depressia\logic\skil
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmutex.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnumeric.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qversiontagging.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstring.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qchar.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearray.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringliteral.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringalgorithms.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringview.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringbuilder.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpair.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearraylist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qregexp.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcoreevent.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qscopedpointer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmetatype.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QString \
+		..\Depressia\logic\events\event.h \
+		..\Depressia\logic\items\item.h \
+		..\Depressia\logic\world\map.h \
+		..\Depressia\logic\world\mapelement.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
+		..\Depressia\io\mapelementloader.h \
+		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvariant.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmap.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdebug.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtextstream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlocale.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qset.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtimer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbasictimer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
@@ -5223,6 +5276,7 @@ debug\map.obj: ..\Depressia\logic\world\map.cpp ..\Depressia\logic\world\map.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
@@ -5340,6 +5394,7 @@ debug\team.obj: ..\Depressia\logic\entities\team.cpp ..\Depressia\logic\entities
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -5377,11 +5432,11 @@ debug\hero.obj: ..\Depressia\logic\entities\hero.cpp ..\Depressia\logic\entities
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\gui\sprite.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
+		..\Depressia\io\spriteloader.h \
+		..\Depressia\io\loader.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qglobal.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig.h \
@@ -5403,74 +5458,82 @@ debug\hero.obj: ..\Depressia\logic\entities\hero.cpp ..\Depressia\logic\entities
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmutex.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnumeric.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qversiontagging.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstring.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qchar.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearray.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringliteral.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringalgorithms.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringview.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringbuilder.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpair.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearraylist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qregexp.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcoreevent.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qscopedpointer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmetatype.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QString \
+		..\Depressia\logic\events\event.h \
+		..\Depressia\logic\items\item.h \
+		..\Depressia\logic\world\map.h \
+		..\Depressia\logic\world\mapelement.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
+		..\Depressia\io\mapelementloader.h \
+		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvariant.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmap.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdebug.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtextstream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlocale.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qset.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtimer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbasictimer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
@@ -5618,6 +5681,7 @@ debug\game.obj: ..\Depressia\logic\game.cpp ..\Depressia\logic\game.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -5741,6 +5805,7 @@ debug\skillloader.obj: ..\Depressia\io\skillloader.cpp ..\Depressia\io\skillload
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -5855,6 +5920,7 @@ debug\loader.obj: ..\Depressia\io\loader.cpp ..\Depressia\io\loader.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -5969,6 +6035,7 @@ debug\qpixmaploader.obj: ..\Depressia\io\qpixmaploader.cpp ..\Depressia\io\qpixm
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -6089,6 +6156,7 @@ debug\dialogloader.obj: ..\Depressia\io\dialogloader.cpp ..\Depressia\io\dialogl
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -6205,6 +6273,7 @@ debug\maploader.obj: ..\Depressia\io\maploader.cpp ..\Depressia\io\maploader.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -6855,6 +6924,7 @@ debug\mainwindow.obj: ..\Depressia\gui\window\mainwindow.cpp ..\Depressia\gui\wi
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -7000,6 +7070,7 @@ debug\gamewindow.obj: ..\Depressia\gui\window\gamewindow.cpp ..\Depressia\gui\wi
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -7657,6 +7728,7 @@ debug\gameframe.obj: ..\Depressia\gui\frame\gameframe.cpp ..\Depressia\gui\frame
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -8292,6 +8364,7 @@ debug\dialogframe.obj: ..\Depressia\gui\frame\dialogframe.cpp ..\Depressia\gui\f
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -9039,6 +9112,7 @@ debug\battleframe.obj: ..\Depressia\gui\frame\battleframe.cpp ..\Depressia\gui\f
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -9680,6 +9754,7 @@ debug\videoframe.obj: ..\Depressia\gui\frame\videoframe.cpp ..\Depressia\gui\fra
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -10276,6 +10351,7 @@ debug\mapelementloader.obj: ..\Depressia\io\mapelementloader.cpp ..\Depressia\io
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -10512,6 +10588,7 @@ debug\itemloader.obj: ..\Depressia\io\itemloader.cpp ..\Depressia\io\itemloader.
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -10672,6 +10749,7 @@ debug\itemframe.obj: ..\Depressia\gui\frame\itemframe.cpp ..\Depressia\gui\frame
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -10815,6 +10893,7 @@ debug\itemwindow.obj: ..\Depressia\gui\window\itemwindow.cpp ..\Depressia\gui\wi
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
@@ -11477,6 +11556,7 @@ debug\optionframe.obj: ..\Depressia\gui\frame\optionframe.cpp ..\Depressia\gui\f
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -11621,6 +11701,7 @@ debug\finalframe.obj: ..\Depressia\gui\frame\finalframe.cpp ..\Depressia\gui\fra
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -11750,17 +11831,25 @@ debug\sprite.obj: ..\Depressia\gui\sprite.cpp ..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\skills\skill.h
+		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
+		..\Depressia\io\loader.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QString \
+		..\Depressia\logic\events\event.h \
+		..\Depressia\logic\items\item.h \
+		..\Depressia\logic\world\map.h \
+		..\Depressia\logic\world\mapelement.h \
+		..\Depressia\io\mapelementloader.h
 
 debug\drain.obj: ..\Depressia\logic\skills\drain.cpp ..\Depressia\logic\skills\drain.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\logic\entities\entity.h \
-		..\Depressia\gui\sprite.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
+		..\Depressia\io\spriteloader.h \
+		..\Depressia\io\loader.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qglobal.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig.h \
@@ -11782,74 +11871,82 @@ debug\drain.obj: ..\Depressia\logic\skills\drain.cpp ..\Depressia\logic\skills\d
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmutex.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnumeric.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qversiontagging.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstring.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qchar.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearray.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringliteral.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringalgorithms.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringview.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringbuilder.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpair.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearraylist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qregexp.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcoreevent.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qscopedpointer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmetatype.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QString \
+		..\Depressia\logic\events\event.h \
+		..\Depressia\logic\items\item.h \
+		..\Depressia\logic\world\map.h \
+		..\Depressia\logic\world\mapelement.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
+		..\Depressia\io\mapelementloader.h \
+		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvariant.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmap.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdebug.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtextstream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlocale.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qset.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtimer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbasictimer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
@@ -11863,11 +11960,11 @@ debug\recoil.obj: ..\Depressia\logic\skills\recoil.cpp ..\Depressia\logic\skills
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
-		..\Depressia\gui\sprite.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
+		..\Depressia\io\spriteloader.h \
+		..\Depressia\io\loader.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qglobal.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig.h \
@@ -11889,74 +11986,82 @@ debug\recoil.obj: ..\Depressia\logic\skills\recoil.cpp ..\Depressia\logic\skills
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmutex.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnumeric.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qversiontagging.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstring.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qchar.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearray.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringliteral.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringalgorithms.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringview.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringbuilder.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpair.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearraylist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qregexp.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcoreevent.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qscopedpointer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmetatype.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QString \
+		..\Depressia\logic\events\event.h \
+		..\Depressia\logic\items\item.h \
+		..\Depressia\logic\world\map.h \
+		..\Depressia\logic\world\mapelement.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
+		..\Depressia\io\mapelementloader.h \
+		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvariant.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmap.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdebug.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtextstream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlocale.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qset.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtimer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbasictimer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
@@ -11969,11 +12074,11 @@ debug\recoil.obj: ..\Depressia\logic\skills\recoil.cpp ..\Depressia\logic\skills
 debug\attack.obj: ..\Depressia\logic\skills\attack.cpp ..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\logic\entities\entity.h \
-		..\Depressia\gui\sprite.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
+		..\Depressia\io\spriteloader.h \
+		..\Depressia\io\loader.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qglobal.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig.h \
@@ -11995,74 +12100,82 @@ debug\attack.obj: ..\Depressia\logic\skills\attack.cpp ..\Depressia\logic\skills
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmutex.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnumeric.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qversiontagging.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstring.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qchar.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearray.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringliteral.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringalgorithms.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringview.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringbuilder.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpair.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearraylist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qregexp.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcoreevent.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qscopedpointer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmetatype.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QString \
+		..\Depressia\logic\events\event.h \
+		..\Depressia\logic\items\item.h \
+		..\Depressia\logic\world\map.h \
+		..\Depressia\logic\world\mapelement.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
+		..\Depressia\io\mapelementloader.h \
+		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvariant.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmap.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdebug.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtextstream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlocale.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qset.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtimer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbasictimer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
@@ -12200,6 +12313,7 @@ debug\characterui.obj: ..\Depressia\gui\frame\characterui.cpp ..\Depressia\gui\f
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
@@ -12354,6 +12468,7 @@ debug\enemyui.obj: ..\Depressia\gui\frame\enemyui.cpp ..\Depressia\gui\frame\ene
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
@@ -12464,6 +12579,7 @@ debug\entityloader.obj: ..\Depressia\io\entityloader.cpp ..\Depressia\io\entityl
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
@@ -12496,17 +12612,11 @@ debug\entityloader.obj: ..\Depressia\io\entityloader.cpp ..\Depressia\io\entityl
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\recover.h
 
-debug\spriteloader.obj: ..\Depressia\io\spriteloader.cpp ..\Depressia\io\spriteloader.h
-
-debug\mob.obj: ..\Depressia\logic\entities\mob.cpp ..\Depressia\logic\entities\mob.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\skills\skill.h \
-		..\Depressia\gui\sprite.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
+debug\spriteloader.obj: ..\Depressia\io\spriteloader.cpp ..\Depressia\io\spriteloader.h \
+		..\Depressia\io\loader.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qglobal.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig.h \
@@ -12528,74 +12638,200 @@ debug\mob.obj: ..\Depressia\logic\entities\mob.cpp ..\Depressia\logic\entities\m
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmutex.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnumeric.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qversiontagging.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstring.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qchar.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearray.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringliteral.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringalgorithms.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringview.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringbuilder.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpair.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearraylist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qregexp.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcoreevent.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qscopedpointer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmetatype.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QString \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\skills\skill.h \
+		..\Depressia\logic\events\event.h \
+		..\Depressia\logic\items\item.h \
+		..\Depressia\logic\world\map.h \
+		..\Depressia\logic\world\mapelement.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
+		..\Depressia\io\mapelementloader.h \
+		..\Depressia\gui\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvariant.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmap.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdebug.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtextstream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlocale.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qset.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtimer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbasictimer.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qbrush.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h
+
+debug\mob.obj: ..\Depressia\logic\entities\mob.cpp ..\Depressia\logic\entities\mob.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\skills\skill.h \
+		..\Depressia\io\spriteloader.h \
+		..\Depressia\io\loader.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qglobal.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtcore-config.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsystemdetection.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qprocessordetection.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcompilerdetection.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtypeinfo.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsysinfo.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlogging.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qflags.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qatomic.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbasicatomic.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qatomic_bootstrap.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qgenericatomic.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qatomic_cxx11.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qatomic_msvc.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qglobalstatic.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmutex.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnumeric.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qversiontagging.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstring.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qchar.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearray.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringliteral.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringalgorithms.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringview.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringbuilder.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpair.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearraylist.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qregexp.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcoreevent.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qscopedpointer.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmetatype.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QString \
+		..\Depressia\logic\events\event.h \
+		..\Depressia\logic\items\item.h \
+		..\Depressia\logic\world\map.h \
+		..\Depressia\logic\world\mapelement.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
+		..\Depressia\io\mapelementloader.h \
+		..\Depressia\gui\sprite.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
+		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvariant.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmap.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdebug.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtextstream.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlocale.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qset.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtimer.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbasictimer.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \

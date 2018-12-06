@@ -8,8 +8,8 @@ Entity::Entity() :
     lvl(1),
     hpMax(2),
     mpMax(0),
-    hp(2),
-    mp(0),
+    hp(hpMax),
+    mp(mpMax),
     att(1),
     def(1),
     spd(1),
@@ -153,12 +153,12 @@ bool Entity::isAlive()
     return (hp == 0);
 }
 
-std::string Entity::getSprite()
+Sprite* Entity::getSprite()
 {
-    return sprite;
+    return new SpriteLoader::generate(sprite);
 }
 
-std::string Entity::getBattleIcon()
+QPixmap Entity::getBattleIcon()
 {
-    return battleIcon;
+    return QPixmapLoader::generate(battleIcon);
 }

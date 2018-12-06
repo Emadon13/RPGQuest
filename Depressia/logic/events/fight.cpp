@@ -1,27 +1,37 @@
 #include "fight.h"
 
+using namespace std;
+
 Fight::Fight()
 {
 
 }
-/*
-Fight::Fight(vector<Entity> h, vector<Entity> o):
-    heroes(nb_e),
-    opponents(nb_e),
-    all_e(2*nb_e)
+
+Fight::Fight(Hero* h[nb_e], Mob* m[nb_e], string img, string mus):
+    music(mus),
+    image(img)
 {
-    heroes = h;
-    opponents = o;
-    vector<Entity> concat = h;
-    concat.insert( concat.end(), o.begin(), o.end() );
-    all_e = concat;
+    for(int i=0 ; i<nb_e ; i++)
+    {
+        heroes[i] = h[i];
+        mobs[i] = m[i];
+        all[i] = m[i];
+        all[i+nb_e] = h[i];
+    }
 
 }
 
-vector<Entity> Fight::getHeroes()
+Entity** Fight::getHeroes()
 {
     return heroes;
 }
- v
 
-*/
+Entity** Fight::getMobs()
+{
+    return mobs;
+}
+
+Entity** Fight::getAll()
+{
+    return all;
+}

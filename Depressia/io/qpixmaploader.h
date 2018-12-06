@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef QPIXMAPLOADER_H
 #define QPIXMAPLOADER_H
 
@@ -7,7 +9,7 @@ class QPixmapLoader : public Loader
 {
 public:
     QPixmapLoader();
-    static QPixmap getQPixmap(std::string path);
+    static QPixmap generate(std::string path);
 
 };
 

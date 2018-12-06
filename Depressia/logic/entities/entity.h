@@ -8,6 +8,8 @@
 #include <vector>
 #include <iostream>
 #include "logic/skills/attack.h"
+#include "io/spriteloader.h"
+#include "io/qpixmaploader.h"
 
 class Entity
 {
@@ -23,7 +25,7 @@ public:
     std::string sprite,
     std::string battleIcon,
     std::vector<Skill*>m_skills);
-    ~Entity();
+    virtual ~Entity();
 
     std::string getName();
     int getLvl();
@@ -46,8 +48,8 @@ public:
 
     bool isAlive();
 
-    std::string getSprite();
-    std::string getBattleIcon();
+    Sprite* getSprite();
+    QPixmap getBattleIcon();
 
 
 protected:

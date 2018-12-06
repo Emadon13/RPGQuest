@@ -7,7 +7,7 @@ QPixmapLoader::QPixmapLoader()
 
 }
 
-QPixmap QPixmapLoader::getQPixmap(string path)
+QPixmap QPixmapLoader::generate(string path)
 {
     ifstream file(path);
     if(file)

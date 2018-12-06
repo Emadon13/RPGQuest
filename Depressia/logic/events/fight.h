@@ -1,8 +1,8 @@
 #ifndef FIGHT_H
 #define FIGHT_H
 
-#include<array>
-#include"logic/entities/entity.h"
+#include "logic/entities/hero.h"
+#include "logic/entities/mob.h"
 
 
 
@@ -10,28 +10,31 @@ class Fight
 {
 public:
     Fight();
-
-    /*
-    Fight(Entity* o[]);
+    Fight(Hero* h[],
+          Mob* m[],
+          std::string img,
+          std::string mus);
 
     Entity** getHeroes();
-    Entity** getOppenents();
-    Entity** getAll_e();
-
+    Entity** getMobs();
+    Entity** getAll();
 
 
 
 private:
 
-    static const int nb_e = 2;
+    static const int nb_e = 4;
     Entity* heroes[nb_e];
-    Entity* opponents[nb_e];
-    Entity* all_e[2*nb_e];
+    Entity* mobs[nb_e];
+    Entity* all[2*nb_e];
+
+    std::string music;
+    std::string image;
+
+
 
 
     void setOrder(std::vector <Entity> fighters);
-
-    */
 };
 
 #endif // FIGHT_H

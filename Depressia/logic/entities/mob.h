@@ -7,6 +7,20 @@ class Mob : public Entity
 {
 public:
     Mob();
+    Mob(std::string m_name,
+        int m_lvl,
+        int m_hpMax,
+        int m_mpMax,
+        int m_att,
+        int m_def,
+        int m_spd,
+        std::string sprite,
+        std::string battleIcon,
+        std::vector<Skill*>m_skills);
+
+    Skill* choseSkill();
+    Entity* choseEntity(std::vector<Entity*> entities);
+    //std::vector<Entity*> choseEntities(std::vector<Entity*>);
 };
 
 #endif // MOB_H

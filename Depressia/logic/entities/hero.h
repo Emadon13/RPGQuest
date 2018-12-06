@@ -14,8 +14,13 @@ public:
          int b_att,
          int b_def,
          int b_spd,
+         std::string spr,
+         std::string bi,
          std::vector<Skill*> s,
          std::string stl[]);
+
+    int getXp();
+    bool addXp(int i);
 
 private:
     int xp;
@@ -29,7 +34,7 @@ private:
 
     std::string skillsToLearn[max_lvl];
 
-    void calculateNextLevel();
+    void calculateLevel();
 
 
 };
