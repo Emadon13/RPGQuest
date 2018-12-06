@@ -4,7 +4,6 @@
 #define SPRITELOADER_H
 
 #include "io/loader.h"
-#include "gui/sprite.h"
 
 class SpriteLoader
 {

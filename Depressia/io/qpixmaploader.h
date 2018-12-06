@@ -4,6 +4,8 @@
 #define QPIXMAPLOADER_H
 
 #include <QPixmap>
+#include <iostream>
+#include <fstream>
 
 class QPixmapLoader
 {
