@@ -34,7 +34,7 @@ DialogFrame::DialogFrame(GameWindow *g) : QObject()
     image->setAlignment(Qt::AlignCenter);
 
     dialogImage = new QLabel(game);
-    dialogImage->setPixmap(QPixmap("../ressources/images/dialog.png").scaled(DialogWidth,DialogHeight));
+    dialogImage->setPixmap(QPixmap("../ressources/images/hud/dialog.png").scaled(DialogWidth,DialogHeight));
     dialogImage->setFixedSize(DialogWidth,DialogHeight);
 
     dialogText = new QLabel(game);

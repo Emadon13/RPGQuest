@@ -27,7 +27,7 @@ Sprite::Sprite(std::string nS, std::string dS, std::string aS, std::string sS, s
 
 QRectF Sprite::boundingRect() const
 {
-    return QRectF(0,0,112,192);
+    return QRectF(0,0,130,200);
 }
 
 void Sprite::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
@@ -39,7 +39,7 @@ void Sprite::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
      * By setting the X coordinate with the variable currentFrame we would like to move the camera on the sprite
      * and the last two arguments - the width and height of the displayed area, that is, the frame
      * */
-    painter->drawPixmap(0,0, *spriteImage, currentFrame, 0, 112,192);
+    painter->drawPixmap(0,0, *spriteImage, currentFrame, 0, 130,200);
     Q_UNUSED(option);
     Q_UNUSED(widget);
 }
@@ -56,9 +56,9 @@ void Sprite::nextFrame()
     /* At a signal from the timer 20 to move the point of rendering pixels
      * If currentFrame = 300 then zero out it as sprite sheet size of 300 pixels by 20
      * */
-    currentFrame += 112;
-    if (currentFrame >= 672 ) currentFrame = 0;
-    this->update(0,0,112,192);
+    currentFrame += 130;
+    if (currentFrame >= 780 ) currentFrame = 0;
+    this->update(0,0,130,200);
 }
 
 void Sprite::kill()
