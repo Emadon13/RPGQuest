@@ -43,7 +43,7 @@ Sprite::Sprite(int nbFrameN, int widthN, int heightN, std::string spriteNormal,
     timerA = new QTimer();
     timerS = new QTimer();
 
-    connect(timerN, &QTimer::timeout, this, &Sprite::nextFrame);
+    connect(timerN, &QTimer::timeout, this, &Sprite::nextNormalFrame);
     connect(timerK, &QTimer::timeout, this, &Sprite::nextKillFrame);
     connect(timerD, &QTimer::timeout, this, &Sprite::nextDamageFrame);
     connect(timerA, &QTimer::timeout, this, &Sprite::nextAttackFrame);

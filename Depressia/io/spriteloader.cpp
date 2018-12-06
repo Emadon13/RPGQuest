@@ -38,7 +38,7 @@ vector<string> SpriteLoader::generate(string path)
 
 }
 
-Sprite makeSprite(vector<string> spriteElements)
+/*Sprite makeSprite(vector<string> spriteElements)
 {
     string nn, nw, nh, ns, dn, dw, dh, ds, an, aw, ah, as, sn, sw, sh, ss, kn, kw, kh, ks;
     nn = spriteElements.at(0);
@@ -63,4 +63,4 @@ Sprite makeSprite(vector<string> spriteElements)
     ks = spriteElements.at(19);
 
     return Sprite(nn, nw, nh, ns, dn, dw, dh, ds, an, aw, ah, as, sn, sw, sh, ss, kn, kw, kh, ks);
-}
+}*/

@@ -26,6 +26,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     double ratio(game->GetGame()->getRatio());
 
 
+
     bonasse = game->GetGame()->team.getHero(0);
 
 
@@ -38,8 +39,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
     scene = new QGraphicsScene(game);
     view = new QGraphicsView(game);
-    sprite = new Sprite("../ressources/images/sprites/sprite_rouge.png","../ressources/images/sprites/sprite_seraphina_damage.png","../ressources/images/sprites/sprite_seraphina_attack.png","","");
-
+    sprite = bonasse->getSprite();
     view->setScene(scene);
     scene->addItem(sprite);
 

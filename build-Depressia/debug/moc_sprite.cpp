@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Sprite_t {
-    QByteArrayData data[13];
-    char stringdata0[113];
+    QByteArrayData data[15];
+    char stringdata0[140];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -40,16 +40,18 @@ QT_MOC_LITERAL(5, 31, 4), // "kill"
 QT_MOC_LITERAL(6, 36, 6), // "damage"
 QT_MOC_LITERAL(7, 43, 6), // "attack"
 QT_MOC_LITERAL(8, 50, 6), // "normal"
-QT_MOC_LITERAL(9, 57, 9), // "nextFrame"
-QT_MOC_LITERAL(10, 67, 15), // "nextAttackFrame"
-QT_MOC_LITERAL(11, 83, 13), // "nextKillFrame"
-QT_MOC_LITERAL(12, 97, 15) // "nextDamageFrame"
+QT_MOC_LITERAL(9, 57, 5), // "skill"
+QT_MOC_LITERAL(10, 63, 15), // "nextNormalFrame"
+QT_MOC_LITERAL(11, 79, 15), // "nextAttackFrame"
+QT_MOC_LITERAL(12, 95, 13), // "nextKillFrame"
+QT_MOC_LITERAL(13, 109, 14), // "nextSkillFrame"
+QT_MOC_LITERAL(14, 124, 15) // "nextDamageFrame"
 
     },
     "Sprite\0clicked\0\0Sprite*\0killed\0kill\0"
-    "damage\0attack\0normal\0nextFrame\0"
+    "damage\0attack\0normal\0skill\0nextNormalFrame\0"
     "nextAttackFrame\0nextKillFrame\0"
-    "nextDamageFrame"
+    "nextSkillFrame\0nextDamageFrame"
 };
 #undef QT_MOC_LITERAL
 
@@ -59,7 +61,7 @@ static const uint qt_meta_data_Sprite[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      10,   14, // methods
+      12,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -67,24 +69,28 @@ static const uint qt_meta_data_Sprite[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   64,    2, 0x06 /* Public */,
-       4,    1,   67,    2, 0x06 /* Public */,
+       1,    1,   74,    2, 0x06 /* Public */,
+       4,    1,   77,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       5,    0,   70,    2, 0x0a /* Public */,
-       6,    0,   71,    2, 0x0a /* Public */,
-       7,    0,   72,    2, 0x0a /* Public */,
-       8,    0,   73,    2, 0x0a /* Public */,
-       9,    0,   74,    2, 0x08 /* Private */,
-      10,    0,   75,    2, 0x08 /* Private */,
-      11,    0,   76,    2, 0x08 /* Private */,
-      12,    0,   77,    2, 0x08 /* Private */,
+       5,    0,   80,    2, 0x0a /* Public */,
+       6,    0,   81,    2, 0x0a /* Public */,
+       7,    0,   82,    2, 0x0a /* Public */,
+       8,    0,   83,    2, 0x0a /* Public */,
+       9,    0,   84,    2, 0x0a /* Public */,
+      10,    0,   85,    2, 0x08 /* Private */,
+      11,    0,   86,    2, 0x08 /* Private */,
+      12,    0,   87,    2, 0x08 /* Private */,
+      13,    0,   88,    2, 0x08 /* Private */,
+      14,    0,   89,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    2,
     QMetaType::Void, 0x80000000 | 3,    2,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -109,10 +115,12 @@ void Sprite::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 3: _t->damage(); break;
         case 4: _t->attack(); break;
         case 5: _t->normal(); break;
-        case 6: _t->nextFrame(); break;
-        case 7: _t->nextAttackFrame(); break;
-        case 8: _t->nextKillFrame(); break;
-        case 9: _t->nextDamageFrame(); break;
+        case 6: _t->skill(); break;
+        case 7: _t->nextNormalFrame(); break;
+        case 8: _t->nextAttackFrame(); break;
+        case 9: _t->nextKillFrame(); break;
+        case 10: _t->nextSkillFrame(); break;
+        case 11: _t->nextDamageFrame(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -179,13 +187,13 @@ int Sprite::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 10)
+        if (_id < 12)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 12;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 10)
+        if (_id < 12)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 12;
     }
     return _id;
 }
