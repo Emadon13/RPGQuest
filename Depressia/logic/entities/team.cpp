@@ -5,7 +5,7 @@ using namespace std;
 Team::Team():
     bag(Inventory())
 {
-    hero[0] = EntityLoader::generate("../ressources/entities/heroes/bonasse)");
+    hero[0] = EntityLoader::generate("../ressources/entities/heroes/bonasse.txt");
 }
 
 int Team::getTeamSize()

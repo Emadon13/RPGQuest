@@ -1,4 +1,3 @@
-#include "gui/sprite.h"
 #include "entity.h"
 #include <string>
 
@@ -154,8 +153,10 @@ bool Entity::isAlive()
     return (hp == 0);
 }
 
-Sprite* Entity::getSprite()
+std::string Entity::getSprite()
 {
+    return sprite;
+    /*
     vector<string> spriteElements =  SpriteLoader::generate(sprite);
     string nn, nw, nh, ns, dn, dw, dh, ds, an, aw, ah, as, sn, sw, sh, ss, kn, kw, kh, ks;
     nn = spriteElements.at(0);
@@ -184,6 +185,7 @@ Sprite* Entity::getSprite()
                       int(stoi(an)), int(stoi(aw)), int(stoi(ah)), as,
                       int(stoi(sn)), int(stoi(sw)), int(stoi(sh)), ss,
                       int(stoi(kn)), int(stoi(kw)), int(stoi(kh)), ks);
+*/
 }
 
 QPixmap Entity::getBattleIcon()

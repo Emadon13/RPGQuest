@@ -8,10 +8,9 @@
 #include <vector>
 #include <iostream>
 #include "logic/skills/attack.h"
-#include "io/spriteloader.h"
+//#include "io/spriteloader.h"
 #include "io/qpixmaploader.h"
 
-class Sprite;
 class Entity
 {
 public:
@@ -49,7 +48,7 @@ public:
 
     bool isAlive();
 
-    Sprite* getSprite();
+    std::string getSprite();
     QPixmap getBattleIcon();
 
 

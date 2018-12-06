@@ -1,10 +1,11 @@
 Bonasse
 1
-10
-5
-3
-2
-2
+100
+50
+30
+20
+20
 ../ressources/sprites/bonasse.txt
+../ressources/images/icons/bonasse-icon.png
 ../ressources/skills/attacks/mitra-poing.txt
 end

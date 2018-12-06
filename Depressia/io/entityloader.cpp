@@ -32,7 +32,7 @@ Entity* EntityLoader::generate(string path)
 
         getline(file, skill);
 
-        while(skill == "end")
+        while(skill != "end")
             skills.push_back(SkillLoader::generate(skill));
 
         return new Entity(name,

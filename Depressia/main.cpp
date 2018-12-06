@@ -20,6 +20,7 @@ GlobalSpec * globalSpec;
 int main(int argc, char *argv[])
 {
     // ------------TEST VINCENT ------------------
+    /*
     Entity e1, e2;
     Recover r("atterissage", "", 0, one, 1.0);
 
@@ -36,6 +37,9 @@ int main(int argc, char *argv[])
 
     cout << e1.getHp() << endl;
     cout << e2.getHp() << endl;
+    */
+
+    cout << "izubqziuvbpqziuhvpZVBZIEY" << endl;
 
     // ------------TEST QUENTIN ------------------
     QApplication app(argc, argv);
