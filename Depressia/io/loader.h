@@ -6,7 +6,6 @@
 #include<vector>
 #include<iostream>
 #include<fstream>
-#include<QPixmap>
 #include<QString>
 
 #include"logic/entities/entity.h"
@@ -18,8 +17,8 @@ class Loader
 {
 public:
     Loader();
-    static QPixmap getQPixmap(std::string path);
-    std::vector<Skill> generate_skills(std::string path);
+    static void generate();
+    static void generate(std::string path);
 
     /*
     std::vector<Entity> generate_entities(std::string path);

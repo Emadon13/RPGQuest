@@ -48,7 +48,7 @@ public:
 
     bool isAlive();
 
-    Sprite* getSprite();
+    Sprite getSprite();
     QPixmap getBattleIcon();
 
 

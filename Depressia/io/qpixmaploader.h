@@ -3,9 +3,9 @@
 #ifndef QPIXMAPLOADER_H
 #define QPIXMAPLOADER_H
 
-#include"io/loader.h"
+#include <QPixmap>
 
-class QPixmapLoader : public Loader
+class QPixmapLoader
 {
 public:
     QPixmapLoader();

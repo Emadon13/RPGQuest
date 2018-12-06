@@ -19,6 +19,10 @@ public:
     Entity** getMobs();
     Entity** getAll();
 
+    bool teamWin();
+    bool mobsWin();
+    Entity* nextPlayer();
+
 
 
 private:
@@ -27,6 +31,8 @@ private:
     Entity* heroes[nb_e];
     Entity* mobs[nb_e];
     Entity* all[2*nb_e];
+    int speeds[2*nb_e];
+    int speedLimit;
 
     std::string music;
     std::string image;
