@@ -20,40 +20,54 @@ signals:
 
 public:
     Sprite();
-    Sprite(std::string normal,
-           std::string damage,
-           std::string attack,
-           std::string skill,
-           std::string killed);
+
+    Sprite(int nbFrameNormal, int widthNormal, int heightNormal, std::string spriteNormal,
+           int nbFrameDamage, int widthDamage, int heightDamage, std::string spriteDamage,
+           int nbFrameAttack, int widthAttack, int heightAttack, std::string spriteAttack,
+           int nbFrameSkill, int widthSkill, int heightSkill, std::string spriteSkill,
+           int nbFrameKilled, int widthKilled, int heightKilled, std::string spriteKilled);
 
 public slots :
     void kill();
     void damage();
     void attack();
     void normal();
+    void skill();
 
 private slots:
-    void nextFrame();
+    void nextNormalFrame();
     void nextAttackFrame();
     void nextKillFrame();
+    void nextSkillFrame();
     void nextDamageFrame();
 
 private:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+
     QRectF boundingRect() const;
+
+    int width, height;
+
+    int nbFrameNormal, widthNormal, heightNormal;
+    int nbFrameDamage, widthDamage, heightDamage;
+    int nbFrameAttack, widthAttack, heightAttack;
+    int nbFrameSkill, widthSkill, heightSkill;
+    int nbFrameKilled, widthKilled, heightKilled;
+
     QString damageSprite;
     QString normalSprite;
     QString attackSprite;
     QString skillSprite;
     QString killedSprite;
 
-private:
-    QTimer *timer;
+    QTimer *timerN;
     QTimer *timerD;
     QTimer *timerK;
     QTimer *timerA;
     QTimer *timerS;
+
     QPixmap *spriteImage;
+
     int currentFrame;
 
 protected:

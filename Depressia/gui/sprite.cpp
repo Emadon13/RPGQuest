@@ -1,33 +1,60 @@
 #include "sprite.h"
 
-Sprite::Sprite(std::string nS, std::string dS, std::string aS, std::string sS, std::string kS) : QObject(), QGraphicsItem()
+Sprite::Sprite(int nbFrameN, int widthN, int heightN, std::string spriteNormal,
+               int nbFrameD, int widthD, int heightD, std::string spriteDamage,
+               int nbFrameA, int widthA, int heightA, std::string spriteAttack,
+               int nbFrameS, int widthS, int heightS, std::string spriteSkill,
+               int nbFrameK, int widthK, int heightK, std::string spriteKilled)
+               : QObject(), QGraphicsItem()
 {
-    this->damageSprite=QString::fromStdString(dS);
-    this->normalSprite=QString::fromStdString(nS);
-    this->attackSprite=QString::fromStdString(aS);
-    this->killedSprite=QString::fromStdString(kS);
-    this->skillSprite=QString::fromStdString(sS);
+    this->damageSprite=QString::fromStdString(spriteDamage);
+    this->normalSprite=QString::fromStdString(spriteNormal);
+    this->attackSprite=QString::fromStdString(spriteAttack);
+    this->killedSprite=QString::fromStdString(spriteKilled);
+    this->skillSprite=QString::fromStdString(spriteSkill);
 
-    currentFrame = 0;
+    this->currentFrame = 0;
+    this->width=130;
+    this->height=200;
+
+    this->nbFrameAttack=nbFrameA;
+    this->nbFrameDamage=nbFrameD;
+    this->nbFrameKilled=nbFrameK;
+    this->nbFrameNormal=nbFrameN;
+    this->nbFrameSkill=nbFrameS;
+
+    this->widthAttack=widthA;
+    this->widthDamage=widthD;
+    this->widthKilled=widthK;
+    this->widthNormal=widthN;
+    this->widthSkill=widthS;
+
+    this->heightAttack=heightA;
+    this->heightDamage=heightD;
+    this->heightKilled=heightK;
+    this->heightNormal=heightN;
+    this->heightSkill=heightS;
+
     spriteImage = new QPixmap(normalSprite);
 
-    timer = new QTimer();
+    timerN = new QTimer();
     timerK = new QTimer();
     timerD = new QTimer();
     timerA = new QTimer();
     timerS = new QTimer();
 
-    connect(timer, &QTimer::timeout, this, &Sprite::nextFrame);
+    connect(timerN, &QTimer::timeout, this, &Sprite::nextFrame);
     connect(timerK, &QTimer::timeout, this, &Sprite::nextKillFrame);
     connect(timerD, &QTimer::timeout, this, &Sprite::nextDamageFrame);
     connect(timerA, &QTimer::timeout, this, &Sprite::nextAttackFrame);
+    connect(timerS, &QTimer::timeout, this, &Sprite::nextSkillFrame);
 
-    timer->start(100);
+    timerN->start(100);
 }
 
 QRectF Sprite::boundingRect() const
 {
-    return QRectF(0,0,130,200);
+    return QRectF(0,0,width,height);
 }
 
 void Sprite::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
@@ -39,7 +66,7 @@ void Sprite::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
      * By setting the X coordinate with the variable currentFrame we would like to move the camera on the sprite
      * and the last two arguments - the width and height of the displayed area, that is, the frame
      * */
-    painter->drawPixmap(0,0, *spriteImage, currentFrame, 0, 130,200);
+    painter->drawPixmap(0,0, *spriteImage, currentFrame, 0, width,height);
     Q_UNUSED(option);
     Q_UNUSED(widget);
 }
@@ -48,22 +75,12 @@ void Sprite::normal()
 {
     spriteImage = new QPixmap(normalSprite);
     currentFrame = 0;
-    timer->start(100);
-}
-
-void Sprite::nextFrame()
-{
-    /* At a signal from the timer 20 to move the point of rendering pixels
-     * If currentFrame = 300 then zero out it as sprite sheet size of 300 pixels by 20
-     * */
-    currentFrame += 130;
-    if (currentFrame >= 780 ) currentFrame = 0;
-    this->update(0,0,130,200);
+    timerN->start(100);
 }
 
 void Sprite::kill()
 {
-    timer->stop();
+    timerN->stop();
     spriteImage = new QPixmap(damageSprite);
     currentFrame = 0;
     timerK->start(100);
@@ -71,7 +88,7 @@ void Sprite::kill()
 
 void Sprite::attack()
 {
-    timer->stop();
+    timerN->stop();
     spriteImage = new QPixmap(attackSprite);
     currentFrame = 0;
     timerA->start(100);
@@ -79,10 +96,28 @@ void Sprite::attack()
 
 void Sprite::damage()
 {
-    timer->stop();
+    timerN->stop();
     spriteImage = new QPixmap(damageSprite);
     currentFrame = 0;
     timerD->start(100);
+}
+
+void Sprite::skill()
+{
+    timerN->stop();
+    spriteImage = new QPixmap(skillSprite);
+    currentFrame = 0;
+    timerS->start(100);
+}
+
+void Sprite::nextNormalFrame()
+{
+    /* At a signal from the timer 20 to move the point of rendering pixels
+     * If currentFrame = 300 then zero out it as sprite sheet size of 300 pixels by 20
+     * */
+    currentFrame += widthNormal;
+    if (currentFrame >= widthNormal*nbFrameNormal ) currentFrame = 0;
+    this->update(0,0,widthNormal,heightNormal);
 }
 
 void Sprite::nextDamageFrame()
@@ -90,14 +125,13 @@ void Sprite::nextDamageFrame()
     /* At a signal from the timer 20 to move the point of rendering pixels
      * If currentFrame = 300 then zero out it as sprite sheet size of 300 pixels by 20
      * */
-    currentFrame += 112;
-    if (currentFrame >= 672 ) {
+    currentFrame += widthDamage;
+    if (currentFrame >= widthDamage*nbFrameDamage ) {
         timerD->stop();
         normal();
         currentFrame = 0;
     }
-    else this->update(0,0,112,192);
-
+    else this->update(0,0,widthDamage,heightDamage);
 }
 
 void Sprite::nextAttackFrame()
@@ -105,14 +139,27 @@ void Sprite::nextAttackFrame()
     /* At a signal from the timer 20 to move the point of rendering pixels
      * If currentFrame = 300 then zero out it as sprite sheet size of 300 pixels by 20
      * */
-    currentFrame += 128;
-    if (currentFrame >= 512 ) {
+    currentFrame += widthAttack;
+    if (currentFrame >= widthAttack*nbFrameAttack ) {
         normal();
         timerA->stop();
         currentFrame = 0;
     }
-    else this->update(0,0,128,184);
+    else this->update(0,0,widthAttack,heightAttack);
+}
 
+void Sprite::nextSkillFrame()
+{
+    /* At a signal from the timer 20 to move the point of rendering pixels
+     * If currentFrame = 300 then zero out it as sprite sheet size of 300 pixels by 20
+     * */
+    currentFrame += widthKilled;
+    if (currentFrame >= widthKilled*nbFrameKilled ) {
+        normal();
+        timerS->stop();
+        currentFrame = 0;
+    }
+    else this->update(0,0,widthKilled,heightKilled);
 }
 
 void Sprite::nextKillFrame()
@@ -120,13 +167,12 @@ void Sprite::nextKillFrame()
     /* At a signal from the timer 20 to move the point of rendering pixels
      * If currentFrame = 300 then zero out it as sprite sheet size of 300 pixels by 20
      * */
-    currentFrame += 112;
-    if (currentFrame >= 672 ) {
+    currentFrame += widthKilled;
+    if (currentFrame >= widthKilled*nbFrameKilled ) {
         emit killed(this);
         currentFrame = 0;
     }
-    else this->update(0,0,112,192);
-
+    else this->update(0,0,widthKilled,heightKilled);
 }
 
 void Sprite::mousePressEvent(QGraphicsSceneMouseEvent *event)
