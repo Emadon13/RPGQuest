@@ -39,13 +39,15 @@ int main(int argc, char *argv[])
     cout << e2.getHp() << endl;
     */
 
-    cout << "izubqziuvbpqziuhvpZVBZIEY" << endl;
+
 
     // ------------TEST QUENTIN ------------------
     QApplication app(argc, argv);
     QApplication::setFont(QFont("Fixedsys"));
 
     Game *game = new Game();
+
+    cout << "izubqziuvbpqziuhvpZVBZIEY" << endl;
 
     MainWindow w(game);
     w.show();
