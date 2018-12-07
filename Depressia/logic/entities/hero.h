@@ -2,6 +2,7 @@
 #define HERO_H
 
 #include "logic/entities/entity.h"
+#include "io/skillloader.h"
 
 class Hero : public Entity
 {
@@ -17,7 +18,7 @@ public:
          std::string spr,
          std::string bi,
          std::vector<Skill*> s,
-         std::string stl[]);
+         std::string stl[max_lvl]);
 
     int getXp();
     bool addXp(int i);

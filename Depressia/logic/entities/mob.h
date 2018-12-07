@@ -1,6 +1,9 @@
+#pragma once
+
 #ifndef MOB_H
 #define MOB_H
 
+#include "logic/events/fight.h"
 #include "logic/entities/entity.h"
 
 class Mob : public Entity
@@ -18,8 +21,8 @@ public:
         std::string battleIcon,
         std::vector<Skill*>m_skills);
 
-    Skill* choseSkill();
-    Entity* choseEntity(std::vector<Entity*> entities);
+    int choseSkill();
+    Entity* choseEntity(Entity** entities);
     //std::vector<Entity*> choseEntities(std::vector<Entity*>);
 };
 

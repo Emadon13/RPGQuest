@@ -5,7 +5,7 @@ using namespace std;
 Team::Team():
     bag(Inventory())
 {
-    hero[0] = EntityLoader::generate("../ressources/entities/heroes/bonasse.txt");
+    hero[0] = dynamic_cast<Hero*>(EntityLoader::generate("../ressources/entities/heroes/bonasse.txt"));
 }
 
 int Team::getTeamSize()
@@ -13,7 +13,7 @@ int Team::getTeamSize()
     return teamSize;
 }
 
-Entity* Team::getHero(int i)
+Hero* Team::getHero(int i)
 {
     if(i>=0 && i<teamSize)
         return hero[i];

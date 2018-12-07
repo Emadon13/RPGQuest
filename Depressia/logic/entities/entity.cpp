@@ -144,8 +144,21 @@ void Entity::restaureMp(const int mpHeal)
 string Entity::hitOpponent(Entity& target)
 {
     Attack* a = dynamic_cast<Attack*>(attack);
-    a->call(*this, target);
+    a->call(*this, vector<Entity>(1,target));
     return a->getSummary();
+}
+
+
+vector<int> Entity::useSkill(int i, std::vector<Entity> e)
+{
+    if(dynamic_cast<Recover*>(skills.at(unsigned(i))) != NULL)
+        return dynamic_cast<Recover*>(skills.at(unsigned(i)))->call(*this, e);
+
+    else if(dynamic_cast<Attack*>(skills.at(unsigned(i))) != NULL)
+        return dynamic_cast<Attack*>(skills.at(unsigned(i)))->call(*this, e);
+
+    else
+        return vector<int>(0);
 }
 
 bool Entity::isAlive()
@@ -185,7 +198,8 @@ std::string Entity::getSprite()
                       int(stoi(an)), int(stoi(aw)), int(stoi(ah)), as,
                       int(stoi(sn)), int(stoi(sw)), int(stoi(sh)), ss,
                       int(stoi(kn)), int(stoi(kw)), int(stoi(kh)), ks);
-*/
+                      */
+
 }
 
 QPixmap Entity::getBattleIcon()

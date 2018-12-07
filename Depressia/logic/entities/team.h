@@ -10,13 +10,13 @@ public:
     Team();
 
     int getTeamSize();
-    Entity* getHero(int i);
+    Hero* getHero(int i);
 
 private:
     Inventory bag;
 
     static const int teamSize = 1;
-    Entity* hero[teamSize];
+    Hero* hero[teamSize];
 };
 
 #endif // TEAM_H

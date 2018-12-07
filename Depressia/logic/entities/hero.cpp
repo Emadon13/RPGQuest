@@ -37,31 +37,19 @@ Hero::Hero(string n,
            string bi,
            vector<Skill*> s,
            string stl[max_lvl]):
+
+    Entity(n, l, 1, 1, 1, 1, 1, spr, bi, vector<Skill*>(s)),
     xp(0),
     base_hp(b_hp),
     base_mp(b_mp),
     base_att(b_att),
     base_def(b_def),
     base_spd(b_spd)
-
 {
-
     for(int i=0 ; i<max_lvl ; i++)
         skillsToLearn[i] = stl[i];
 
-    Entity(n,
-           l,
-           int(base_hp*(lvl/max_lvl)),
-           int(base_mp*(lvl/max_lvl)),
-           int(base_att*(lvl/max_lvl)),
-           int(base_def*(lvl/max_lvl)),
-           int(base_spd*(lvl/max_lvl)),
-           spr,
-           bi,
-           vector<Skill*>(s));
-
     calculateLevel();
-
 }
 
 int Hero::getXp()
@@ -72,6 +60,9 @@ int Hero::getXp()
 bool Hero::addXp(int i)
 {
     xp += i;
+
+
+
     if(xp>=next_level)
     {
         lvl++;
@@ -88,9 +79,15 @@ void Hero::calculateLevel()
 
     hpMax = int(base_hp*0.1*lvl) ;
     mpMax = int(base_mp*0.1*lvl) ;
+    hp = hpMax;
+    mp = mpMax;
     att = int(base_att*0.1*lvl) ;
     def = int(base_def*0.1*lvl) ;
     spd = int(base_spd*0.1*lvl) ;
+
+    if(skillsToLearn[lvl] != "")
+        skills.push_back(SkillLoader::generate(skillsToLearn[lvl]));
+
     next_level = lvl*lvl*10;
 }
 

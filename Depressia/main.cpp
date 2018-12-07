@@ -20,36 +20,19 @@ GlobalSpec * globalSpec;
 int main(int argc, char *argv[])
 {
     // ------------TEST VINCENT ------------------
-    /*
-    Entity e1, e2;
-    Recover r("atterissage", "", 0, one, 1.0);
-
-    cout << e1.getHp() << endl;
-    cout << e2.getHp() << endl;
-
-    cout << e1.hitOpponent(e2) << endl;
-
-    cout << e1.getHp() << endl;
-    cout << e2.getHp() << endl;
-
-    r.call(e1,e2);
-    cout << r.getSummary() << endl;
-
-    cout << e1.getHp() << endl;
-    cout << e2.getHp() << endl;
-    */
-
-
 
     // ------------TEST QUENTIN ------------------
     QApplication app(argc, argv);
     QApplication::setFont(QFont("Fixedsys"));
 
-    Game *game = new Game();
+    Game game = Game();
 
-    cout << "izubqziuvbpqziuhvpZVBZIEY" << endl;
+    cout << game.team.getHero(0)->getSkillsSize() << endl;
+    game.team.getHero(0)->addXp(111);
+    game.team.getHero(0)->takeDamage(4);
 
-    MainWindow w(game);
+
+    MainWindow w(&game);
     w.show();
 
     return app.exec();

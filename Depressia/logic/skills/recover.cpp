@@ -28,16 +28,6 @@ Recover::~Recover()
 
 }
 
-int Recover::call(Entity& user, Entity& target)
-{
-    //payMp(user);
-
-    int hpHeal = Recover::effect(user, target);
-    setSummary(user.getName(), target.getName(), hpHeal);
-
-    return hpHeal;
-}
-
 vector<int> Recover::call(Entity& user, vector<Entity> targets)
 {
     //payMp(user);
@@ -68,13 +58,6 @@ int Recover::effect(Entity& user, Entity& target)
     return hpHeal;
 }
 
-void Recover::setSummary(string user, string target,int hpHeal)
-{
-    stringstream sstr;
-    sstr << user << " utilise " << name << " sur " << target << " !<br>"
-         << hpHeal << " PVs soignés !";
-    summary = sstr.str();
-}
 
 void Recover::setSummary(string user, vector<string> targets, vector<int> hpsHeal)
 {

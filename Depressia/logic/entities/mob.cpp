@@ -32,18 +32,24 @@ Mob::Mob(string m_name,
 
 }
 
-Skill* Mob::choseSkill()
+int Mob::choseSkill()
 {
-    vector<Skill*> usable(0);
+    vector<int> usable(0);
     for(unsigned i=0 ; i<skills.size() ; i++)
         if(skills.at(i)->getMpCost() <= mp)
-            usable.push_back(skills.at(i));
+            usable.push_back(int(i));
 
     return usable.at(unsigned(rand()) % usable.size());
 
 }
 
-Entity* Mob::choseEntity(vector<Entity*> entities)
+Entity* Mob::choseEntity(Entity** entities)
 {
-    return entities.at(unsigned(rand()) % entities.size());
+    vector<Entity*> attackable(0);
+    for(unsigned i=0 ; i<Fight::nb_e ; i++)
+        if(entities[i] != NULL)
+            if(entities[i]->getHp() >0)
+                attackable.push_back(entities[i]);
+
+    return attackable.at(unsigned(rand()) % attackable.size());
 }

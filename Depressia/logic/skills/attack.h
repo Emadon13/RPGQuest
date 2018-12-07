@@ -13,13 +13,11 @@ public:
     Attack(std::string n, std::string t, int mp, Range rng, double c);
     ~Attack();
 
-    int call(Entity& user, Entity& target);
     std::vector<int> call(Entity& user, std::vector<Entity> targets);
 
 private:
     double coef;
     int effect(Entity& user, Entity& target, float coef);
-    void setSummary(HitEffect he, std::string user, std::string target, int deg);
     void setSummary(HitEffect he, std::string user, std::vector<std::string> target, std::vector<int>);
 
 };

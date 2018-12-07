@@ -8,7 +8,8 @@
 #include <vector>
 #include <iostream>
 #include "logic/skills/attack.h"
-//#include "io/spriteloader.h"
+#include "logic/skills/recover.h"
+#include "io/spriteloader.h"
 #include "io/qpixmaploader.h"
 
 class Entity
@@ -37,6 +38,8 @@ public:
     int getDef();
     int getSpd();
 
+    int static const max_lvl = 10;
+
     Skill getSkill(int i);
     int getSkillsSize();
 
@@ -44,7 +47,9 @@ public:
     void loseMp(int mp);
     void restaureHp(int hpHeal);
     void restaureMp(int mpHeal);
+
     std::string hitOpponent(Entity& target);
+    std::vector<int> useSkill(int i, std::vector<Entity> e);
 
     bool isAlive();
 
@@ -64,7 +69,6 @@ protected:
     int spd;
     std::vector<Skill*>skills;
     Skill* attack;
-    int static const max_lvl = 10;
 
     std::string sprite;
     std::string battleIcon;

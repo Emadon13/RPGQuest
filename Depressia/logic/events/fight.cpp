@@ -1,4 +1,5 @@
 #include "fight.h"
+#include "logic/entities/mob.h"
 
 using namespace std;
 
@@ -21,12 +22,12 @@ Fight::Fight(Hero* h[nb_e], Mob* m[nb_e], string img, string mus):
 
 }
 
-Entity** Fight::getHeroes()
+Hero** Fight::getHeroes()
 {
     return heroes;
 }
 
-Entity** Fight::getMobs()
+Mob** Fight::getMobs()
 {
     return mobs;
 }

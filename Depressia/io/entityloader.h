@@ -2,7 +2,8 @@
 #define ENTITYLOADER_H
 
 #include "io/loader.h"
-#include "logic/entities/entity.h"
+#include "logic/entities/hero.h"
+#include "logic/entities/mob.h"
 #include "io/skillloader.h"
 
 class EntityLoader : public Loader
