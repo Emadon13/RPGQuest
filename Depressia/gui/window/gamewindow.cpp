@@ -64,8 +64,7 @@ void GameWindow::ShowFrame()
         }
         else if(dynamic_cast<Save*>(event) != NULL)
         {
-            CreateBattleFrame();
-            map->setEventHapp();
+            CreateGameFrame();
         }
         else if(dynamic_cast<FinalScreen*>(event) != NULL)
         {
@@ -121,7 +120,7 @@ void GameWindow::CreateGameFrame()
     ClearWidget();
 
     QPalette p( palette() );
-    p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage())).scaled(WindowWidth,WindowHeight)));
+    p.setBrush(QPalette::Window, QBrush(((dynamic_cast<Fight*>(map->getCurrentPosition().getEvent()))->getImage()).scaled(WindowWidth,WindowHeight)));
     setPalette(p);
 
     GameFrame gf(this);

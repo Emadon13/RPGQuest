@@ -116,7 +116,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     attack->move(400,100);
     attack->show();
 
-    QObject::connect(pass, SIGNAL(clicked()), game , SLOT(ShowFrame()));
+    QObject::connect(pass, SIGNAL(clicked()), game , SLOT(CreateGameFrame()));
 
     QObject::connect(attack, SIGNAL(clicked()), this , SLOT(Attack()));
     QObject::connect(damage, SIGNAL(clicked()), this , SLOT(Damage()));
