@@ -7,7 +7,7 @@
 #include <sstream>
 #include <vector>
 
-enum HitEffect {normal, critical, miss, noMp};
+enum HitEffect {miss, normal, critical};
 enum Range { one, group, all, several };
 
 class Entity;

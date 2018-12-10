@@ -40,28 +40,26 @@ Entity** Fight::getAll()
 
 bool Fight::teamWin()
 {
-    if(mobs[0]->getHp() == 0 &&
-       mobs[1]->getHp() == 0 &&
-       mobs[2]->getHp() == 0 &&
-       mobs[3]->getHp() == 0)
-        return true;
-
-    else
-        return false;
+    for(int i=0 ; i<nb_e ; i++)
+        if(mobs[i] != nullptr)
+            if(mobs[i]->getHp() <= 0)
+                return true;
+    return false;
 }
 
 bool Fight::mobsWin()
 {
-    if(heroes[0]->getHp() == 0 &&
-       heroes[1]->getHp() == 0 &&
-       heroes[2]->getHp() == 0 &&
-       heroes[3]->getHp() == 0)
-        return true;
-
-    else
-        return false;
+    for(int i=0 ; i<nb_e ; i++)
+        if(heroes[i] != nullptr)
+            if(heroes[i]->getHp() <= 0)
+                return true;
+    return false;
 }
 
+bool Fight::isEnded()
+{
+    return(teamWin() || mobsWin());
+}
 Entity* Fight::nextPlayer()
 {
     for (int i=0 ; i<2*nb_e ; i++)

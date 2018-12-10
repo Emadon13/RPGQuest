@@ -19,7 +19,7 @@ private:
     float coef;
     int effect(Entity& user, Entity& target);
     void setSummary(std::string user, std::vector<std::string> target, std::vector<int>);
-    int critcoef;
+    HitEffect hitEffect;
 
 };
 

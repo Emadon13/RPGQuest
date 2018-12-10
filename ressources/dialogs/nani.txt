@@ -1,9 +1,9 @@
 left
 Vincent
 Omae wa mou shindeiru
-../ressources/images/homme-normal.png
+../ressources/images/dialogs/homme-normal.png
 right
 Quentin
 N A N I ????????????
-../ressources/images/fille-colere.png
+../ressources/images/dialogs/fille-colere.png
 end

@@ -12,6 +12,7 @@
 #include "io/spriteloader.h"
 #include "io/qpixmaploader.h"
 
+class Sprite;
 class Entity
 {
 public:
@@ -53,8 +54,8 @@ public:
 
     bool isAlive();
 
-    std::string getSprite();
-    QPixmap getBattleIcon();
+    Sprite* getSprite();
+    QPixmap* getBattleIcon();
 
 
 protected:

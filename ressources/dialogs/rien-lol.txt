@@ -1,13 +1,13 @@
 right
 Quentin
 Vincent ?
-../ressources/images/fille-normale.png
+../ressources/images/dialogs/fille-normale.png
 left
 Vincent
 Oui ?
-../ressources/images/homme-demande.png
+../ressources/images/dialogs/homme-demande.png
 right
 Quentin
 Rien lol
-../ressources/images/fille-rire.png
+../ressources/images/dialogs/fille-rire.png
 end

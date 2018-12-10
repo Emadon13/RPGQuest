@@ -30,7 +30,7 @@ Recover::~Recover()
 
 vector<int> Recover::call(Entity& user, vector<Entity*> targets)
 {
-    //payMp(user);
+    payMp(user);
 
     int hph;
     vector<int> hpsHeal(0);

@@ -27,6 +27,7 @@ public:
 
     bool teamWin();
     bool mobsWin();
+    bool isEnded();
     Entity* nextPlayer();
 
 

@@ -36,17 +36,17 @@ vector <int> Attack::call(Entity& user, vector<Entity*> targets)
 
     if(hit == 0)
     {
-        critcoef = 0;
+        hitEffect = miss;
     }
 
     else if(hit == 9)
     {
-        critcoef = 2;
+        hitEffect = critical;
     }
 
     else
     {
-        critcoef = 1;
+        hitEffect = normal;
     }
 
     for (unsigned i=0 ; i<targets.size(); i++)
@@ -67,12 +67,12 @@ int Attack::effect(Entity& user, Entity& target)
     int deg;
     if (target.getDef() <= 0)
     {
-        deg = int(user.getAtt()*user.getLvl()*coef*critcoef);
+        deg = int(user.getAtt()*user.getLvl()*coef*hitEffect);
     }
 
     else
     {
-        deg = int((user.getAtt()*user.getLvl()*coef*critcoef) / (target.getDef()));
+        deg = int((user.getAtt()*user.getLvl()*coef*hitEffect) / (target.getDef()));
     }
 
     if (deg > target.getHp()) deg = target.getHp();
@@ -102,12 +102,12 @@ void Attack::setSummary(string user, vector<string> targets, vector<int> degs)
 
     sstr << " !<br>";
 
-    if (critcoef == 0)
+    if (hitEffect == miss)
         sstr << "Mais échoué ! ";
 
     else
     {
-        if (critcoef == 2)
+        if (hitEffect == critical)
             sstr << "COUP CRITIQUE !<br>";
 
         for(unsigned i=0 ; i<targets.size() ; i++)

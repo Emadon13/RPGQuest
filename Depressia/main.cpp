@@ -35,34 +35,22 @@ int main(int argc, char *argv[])
 
 
     cout << fight.getMobs()[1]->getName() << endl;
-
-    cout << game.getTeam()->getHero(0)->getHp() << endl;
-
+/*
+    while(!fight.isEnded())
+    {
+    //    Hero h = fight.getMobs()[1]->choseEntity(fight.getHeroes());
+    }
+*/
     s =  fight.getMobs()[1]->getMove(fight.getMobs()[1]->choseMove());
     s->call(*fight.getMobs()[1], target);
     cout << s->getSummary() << endl;
-
-    s =  fight.getMobs()[1]->getMove(fight.getMobs()[1]->choseMove());
-    s->call(*fight.getMobs()[1], target);
-    cout << s->getSummary() << endl;
-
-    s =  fight.getMobs()[1]->getMove(fight.getMobs()[1]->choseMove());
-    s->call(*fight.getMobs()[1], target);
-    cout << s->getSummary() << endl;
-
-    s =  fight.getMobs()[1]->getMove(fight.getMobs()[1]->choseMove());
-    s->call(*fight.getMobs()[1], target);
-    cout << s->getSummary() << endl;
-
-    s =  fight.getMobs()[1]->getMove(fight.getMobs()[1]->choseMove());
-    s->call(*fight.getMobs()[1], target);
-    cout << s->getSummary() << endl;
+    cout << fight.getMobs()[1]->getMp() << endl;
 
     cout << game.getTeam()->getHero(0)->getHp() << endl;
 
 
     MainWindow w(&game);
-    //w.show();
+    w.show();
 
     return app.exec();
 }
