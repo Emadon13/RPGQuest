@@ -49,6 +49,9 @@ int main(int argc, char *argv[])
     cout << game.getTeam()->getHero(0)->getHp() << endl;
 
 
+    cout << fight.getHeroes()[0]->getName() << endl;
+
+
     MainWindow w(&game);
     w.show();
 

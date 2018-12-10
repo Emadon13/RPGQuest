@@ -1,6 +1,7 @@
 #include "map.h"
 #include <iostream>
 
+
 using namespace std;
 
 Map::Map():
@@ -21,7 +22,8 @@ Map::Map():
 }
 
 
-Map::Map(vector<string> wm, vector<unsigned int> r, vector<unsigned int> u, vector<unsigned int> l, vector<unsigned int> d):
+Map::Map(Team* t, vector<string> wm, vector<unsigned int> r, vector<unsigned int> u, vector<unsigned int> l, vector<unsigned int> d):
+    team(t),
     eventHapp(wm.size(), false),
     elements(wm),
     rights(r),
@@ -48,7 +50,7 @@ Map::Map(vector<string> wm, vector<unsigned int> r, vector<unsigned int> u, vect
 MapElement Map::getCurrentPosition()
 {
     if(currentPosition < elements.size())
-        return MapElementLoader::generate(elements.at(currentPosition));
+        return MapElementLoader::generate(team, elements.at(currentPosition));
     else
         cout << "ERREUR : currentPosition a dépasser la taille d'elements" << endl;
         return MapElement();
@@ -62,25 +64,25 @@ int Map::getNbElements()
 MapElement Map::goRight()
 {
     currentPosition = rights.at(currentPosition);
-    return MapElementLoader::generate(elements.at(currentPosition));
+    return MapElementLoader::generate(team, elements.at(currentPosition));
 }
 
 MapElement Map::goUp()
 {
     currentPosition = ups.at(currentPosition);
-    return MapElementLoader::generate(elements.at(currentPosition));
+    return MapElementLoader::generate(team, elements.at(currentPosition));
 }
 
 MapElement Map::goLeft()
 {
     currentPosition = lefts.at(currentPosition);
-    return MapElementLoader::generate(elements.at(currentPosition));
+    return MapElementLoader::generate(team, elements.at(currentPosition));
 }
 
 MapElement Map::goDown()
 {
     currentPosition = downs.at(currentPosition);
-    return MapElementLoader::generate(elements.at(currentPosition));
+    return MapElementLoader::generate(team,  elements.at(currentPosition));
 }
 
 bool Map::existRight()

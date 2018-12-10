@@ -8,11 +8,6 @@
 #include<fstream>
 #include<QString>
 
-#include"logic/entities/entity.h"
-#include"logic/events/event.h"
-#include"logic/items/item.h"
-#include"logic/world/map.h"
-
 class Loader
 {
 public:

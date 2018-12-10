@@ -1,8 +1,11 @@
+#pragma once
+
 #ifndef HERO_H
 #define HERO_H
 
-#include "logic/entities/entity.h"
+
 #include "io/skillloader.h"
+#include "logic/entities/entity.h"
 
 class Hero : public Entity
 {

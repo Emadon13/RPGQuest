@@ -3,8 +3,9 @@
 #ifndef SPRITELOADER_H
 #define SPRITELOADER_H
 
-#include "io/loader.h"
 #include "gui/sprite.h"
+#include <fstream>
+#include<iostream>
 
 class SpriteLoader
 {

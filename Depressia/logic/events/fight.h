@@ -5,12 +5,13 @@
 
 #include <string>
 #include <vector>
+#include "logic/events/event.h"
 
 class Mob;
 class Team;
 class Hero;
 class Entity;
-class Fight
+class Fight : public Event
 {
 public:
     Fight();

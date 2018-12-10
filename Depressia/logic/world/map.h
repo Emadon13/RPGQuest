@@ -4,13 +4,14 @@
 
 #include"logic/world/mapelement.h"
 #include"io/mapelementloader.h"
+#include "logic/entities/team.h"
 
 
 class Map
 {
 public:
     Map();
-    Map(std::vector<std::string> wm, std::vector<unsigned int> r, std::vector<unsigned int> u, std::vector<unsigned int> l, std::vector<unsigned int> d);
+    Map(Team* t,std::vector<std::string> wm, std::vector<unsigned int> r, std::vector<unsigned int> u, std::vector<unsigned int> l, std::vector<unsigned int> d);
     MapElement getCurrentPosition();
     int getNbElements();
 
@@ -30,6 +31,7 @@ public:
     unsigned int currentPosition;
 private:
 
+    Team* team;
     std::vector<bool> eventHapp;
     std::vector<std::string> elements;
     std::vector<unsigned int> rights;

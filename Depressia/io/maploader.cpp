@@ -13,7 +13,7 @@ Map MapLoader::generate()
     return Map();
 }
 
-Map MapLoader::generate(string path)
+Map MapLoader::generate(Team* t,string path)
 {
     ifstream file(path);
     string line, mapElementAdd;
@@ -59,7 +59,7 @@ Map MapLoader::generate(string path)
         }
 
 
-        return Map(mapElementsAdd, rights, ups, lefts, downs);
+        return Map(t, mapElementsAdd, rights, ups, lefts, downs);
 
     }
 

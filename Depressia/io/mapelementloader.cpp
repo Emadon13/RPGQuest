@@ -6,6 +6,7 @@
 #include "logic/events/save.h"
 #include "logic/events/video.h"
 #include "logic/events/finalscreen.h"
+#include "fightloader.h"
 
 using namespace std;
 
@@ -19,7 +20,7 @@ MapElement MapElementLoader::generate()
     return MapElement();
 }
 
-MapElement MapElementLoader::generate(string path)
+MapElement MapElementLoader::generate(Team* t, string path)
 {
     ifstream file(path);
     string line, name, text, image, et, e;
@@ -41,6 +42,12 @@ MapElement MapElementLoader::generate(string path)
         {
             getline(file,e);
             return MapElement(name, text, image, new Dialog(DialogLoader::generate(e)));
+        }
+
+        else if(et == "fight")
+        {
+            getline(file, e);
+            return MapElement(name, text,image, new Fight(FightLoader::generate(t,e)));
         }
 
         else if(et == "video")

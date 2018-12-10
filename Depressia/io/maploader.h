@@ -1,16 +1,15 @@
 #ifndef MAPLOADER_H
 #define MAPLOADER_H
 
-#include"io/loader.h"
 #include"logic/world/map.h"
 
-class MapLoader : public Loader
+class MapLoader
 {
 public:
     MapLoader();
 
     static Map generate();
-    static Map generate(std::string);
+    static Map generate(Team* t, std::string s);
 };
 
 #endif // MAPLOADER_H

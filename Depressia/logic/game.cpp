@@ -13,7 +13,7 @@ Game::Game():
     savePath("../ressources/save/save.vincent"),
     team(Team())
 {
-    map = MapLoader::generate("../ressources/maps/map.txt");
+    map = MapLoader::generate(&team, "../ressources/maps/map.txt");
     srand (unsigned(time(nullptr)));
 }
 
