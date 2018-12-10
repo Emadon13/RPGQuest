@@ -14,8 +14,8 @@ Sprite::Sprite(int nbFrameN, int widthN, int heightN, std::string spriteNormal,
     this->skillSprite=QString::fromStdString(spriteSkill);
 
     this->currentFrame = 0;
-    this->width=130;
-    this->height=200;
+    this->width=widthN;
+    this->height=heightN;
 
     this->nbFrameAttack=nbFrameA;
     this->nbFrameDamage=nbFrameD;

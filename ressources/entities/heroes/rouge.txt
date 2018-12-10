@@ -6,6 +6,6 @@ Rouge
 60
 20
 ../ressources/sprites/rouge.txt
-../ressources/images/icons/bonasse-icon.png
+../ressources/images/icons/rouge-icon.png
 end_skill
 end

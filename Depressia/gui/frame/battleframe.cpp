@@ -52,19 +52,17 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
     for (int i=0; i < Fight::nb_e; i=i+1)
     {
-        allie=fight->getHeroes()[1];
+        allie=fight->getHeroes()[i];
 
         if(allie != nullptr)
         {
-            sprite = new Sprite(6,130,200,"../ressources/images/sprites/sprite_seraphina.png",0,0,0,"",0,0,0,"",0,0,0,"",0,0,0,"");
-            sprite->setPos(QPointF(int((1300+i*50)/ratio),int(500/ratio)));
-            sprite->setToolTip("Bonasse");
+            teamSprite[i] = allie->getSprite();
+            teamSprite[i]->setPos(QPointF(int((1000+i*150)/ratio),int(500/ratio)));
+            teamSprite[i]->setToolTip(QString::fromStdString(allie->getName()));
 
-            teamSprite[i]=sprite;
             scene->addItem(teamSprite[i]);
 
-            character = new CharacterUI(game,allie,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*(i+1)+tailleUI*i,tailleUI,tailleUI);
-            teamUI[i]=character;
+            teamUI[i] = new CharacterUI(game,allie,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*(i+1)+tailleUI*i,tailleUI,tailleUI);
         }
     }
 

@@ -12,11 +12,11 @@ public slots:
     void Update();
 
 public:
-    CharacterUI(GameWindow *g, Entity *e, int x, int y, int width, int height);
+    CharacterUI(GameWindow *g, Hero *e, int x, int y, int width, int height);
 
     GameWindow *game;
 
-    Entity *perso;
+    Hero *perso;
 
     int posX;
     int posY;

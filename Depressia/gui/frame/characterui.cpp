@@ -1,7 +1,7 @@
 #include "characterui.h"
 #include <QProgressBar>
 
-CharacterUI::CharacterUI(GameWindow *g, Entity *e, int x, int y, int width, int height) : QObject()
+CharacterUI::CharacterUI(GameWindow *g, Hero *e, int x, int y, int width, int height) : QObject()
 {
     game=g;
     posX=x;
@@ -24,7 +24,7 @@ CharacterUI::CharacterUI(GameWindow *g, Entity *e, int x, int y, int width, int 
 
 
     image = new QLabel(game);
-    image->setPixmap(QPixmap(QString::fromStdString("../ressources/images/icons/bonasse-icon.png")).scaled(imageWidht,imageHeight));
+    image->setPixmap(perso->getBattleIcon()->scaled(imageWidht,imageHeight));
     image->setFixedSize(imageWidht,imageHeight);
     image->move(posX,posY);
     image->show();
@@ -70,12 +70,12 @@ CharacterUI::CharacterUI(GameWindow *g, Entity *e, int x, int y, int width, int 
     jaugeMP->setStyleSheet(styleMP);
 
     jaugeEXP = new QProgressBar(game);
-    jaugeEXP->setMaximum(150);
+    jaugeEXP->setMaximum(perso->getNextLevel());
     jaugeEXP->setMinimum(0);
     jaugeEXP->setFixedSize((width-imageWidht)/2,imageHeight);
     jaugeEXP->move(posX+imageWidht,posY);
     jaugeEXP->show();
-    jaugeEXP->setValue(90);
+    jaugeEXP->setValue(perso->getXp());
     jaugeEXP->setFormat("XP");
     jaugeEXP->setAlignment(Qt::AlignCenter);
     jaugeEXP->setStyleSheet(styleEXP);
