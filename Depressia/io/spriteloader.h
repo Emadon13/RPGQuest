@@ -10,7 +10,7 @@ class SpriteLoader
 {
 public:
     SpriteLoader();
-    static Sprite* generate();
+    Sprite* generate();
     static Sprite* generate(std::string path);
 };
 

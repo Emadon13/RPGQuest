@@ -9,7 +9,7 @@ SpriteLoader::SpriteLoader()
 
 Sprite* SpriteLoader::generate()
 {
-    return new Sprite();
+    return nullptr;
 }
 
 Sprite* SpriteLoader::generate(string path)
@@ -53,7 +53,7 @@ Sprite* SpriteLoader::generate(string path)
     else
     {
         cout << "ERREUR : sprite " << path << "non trouvé";
-        return new Sprite();
+        return nullptr;
     }
 
 
