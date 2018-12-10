@@ -76,6 +76,11 @@ void GameWindow::ShowFrame()
             CreateVideoFrame();
             map->setEventHapp();
         }
+        else if(dynamic_cast<Fight*>(event) != NULL)
+        {
+            CreateBattleFrame();
+            map->setEventHapp();
+        }
         else
         {
             CreateGameFrame();

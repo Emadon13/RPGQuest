@@ -29,21 +29,18 @@ public:
 
     Fight* fight;
 
-    Hero* heroes[Fight::nb_e];
-    Mob* enemies[Fight::nb_e];
     CharacterUI* teamUI[Fight::nb_e];
     EnemyUI* ennemyUI[Fight::nb_e];
     Sprite* teamSprite[Fight::nb_e];
     Sprite* ennemySprite[Fight::nb_e];
 
-    Entity *allie;
+    Hero *allie;
     Entity *mob;
 
     CharacterUI *character;
     EnemyUI *enemy;
 
     Sprite *sprite;
-    Sprite *sprite2;
 
     QLabel *dialogInfo;
 

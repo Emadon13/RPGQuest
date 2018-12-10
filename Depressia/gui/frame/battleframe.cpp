@@ -50,9 +50,9 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     int tailleUI = int((game->GetGame()->getWindowHeight()-espacementUI*5)/4);
 
 
-    for (int i=0; i<= Fight::nb_e; i=i+1)
+    for (int i=0; i < Fight::nb_e; i=i+1)
     {
-        allie = fight->getHeroes()[i];
+        allie=fight->getHeroes()[1];
 
         if(allie != nullptr)
         {
