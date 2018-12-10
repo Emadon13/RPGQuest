@@ -120,7 +120,7 @@ void GameWindow::CreateGameFrame()
     ClearWidget();
 
     QPalette p( palette() );
-    p.setBrush(QPalette::Window, QBrush(((dynamic_cast<Fight*>(map->getCurrentPosition().getEvent()))->getImage()).scaled(WindowWidth,WindowHeight)));
+    p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage())).scaled(WindowWidth,WindowHeight)));
     setPalette(p);
 
     GameFrame gf(this);
@@ -154,7 +154,7 @@ void GameWindow::CreateBattleFrame()
     ClearWidget();
 
     QPalette p( palette() );
-    p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage())).scaled(WindowWidth,WindowHeight)));
+    p.setBrush(QPalette::Window, QBrush(((dynamic_cast<Fight*>(map->getCurrentPosition().getEvent()))->getImage())->scaled(WindowWidth,WindowHeight)));
     setPalette(p);
 
     BattleFrame *bf = new BattleFrame(this);

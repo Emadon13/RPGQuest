@@ -39,7 +39,7 @@ EnemyUI::EnemyUI(GameWindow *g, Mob *e, int x, int y, int width, int height) : Q
     boostSpeed->setStyleSheet(styleGlobal);
 
     image = new QLabel(game);
-    image->setPixmap(QPixmap(QString::fromStdString("../ressources/images/icons/enemy-icon.png")).scaled(imageWidht,imageHeight));
+    image->setPixmap(perso->getBattleIcon()->scaled(imageWidht,imageHeight));
     image->setFixedSize(imageWidht,imageHeight);
     image->move(posX+boostAttack->width(),posY);
     image->show();

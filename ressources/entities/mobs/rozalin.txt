@@ -6,7 +6,7 @@ Rozalin
 4
 2
 ../ressources/sprites/rozalin.txt
-../ressources/images/icons/bonasse-icon.png
+../ressources/images/icons/rozalin-icon.png
 ../ressources/skills/recovers/e-coque.txt
 end_skill
 end
