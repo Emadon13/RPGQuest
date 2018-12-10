@@ -57,6 +57,10 @@ int Hero::getXp()
     return xp;
 }
 
+int Hero::getNextLevel()
+{
+    return next_level;
+}
 bool Hero::addXp(int i)
 {
     xp += i;

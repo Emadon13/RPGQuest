@@ -24,6 +24,7 @@ public:
          std::string stl[max_lvl]);
 
     int getXp();
+    int getNextLevel();
     bool addXp(int i);
 
 private:
