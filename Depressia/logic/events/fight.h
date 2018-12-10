@@ -5,6 +5,9 @@
 
 #include <string>
 #include <vector>
+#include <QUrl>
+#include <QString>
+#include "io/qpixmaploader.h"
 #include "logic/events/event.h"
 
 class Mob;
@@ -30,6 +33,9 @@ public:
     bool mobsWin();
     bool isEnded();
     Entity* nextPlayer();
+
+    QPixmap* getImage();
+    QUrl* getMusic();
 
 
 

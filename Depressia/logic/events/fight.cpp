@@ -74,3 +74,13 @@ Entity* Fight::nextPlayer()
 
     return nextPlayer();
 }
+
+QPixmap* Fight::getImage()
+{
+    return new QPixmap(QPixmapLoader::generate(image));
+}
+
+QUrl* Fight::getMusic()
+{
+    return new QUrl(QString::fromStdString(music));
+}
