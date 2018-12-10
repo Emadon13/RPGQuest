@@ -7,7 +7,7 @@
 #include "gui/sprite.h"
 #include "gui/frame/characterui.h"
 #include "gui/frame/enemyui.h"
-
+#include "logic/events/fight.h"
 
 class BattleFrame : QObject
 {
@@ -27,8 +27,17 @@ public:
 
     GameWindow *game;
 
-    Entity *bonasse;
-    Entity *rozalin;
+    Fight* fight;
+
+    Hero* heroes[Fight::nb_e];
+    Mob* enemies[Fight::nb_e];
+    CharacterUI* teamUI[Fight::nb_e];
+    EnemyUI* ennemyUI[Fight::nb_e];
+    Sprite* teamSprite[Fight::nb_e];
+    Sprite* ennemySprite[Fight::nb_e];
+
+    Entity *allie;
+    Entity *mob;
 
     CharacterUI *character;
     EnemyUI *enemy;
