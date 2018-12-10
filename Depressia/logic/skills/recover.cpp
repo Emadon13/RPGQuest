@@ -28,7 +28,7 @@ Recover::~Recover()
 
 }
 
-vector<int> Recover::call(Entity& user, vector<Entity> targets)
+vector<int> Recover::call(Entity& user, vector<Entity*> targets)
 {
     //payMp(user);
 
@@ -38,9 +38,9 @@ vector<int> Recover::call(Entity& user, vector<Entity> targets)
     for (unsigned i=0 ; i<targets.size() ; i++)
     {
 
-        hph = Recover::effect(user, targets.at((i)));
+        hph = Recover::effect(user, *targets.at((i)));
         hpsHeal.push_back(hph);
-        targetNames.push_back(targets.at(i).getName());
+        targetNames.push_back(targets.at(i)->getName());
     }
     setSummary(user.getName(), targetNames, hpsHeal);
 

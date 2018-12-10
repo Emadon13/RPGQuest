@@ -6,6 +6,9 @@ Team::Team():
     bag(Inventory())
 {
     hero[0] = dynamic_cast<Hero*>(EntityLoader::generate("../ressources/entities/heroes/bonasse.txt"));
+    hero[1] = dynamic_cast<Hero*>(EntityLoader::generate("../ressources/entities/heroes/rouge.txt"));
+    hero[2] = nullptr;
+    hero[3] = nullptr;
 }
 
 int Team::getTeamSize()
@@ -23,4 +26,9 @@ Hero* Team::getHero(int i)
         cout << "ERREUR : taille de tableau " << i << " dépassée pour team";
         return hero[0];
     }
+}
+
+Hero** Team::getHeroes()
+{
+    return hero;
 }

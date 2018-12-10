@@ -40,7 +40,7 @@ public:
 
     int static const max_lvl = 10;
 
-    Skill getSkill(int i);
+    Skill* getMove(int i);
     int getSkillsSize();
 
     void takeDamage(int deg);
@@ -49,7 +49,7 @@ public:
     void restaureMp(int mpHeal);
 
     std::string hitOpponent(Entity& target);
-    std::vector<int> useSkill(int i, std::vector<Entity> e);
+    std::vector<int> useMove(int i, std::vector<Entity*> e);
 
     bool isAlive();
 

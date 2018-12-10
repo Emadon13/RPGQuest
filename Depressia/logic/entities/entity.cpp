@@ -97,16 +97,18 @@ int Entity::getSpd()
     return spd;
 }
 
-Skill Entity::getSkill(int i)
+Skill* Entity::getMove(int i)
 {
-    if(skills.at(unsigned (i)) != NULL)
-        return *(skills.at(unsigned(i)));
+    if(i>0 || unsigned(i)<skills.size())
+    {
+        if(skills.at(unsigned (i)) != nullptr)
+            return skills.at(unsigned(i));
+        else
+            return attack;
+    }
 
     else
-    {
-        cout << "ERREUR : Le " << i << "-ième sort de " << name << " n'existe pas" << endl;
-        return Skill();
-    }
+        return attack;
 }
 
 int Entity::getSkillsSize()
@@ -144,21 +146,14 @@ void Entity::restaureMp(const int mpHeal)
 string Entity::hitOpponent(Entity& target)
 {
     Attack* a = dynamic_cast<Attack*>(attack);
-    a->call(*this, vector<Entity>(1,target));
+    a->call(*this, vector<Entity*>(1,&target));
     return a->getSummary();
 }
 
 
-vector<int> Entity::useSkill(int i, std::vector<Entity> e)
+vector<int> Entity::useMove(int i, std::vector<Entity*> e)
 {
-    if(dynamic_cast<Recover*>(skills.at(unsigned(i))) != NULL)
-        return dynamic_cast<Recover*>(skills.at(unsigned(i)))->call(*this, e);
-
-    else if(dynamic_cast<Attack*>(skills.at(unsigned(i))) != NULL)
-        return dynamic_cast<Attack*>(skills.at(unsigned(i)))->call(*this, e);
-
-    else
-        return vector<int>(0);
+    return (getMove(i))->call(*this, e);
 }
 
 bool Entity::isAlive()

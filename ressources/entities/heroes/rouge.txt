@@ -1,0 +1,11 @@
+Rouge
+1
+200
+10
+60
+60
+20
+../ressources/sprites/bonasse.txt
+../ressources/images/icons/bonasse-icon.png
+end_skill
+end

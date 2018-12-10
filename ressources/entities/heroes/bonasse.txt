@@ -4,11 +4,9 @@ Bonasse
 50
 30
 20
-20
+50
 ../ressources/sprites/bonasse.txt
 ../ressources/images/icons/bonasse-icon.png
-../ressources/skills/attacks/mitra-poing.txt
-end_skill
-3
 ../ressources/skills/recovers/e-coque.txt
+end_skill
 end

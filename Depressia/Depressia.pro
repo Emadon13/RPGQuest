@@ -49,7 +49,8 @@ SOURCES += \
     gui/frame/enemyui.cpp \
     io/entityloader.cpp \
     io/spriteloader.cpp \
-    logic/entities/mob.cpp
+    logic/entities/mob.cpp \
+    io/fightloader.cpp
 
 
 
@@ -102,4 +103,5 @@ HEADERS += \
     gui/frame/enemyui.h \
     io/entityloader.h \
     io/spriteloader.h \
-    logic/entities/mob.h
+    logic/entities/mob.h \
+    io/fightloader.h

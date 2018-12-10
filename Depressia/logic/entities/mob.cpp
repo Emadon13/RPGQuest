@@ -32,6 +32,13 @@ Mob::Mob(string m_name,
 
 }
 
+int Mob::choseMove()
+{
+    if(unsigned(rand()) % 2 == 0)
+        return -1;
+    else
+        return choseSkill();
+}
 int Mob::choseSkill()
 {
     vector<int> usable(0);
@@ -39,7 +46,10 @@ int Mob::choseSkill()
         if(skills.at(i)->getMpCost() <= mp)
             usable.push_back(int(i));
 
-    return usable.at(unsigned(rand()) % usable.size());
+    if(usable.size() == 0)
+        return -1;
+    else
+        return usable.at(unsigned(rand()) % usable.size());
 
 }
 

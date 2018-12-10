@@ -38,9 +38,9 @@ int Skill::getMpCost()
     return mpCost;
 }
 
-int Skill::call()
+vector<int> Skill::call(Entity& user, vector<Entity*> targets)
 {
-    return 0;
+    return vector<int>(0);
 }
 
 string Skill::getSummary()
@@ -60,3 +60,7 @@ void Skill::payMp(Entity& e)
         e.loseMp(mpCost);
 }
 
+int effect(Entity& user, Entity& target)
+{
+    return 0;
+}

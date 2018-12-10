@@ -51,6 +51,7 @@ Entity* EntityLoader::generate(string path)
                 getline(file, nbSkill);
             }
 
+
             Hero* hero = new Hero(name,
                           int(stoi(lvl)),
                           int(stoi(hpMax)),

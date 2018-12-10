@@ -14,7 +14,7 @@ Game::Game():
     team(Team())
 {
     map = MapLoader::generate("../ressources/maps/map.txt");
-    srand (time(NULL));
+    srand (unsigned(time(nullptr)));
 }
 
 Map* Game::getMap()
@@ -74,4 +74,8 @@ void Game::load()
 
 }
 
+Team* Game::getTeam()
+{
+    return &team;
+}
 

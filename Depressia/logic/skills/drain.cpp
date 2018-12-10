@@ -2,18 +2,20 @@
 
 using namespace std;
 
-Drain::Drain():
+Drain::Drain() /*:
+
     Attack("Vampipoutou",
           "Baiser qui restaure 1/2 des dégats infligés",
           3,
           one,
           1.0),
     rate(1.2)
+        */
 {
 
 }
 
-
+/*
 Drain::Drain(string n,
                      string t,
                      int mp,
@@ -47,3 +49,4 @@ vector<int> Drain::call(Entity& user, vector <Entity> targets)
     return drains;
 }
 
+*/

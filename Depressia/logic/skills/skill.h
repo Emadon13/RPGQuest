@@ -22,7 +22,7 @@ public:
     std::string getText();
     int getMpCost();
     std::string getSummary();
-    int call();
+    virtual std::vector<int> call(Entity& user, std::vector<Entity*> targets);
 
 
 protected:
@@ -34,7 +34,7 @@ protected:
 
     std::string setSummary(std::string s);
     void payMp(Entity& e);
-    int effect();
+    int effect(Entity& user, Entity& target);
 
 
 };

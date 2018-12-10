@@ -1,0 +1,13 @@
+Quentin
+1
+100
+50
+40
+40
+70
+../ressources/sprites/bonasse.txt
+../ressources/images/icons/bonasse-icon.png
+../ressources/skills/recovers/e-coque.txt
+../ressources/skills/attacks/mitra-poing.txt
+end_skill
+end

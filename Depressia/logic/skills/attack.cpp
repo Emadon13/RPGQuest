@@ -13,7 +13,7 @@ Attack::Attack(string n,
                string t,
                int mp,
                Range rng,
-               double c):
+               float c):
     Skill(n, t, mp, rng),
     coef(c)
 
@@ -26,58 +26,53 @@ Attack::~Attack()
 
 }
 
-vector <int> Attack::call(Entity& user, vector<Entity> targets)
+vector <int> Attack::call(Entity& user, vector<Entity*> targets)
 {
     int hit = rand() % 10;
     vector <int> degs(0);
     vector<string> targetNames;
-    float critcoef;
-    HitEffect he;
 
     payMp(user);
 
     if(hit == 0)
     {
         critcoef = 0;
-        he = miss;
     }
 
     else if(hit == 9)
     {
         critcoef = 2;
-        he = critical;
     }
 
     else
     {
         critcoef = 1;
-        he = normal;
     }
 
     for (unsigned i=0 ; i<targets.size(); i++)
     {
-        targetNames.push_back(targets.at(i).getName());
-        degs.push_back(Attack::effect(user, targets.at(i), critcoef));
+        targetNames.push_back(targets.at(i)->getName());
+        degs.push_back(Attack::effect(user, *targets.at(i)));
     }
 
 
 
-    setSummary(he, user.getName(), targetNames, degs);
+    setSummary(user.getName(), targetNames, degs);
 
     return degs;
 }
 
-int Attack::effect(Entity& user, Entity& target, float critcoef)
+int Attack::effect(Entity& user, Entity& target)
 {
     int deg;
     if (target.getDef() <= 0)
     {
-        deg = int(user.getAtt()*user.getLvl()*coef*double(critcoef));
+        deg = int(user.getAtt()*user.getLvl()*coef*critcoef);
     }
 
     else
     {
-        deg = int((user.getAtt()*user.getLvl()*coef*double(critcoef)) / (target.getDef()));
+        deg = int((user.getAtt()*user.getLvl()*coef*critcoef) / (target.getDef()));
     }
 
     if (deg > target.getHp()) deg = target.getHp();
@@ -88,16 +83,31 @@ int Attack::effect(Entity& user, Entity& target, float critcoef)
 
 }
 
-void Attack::setSummary(HitEffect he, string user, vector<string> targets, vector<int> degs)
+void Attack::setSummary(string user, vector<string> targets, vector<int> degs)
 {
     stringstream sstr;
-    sstr << user << " utilise " << name << " !<br>";
-    if (he == miss)
+    if((fabs(coef - float(1.0)) < float(0.001)))
+    {
+        sstr << user << " attaque ";
+        if(targets.size() == 1)
+            sstr << targets.at(0);
+    }
+
+    else
+    {
+        sstr << user << " utilise " << name;
+        if(targets.size() == 1)
+            sstr << " sur " << targets.at(0);
+    }
+
+    sstr << " !<br>";
+
+    if (critcoef == 0)
         sstr << "Mais échoué ! ";
 
     else
     {
-        if (he == critical)
+        if (critcoef == 2)
             sstr << "COUP CRITIQUE !<br>";
 
         for(unsigned i=0 ; i<targets.size() ; i++)

@@ -7,7 +7,7 @@
 #include "gui/globalspec.h"
 #include "gui/window/mainwindow.h"
 #include "gui/window/gamewindow.h"
-#include "logic/events/fight.h"
+#include "io/fightloader.h"
 #include "logic/world/map.h"
 #include"io/dialogloader.h"
 #include"logic/game.h"
@@ -26,14 +26,43 @@ int main(int argc, char *argv[])
     QApplication::setFont(QFont("Fixedsys"));
 
     Game game = Game();
+    Fight fight = FightLoader::generate(game.getTeam(), "../ressources/fights/first.txt");
+    Skill* s;
+    vector<Entity*> target;
+    target.push_back(fight.getHeroes()[0]);
 
-    cout << game.team.getHero(0)->getSkillsSize() << endl;
-    game.team.getHero(0)->addXp(111);
-    game.team.getHero(0)->takeDamage(4);
+
+
+
+    cout << fight.getMobs()[1]->getName() << endl;
+
+    cout << game.getTeam()->getHero(0)->getHp() << endl;
+
+    s =  fight.getMobs()[1]->getMove(fight.getMobs()[1]->choseMove());
+    s->call(*fight.getMobs()[1], target);
+    cout << s->getSummary() << endl;
+
+    s =  fight.getMobs()[1]->getMove(fight.getMobs()[1]->choseMove());
+    s->call(*fight.getMobs()[1], target);
+    cout << s->getSummary() << endl;
+
+    s =  fight.getMobs()[1]->getMove(fight.getMobs()[1]->choseMove());
+    s->call(*fight.getMobs()[1], target);
+    cout << s->getSummary() << endl;
+
+    s =  fight.getMobs()[1]->getMove(fight.getMobs()[1]->choseMove());
+    s->call(*fight.getMobs()[1], target);
+    cout << s->getSummary() << endl;
+
+    s =  fight.getMobs()[1]->getMove(fight.getMobs()[1]->choseMove());
+    s->call(*fight.getMobs()[1], target);
+    cout << s->getSummary() << endl;
+
+    cout << game.getTeam()->getHero(0)->getHp() << endl;
 
 
     MainWindow w(&game);
-    w.show();
+    //w.show();
 
     return app.exec();
 }

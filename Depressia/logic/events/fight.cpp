@@ -1,5 +1,6 @@
 #include "fight.h"
 #include "logic/entities/mob.h"
+#include "logic/entities/team.h"
 
 using namespace std;
 
@@ -8,16 +9,16 @@ Fight::Fight()
 
 }
 
-Fight::Fight(Hero* h[nb_e], Mob* m[nb_e], string img, string mus):
+Fight::Fight(Team* team, Mob* m[nb_e], string img, string mus):
     music(mus),
     image(img)
 {
     for(int i=0 ; i<nb_e ; i++)
     {
-        heroes[i] = h[i];
+        heroes[i] = team->getHero(i);
         mobs[i] = m[i];
         all[i] = m[i];
-        all[i+nb_e] = h[i];
+        all[i+nb_e] = team->getHero(i);
     }
 
 }

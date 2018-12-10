@@ -10,15 +10,16 @@ class Attack : public Skill
 {
 public:
     Attack();
-    Attack(std::string n, std::string t, int mp, Range rng, double c);
+    Attack(std::string n, std::string t, int mp, Range rng, float c);
     ~Attack();
 
-    std::vector<int> call(Entity& user, std::vector<Entity> targets);
+    virtual std::vector<int> call(Entity& user, std::vector<Entity*> targets);
 
 private:
-    double coef;
-    int effect(Entity& user, Entity& target, float coef);
-    void setSummary(HitEffect he, std::string user, std::vector<std::string> target, std::vector<int>);
+    float coef;
+    int effect(Entity& user, Entity& target);
+    void setSummary(std::string user, std::vector<std::string> target, std::vector<int>);
+    int critcoef;
 
 };
 

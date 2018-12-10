@@ -14,7 +14,7 @@ public:
     Recover(std::string n, std::string t, int mp, Range rng, double c);
     ~Recover();
 
-    std::vector<int> call(Entity& user, std::vector<Entity> targets);
+    virtual std::vector<int> call(Entity& user, std::vector<Entity*> targets);
 
 private:
     double coef;

@@ -23,6 +23,7 @@ public:
     void save();
     void load();
 
+    Team* getTeam();
     Team team;
 
 

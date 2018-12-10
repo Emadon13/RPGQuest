@@ -1,0 +1,12 @@
+Jessica
+1
+150
+50
+40
+10
+30
+../ressources/sprites/bonasse.txt
+../ressources/images/icons/bonasse-icon.png
+../ressources/skills/attacks/mitra-poing.txt
+end_skill
+end

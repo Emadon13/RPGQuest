@@ -3,17 +3,23 @@
 #ifndef FIGHT_H
 #define FIGHT_H
 
-#include "logic/entities/hero.h"
+#include <string>
+#include <vector>
 
 class Mob;
+class Team;
+class Hero;
+class Entity;
 class Fight
 {
 public:
     Fight();
-    Fight(Hero* h[],
+    Fight(Team* team,
           Mob* m[],
           std::string img,
           std::string mus);
+
+    static const int nb_e = 4;
 
     Hero** getHeroes();
     Mob** getMobs();
@@ -23,7 +29,7 @@ public:
     bool mobsWin();
     Entity* nextPlayer();
 
-    static const int nb_e = 4;
+
 
 
 
