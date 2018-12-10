@@ -13,11 +13,11 @@ public slots:
     void Update();
 
 public:
-    EnemyUI(GameWindow *g, Entity *e, int x, int y, int width, int height);
+    EnemyUI(GameWindow *g, Mob *e, int x, int y, int width, int height);
 
     GameWindow *game;
 
-    Entity *perso;
+    Mob *perso;
 
     int posX;
     int posY;

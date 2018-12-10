@@ -1,7 +1,7 @@
 #include "enemyui.h"
 #include <QProgressBar>
 
-EnemyUI::EnemyUI(GameWindow *g, Entity *e, int x, int y, int width, int height) : QObject()
+EnemyUI::EnemyUI(GameWindow *g, Mob *e, int x, int y, int width, int height) : QObject()
 {
     game=g;
     posX=x;

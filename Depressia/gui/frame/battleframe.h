@@ -35,7 +35,7 @@ public:
     Sprite* ennemySprite[Fight::nb_e];
 
     Hero *allie;
-    Entity *mob;
+    Mob *mob;
 
     CharacterUI *character;
     EnemyUI *enemy;
