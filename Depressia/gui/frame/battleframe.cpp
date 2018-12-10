@@ -58,8 +58,8 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
         if(allie != nullptr)
         {
             teamSprite[i] = allie->getSprite();
-            if(i%2==0) teamSprite[i]->setPos(QPointF(int(((WindowWidth*0.5)+espacementSprite*(i)+espacementMilieu)/ratio),int((WindowHeight/2)/ratio)));
-            else teamSprite[i]->setPos(QPointF(int(((WindowWidth*0.5)+espacementSprite*(i)+espacementMilieu)/ratio),int((WindowHeight/2-espacementSprite)/ratio)));
+            if(i%2==0) teamSprite[i]->setPos(QPointF(int(((WindowWidth*0.5)+espacementSprite*(i)+espacementMilieu)),int((WindowHeight/2))));
+            else teamSprite[i]->setPos(QPointF(int(((WindowWidth*0.5)+espacementSprite*(i)+espacementMilieu)),int((WindowHeight/2-espacementSprite))));
             teamSprite[i]->setToolTip(QString::fromStdString(allie->getName()));
 
             scene->addItem(teamSprite[i]);
