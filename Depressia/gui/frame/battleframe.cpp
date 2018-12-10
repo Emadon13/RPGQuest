@@ -48,8 +48,8 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
     int espacementUI=50;
     int tailleUI = int((game->GetGame()->getWindowHeight()-espacementUI*5)/4);
-    int espacementSprite=150;
-    int espacementMilieu=50;
+    int espacementSprite=int(150/ratio);
+    int espacementMilieu=int(50/ratio);
 
     for (int i=0 ; i < Fight::nb_e ; i=i+1)
     {
