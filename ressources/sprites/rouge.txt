@@ -1,6 +1,6 @@
 6
 130
-120
+200
 ../ressources/images/sprites/sprite_rouge.png
 4
 112
