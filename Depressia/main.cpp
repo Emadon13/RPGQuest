@@ -52,6 +52,7 @@ int main(int argc, char *argv[])
     cout << fight.getHeroes()[0]->getName() << endl;
 
 
+
     MainWindow w(&game);
     w.show();
 
