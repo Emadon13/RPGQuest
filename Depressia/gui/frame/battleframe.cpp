@@ -48,7 +48,8 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
     int espacementUI=50;
     int tailleUI = int((game->GetGame()->getWindowHeight()-espacementUI*5)/4);
-
+    int espacementSprite=150;
+    int espacementMilieu=50;
 
     for (int i=0 ; i < Fight::nb_e ; i=i+1)
     {
@@ -57,7 +58,8 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
         if(allie != nullptr)
         {
             teamSprite[i] = allie->getSprite();
-            teamSprite[i]->setPos(QPointF(int((1000+i*150)/ratio),int(500/ratio)));
+            if(i%2==0) teamSprite[i]->setPos(QPointF(int(((WindowWidth*0.5)+espacementSprite*(i)+espacementMilieu)/ratio),int((WindowHeight/2)/ratio)));
+            else teamSprite[i]->setPos(QPointF(int(((WindowWidth*0.5)+espacementSprite*(i)+espacementMilieu)/ratio),int((WindowHeight/2-espacementSprite)/ratio)));
             teamSprite[i]->setToolTip(QString::fromStdString(allie->getName()));
 
             scene->addItem(teamSprite[i]);
@@ -73,7 +75,8 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
         if(mob != nullptr)
         {
             ennemySprite[i] = mob->getSprite();
-            ennemySprite[i]->setPos(QPointF(int((500+i*150)/ratio),int(500/ratio)));
+            if(i%2==1) ennemySprite[i]->setPos(QPointF(int(((WindowWidth*0.5)-espacementSprite*(i+1)-espacementMilieu)/ratio),int((WindowHeight/2)/ratio)));
+            else ennemySprite[i]->setPos(QPointF(int(((WindowWidth*0.5)-espacementSprite*(i+1)-espacementMilieu)/ratio),int((WindowHeight/2-espacementSprite)/ratio)));
             ennemySprite[i]->setToolTip(QString::fromStdString(mob->getName()));
 
             scene->addItem(ennemySprite[i]);
@@ -99,7 +102,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     dialogSelection->show();
 
 
-    QPushButton *pass = new QPushButton("pass", game);
+    /*QPushButton *pass = new QPushButton("pass", game);
     pass->setFixedSize(100,100);
     pass->move(90,100);
     pass->show();
@@ -121,6 +124,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     QObject::connect(attack, SIGNAL(clicked()), this , SLOT(Attack()));
     QObject::connect(damage, SIGNAL(clicked()), this , SLOT(Damage()));
     QObject::connect(kill, SIGNAL(clicked()), this , SLOT(Kill()));
+    */
 }
 
 void::BattleFrame::Attack()

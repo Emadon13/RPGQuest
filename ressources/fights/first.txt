@@ -1,6 +1,6 @@
-../ressources/entities/mobs/rozalin.txt
 ../ressources/entities/mobs/grande-tata.txt
-none
-none
+../ressources/entities/mobs/grande-tata.txt
+../ressources/entities/mobs/grande-tata.txt
+../ressources/entities/mobs/grande-tata.txt
 ../ressources/images/backgrounds/battle_background.png
 ../ressources/musics/cynthia.mp3
