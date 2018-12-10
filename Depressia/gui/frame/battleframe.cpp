@@ -75,8 +75,8 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
         if(mob != nullptr)
         {
             ennemySprite[i] = mob->getSprite();
-            if(i%2==1) ennemySprite[i]->setPos(QPointF(int(((WindowWidth*0.5)-espacementSprite*(i+1)-espacementMilieu)/ratio),int((WindowHeight/2)/ratio)));
-            else ennemySprite[i]->setPos(QPointF(int(((WindowWidth*0.5)-espacementSprite*(i+1)-espacementMilieu)/ratio),int((WindowHeight/2-espacementSprite)/ratio)));
+            if(i%2==1) ennemySprite[i]->setPos(QPointF(int(((WindowWidth*0.5)-espacementSprite*(i+1)-espacementMilieu)),int((WindowHeight/2))));
+            else ennemySprite[i]->setPos(QPointF(int(((WindowWidth*0.5)-espacementSprite*(i+1)-espacementMilieu)),int((WindowHeight/2-espacementSprite))));
             ennemySprite[i]->setToolTip(QString::fromStdString(mob->getName()));
 
             scene->addItem(ennemySprite[i]);
