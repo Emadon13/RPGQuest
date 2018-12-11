@@ -1,0 +1,13 @@
+Poulpina
+3
+20
+10
+2
+4
+6
+../ressources/sprites/blue-queen.txt
+../ressources/images/icons/blue-queen-icon.png
+../ressources/skills/recovers/e-coque.txt
+../ressources/skills/attacks/mitra-poing.txt
+end_skill
+end

@@ -19,6 +19,8 @@ Fight::Fight(Team* team, Mob* m[nb_e], string img, string mus):
         mobs[i] = m[i];
         all[i] = m[i];
         all[i+nb_e] = team->getHero(i);
+        speeds[i] = 0;
+        speeds[i*2] = 0;
     }
 
 }
@@ -60,8 +62,20 @@ bool Fight::isEnded()
 {
     return(teamWin() || mobsWin());
 }
+
 Entity* Fight::nextPlayer()
 {
+    speedLimit = 0;
+
+    for (int i=0 ; i<2*nb_e ; i++)
+        if (all[i] != nullptr)
+            if(all[i]->getHp() > 0)
+                speedLimit += all[i]->getSpd();
+
+
+    cout << "speedLimit : " << speedLimit << endl;
+
+
     for (int i=0 ; i<2*nb_e ; i++)
         if (speeds[i] >= speedLimit)
         {
@@ -70,7 +84,13 @@ Entity* Fight::nextPlayer()
         }
 
     for (int i=0 ; i<2*nb_e ; i++)
-        speeds[i] += all[i]->getSpd();
+    {
+        if (all[i] != nullptr)
+            if(all[i]->getHp() > 0)
+                speeds[i] += all[i]->getSpd();
+        cout << speeds[i] << " ";
+    }
+    cout << endl;
 
     return nextPlayer();
 }

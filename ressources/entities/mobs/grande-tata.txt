@@ -4,7 +4,7 @@ Grande Tata
 10
 2
 4
-2
+7
 ../ressources/sprites/grande-tata.txt
 ../ressources/images/icons/tata-icon.png
 ../ressources/skills/recovers/e-coque.txt

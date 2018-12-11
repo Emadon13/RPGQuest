@@ -1,7 +1,7 @@
 6
-120
-208
-../ressources/images/sprites/queen_blue.png
+112
+192
+../ressources/images/sprites/sprite_rozalin.png
 4
 112
 192

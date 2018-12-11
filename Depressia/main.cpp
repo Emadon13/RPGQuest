@@ -30,17 +30,37 @@ int main(int argc, char *argv[])
     Skill* s;
     vector<Entity*> target;
     target.push_back(fight.getHeroes()[0]);
+    Entity* entities[4];
 
+    Entity* player;
 
+    player = fight.nextPlayer();
+    cout << player->getName() << endl;
+    player = fight.nextPlayer();
+    cout << player->getName() << endl;
+    player = fight.nextPlayer();
+    cout << player->getName() << endl;
+    player = fight.nextPlayer();
+    cout << player->getName() << endl;
+    player = fight.nextPlayer();
+    cout << player->getName() << endl;
+    player = fight.nextPlayer();
+    cout << player->getName() << endl;
+    player = fight.nextPlayer();
+    cout << player->getName() << endl;
 
-
+    /*
     cout << fight.getMobs()[1]->getName() << endl;
-/*
+
     while(!fight.isEnded())
     {
-    //    Hero h = fight.getMobs()[1]->choseEntity(fight.getHeroes());
+        for (int i=0 ; i<Fight::nb_e ; i++)
+            entities[i] = fight.getHeroes()[i];
+        Entity* t  = fight.getMobs()[1]->choseEntity(entities);
     }
-*/
+
+
+
     s =  fight.getMobs()[1]->getMove(fight.getMobs()[1]->choseMove());
     s->call(*fight.getMobs()[1], target);
     cout << s->getSummary() << endl;
@@ -50,7 +70,7 @@ int main(int argc, char *argv[])
 
 
     cout << fight.getHeroes()[0]->getName() << endl;
-
+    */
 
 
     MainWindow w(&game);

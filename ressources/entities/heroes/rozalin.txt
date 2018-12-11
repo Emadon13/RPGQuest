@@ -1,0 +1,12 @@
+Rozalin
+1
+20
+10
+40
+20
+40
+../ressources/sprites/rozalin.txt
+../ressources/images/icons/rozalin-icon.png
+../ressources/skills/recovers/e-coque.txt
+end_skill
+end
