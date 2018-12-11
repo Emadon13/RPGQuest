@@ -4,6 +4,7 @@
 #include <QMediaPlayer>
 #include <QMediaPlaylist>
 #include <QVideoWidget>
+#include <QSignalMapper>
 #include "gui/sprite.h"
 #include "gui/frame/characterui.h"
 #include "gui/frame/enemyui.h"
@@ -25,6 +26,12 @@ public slots :
     void updateCurrentPlayer();
     void updateTurnInfo();
     void showSelection();
+
+    //void choixSkill(int i);
+    //void choixObjet(int i);
+
+    void showObjet();
+    void showSkill();
 
 public:
     BattleFrame(GameWindow *game);
@@ -63,6 +70,10 @@ public:
     QPushButton *retour;
     QPushButton *next;
     QPushButton *previous;
+
+    QPushButton *selectionSkill[8];
+    QPushButton *selectionObjet[8];
+    QSignalMapper *signalMapper;
 
     QGraphicsScene *scene;
     QGraphicsView *view;

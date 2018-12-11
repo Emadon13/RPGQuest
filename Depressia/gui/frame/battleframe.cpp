@@ -167,6 +167,37 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     previous->show();
     previous->setStyleSheet(styleBoutonRond);
 
+    signalMapper = new QSignalMapper(this);
+    //QObject::connect(signalMapper, SIGNAL(mapped(int)), this, SLOT(choixSkill(int)));
+    //QObject::connect(signalMapper, SIGNAL(mapped(int)), this, SLOT(choixObjet(int)));
+
+    QObject::connect(sorts, SIGNAL(clicked()), this, SLOT(showSkill()));
+    QObject::connect(objet, SIGNAL(clicked()), this, SLOT(showObjet()));
+    QObject::connect(retour, SIGNAL(clicked()), this, SLOT(showSelection()));
+
+    int espacementBoutonVChoix(int((dialogHeight-boutonHeight*2)/5));
+
+    for (int i = 0; i < 8; i=i+1)
+    {
+        selectionObjet[i] = new QPushButton("objet",game);
+        selectionObjet[i]->setFixedSize(boutonWidth,int(boutonHeight*0.5));
+
+
+        selectionSkill[i] = new QPushButton("attaque",game);
+        selectionSkill[i]->setFixedSize(boutonWidth,int(boutonHeight*0.5));
+
+        if(i<4)
+        {
+            selectionObjet[i]->move(dialogSelection->x()+espacementBoutonH,dialogSelection->y()+espacementBoutonVChoix*(i+1)*int(boutonHeight*0.5*i));
+            selectionSkill[i]->move(dialogSelection->x()+espacementBoutonH,dialogSelection->y()+espacementBoutonVChoix*(i+1)*int(boutonHeight*0.5*i));
+        }
+        else
+        {
+            selectionObjet[i]->move(dialogSelection->x()+espacementBoutonH*2+boutonWidth,dialogSelection->y()+espacementBoutonVChoix*(i+1)*int(boutonHeight*0.5*i));
+            selectionSkill[i]->move(dialogSelection->x()+espacementBoutonH*2+boutonWidth,dialogSelection->y()+espacementBoutonVChoix*(i+1)*int(boutonHeight*0.5*i));
+        }
+    }
+
     nextTurn();
 
     /*QPushButton *pass = new QPushButton("pass", game);
@@ -201,17 +232,16 @@ void::BattleFrame::nextTurn()
         //current = fight->nextPlayer();
 
         updateCurrentPlayer();
-        updateTurnInfo();
-        showSelection();
 
         /*if(dynamic_cast<Mob*>(current) != NULL)
         {
             skillNumber = (dynamic_cast<Mob*>(current))->chooseMove();
         }
         else if(dynamic_cast<Hero*>(current) != NULL)
-        {
-
-        }
+        {*/
+            updateTurnInfo();
+            showSelection();
+        /*}
         else
         {
             std::cout << "Erreur lors de nextPlayer()" << endl;
@@ -236,10 +266,42 @@ void BattleFrame::updateTurnInfo()
 
 void BattleFrame::showSelection()
 {
+    for (int i = 0; i < 8; i=i+1)
+    {
+        selectionObjet[i]->hide();
+        selectionSkill[i]->hide();
+    }
+
     attack->show();
     sorts->show();
     objet->show();
     fuite->show();
+}
+
+void BattleFrame::showObjet()
+{
+    attack->hide();
+    sorts->hide();
+    objet->hide();
+    fuite->hide();
+
+    for (int i = 1; i < 8; i=i+1)
+    {
+        selectionObjet[i]->show();
+    }
+}
+
+void BattleFrame::showSkill()
+{
+    attack->hide();
+    sorts->hide();
+    objet->hide();
+    fuite->hide();
+
+    for (int i = 0; i < 8; i=i+1)
+    {
+        selectionSkill[i]->show();
+    }
 }
 
 void::BattleFrame::Attack()
