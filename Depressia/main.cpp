@@ -53,13 +53,16 @@ int main(int argc, char *argv[])
     while(!fight->isEnded())
     {   
         Entity* e = fight->nextPlayer();
+
         if(dynamic_cast<Mob*>(e) != nullptr)
         {
             int i = dynamic_cast<Mob*>(e)->chooseMove();
-            fight->target(dynamic_cast<Mob*>(e), i);
-            //cout << e->getSkillSummary(i) << endl;
-        }
+            cout << "ENTITY : " << i << " : ";
 
+            fight->target(dynamic_cast<Mob*>(e), i);
+            cout << e->getSkillSummary(i) << endl;
+        }
+        cout << e->getName() << endl;
     }
 
 */

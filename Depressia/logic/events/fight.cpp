@@ -115,9 +115,9 @@ void Fight::target(Mob* user, int skill)
     else if(user->getMove(skill)->getRange() == one_ally)
         user->getMove(skill)->call(dynamic_cast<Entity*>(user), vector<Entity*>(1,user->chooseEntity(tMobs)));
 
-    else if(user->getMove(skill)->getRange() == one_enemy)
+    else if(user->getMove(skill)->getRange() == one_enemy){
         user->getMove(skill)->call(dynamic_cast<Entity*>(user), vector<Entity*>(1,user->chooseEntity(tHeroes)));
-
+}
     else if(user->getMove(skill)->getRange() == group_allies)
         user->getMove(skill)->call(dynamic_cast<Entity*>(user), vMobs);
 
