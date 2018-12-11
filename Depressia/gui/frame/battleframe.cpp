@@ -174,6 +174,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     QObject::connect(sorts, SIGNAL(clicked()), this, SLOT(showSkill()));
     QObject::connect(objet, SIGNAL(clicked()), this, SLOT(showObjet()));
     QObject::connect(retour, SIGNAL(clicked()), this, SLOT(showSelection()));
+    QObject::connect(fuite, SIGNAL(clicked()), game, SLOT(ShowFrame()));
 
     int espacementBoutonVChoix(int((dialogHeight-boutonHeight*2)/5));
 
@@ -181,20 +182,22 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     {
         selectionObjet[i] = new QPushButton("objet",game);
         selectionObjet[i]->setFixedSize(boutonWidth,int(boutonHeight*0.5));
+        selectionObjet[i]->setStyleSheet(styleBouton);
 
 
         selectionSkill[i] = new QPushButton("attaque",game);
         selectionSkill[i]->setFixedSize(boutonWidth,int(boutonHeight*0.5));
+        selectionSkill[i]->setStyleSheet(styleBouton);
 
         if(i<4)
         {
-            selectionObjet[i]->move(dialogSelection->x()+espacementBoutonH,dialogSelection->y()+espacementBoutonVChoix*(i+1)*int(boutonHeight*0.5*i));
-            selectionSkill[i]->move(dialogSelection->x()+espacementBoutonH,dialogSelection->y()+espacementBoutonVChoix*(i+1)*int(boutonHeight*0.5*i));
+            selectionObjet[i]->move(dialogSelection->x()+espacementBoutonH,dialogSelection->y()+espacementBoutonVChoix*(i+1)+int(boutonHeight*0.5*i));
+            selectionSkill[i]->move(dialogSelection->x()+espacementBoutonH,dialogSelection->y()+espacementBoutonVChoix*(i+1)+int(boutonHeight*0.5*i));
         }
         else
         {
-            selectionObjet[i]->move(dialogSelection->x()+espacementBoutonH*2+boutonWidth,dialogSelection->y()+espacementBoutonVChoix*(i+1)*int(boutonHeight*0.5*i));
-            selectionSkill[i]->move(dialogSelection->x()+espacementBoutonH*2+boutonWidth,dialogSelection->y()+espacementBoutonVChoix*(i+1)*int(boutonHeight*0.5*i));
+            selectionObjet[i]->move(dialogSelection->x()+espacementBoutonH*2+boutonWidth,dialogSelection->y()+espacementBoutonVChoix*(i-4+1)+int(boutonHeight*0.5*(i-4)));
+            selectionSkill[i]->move(dialogSelection->x()+espacementBoutonH*2+boutonWidth,dialogSelection->y()+espacementBoutonVChoix*(i-4+1)+int(boutonHeight*0.5*(i-4)));
         }
     }
 
@@ -285,7 +288,7 @@ void BattleFrame::showObjet()
     objet->hide();
     fuite->hide();
 
-    for (int i = 1; i < 8; i=i+1)
+    for (int i = 0; i < 8; i=i+1)
     {
         selectionObjet[i]->show();
     }
