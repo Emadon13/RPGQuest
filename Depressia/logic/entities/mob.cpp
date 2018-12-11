@@ -32,14 +32,14 @@ Mob::Mob(string m_name,
 
 }
 
-int Mob::choseMove()
+int Mob::chooseMove()
 {
     if(unsigned(rand()) % 2 == 0)
         return -1;
     else
         return choseSkill();
 }
-int Mob::choseSkill()
+int Mob::chooseSkill()
 {
     vector<int> usable(0);
     for(unsigned i=0 ; i<skills.size() ; i++)
@@ -53,7 +53,7 @@ int Mob::choseSkill()
 
 }
 
-Entity* Mob::choseEntity(Entity** entities)
+Entity* Mob::chooseEntity(Entity** entities)
 {
     vector<Entity*> attackable(0);
     for(unsigned i=0 ; i<Fight::nb_e ; i++)

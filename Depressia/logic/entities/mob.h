@@ -21,12 +21,12 @@ public:
         std::string battleIcon,
         std::vector<Skill*>m_skills);
 
-    int choseMove();
-    Entity* choseEntity(Entity** entities);
+    int chooseMove();
+    Entity* chooseEntity(Entity** entities);
     //std::vector<Entity*> choseEntities(std::vector<Entity*>);
 
 private:
-    int choseSkill();
+    int chooseSkill();
 };
 
 #endif // MOB_H
