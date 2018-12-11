@@ -26,7 +26,7 @@ Fight::Fight(Team* t, Mob* m[nb_e], string img, string mus):
         vAll.push_back(m[i]);
         vAll.push_back(t->getHero(i));
         speeds[i] = 0;
-        speeds[i*2] = 0;
+        speeds[i+nb_e] = 0;
         team = t;
     }
 
@@ -73,6 +73,7 @@ bool Fight::isEnded()
 Entity* Fight::nextPlayer()
 {
     speedLimit = 0;
+    int maxSpeed = 0;
 
     for (int i=0 ; i<2*nb_e ; i++)
         if (all[i] != nullptr)
@@ -84,11 +85,14 @@ Entity* Fight::nextPlayer()
 
 
     for (int i=0 ; i<2*nb_e ; i++)
-        if (speeds[i] >= speedLimit)
-        {
-            speeds[i] = 0;
-            return all[i];
-        }
+        if(speeds[i] > speeds[maxSpeed])
+                maxSpeed = i;
+
+    if(speeds[maxSpeed] >= speedLimit)
+    {
+        speeds[maxSpeed] = 0;
+        return all[maxSpeed];
+    }
 
     for (int i=0 ; i<2*nb_e ; i++)
     {

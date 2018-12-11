@@ -27,22 +27,26 @@ int main(int argc, char *argv[])
 
     Game game = Game();
 
-    /*
-    player = fight.nextPlayer();
-    cout << player->getName() << endl;
-    player = fight.nextPlayer();
-    cout << player->getName() << endl;
-    player = fight.nextPlayer();
-    cout << player->getName() << endl;
-    player = fight.nextPlayer();
-    cout << player->getName() << endl;
-    player = fight.nextPlayer();
-    cout << player->getName() << endl;
-    player = fight.nextPlayer();
-    cout << player->getName() << endl;
-    player = fight.nextPlayer();
+    Fight* fight = dynamic_cast<Fight*>(game.getMap()->getCurrentPosition().getEvent());
+
+    Entity* player;
+
+    player = fight->nextPlayer();
     cout << player->getName() << endl;
 
+    player = fight->nextPlayer();
+    cout << player->getName() << endl;
+    player = fight->nextPlayer();
+    cout << player->getName() << endl;
+    player = fight->nextPlayer();
+    cout << player->getName() << endl;
+    player = fight->nextPlayer();
+    cout << player->getName() << endl;
+    player = fight->nextPlayer();
+    cout << player->getName() << endl;
+    player = fight->nextPlayer();
+    cout << player->getName() << endl;
+/*
     cout << fight.getMobs()[1]->getName() << endl;
 
     while(!fight.isEnded())
