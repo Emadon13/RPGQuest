@@ -1,6 +1,6 @@
-e-coque
+E-coque
 Un oeuf à la coque. C'est toujours réconfortant.
-3
-one
+2
+self
 recover
-1.0
+1.5

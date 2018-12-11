@@ -9,5 +9,6 @@ Poulpina
 ../ressources/images/icons/blue-queen-icon.png
 ../ressources/skills/recovers/e-coque.txt
 ../ressources/skills/attacks/mitra-poing.txt
+../ressources/skills/recovers/vibra-soin.txt
 end_skill
 end

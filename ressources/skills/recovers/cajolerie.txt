@@ -1,0 +1,6 @@
+Cajolerie
+Concentre son amour pour soigner un allié.
+3
+one_ally
+recover
+2

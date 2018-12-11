@@ -6,7 +6,7 @@ Recover::Recover():
     Skill("Soin",
           "Un sort de soin basique",
           2,
-          one),
+          self),
     coef(1)
 {
 
@@ -16,7 +16,7 @@ Recover::Recover(string n,
                  string t,
                  int mp,
                  Range rng,
-                 double c):
+                 float c):
     Skill(n,t,mp,rng),
     coef(c)
 {
@@ -28,7 +28,7 @@ Recover::~Recover()
 
 }
 
-vector<int> Recover::call(Entity& user, vector<Entity*> targets)
+vector<int> Recover::call(Entity* user, vector<Entity*> targets)
 {
     payMp(user);
 
@@ -38,22 +38,22 @@ vector<int> Recover::call(Entity& user, vector<Entity*> targets)
     for (unsigned i=0 ; i<targets.size() ; i++)
     {
 
-        hph = Recover::effect(user, *targets.at((i)));
+        hph = Recover::effect(user, targets.at((i)));
         hpsHeal.push_back(hph);
         targetNames.push_back(targets.at(i)->getName());
     }
-    setSummary(user.getName(), targetNames, hpsHeal);
+    setSummary(user->getName(), targetNames, hpsHeal);
 
     return hpsHeal;
 }
 
-int Recover::effect(Entity& user, Entity& target)
+int Recover::effect(Entity* user, Entity* target)
 {
     int rdm(rand() % 10);
     int signe((rand() % 3)-1);
-    int hpHeal(int((user.getLvl() * 2 + target.getLvl()) * coef));
+    int hpHeal(int((user->getLvl() * 2 + target->getLvl()) * coef));
     hpHeal = hpHeal+int(hpHeal*rdm*signe*0.1);
-    target.restaureHp(hpHeal);
+    target->restaureHp(hpHeal);
 
     return hpHeal;
 }

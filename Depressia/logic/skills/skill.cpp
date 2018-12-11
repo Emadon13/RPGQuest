@@ -5,7 +5,8 @@ using namespace std;
 
 Skill::Skill() :
     mpCost(0),
-    range(one)
+    range(self),
+    hitEffect(miss)
 {}
 
 Skill::Skill(string n,
@@ -15,7 +16,8 @@ Skill::Skill(string n,
     name(n),
     text(t),
     mpCost(m_mpCost),
-    range(c)
+    range(c),
+    hitEffect(miss)
 {}
 
 
@@ -38,7 +40,7 @@ int Skill::getMpCost()
     return mpCost;
 }
 
-vector<int> Skill::call(Entity& user, vector<Entity*> targets)
+vector<int> Skill::call(Entity* user, vector<Entity*> targets)
 {
     return vector<int>(0);
 }
@@ -48,19 +50,29 @@ string Skill::getSummary()
     return summary;
 }
 
+Range Skill::getRange()
+{
+    return range;
+}
+
+bool Skill::hasMiss()
+{
+    return(hitEffect==miss);
+}
+
 string Skill::setSummary(string s)
 {
     summary = s;
     return summary;
 }
 
-void Skill::payMp(Entity& e)
+void Skill::payMp(Entity* e)
 {
-    if(e.getMp() >= mpCost)
-        e.loseMp(mpCost);
+    if(e->getMp() >= mpCost)
+        e->loseMp(mpCost);
 }
 
-int effect(Entity& user, Entity& target)
+int effect(Entity* user, Entity* target)
 {
     return 0;
 }

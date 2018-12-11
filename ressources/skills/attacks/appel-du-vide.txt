@@ -1,0 +1,6 @@
+Appel du Vide
+???
+0
+all_entities
+attack
+100

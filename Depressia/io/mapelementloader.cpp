@@ -47,7 +47,7 @@ MapElement MapElementLoader::generate(Team* t, string path)
         else if(et == "fight")
         {
             getline(file, e);
-            return MapElement(name, text,image, new Fight(FightLoader::generate(t,e)));
+            return MapElement(name, text, image, new Fight(FightLoader::generate(t,e)));
         }
 
         else if(et == "video")

@@ -26,30 +26,23 @@ int main(int argc, char *argv[])
     QApplication::setFont(QFont("Fixedsys"));
 
     Game game = Game();
-    Fight fight = FightLoader::generate(game.getTeam(), "../ressources/fights/first.txt");
-    Skill* s;
-    vector<Entity*> target;
-    target.push_back(fight.getHeroes()[0]);
-    Entity* entities[4];
-
-    Entity* player;
-
-    player = fight.nextPlayer();
-    cout << player->getName() << endl;
-    player = fight.nextPlayer();
-    cout << player->getName() << endl;
-    player = fight.nextPlayer();
-    cout << player->getName() << endl;
-    player = fight.nextPlayer();
-    cout << player->getName() << endl;
-    player = fight.nextPlayer();
-    cout << player->getName() << endl;
-    player = fight.nextPlayer();
-    cout << player->getName() << endl;
-    player = fight.nextPlayer();
-    cout << player->getName() << endl;
 
     /*
+    player = fight.nextPlayer();
+    cout << player->getName() << endl;
+    player = fight.nextPlayer();
+    cout << player->getName() << endl;
+    player = fight.nextPlayer();
+    cout << player->getName() << endl;
+    player = fight.nextPlayer();
+    cout << player->getName() << endl;
+    player = fight.nextPlayer();
+    cout << player->getName() << endl;
+    player = fight.nextPlayer();
+    cout << player->getName() << endl;
+    player = fight.nextPlayer();
+    cout << player->getName() << endl;
+
     cout << fight.getMobs()[1]->getName() << endl;
 
     while(!fight.isEnded())

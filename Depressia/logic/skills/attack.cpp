@@ -3,7 +3,7 @@
 using namespace std;
 
 Attack::Attack():
-    Skill("Attaque", "L'attaque de base", 0, one),
+    Skill("Attaque", "L'attaque de base", 0, one_enemy),
     coef(1.0)
 {
 
@@ -26,7 +26,7 @@ Attack::~Attack()
 
 }
 
-vector <int> Attack::call(Entity& user, vector<Entity*> targets)
+vector <int> Attack::call(Entity* user, vector<Entity*> targets)
 {
     int hit = rand() % 10;
     vector <int> degs(0);
@@ -52,32 +52,32 @@ vector <int> Attack::call(Entity& user, vector<Entity*> targets)
     for (unsigned i=0 ; i<targets.size(); i++)
     {
         targetNames.push_back(targets.at(i)->getName());
-        degs.push_back(Attack::effect(user, *targets.at(i)));
+        degs.push_back(Attack::effect(user, targets.at(i)));
     }
 
 
 
-    setSummary(user.getName(), targetNames, degs);
+    setSummary(user->getName(), targetNames, degs);
 
     return degs;
 }
 
-int Attack::effect(Entity& user, Entity& target)
+int Attack::effect(Entity* user, Entity* target)
 {
     int deg;
-    if (target.getDef() <= 0)
+    if (target->getDef() <= 0)
     {
-        deg = int(user.getAtt()*user.getLvl()*coef*hitEffect);
+        deg = int(user->getAtt()*user->getLvl()*coef*hitEffect);
     }
 
     else
     {
-        deg = int((user.getAtt()*user.getLvl()*coef*hitEffect) / (target.getDef()));
+        deg = int((user->getAtt()*user->getLvl()*coef*hitEffect) / (target->getDef()));
     }
 
-    if (deg > target.getHp()) deg = target.getHp();
+    if (deg > target->getHp()) deg = target->getHp();
 
-    target.takeDamage(deg);
+    target->takeDamage(deg);
 
     return deg;
 

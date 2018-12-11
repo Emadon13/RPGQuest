@@ -1,0 +1,6 @@
+Vibra-soin
+Une onde qui soigne un adversaire wtf
+10
+one_enemy
+recover
+2.0

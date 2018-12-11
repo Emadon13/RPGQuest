@@ -28,13 +28,13 @@ Skill* SkillLoader::generate(string path)
         if(skill == "attack")
         {
             getline(file, co);
-            return new Attack(name, text, int(stoi(mpc)), SkillLoader::compareRange(rng), double(stoi(co)));
+            return new Attack(name, text, int(stoi(mpc)), SkillLoader::compareRange(rng), float(stoi(co)));
         }
 
         else if(skill == "recover")
         {
             getline(file, co);
-            return new Recover(name, text, int(stoi(mpc)), SkillLoader::compareRange(rng), double(stoi(co)));
+            return new Recover(name, text, int(stoi(mpc)), SkillLoader::compareRange(rng), float(stoi(co)));
         }
 
         else
@@ -53,18 +53,24 @@ Skill* SkillLoader::generate(string path)
 
 Range SkillLoader::compareRange(string range)
 {
-    if (range == "one")
-        return one;
+    if (range == "self")
+        return self;
+    else if (range == "one_ally")
+        return one_ally;
+    else if (range == "one_enemy")
+        return one_enemy;
+    else if (range == "group_allies")
+        return group_allies;
+    else if (range == "group_enemies")
+        return group_enemies;
+    else if (range == "all_entities")
+        return all_entities;
     else if (range == "several")
         return several;
-    else if (range == "group")
-        return group;
-    else if (range == "all")
-        return all;
 
     else
     {
         cout << "ERREUR : range inconnu" << endl;
-        return one;
+        return one_enemy;
     }
 }

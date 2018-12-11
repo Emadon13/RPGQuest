@@ -8,5 +8,6 @@ Rozalin
 ../ressources/sprites/rozalin.txt
 ../ressources/images/icons/rozalin-icon.png
 ../ressources/skills/recovers/e-coque.txt
+../ressources/skills/attacks/mitra-poing.txt
 end_skill
 end

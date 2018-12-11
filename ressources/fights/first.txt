@@ -3,4 +3,4 @@ none
 ../ressources/entities/mobs/grande-tata.txt
 none
 ../ressources/images/backgrounds/battle_background.png
-../ressources/musics/cynthia.mp3
+../ressources/musics/cynthia.mp

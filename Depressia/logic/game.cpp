@@ -10,9 +10,9 @@ Game::Game():
     windowHeight(1080),
     windowWidth(1920),
     ratio(1.0),
-    savePath("../ressources/save/save.vincent"),
-    team(Team())
+    savePath("../ressources/save/save.vincent")
 {
+    team = Team();
     map = MapLoader::generate(&team, "../ressources/maps/map.txt");
     srand (unsigned(time(nullptr)));
 }

@@ -1,6 +1,6 @@
 Bonasse
 1
-1100
+200
 50
 30
 20
@@ -8,5 +8,7 @@ Bonasse
 ../ressources/sprites/bonasse.txt
 ../ressources/images/icons/bonasse-icon.png
 ../ressources/skills/recovers/e-coque.txt
+../ressources/skills/recovers/cajolerie.txt
+../ressources/skills/recovers/vibra-soin.txt
 end_skill
 end

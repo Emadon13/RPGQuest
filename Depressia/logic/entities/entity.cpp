@@ -146,14 +146,14 @@ void Entity::restaureMp(const int mpHeal)
 string Entity::hitOpponent(Entity& target)
 {
     Attack* a = dynamic_cast<Attack*>(attack);
-    a->call(*this, vector<Entity*>(1,&target));
+    a->call(this, vector<Entity*>(1,&target));
     return a->getSummary();
 }
 
 
 vector<int> Entity::useMove(int i, std::vector<Entity*> e)
 {
-    return (getMove(i))->call(*this, e);
+    return (getMove(i))->call(this, e);
 }
 
 bool Entity::isAlive()

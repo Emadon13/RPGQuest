@@ -7,7 +7,10 @@ Grande Tata
 7
 ../ressources/sprites/grande-tata.txt
 ../ressources/images/icons/tata-icon.png
+../ressources/skills/attacks/canicule.txt
 ../ressources/skills/recovers/e-coque.txt
 ../ressources/skills/attacks/mitra-poing.txt
+../ressources/skills/recovers/cajolerie.txt
+../ressources/skills/attacks/appel-du-vide.txt
 end_skill
 end

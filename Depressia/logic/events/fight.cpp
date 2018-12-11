@@ -9,18 +9,25 @@ Fight::Fight()
 
 }
 
-Fight::Fight(Team* team, Mob* m[nb_e], string img, string mus):
+Fight::Fight(Team* t, Mob* m[nb_e], string img, string mus):
     music(mus),
     image(img)
 {
     for(int i=0 ; i<nb_e ; i++)
     {
-        heroes[i] = team->getHero(i);
+        heroes[i] = t->getHero(i);
+        tHeroes[i] = t->getHero(i);
+        vHeroes.push_back(t->getHero(i));
         mobs[i] = m[i];
+        tMobs[i] = m[i];
+        vMobs.push_back(m[i]);
         all[i] = m[i];
-        all[i+nb_e] = team->getHero(i);
+        all[i+nb_e] = t->getHero(i);
+        vAll.push_back(m[i]);
+        vAll.push_back(t->getHero(i));
         speeds[i] = 0;
         speeds[i*2] = 0;
+        team = t;
     }
 
 }
@@ -93,6 +100,52 @@ Entity* Fight::nextPlayer()
     cout << endl;
 
     return nextPlayer();
+}
+
+void Fight::target(Mob* user, int skill)
+{
+
+    if(user->getMove(skill)->getRange() == self)
+        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vector<Entity*>(1,user));
+
+    else if(user->getMove(skill)->getRange() == one_ally)
+        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vector<Entity*>(1,user->chooseEntity(tMobs)));
+
+    else if(user->getMove(skill)->getRange() == one_enemy)
+        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vector<Entity*>(1,user->chooseEntity(tHeroes)));
+
+    else if(user->getMove(skill)->getRange() == group_allies)
+        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vMobs);
+
+    else if(user->getMove(skill)->getRange() == group_enemies)
+        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vHeroes);
+
+    else if(user->getMove(skill)->getRange() == all_entities)
+        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vAll);
+}
+
+void Fight::target(Hero* user, int skill)
+{
+    if(user->getMove(skill)->getRange() == self)
+        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vector<Entity*>(1,user));
+
+    else if(user->getMove(skill)->getRange() == group_allies)
+        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vMobs);
+
+    else if(user->getMove(skill)->getRange() == group_enemies)
+        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vHeroes);
+
+    else if(user->getMove(skill)->getRange() == all_entities)
+        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vAll);
+}
+
+void Fight::target(Hero* user, int skill, int target)
+{
+    if(user->getMove(skill)->getRange() == one_ally)
+        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vector<Entity*>(1, heroes[target]));
+
+    else if(user->getMove(skill)->getRange() == one_enemy)
+        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vector<Entity*>(1, mobs[target]));
 }
 
 QPixmap* Fight::getImage()

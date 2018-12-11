@@ -18,7 +18,7 @@ class Fight : public Event
 {
 public:
     Fight();
-    Fight(Team* team,
+    Fight(Team* t,
           Mob* m[],
           std::string img,
           std::string mus);
@@ -34,6 +34,10 @@ public:
     bool isEnded();
     Entity* nextPlayer();
 
+    void target(Mob* user, int skill);
+    void target(Hero* user, int skill);
+    void target(Hero* user, int skill, int target);
+
     QPixmap* getImage();
     QUrl* getMusic();
 
@@ -43,9 +47,13 @@ public:
 
 private:
 
+    Team* team;
     Hero* heroes[nb_e];
     Mob* mobs[nb_e];
     Entity* all[2*nb_e];
+    Entity* tHeroes[nb_e];
+    Entity* tMobs[nb_e];
+    std::vector<Entity*> vMobs, vHeroes, vAll;
     int speeds[2*nb_e];
     int speedLimit;
 

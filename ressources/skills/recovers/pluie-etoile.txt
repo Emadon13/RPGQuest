@@ -1,0 +1,6 @@
+Pluie d'Etoiles
+Une pluie d'etoiles dorees qui soignent toute l'equipe.
+5
+group_allies
+recover
+1.0

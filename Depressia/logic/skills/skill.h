@@ -8,7 +8,7 @@
 #include <vector>
 
 enum HitEffect {miss, normal, critical};
-enum Range { one, group, all, several };
+enum Range { self, one_ally, one_enemy, group_allies, group_enemies, all_entities, several };
 
 class Entity;
 class Skill
@@ -22,7 +22,9 @@ public:
     std::string getText();
     int getMpCost();
     std::string getSummary();
-    virtual std::vector<int> call(Entity& user, std::vector<Entity*> targets);
+    Range getRange();
+    bool hasMiss();
+    virtual std::vector<int> call(Entity* user, std::vector<Entity*> targets);
 
 
 protected:
@@ -31,10 +33,11 @@ protected:
     int mpCost;
     Range range;
     std::string summary;
+    HitEffect hitEffect;
 
     std::string setSummary(std::string s);
-    void payMp(Entity& e);
-    int effect(Entity& user, Entity& target);
+    void payMp(Entity* e);
+    int effect(Entity* user, Entity* target);
 
 
 };

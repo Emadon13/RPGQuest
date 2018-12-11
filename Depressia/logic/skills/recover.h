@@ -11,15 +11,15 @@ class Recover : public Skill
 {
 public:
     Recover();
-    Recover(std::string n, std::string t, int mp, Range rng, double c);
+    Recover(std::string n, std::string t, int mp, Range rng, float c);
     ~Recover();
 
-    virtual std::vector<int> call(Entity& user, std::vector<Entity*> targets);
+    virtual std::vector<int> call(Entity* user, std::vector<Entity*> targets);
 
 private:
-    double coef;
+    float coef;
     void setSummary(std::string user, std::vector<std::string> target, std::vector<int>);
-    int effect(Entity& user, Entity& target);
+    int effect(Entity* user, Entity* target);
 };
 
 #endif // RECOVER_H
