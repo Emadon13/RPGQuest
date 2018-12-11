@@ -37,7 +37,7 @@ int Mob::chooseMove()
     if(unsigned(rand()) % 2 == 0)
         return -1;
     else
-        return choseSkill();
+        return chooseSkill();
 }
 int Mob::chooseSkill()
 {

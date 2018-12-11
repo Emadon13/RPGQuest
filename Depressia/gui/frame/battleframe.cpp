@@ -101,6 +101,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     dialogSelection->move(WindowWidth/2-dialogWidth/2,WindowHeight-dialogHeight);
     dialogSelection->show();
 
+    //nextTurn();
 
     /*QPushButton *pass = new QPushButton("pass", game);
     pass->setFixedSize(100,100);
@@ -125,6 +126,32 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     QObject::connect(damage, SIGNAL(clicked()), this , SLOT(Damage()));
     QObject::connect(kill, SIGNAL(clicked()), this , SLOT(Kill()));
     */
+}
+
+void::BattleFrame::nextTurn()
+{
+    if(!fight->isEnded())
+    {
+
+        /*current = fight->nextPlayer();
+
+        if(dynamic_cast<Mob*>(current) != NULL)
+        {
+            skillNumber = (dynamic_cast<Mob*>(current))->chooseMove();
+        }
+        else if(dynamic_cast<Hero*>(current) != NULL)
+        {
+
+        }
+        else
+        {
+            std::cout << "Erreur lors de nextPlayer()" << endl;
+        }*/
+    }
+    else{
+        game->ShowFrame();
+    }
+
 }
 
 void::BattleFrame::Attack()

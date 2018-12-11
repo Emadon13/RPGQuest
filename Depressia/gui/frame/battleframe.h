@@ -21,6 +21,7 @@ public slots :
     void Attack();
     void Damage();
     void Kill();
+    void nextTurn();
 
 public:
     BattleFrame(GameWindow *game);
@@ -36,6 +37,9 @@ public:
 
     Hero *allie;
     Mob *mob;
+    Entity *current;
+    Skill *skill;
+    int skillNumber;
 
     CharacterUI *character;
     EnemyUI *enemy;
