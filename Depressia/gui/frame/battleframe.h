@@ -22,6 +22,9 @@ public slots :
     void Damage();
     void Kill();
     void nextTurn();
+    void updateCurrentPlayer();
+    void updateTurnInfo();
+    void showSelection();
 
 public:
     BattleFrame(GameWindow *game);
@@ -47,6 +50,16 @@ public:
     Sprite *sprite;
 
     QLabel *dialogInfo;
+    QLabel *dialogSelection;
+    QLabel *dailogCurrent;
+
+    QPushButton *attack;
+    QPushButton *sorts;
+    QPushButton *objet;
+    QPushButton *fuite;
+    QPushButton *retour;
+    QPushButton *next;
+    QPushButton *previous;
 
     QGraphicsScene *scene;
     QGraphicsView *view;

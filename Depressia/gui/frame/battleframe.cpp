@@ -28,7 +28,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     double ratio(game->GetGame()->getRatio());
 
     QLabel *back = new QLabel(game);
-    back->setPixmap(QPixmap("../ressources/images/hud/background-battle4.png").scaled(WindowWidth,WindowHeight));
+    back->setPixmap(QPixmap("../ressources/images/hud/background-battle5.png").scaled(WindowWidth,WindowHeight));
     back->setFixedSize(WindowWidth,WindowHeight);
     back->move(0,0);
     back->show();
@@ -95,13 +95,72 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     dialogInfo->move(WindowWidth/2-dialogWidth/2,0);
     dialogInfo->show();
 
-    QLabel *dialogSelection = new QLabel(game);
+    dialogSelection = new QLabel(game);
     dialogSelection->setPixmap(QPixmap("../ressources/images/hud/jaugeHP.png").scaled(dialogWidth,dialogHeight));
     dialogSelection->setFixedSize(dialogWidth,dialogHeight);
     dialogSelection->move(WindowWidth/2-dialogWidth/2,WindowHeight-dialogHeight);
     dialogSelection->show();
 
-    //nextTurn();
+    dailogCurrent = new QLabel(game);
+    dailogCurrent->setPixmap(QPixmap("../ressources/images/hud/jaugeMP.png").scaled(dialogWidth,dialogHeight));
+    dailogCurrent->setFixedSize(dialogWidth*0.2,dialogHeight*0.2);
+    dailogCurrent->move(WindowWidth/2-dialogWidth/2,0);
+    dailogCurrent->show();
+
+    int boutonHeight(80);
+    int boutonWidth(300);
+    int espacementBoutonH(int((dialogWidth-boutonWidth*2)/3));
+    int espacementBoutonV(int((dialogHeight-boutonHeight*2)/3));
+
+    QString styleBouton = "QPushButton {background-color: red;"
+                          "border-style: outset; border-width: 2px;"
+                          "border-radius: 10px; border-color: beige;"
+                          "font: bold 14px; min-width: 10em; padding: 6px;}"
+                          "QPushButton:pressed {background-color: rgb(224, 0, 0);"
+                          "border-style: inset;}";
+
+    QString styleBoutonRond = "QPushButton { background-color: white;"
+            "border-style: solid;"
+            "border-width:1px;"
+            "border-radius:25px;"
+            "border-color: red;}";
+
+    attack = new QPushButton("Attaquer", game);
+    attack->setFixedSize(boutonWidth,boutonHeight);
+    attack->move(dialogSelection->x()+espacementBoutonH,dialogSelection->y()+espacementBoutonV);
+    attack->setStyleSheet(styleBouton);
+    sorts = new QPushButton("Sorts", game);
+    sorts->setFixedSize(boutonWidth,boutonHeight);
+    sorts->move(dialogSelection->x()+espacementBoutonH*2+boutonWidth,dialogSelection->y()+espacementBoutonV);
+    sorts->setStyleSheet(styleBouton);
+    objet = new QPushButton("Objets", game);
+    objet->setFixedSize(boutonWidth,boutonHeight);
+    objet->move(dialogSelection->x()+espacementBoutonH,dialogSelection->y()+espacementBoutonV*2+boutonHeight);
+    objet->setStyleSheet(styleBouton);
+    fuite = new QPushButton("Fuir", game);
+    fuite->setFixedSize(boutonWidth,boutonHeight);
+    fuite->move(dialogSelection->x()+espacementBoutonH*2+boutonWidth,dialogSelection->y()+espacementBoutonV*2+boutonHeight);
+    fuite->setStyleSheet(styleBouton);
+
+    int tailleBouton(50);
+
+    retour = new QPushButton("R", game);
+    retour->setFixedSize(tailleBouton,tailleBouton);
+    retour->move(dialogSelection->x()-espacementBoutonV-tailleBouton,WindowHeight-tailleBouton-espacementBoutonV);
+    retour->show();
+    retour->setStyleSheet(styleBoutonRond);
+    next = new QPushButton("<", game);
+    next->setFixedSize(tailleBouton,tailleBouton);
+    next->move(dialogSelection->x()+dialogWidth+espacementBoutonV,WindowHeight-tailleBouton-espacementBoutonV);
+    next->show();
+    next->setStyleSheet(styleBoutonRond);
+    previous = new QPushButton(">", game);
+    previous->setFixedSize(tailleBouton,tailleBouton);
+    previous->move(dialogSelection->x()+dialogWidth+espacementBoutonV*2+tailleBouton,WindowHeight-tailleBouton-espacementBoutonV);
+    previous->show();
+    previous->setStyleSheet(styleBoutonRond);
+
+    nextTurn();
 
     /*QPushButton *pass = new QPushButton("pass", game);
     pass->setFixedSize(100,100);
@@ -132,10 +191,13 @@ void::BattleFrame::nextTurn()
 {
     if(!fight->isEnded())
     {
+        //current = fight->nextPlayer();
 
-        /*current = fight->nextPlayer();
+        updateCurrentPlayer();
+        updateTurnInfo();
+        showSelection();
 
-        if(dynamic_cast<Mob*>(current) != NULL)
+        /*if(dynamic_cast<Mob*>(current) != NULL)
         {
             skillNumber = (dynamic_cast<Mob*>(current))->chooseMove();
         }
@@ -152,6 +214,24 @@ void::BattleFrame::nextTurn()
         game->ShowFrame();
     }
 
+}
+
+void::BattleFrame::updateCurrentPlayer()
+{
+    dailogCurrent->setText("Vincent");
+}
+
+void BattleFrame::updateTurnInfo()
+{
+    dialogInfo->setText("Que voulez vous faire ?");
+}
+
+void BattleFrame::showSelection()
+{
+    attack->show();
+    sorts->show();
+    objet->show();
+    fuite->show();
 }
 
 void::BattleFrame::Attack()
