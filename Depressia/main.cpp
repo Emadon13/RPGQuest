@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
 
     Entity* player;
 
+    /*
     player = fight->nextPlayer();
     cout << player->getName() << endl;
 
@@ -46,30 +47,22 @@ int main(int argc, char *argv[])
     cout << player->getName() << endl;
     player = fight->nextPlayer();
     cout << player->getName() << endl;
-/*
-    cout << fight.getMobs()[1]->getName() << endl;
 
-    while(!fight.isEnded())
-    {
-        for (int i=0 ; i<Fight::nb_e ; i++)
-            entities[i] = fight.getHeroes()[i];
-        Entity* t  = fight.getMobs()[1]->choseEntity(entities);
+    cout << fight->getMobs()[1]->getName() << endl;
+
+    while(!fight->isEnded())
+    {   
+        Entity* e = fight->nextPlayer();
+        if(dynamic_cast<Mob*>(e) != nullptr)
+        {
+            int i = dynamic_cast<Mob*>(e)->chooseMove();
+            fight->target(dynamic_cast<Mob*>(e), i);
+            //cout << e->getSkillSummary(i) << endl;
+        }
+
     }
 
-
-
-    s =  fight.getMobs()[1]->getMove(fight.getMobs()[1]->choseMove());
-    s->call(*fight.getMobs()[1], target);
-    cout << s->getSummary() << endl;
-    cout << fight.getMobs()[1]->getMp() << endl;
-
-    cout << game.getTeam()->getHero(0)->getHp() << endl;
-
-
-    cout << fight.getHeroes()[0]->getName() << endl;
-    */
-
-
+*/
     MainWindow w(&game);
     w.show();
 

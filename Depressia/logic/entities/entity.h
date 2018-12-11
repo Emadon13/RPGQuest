@@ -51,6 +51,7 @@ public:
 
     std::string hitOpponent(Entity& target);
     std::vector<int> useMove(int i, std::vector<Entity*> e);
+    std::string getSkillSummary(int i);
 
     bool isAlive();
 

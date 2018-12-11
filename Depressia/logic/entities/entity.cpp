@@ -156,6 +156,11 @@ vector<int> Entity::useMove(int i, std::vector<Entity*> e)
     return (getMove(i))->call(this, e);
 }
 
+std::string Entity::getSkillSummary(int i)
+{
+    return skills.at(unsigned(i))->getSummary();
+}
+
 bool Entity::isAlive()
 {
     return (hp == 0);

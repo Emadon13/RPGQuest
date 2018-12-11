@@ -81,7 +81,7 @@ Entity* Fight::nextPlayer()
                 speedLimit += all[i]->getSpd();
 
 
-    cout << "speedLimit : " << speedLimit << endl;
+   // cout << "speedLimit : " << speedLimit << endl;
 
 
     for (int i=0 ; i<2*nb_e ; i++)
@@ -99,9 +99,9 @@ Entity* Fight::nextPlayer()
         if (all[i] != nullptr)
             if(all[i]->getHp() > 0)
                 speeds[i] += all[i]->getSpd();
-        cout << speeds[i] << " ";
+      //  cout << speeds[i] << " ";
     }
-    cout << endl;
+    //cout << endl;
 
     return nextPlayer();
 }
