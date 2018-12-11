@@ -33,6 +33,9 @@ public:
 
     Fight* fight;
 
+    QMediaPlaylist *playlist;
+    QMediaPlayer *music;
+
     CharacterUI* teamUI[Fight::nb_e];
     EnemyUI* ennemyUI[Fight::nb_e];
     Sprite* teamSprite[Fight::nb_e];

@@ -21,6 +21,13 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
     fight=((dynamic_cast<Fight*>(game->GetGame()->getMap()->getCurrentPosition().getEvent())));
 
+    playlist = new QMediaPlaylist();
+    playlist->addMedia(*fight->getMusic());
+    playlist->setPlaybackMode(QMediaPlaylist::Loop);
+
+    music = new QMediaPlayer();
+    music->setPlaylist(playlist);
+    music->play();
 
     int WindowWidth(game->GetGame()->getWindowWidth());
     int WindowHeight(game->GetGame()->getWindowHeight());
@@ -28,7 +35,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     double ratio(game->GetGame()->getRatio());
 
     QLabel *back = new QLabel(game);
-    back->setPixmap(QPixmap("../ressources/images/hud/background-battle5.png").scaled(WindowWidth,WindowHeight));
+    back->setPixmap(QPixmap("../ressources/images/hud/background-battle7.png").scaled(WindowWidth,WindowHeight));
     back->setFixedSize(WindowWidth,WindowHeight);
     back->move(0,0);
     back->show();
@@ -87,7 +94,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
 
     int dialogWidth(int(WindowWidth*0.4));
-    int dialogHeight(int(WindowHeight*0.2));
+    int dialogHeight(int(WindowHeight*0.19));
 
     dialogInfo = new QLabel(game);
     dialogInfo->setPixmap(QPixmap("../ressources/images/hud/jaugeHP.png").scaled(dialogWidth,dialogHeight));
@@ -211,6 +218,7 @@ void::BattleFrame::nextTurn()
         }*/
     }
     else{
+        music->stop();
         game->ShowFrame();
     }
 
