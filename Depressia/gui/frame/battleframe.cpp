@@ -151,7 +151,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
     int tailleBouton(50);
 
-    retour = new QPushButton("R", game);
+    retour = new QPushButton("↪", game);
     retour->setFixedSize(tailleBouton,tailleBouton);
     retour->move(dialogSelection->x()-espacementBoutonV-tailleBouton,WindowHeight-tailleBouton-espacementBoutonV);
     retour->show();
