@@ -57,7 +57,10 @@ Range Skill::getRange()
 
 bool Skill::hasMiss()
 {
-    return(hitEffect==miss);
+    if(hitEffect == miss)
+        return true;
+    else
+        return false;
 }
 
 string Skill::setSummary(string s)
