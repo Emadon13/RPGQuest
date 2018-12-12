@@ -120,11 +120,11 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     dialogSelection->move(WindowWidth/2-dialogWidth/2,WindowHeight-dialogHeight);
     dialogSelection->show();
 
-    dailogCurrent = new QLabel(game);
-    dailogCurrent->setPixmap(QPixmap("../ressources/images/hud/jaugeMP.png").scaled(dialogWidth,dialogHeight));
-    dailogCurrent->setFixedSize(int(dialogWidth*0.2),int(dialogHeight*0.2));
-    dailogCurrent->move(WindowWidth/2-dialogWidth/2,0);
-    dailogCurrent->show();
+    dialogCurrent = new QLabel(game);
+    dialogCurrent->setPixmap(QPixmap("../ressources/images/hud/jaugeMP.png").scaled(dialogWidth,dialogHeight));
+    dialogCurrent->setFixedSize(int(dialogWidth*0.2),int(dialogHeight*0.2));
+    dialogCurrent->move(WindowWidth/2-dialogWidth/2,0);
+    dialogCurrent->show();
 
     int boutonHeight(int(80/ratio));
     int boutonWidth(int(300/ratio));
@@ -187,6 +187,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     QObject::connect(objet, SIGNAL(clicked()), this, SLOT(showObjet()));
     QObject::connect(retour, SIGNAL(clicked()), this, SLOT(showSelection()));
     QObject::connect(fuite, SIGNAL(clicked()), game, SLOT(ShowFrame()));
+    QObject::connect(fuite, SIGNAL(clicked()), music, SLOT(stop()));
 
     int espacementBoutonVChoix(int((dialogHeight-boutonHeight*2)/5));
 
@@ -284,8 +285,12 @@ void::BattleFrame::nextTurn()
         }
     }
     else{
-        music->stop();
-        game->ShowFrame();
+        dialogCurrent->setText("");
+        dialogInfo->setText("C'est très la fin !");
+        ok->hide();
+        fuite->setText("Fin");
+        fuite->move(dialogSelection->x()+int(dialogSelection->width()*0.5)-int(fuite->width()*0.5),dialogSelection->y()+int(dialogSelection->height()*0.5)-int(fuite->height()*0.5));
+        fuite->show();
     }
 
 }
@@ -329,7 +334,7 @@ void::BattleFrame::playMobTurn()
 
 void::BattleFrame::updateCurrentPlayer()
 {
-    dailogCurrent->setText(QString::fromStdString(current->getName()));
+    dialogCurrent->setText(QString::fromStdString(current->getName()));
 }
 
 void BattleFrame::updateTurnInfo()

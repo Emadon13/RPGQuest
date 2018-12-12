@@ -63,7 +63,7 @@ public:
 
     QLabel *dialogInfo;
     QLabel *dialogSelection;
-    QLabel *dailogCurrent;
+    QLabel *dialogCurrent;
 
     QPushButton *attack;
     QPushButton *sorts;
