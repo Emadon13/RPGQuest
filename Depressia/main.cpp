@@ -27,10 +27,6 @@ int main(int argc, char *argv[])
 
     Game game = Game();
 
-    Fight* fight = dynamic_cast<Fight*>(game.getMap()->getCurrentPosition().getEvent());
-
-    Entity* player;
-
     /*
     player = fight->nextPlayer();
     cout << player->getName() << endl;
@@ -63,15 +59,6 @@ int main(int argc, char *argv[])
         }
     }
 */
-
-    Entity* e = fight->nextPlayer();
-    if(dynamic_cast<Mob*>(e) != nullptr)
-    {
-        int i = dynamic_cast<Mob*>(e)->chooseMove();
-
-        fight->target(dynamic_cast<Mob*>(e), i);
-        cout << e->getSkillSummary(i) << endl;
-    }
 
     MainWindow w(&game);
     w.show();
