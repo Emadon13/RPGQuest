@@ -17,14 +17,10 @@ Fight::Fight(Team* t, Mob* m[nb_e], string img, string mus):
     {
         heroes[i] = t->getHero(i);
         tHeroes[i] = t->getHero(i);
-        vHeroes.push_back(t->getHero(i));
         mobs[i] = m[i];
         tMobs[i] = m[i];
-        vMobs.push_back(m[i]);
         all[i] = m[i];
         all[i+nb_e] = t->getHero(i);
-        vAll.push_back(m[i]);
-        vAll.push_back(t->getHero(i));
         speeds[i] = 0;
         speeds[i+nb_e] = 0;
         team = t;
@@ -49,19 +45,30 @@ Entity** Fight::getAll()
 
 bool Fight::teamWin()
 {
+    int totalHp = 0;
     for(int i=0 ; i<nb_e ; i++)
         if(mobs[i] != nullptr)
-            if(mobs[i]->getHp() <= 0)
-                return true;
+            totalHp+=mobs[i]->getHp();
+    if(totalHp <= 0)
+     {
+        cout << "les heros ont gagné" << endl;
+        return true;
+     }
+
     return false;
 }
 
 bool Fight::mobsWin()
 {
+    int totalHp = 0;
     for(int i=0 ; i<nb_e ; i++)
         if(heroes[i] != nullptr)
-            if(heroes[i]->getHp() <= 0)
-                return true;
+            totalHp+=heroes[i]->getHp();
+    if(totalHp <= 0)
+     {
+        cout << "les mobs ont gagné" << endl;
+        return true;
+     }
     return false;
 }
 
@@ -80,18 +87,17 @@ Entity* Fight::nextPlayer()
             if(all[i]->getHp() > 0)
                 speedLimit += all[i]->getSpd();
 
-
-   // cout << "speedLimit : " << speedLimit << endl;
-
-
     for (int i=0 ; i<2*nb_e ; i++)
         if(speeds[i] > speeds[maxSpeed])
                 maxSpeed = i;
 
-    if(speeds[maxSpeed] >= speedLimit)
+    if(all[maxSpeed] != nullptr)
     {
-        speeds[maxSpeed] = 0;
-        return all[maxSpeed];
+        if(speeds[maxSpeed] >= speedLimit)
+        {
+            speeds[maxSpeed] = 0;
+            return all[maxSpeed];
+        }
     }
 
     for (int i=0 ; i<2*nb_e ; i++)
@@ -99,9 +105,8 @@ Entity* Fight::nextPlayer()
         if (all[i] != nullptr)
             if(all[i]->getHp() > 0)
                 speeds[i] += all[i]->getSpd();
-      //  cout << speeds[i] << " ";
     }
-    //cout << endl;
+
 
     return nextPlayer();
 }
@@ -115,17 +120,17 @@ void Fight::target(Mob* user, int skill)
     else if(user->getMove(skill)->getRange() == one_ally)
         user->getMove(skill)->call(dynamic_cast<Entity*>(user), vector<Entity*>(1,user->chooseEntity(tMobs)));
 
-    else if(user->getMove(skill)->getRange() == one_enemy){
+    else if(user->getMove(skill)->getRange() == one_enemy)
         user->getMove(skill)->call(dynamic_cast<Entity*>(user), vector<Entity*>(1,user->chooseEntity(tHeroes)));
-}
+
     else if(user->getMove(skill)->getRange() == group_allies)
-        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vMobs);
+        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vectorizeM());
 
     else if(user->getMove(skill)->getRange() == group_enemies)
-        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vHeroes);
+        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vectorizeH());
 
     else if(user->getMove(skill)->getRange() == all_entities)
-        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vAll);
+        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vectoriezA());
 }
 
 void Fight::target(Hero* user, int skill)
@@ -134,13 +139,13 @@ void Fight::target(Hero* user, int skill)
         user->getMove(skill)->call(dynamic_cast<Entity*>(user), vector<Entity*>(1,user));
 
     else if(user->getMove(skill)->getRange() == group_allies)
-        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vMobs);
+        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vectorizeM());
 
     else if(user->getMove(skill)->getRange() == group_enemies)
-        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vHeroes);
+        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vectorizeH());
 
     else if(user->getMove(skill)->getRange() == all_entities)
-        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vAll);
+        user->getMove(skill)->call(dynamic_cast<Entity*>(user), vectoriezA());
 }
 
 void Fight::target(Hero* user, int skill, int target)
@@ -160,4 +165,31 @@ QPixmap* Fight::getImage()
 QUrl* Fight::getMusic()
 {
     return new QUrl(QString::fromStdString(music));
+}
+
+std::vector<Entity*> Fight::vectorizeH()
+{
+    vector<Entity*> e;
+    for(int i=0 ; i<nb_e ; i++)
+        if(heroes[i] != nullptr)
+            e.push_back(heroes[i]);
+    return e;
+}
+
+std::vector<Entity*> Fight::vectorizeM()
+{
+    vector<Entity*> e;
+    for(int i=0 ; i<nb_e ; i++)
+        if(mobs[i] != nullptr)
+            e.push_back(mobs[i]);
+    return e;
+}
+
+std::vector<Entity*> Fight::vectoriezA()
+{
+    vector<Entity*> e;
+    for(int i=0 ; i<nb_e*2 ; i++)
+        if(all[i] != nullptr)
+            e.push_back(all[i]);
+    return e;
 }

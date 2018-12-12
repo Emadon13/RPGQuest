@@ -53,9 +53,12 @@ private:
     Entity* all[2*nb_e];
     Entity* tHeroes[nb_e];
     Entity* tMobs[nb_e];
-    std::vector<Entity*> vMobs, vHeroes, vAll;
     int speeds[2*nb_e];
     int speedLimit;
+
+    std::vector<Entity*> vectorizeH();
+    std::vector<Entity*> vectorizeM();
+    std::vector<Entity*> vectoriezA();
 
     std::string music;
     std::string image;

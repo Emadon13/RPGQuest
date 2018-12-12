@@ -158,7 +158,16 @@ vector<int> Entity::useMove(int i, std::vector<Entity*> e)
 
 std::string Entity::getSkillSummary(int i)
 {
-    return skills.at(unsigned(i))->getSummary();
+    if(i>0 || unsigned(i)<skills.size())
+    {
+        if(skills.at(unsigned (i)) != nullptr)
+            return skills.at(unsigned(i))->getSummary();
+        else
+            return attack->getSummary();
+    }
+
+    else
+        return attack->getSummary();
 }
 
 bool Entity::isAlive()
