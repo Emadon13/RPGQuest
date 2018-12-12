@@ -82,6 +82,9 @@ public:
     QGraphicsView *view;
 
     ClickableLabel *c;
+
+    int espacementBoutonH;
+    int espacementBoutonV;
 };
 
 #endif // BATTLEFRAME_H
