@@ -26,12 +26,12 @@ int main(int argc, char *argv[])
     QApplication::setFont(QFont("Fixedsys"));
 
     Game game = Game();
-
+/*
     Fight* fight = dynamic_cast<Fight*>(game.getMap()->getCurrentPosition().getEvent());
 
     Entity* player;
 
-    /*
+
     player = fight->nextPlayer();
     cout << player->getName() << endl;
 
@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
             cout << e->getSkillSummary(i) << endl;
         }
     }
-*/
+
 
     Entity* e = fight->nextPlayer();
     if(dynamic_cast<Mob*>(e) != nullptr)
@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
         fight->target(dynamic_cast<Mob*>(e), i);
         cout << e->getSkillSummary(i) << endl;
     }
-
+*/
     MainWindow w(&game);
     w.show();
 
