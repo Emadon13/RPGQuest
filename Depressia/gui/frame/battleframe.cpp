@@ -110,6 +110,8 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     dialogInfo->setPixmap(QPixmap("../ressources/images/hud/jaugeHP.png").scaled(dialogWidth,dialogHeight));
     dialogInfo->setFixedSize(dialogWidth,dialogHeight);
     dialogInfo->move(WindowWidth/2-dialogWidth/2,0);
+    dialogInfo->setWordWrap(true);
+    dialogInfo->setText("La Grande Tata et son esclave vous défient");
     dialogInfo->show();
 
     dialogSelection = new QLabel(game);
@@ -120,14 +122,14 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
     dailogCurrent = new QLabel(game);
     dailogCurrent->setPixmap(QPixmap("../ressources/images/hud/jaugeMP.png").scaled(dialogWidth,dialogHeight));
-    dailogCurrent->setFixedSize(dialogWidth*0.2,dialogHeight*0.2);
+    dailogCurrent->setFixedSize(int(dialogWidth*0.2),int(dialogHeight*0.2));
     dailogCurrent->move(WindowWidth/2-dialogWidth/2,0);
     dailogCurrent->show();
 
-    int boutonHeight(80);
-    int boutonWidth(300);
-    int espacementBoutonH(int((dialogWidth-boutonWidth*2)/3));
-    int espacementBoutonV(int((dialogHeight-boutonHeight*2)/3));
+    int boutonHeight(int(80/ratio));
+    int boutonWidth(int(300/ratio));
+    espacementBoutonH = (int((dialogWidth-boutonWidth*2)/3));
+    espacementBoutonV = (int((dialogHeight-boutonHeight*2)/3));
 
     QString styleBouton = "QPushButton {background-color: red;"
                           "border-style: outset; border-width: 2px;"
@@ -136,11 +138,11 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
                           "QPushButton:pressed {background-color: rgb(224, 0, 0);"
                           "border-style: inset;}";
 
-    QString styleBoutonRond = "QPushButton { background-color: white;"
-            "border-style: solid;"
-            "border-width:1px;"
-            "border-radius:25px;"
-            "border-color: red;}";
+    QString styleBoutonRond =   "QPushButton { background-color: white;"
+                                "border-style: solid;"
+                                "border-width:1px;"
+                                "border-radius:25px;"
+                                "border-color: red;}";
 
     attack = new QPushButton("Attaquer", game);
     attack->setFixedSize(boutonWidth,boutonHeight);
@@ -156,7 +158,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     objet->setStyleSheet(styleBouton);
     fuite = new QPushButton("Fuir", game);
     fuite->setFixedSize(boutonWidth,boutonHeight);
-    fuite->move(dialogSelection->x()+espacementBoutonH*2+boutonWidth,dialogSelection->y()+espacementBoutonV*2+boutonHeight);
+    //fuite->move(dialogSelection->x()+espacementBoutonH*2+boutonWidth,dialogSelection->y()+espacementBoutonV*2+boutonHeight);
     fuite->setStyleSheet(styleBouton);
 
     int tailleBouton(50);
@@ -211,14 +213,17 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
         }
     }
 
-    ok = new QPushButton("OK", game);
+    ok = new QPushButton("Combattre !", game);
     ok->setFixedSize(boutonWidth,boutonHeight);
-    ok->move(dialogSelection->x()+int(dialogWidth*0.5)-int(boutonWidth*0.5),dialogSelection->y()+int(dialogHeight*0.5)-int(boutonHeight*0.5));
+    //ok->move(dialogSelection->x()+int(dialogWidth*0.5)-int(boutonWidth*0.5),dialogSelection->y()+int(dialogHeight*0.5)-int(boutonHeight*0.5));
     ok->setStyleSheet(styleBouton);
 
-    QObject::connect(ok, SIGNAL(clicked()), this, SLOT(nextTurn()));
+    ok->move(dialogSelection->x()+int(dialogWidth*0.5)-int(boutonWidth*0.5),dialogSelection->y()+int(dialogHeight*0.25)-int(boutonHeight*0.5));
+    fuite->move(dialogSelection->x()+int(dialogWidth*0.5)-int(boutonWidth*0.5),dialogSelection->y()+int(dialogHeight*0.75)-int(boutonHeight*0.5));
+    ok->show();
+    fuite->show();
 
-    nextTurn();
+    QObject::connect(ok, SIGNAL(clicked()), this, SLOT(nextTurn()));
 
     /*QPushButton *pass = new QPushButton("pass", game);
     pass->setFixedSize(100,100);
@@ -250,6 +255,11 @@ void::BattleFrame::nextTurn()
     if(!fight->isEnded())
     {
         ok->hide();
+        ok->move(dialogSelection->x()+int(dialogSelection->width()*0.5)-int(ok->width()*0.5),dialogSelection->y()+int(dialogSelection->height()*0.5)-int(ok->height()*0.5));
+        fuite->hide();
+        fuite->move(dialogSelection->x()+espacementBoutonH*2+fuite->width(),dialogSelection->y()+espacementBoutonV*2+fuite->height());
+
+
 
         current = fight->nextPlayer();
 
@@ -282,6 +292,8 @@ void::BattleFrame::nextTurn()
 
 void::BattleFrame::updateUI()
 {
+    ok->setText("OK");
+
     for (int i=0 ; i < Fight::nb_e ; i=i+1)
     {
         if(teamUI[i] != nullptr)
