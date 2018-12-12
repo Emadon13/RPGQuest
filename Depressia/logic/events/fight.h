@@ -34,9 +34,9 @@ public:
     bool isEnded();
     Entity* nextPlayer();
 
-    void target(Mob* user, int skill);
-    void target(Hero* user, int skill);
-    void target(Hero* user, int skill, int target);
+    std::vector<Entity*> target(Mob* user, int skill);
+    std::vector<Entity*> target(Hero* user, int skill);
+    std::vector<Entity*> target(Hero* user, int skill, int target);
 
     QPixmap* getImage();
     QUrl* getMusic();

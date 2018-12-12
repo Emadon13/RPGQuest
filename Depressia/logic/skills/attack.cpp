@@ -58,8 +58,6 @@ vector <int> Attack::call(Entity* user, vector<Entity*> targets)
 
 
     setSummary(user->getName(), targetNames, degs);
-
-    cout << "LOLOLOLOLOLILOL : " << degs.at(0) << endl;
     return degs;
 }
 
