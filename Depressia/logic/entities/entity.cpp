@@ -172,7 +172,9 @@ std::string Entity::getSkillSummary(int i)
 
 bool Entity::hasSkillMiss(int skillNumber)
 {
-    return skills.at(unsigned(skillNumber))->hasMiss();
+    if(skillNumber <0 || unsigned(skillNumber) >= skills.size())
+        return skills.at(unsigned(skillNumber))->hasMiss();
+    else return attack->hasMiss();
 }
 
 bool Entity::isAlive()
