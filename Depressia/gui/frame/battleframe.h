@@ -26,6 +26,8 @@ public slots :
     void updateCurrentPlayer();
     void updateTurnInfo();
     void showSelection();
+    void playMobTurn();
+    void updateUI();
 
     //void choixSkill(int i);
     //void choixObjet(int i);
@@ -70,6 +72,7 @@ public:
     QPushButton *retour;
     QPushButton *next;
     QPushButton *previous;
+    QPushButton *ok;
 
     QPushButton *selectionSkill[8];
     QPushButton *selectionObjet[8];

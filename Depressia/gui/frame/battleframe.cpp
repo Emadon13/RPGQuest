@@ -65,6 +65,8 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
         if(allie != nullptr)
         {
             teamSprite[i] = allie->getSprite();
+            std::cout << teamSprite[i] << std::endl;
+            std::cout << allie->getSprite() << std::endl;
             if(i%2==0) teamSprite[i]->setPos(QPointF(int(((WindowWidth*0.5)+espacementSprite*(i)+espacementMilieu)),int((WindowHeight/2))));
             else teamSprite[i]->setPos(QPointF(int(((WindowWidth*0.5)+espacementSprite*(i)+espacementMilieu)),int((WindowHeight/2-espacementSprite))));
             teamSprite[i]->setToolTip(QString::fromStdString(allie->getName()));
@@ -72,6 +74,10 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
             scene->addItem(teamSprite[i]);
 
             teamUI[i] = new CharacterUI(game,allie,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*(i+1)+tailleUI*i,tailleUI,tailleUI);
+        }
+        else
+        {
+            teamUI[i]=nullptr;
         }
     }
 
@@ -89,6 +95,10 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
             scene->addItem(ennemySprite[i]);
 
             ennemyUI[i] = new EnemyUI(game,mob,espacementUI,espacementUI*(i+1)+tailleUI*i,tailleUI,tailleUI);
+        }
+        else
+        {
+            ennemyUI[i]=nullptr;
         }
     }
 
@@ -201,6 +211,13 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
         }
     }
 
+    ok = new QPushButton("OK", game);
+    ok->setFixedSize(boutonWidth,boutonHeight);
+    ok->move(dialogSelection->x()+int(dialogWidth*0.5)-int(boutonWidth*0.5),dialogSelection->y()+int(dialogHeight*0.5)-int(boutonHeight*0.5));
+    ok->setStyleSheet(styleBouton);
+
+    QObject::connect(ok, SIGNAL(clicked()), this, SLOT(nextTurn()));
+
     nextTurn();
 
     /*QPushButton *pass = new QPushButton("pass", game);
@@ -232,23 +249,29 @@ void::BattleFrame::nextTurn()
 {
     if(!fight->isEnded())
     {
-        //current = fight->nextPlayer();
+        ok->hide();
+
+        current = fight->nextPlayer();
 
         updateCurrentPlayer();
 
-        /*if(dynamic_cast<Mob*>(current) != NULL)
+        if(dynamic_cast<Mob*>(current) != NULL)
         {
             skillNumber = (dynamic_cast<Mob*>(current))->chooseMove();
+            fight->target(dynamic_cast<Mob*>(current), skillNumber);
+            playMobTurn();
+
         }
         else if(dynamic_cast<Hero*>(current) != NULL)
-        {*/
-            updateTurnInfo();
-            showSelection();
-        /*}
+        {
+            //updateTurnInfo();
+            //showSelection();
+            nextTurn();
+        }
         else
         {
             std::cout << "Erreur lors de nextPlayer()" << endl;
-        }*/
+        }
     }
     else{
         music->stop();
@@ -257,9 +280,44 @@ void::BattleFrame::nextTurn()
 
 }
 
+void::BattleFrame::updateUI()
+{
+    for (int i=0 ; i < Fight::nb_e ; i=i+1)
+    {
+        if(teamUI[i] != nullptr)
+        {
+            teamUI[i]->Update();
+        }
+        if(ennemyUI[i] != nullptr)
+        {
+            ennemyUI[i]->Update();
+        }
+    }
+}
+
+void::BattleFrame::playMobTurn()
+{
+    dialogInfo->setText(QString::fromStdString(current->getSkillSummary(skillNumber)));
+    updateUI();
+/*
+    if(skill->hasMiss()==true)
+    {
+        std::cout << "behvfehbfvhe" << std::endl;
+
+    }
+    else
+    {
+        std::cout << "behvfehbfvhe" << std::endl;
+        attackEntity(current->getSprite());
+    }
+*/
+    attackEntity(current->getSprite());
+    ok->show();
+}
+
 void::BattleFrame::updateCurrentPlayer()
 {
-    dailogCurrent->setText("Vincent");
+    dailogCurrent->setText(QString::fromStdString(current->getName()));
 }
 
 void BattleFrame::updateTurnInfo()
@@ -341,23 +399,7 @@ void BattleFrame::damageEntity(Sprite *s)
 
 void BattleFrame::attackEntity(Sprite *s)
 {
-    std::string test;
-
-    /*if(s->getEntity()==bonasse)
-    {
-        sprite->attack();
-        sprite2->damage();
-        test = bonasse->hitOpponent(*rozalin);
-    }
-    else
-    {
-        sprite2->attack();
-        sprite->damage();
-        test = rozalin->hitOpponent(*bonasse);
-    }
-    enemy->Update();
-    character->Update();
-    dialogInfo->setText(QString::fromStdString(test));*/
+    s->attack();
 }
 
 void BattleFrame::deleteEntity(Sprite *s)

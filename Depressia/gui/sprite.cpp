@@ -1,4 +1,5 @@
 #include "sprite.h"
+#include "iostream"
 
 Sprite::Sprite(int nbFrameN, int widthN, int heightN, std::string spriteNormal,
                int nbFrameD, int widthD, int heightD, std::string spriteDamage,
