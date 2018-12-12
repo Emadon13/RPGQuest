@@ -15,9 +15,9 @@ Entity::Entity() :
     spd(1),
     skills(0),
     attack(new Attack()),
-    sprite(""),
     battleIcon("")
 {
+    sprite = SpriteLoader::generate("");
 }
 
 Entity::Entity(string m_name,
@@ -41,9 +41,9 @@ Entity::Entity(string m_name,
     spd(m_spd),
     skills(m_skills),
     attack(new Attack()),
-    sprite(s),
     battleIcon(bi)
 {
+    sprite = SpriteLoader::generate(s);
 }
 
 
@@ -177,7 +177,7 @@ bool Entity::isAlive()
 
 Sprite* Entity::getSprite()
 {
-    return SpriteLoader::generate(sprite);
+    return sprite;
 
 }
 

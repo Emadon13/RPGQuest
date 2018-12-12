@@ -71,9 +71,11 @@ protected:
     int spd;
     std::vector<Skill*>skills;
     Skill* attack;
+    Sprite* sprite;
 
-    std::string sprite;
     std::string battleIcon;
+
+
 
 
 
