@@ -53,8 +53,8 @@ public:
     Hero *allie;
     Mob *mob;
     Entity *current;
-    Skill *skill;
     int skillNumber;
+    vector<Entity*> hited;
 
     CharacterUI *character;
     EnemyUI *enemy;

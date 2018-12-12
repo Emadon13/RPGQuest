@@ -260,8 +260,6 @@ void::BattleFrame::nextTurn()
         fuite->hide();
         fuite->move(dialogSelection->x()+espacementBoutonH*2+fuite->width(),dialogSelection->y()+espacementBoutonV*2+fuite->height());
 
-
-
         current = fight->nextPlayer();
 
         updateCurrentPlayer();
@@ -269,7 +267,7 @@ void::BattleFrame::nextTurn()
         if(dynamic_cast<Mob*>(current) != NULL)
         {
             skillNumber = (dynamic_cast<Mob*>(current))->chooseMove();
-            fight->target(dynamic_cast<Mob*>(current), skillNumber);
+            hited=fight->target(dynamic_cast<Mob*>(current), skillNumber);
             playMobTurn();
 
         }
@@ -316,19 +314,17 @@ void::BattleFrame::playMobTurn()
 {
     dialogInfo->setText(QString::fromStdString(current->getSkillSummary(skillNumber)));
     updateUI();
-/*
-    if(skill->hasMiss()==true)
-    {
-        std::cout << "behvfehbfvhe" << std::endl;
-
-    }
-    else
-    {
-        std::cout << "behvfehbfvhe" << std::endl;
-        attackEntity(current->getSprite());
-    }
-*/
     attackEntity(current->getSprite());
+    current->hasSkillMiss(skillNumber);
+
+    if(!current->hasSkillMiss(skillNumber))
+    {
+        for (unsigned long long i=0 ; i < hited.size() ; i++)
+        {
+            damageEntity(hited[i]->getSprite());
+        }
+    }
+
     ok->show();
 }
 
@@ -411,7 +407,7 @@ void BattleFrame::killEntity(Sprite *s)
 
 void BattleFrame::damageEntity(Sprite *s)
 {
-
+    s->damage();
 }
 
 void BattleFrame::attackEntity(Sprite *s)
