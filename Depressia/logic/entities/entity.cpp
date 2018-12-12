@@ -174,6 +174,7 @@ bool Entity::hasSkillMiss(int skillNumber)
 {
     return skills.at(unsigned(skillNumber))->hasMiss();
 }
+
 bool Entity::isAlive()
 {
     return (hp == 0);
