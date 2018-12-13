@@ -315,7 +315,6 @@ void::BattleFrame::playMobTurn()
     dialogInfo->setText(QString::fromStdString(current->getSkillSummary(skillNumber)));
     updateUI();
     attackEntity(current->getSprite());
-    current->hasSkillMiss(skillNumber);
 
     if(!current->hasSkillMiss(skillNumber))
     {
