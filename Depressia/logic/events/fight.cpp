@@ -90,10 +90,14 @@ Entity* Fight::nextPlayer()
 
     if(all[maxSpeed] != nullptr)
     {
-        if(speeds[maxSpeed] >= speedLimit)
+        if(all[maxSpeed]->getHp() > 0)
         {
-            speeds[maxSpeed] = 0;
-            return all[maxSpeed];
+            if(speeds[maxSpeed] >= speedLimit)
+            {
+                speeds[maxSpeed] = 0;
+
+                return all[maxSpeed];
+            }
         }
     }
 
@@ -103,7 +107,6 @@ Entity* Fight::nextPlayer()
             if(all[i]->getHp() > 0)
                 speeds[i] += all[i]->getSpd();
     }
-
 
     return nextPlayer();
 }
@@ -142,10 +145,10 @@ vector<Entity*> Fight::target(Hero* user, int skill)
         v = vector<Entity*>(1,user);
 
     else if(user->getMove(skill)->getRange() == group_allies)
-        v = vectorizeM();
+        v = vectorizeH();
 
     else if(user->getMove(skill)->getRange() == group_enemies)
-        v = vectorizeH();
+        v = vectorizeM();
 
     else if(user->getMove(skill)->getRange() == all_entities)
         v = vectoriezA();
