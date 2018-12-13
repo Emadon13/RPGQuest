@@ -1,6 +1,6 @@
 #ifndef RECOIL_H
 #define RECOIL_H
-
+/*
 #include"logic/skills/skill.h"
 #include "logic/entities/entity.h"
 
@@ -17,5 +17,5 @@ private:
     double coef;
     double rate;
 };
-
+*/
 #endif // RECOIL_H
