@@ -7,9 +7,9 @@
 192
 ../ressources/sprites/sprite_rozalin_damage.png
 4
-120
-200
-../ressources/images/sprites/blue_queen_attack.png
+154
+192
+../ressources/images/sprites/blue_queen_skill.png
 4
 120
 200
