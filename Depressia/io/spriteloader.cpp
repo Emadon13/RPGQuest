@@ -58,31 +58,36 @@ Sprite* SpriteLoader::generate(string path)
 
 
 }
-/*
-Sprite makeSprite(vector<string> spriteElements)
-{
-    string nn, nw, nh, ns, dn, dw, dh, ds, an, aw, ah, as, sn, sw, sh, ss, kn, kw, kh, ks;
-    nn = spriteElements.at(0);
-    nw = spriteElements.at(1);
-    nh = spriteElements.at(2);
-    ns = spriteElements.at(3);
-    dn = spriteElements.at(4);
-    dw = spriteElements.at(5);
-    dh = spriteElements.at(6);
-    ds = spriteElements.at(7);
-    an = spriteElements.at(8);
-    aw = spriteElements.at(9);
-    ah = spriteElements.at(10);
-    as = spriteElements.at(11);
-    sn = spriteElements.at(12);
-    sw = spriteElements.at(13);
-    sh = spriteElements.at(14);
-    ss = spriteElements.at(15);
-    kn = spriteElements.at(16);
-    kw = spriteElements.at(17);
-    kh = spriteElements.at(18);
-    ks = spriteElements.at(19);
 
-    return Sprite(nn, nw, nh, ns, dn, dw, dh, ds, an, aw, ah, as, sn, sw, sh, ss, kn, kw, kh, ks);
+SpriteTemplate** SpriteLoader::generateNew(string path)
+{
+    ifstream file(path);
+    string type, nb, w, h, s;
+
+    if(file)
+    {
+        for(int i=0 ; i<4 ; i++)
+        {
+            getline(file,type);
+            getline(file, nb);
+            getline(file, w);
+            getline(file, h);
+            getline(file, s);
+            if(type=="unique")
+            {
+                list[0] = new SpriteUnique(int(stoi(nb)), int(stoi(w)), int(stoi(h)), s);
+            }
+            else if(type=="loop")
+            {
+                list[0] = new SpriteLoop(int(stoi(nb)), int(stoi(w)), int(stoi(h)), s);
+            }
+        }
+        return list;
+    }
+
+    else
+    {
+        cout << "ERREUR : sprite " << path << "non trouvé";
+        return nullptr;
+    }
 }
-*/
