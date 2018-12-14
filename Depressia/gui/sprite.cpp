@@ -156,14 +156,14 @@ void Sprite::nextSkillFrame()
     /* At a signal from the timer 20 to move the point of rendering pixels
      * If currentFrame = 300 then zero out it as sprite sheet size of 300 pixels by 20
      * */
-    currentFrame += widthKilled;
-    if (currentFrame >= widthKilled*nbFrameKilled ) {
+    currentFrame += widthSkill;
+    if (currentFrame >= widthSkill*nbFrameSkill ) {
         normal();
         emit attackDone();
         timerS->stop();
         currentFrame = 0;
     }
-    else this->update(0,0,widthKilled,heightKilled);
+    else this->update(0,0,widthSkill,heightSkill);
 }
 
 void Sprite::nextKillFrame()

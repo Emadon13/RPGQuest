@@ -14,6 +14,8 @@
 #include "gui/clickable/clickablelabel.h"
 #include "gui/frame/characterui.h"
 #include "gui/frame/enemyui.h"
+#include "gui/spriteloop.h"
+#include "gui/spriteunique.h"
 
 BattleFrame::BattleFrame(GameWindow *g) : QObject()
 {
@@ -65,8 +67,6 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
         if(allie != nullptr)
         {
             teamSprite[i] = allie->getSprite();
-            std::cout << teamSprite[i] << std::endl;
-            std::cout << allie->getSprite() << std::endl;
             if(i%2==0) teamSprite[i]->setPos(QPointF(int(((WindowWidth*0.5)+espacementSprite*(i)+espacementMilieu)),int((WindowHeight/2))));
             else teamSprite[i]->setPos(QPointF(int(((WindowWidth*0.5)+espacementSprite*(i)+espacementMilieu)),int((WindowHeight/2-espacementSprite))));
             teamSprite[i]->setToolTip(QString::fromStdString(allie->getName()));
@@ -102,6 +102,14 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
         }
     }
 
+    SpriteLoop *test = new SpriteLoop(6,130,200,"../ressources/images/sprites/sprite_rouge.png");
+    test->setPos(QPointF(50,50));
+    scene->addItem(test);
+
+    SpriteUnique *test2 = new SpriteUnique(6,130,200,"../ressources/images/sprites/sprite_rouge.png");
+    test2->setPos(QPointF(500,50));
+    scene->addItem(test2);
+    test2->play();
 
     int dialogWidth(int(WindowWidth*0.4));
     int dialogHeight(int(WindowHeight*0.19));

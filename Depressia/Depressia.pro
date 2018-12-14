@@ -50,7 +50,10 @@ SOURCES += \
     io/entityloader.cpp \
     io/spriteloader.cpp \
     logic/entities/mob.cpp \
-    io/fightloader.cpp
+    io/fightloader.cpp \
+    gui/spritetemplate.cpp \
+    gui/spriteloop.cpp \
+    gui/spriteunique.cpp
 
 
 
@@ -104,4 +107,7 @@ HEADERS += \
     io/entityloader.h \
     io/spriteloader.h \
     logic/entities/mob.h \
-    io/fightloader.h
+    io/fightloader.h \
+    gui/spritetemplate.h \
+    gui/spriteloop.h \
+    gui/spriteunique.h
