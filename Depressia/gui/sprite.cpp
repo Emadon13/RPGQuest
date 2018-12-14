@@ -158,6 +158,7 @@ void Sprite::nextSkillFrame()
     currentFrame += widthKilled;
     if (currentFrame >= widthKilled*nbFrameKilled ) {
         normal();
+        emit attackDone();
         timerS->stop();
         currentFrame = 0;
     }

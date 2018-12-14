@@ -181,6 +181,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     signalMapperSkill = new QSignalMapper(this);
     QObject::connect(signalMapperSkill, SIGNAL(mapped(int)), this, SLOT(choixSkill(int)));
 
+    QObject::connect(attack, SIGNAL(clicked()), this, SLOT(callAttack()));
     QObject::connect(sorts, SIGNAL(clicked()), this, SLOT(showSkill()));
     QObject::connect(objet, SIGNAL(clicked()), this, SLOT(showObjet()));
     QObject::connect(fuite, SIGNAL(clicked()), game, SLOT(ShowFrame()));
@@ -325,7 +326,14 @@ void::BattleFrame::playTurn()
 {
     dialogInfo->setText(QString::fromStdString(current->getSkillSummary(skillNumber)));
     updateUI();
-    attackEntity(current->getSprite());
+    if(skillNumber==-1)
+    {
+        attackEntity(current->getSprite());
+    }
+    else
+    {
+        skillEntity(current->getSprite());
+    }
 
     for (int i=0 ; i < Fight::nb_e ; i=i+1)
     {
@@ -345,6 +353,29 @@ void BattleFrame::playDamage()
         }
     }
     ok->show();
+}
+
+void BattleFrame::callAttack()
+{
+    attack->hide();
+    sorts->hide();
+    objet->hide();
+    fuite->hide();
+
+    skillNumber=-1;
+
+    for (int i=0 ; i < Fight::nb_e ; i=i+1)
+    {
+        mob=fight->getMobs()[i];
+
+        if(mob != nullptr)
+        {
+            selectionEntity[i]->setText(QString::fromStdString(mob->getName()));
+            selectionEntity[i]->show();
+        }
+    }
+
+
 }
 
 void::BattleFrame::updateCurrentPlayer()
@@ -475,6 +506,11 @@ void BattleFrame::damageEntity(Sprite *s)
 void BattleFrame::attackEntity(Sprite *s)
 {
     s->attack();
+}
+
+void BattleFrame::skillEntity(Sprite *s)
+{
+    s->skill();
 }
 
 void BattleFrame::deleteEntity(Sprite *s)

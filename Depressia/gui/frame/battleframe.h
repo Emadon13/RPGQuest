@@ -19,6 +19,7 @@ public slots :
     void damageEntity(Sprite *sprite);
     void deleteEntity(Sprite *sprite);
     void attackEntity(Sprite *sprite);
+    void skillEntity(Sprite *sprite);
     void nextTurn();
     void updateCurrentPlayer();
     void updateTurnInfo();
@@ -28,6 +29,7 @@ public slots :
     void callSkill();
     void playDamage();
 
+    void callAttack();
     void choixEntity(int i);
     void choixSkill(int i);
     //void choixObjet(int i);
