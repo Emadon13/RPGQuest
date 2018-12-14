@@ -13,7 +13,7 @@
 6
 112
 184
-../ressources/images/sprites/sprite_seraphina_skill.png
+../ressources/images/sprites/sprite_tata_skill.png
 4
 112
 192
