@@ -143,6 +143,7 @@ void Sprite::nextAttackFrame()
     currentFrame += widthAttack;
     if (currentFrame >= widthAttack*nbFrameAttack ) {
         normal();
+        emit attackDone();
         timerA->stop();
         currentFrame = 0;
     }

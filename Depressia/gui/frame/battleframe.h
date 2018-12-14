@@ -26,6 +26,7 @@ public slots :
     void playTurn();
     void updateUI();
     void callSkill();
+    void playDamage();
 
     void choixEntity(int i);
     void choixSkill(int i);
