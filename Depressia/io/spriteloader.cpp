@@ -81,6 +81,10 @@ SpriteTemplate** SpriteLoader::generateNew(string path)
             {
                 list[0] = new SpriteLoop(int(stoi(nb)), int(stoi(w)), int(stoi(h)), s);
             }
+            else
+            {
+                cout<<"Erreur de type sprite"<<endl;
+            }
         }
         return list;
     }

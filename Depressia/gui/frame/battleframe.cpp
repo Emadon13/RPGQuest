@@ -16,6 +16,7 @@
 #include "gui/frame/enemyui.h"
 #include "gui/spriteloop.h"
 #include "gui/spriteunique.h"
+#include "io/spriteloader.h"
 
 BattleFrame::BattleFrame(GameWindow *g) : QObject()
 {
