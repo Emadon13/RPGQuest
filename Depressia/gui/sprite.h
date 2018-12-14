@@ -16,6 +16,7 @@ class Sprite : public QObject, public QGraphicsItem
 signals:
     void clicked(Sprite*);
     void killed(Sprite*);
+    void attackDone();
 
 public:
     Sprite();

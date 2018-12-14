@@ -332,6 +332,11 @@ void::BattleFrame::playTurn()
         selectionEntity[i]->hide();
     }
 
+    QObject::connect(current->getSprite(), SIGNAL(attackDone()), this, SLOT(playDamage()));
+}
+
+void BattleFrame::playDamage()
+{
     if(!current->hasSkillMiss(skillNumber))
     {
         for (unsigned long long i=0 ; i < hited.size() ; i++)
