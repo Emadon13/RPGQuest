@@ -4,8 +4,8 @@
 ../ressources/images/sprites/sprite_tata_reverse.png
 4
 112
-192
-../ressources/images/sprites/sprite_seraphina_damage.png
+184
+../ressources/images/sprites/sprite_tata_damage.png
 4
 112
 184
@@ -16,5 +16,5 @@
 ../ressources/images/sprites/sprite_tata_skill.png
 4
 112
-192
-../ressources/images/sprites/sprite_seraphina_damage.png
+184
+../ressources/images/sprites/sprite_tata_damage.png
