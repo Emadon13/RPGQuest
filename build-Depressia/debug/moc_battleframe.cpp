@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_BattleFrame_t {
-    QByteArrayData data[19];
-    char stringdata0[196];
+    QByteArrayData data[20];
+    char stringdata0[209];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -39,25 +39,26 @@ QT_MOC_LITERAL(4, 32, 6), // "sprite"
 QT_MOC_LITERAL(5, 39, 12), // "damageEntity"
 QT_MOC_LITERAL(6, 52, 12), // "deleteEntity"
 QT_MOC_LITERAL(7, 65, 12), // "attackEntity"
-QT_MOC_LITERAL(8, 78, 6), // "Attack"
-QT_MOC_LITERAL(9, 85, 6), // "Damage"
-QT_MOC_LITERAL(10, 92, 4), // "Kill"
-QT_MOC_LITERAL(11, 97, 8), // "nextTurn"
-QT_MOC_LITERAL(12, 106, 19), // "updateCurrentPlayer"
-QT_MOC_LITERAL(13, 126, 14), // "updateTurnInfo"
-QT_MOC_LITERAL(14, 141, 13), // "showSelection"
-QT_MOC_LITERAL(15, 155, 11), // "playMobTurn"
-QT_MOC_LITERAL(16, 167, 8), // "updateUI"
-QT_MOC_LITERAL(17, 176, 9), // "showObjet"
-QT_MOC_LITERAL(18, 186, 9) // "showSkill"
+QT_MOC_LITERAL(8, 78, 8), // "nextTurn"
+QT_MOC_LITERAL(9, 87, 19), // "updateCurrentPlayer"
+QT_MOC_LITERAL(10, 107, 14), // "updateTurnInfo"
+QT_MOC_LITERAL(11, 122, 13), // "showSelection"
+QT_MOC_LITERAL(12, 136, 8), // "playTurn"
+QT_MOC_LITERAL(13, 145, 8), // "updateUI"
+QT_MOC_LITERAL(14, 154, 9), // "callSkill"
+QT_MOC_LITERAL(15, 164, 11), // "choixEntity"
+QT_MOC_LITERAL(16, 176, 1), // "i"
+QT_MOC_LITERAL(17, 178, 10), // "choixSkill"
+QT_MOC_LITERAL(18, 189, 9), // "showObjet"
+QT_MOC_LITERAL(19, 199, 9) // "showSkill"
 
     },
     "BattleFrame\0killEntity\0\0Sprite*\0sprite\0"
     "damageEntity\0deleteEntity\0attackEntity\0"
-    "Attack\0Damage\0Kill\0nextTurn\0"
-    "updateCurrentPlayer\0updateTurnInfo\0"
-    "showSelection\0playMobTurn\0updateUI\0"
-    "showObjet\0showSkill"
+    "nextTurn\0updateCurrentPlayer\0"
+    "updateTurnInfo\0showSelection\0playTurn\0"
+    "updateUI\0callSkill\0choixEntity\0i\0"
+    "choixSkill\0showObjet\0showSkill"
 };
 #undef QT_MOC_LITERAL
 
@@ -86,10 +87,10 @@ static const uint qt_meta_data_BattleFrame[] = {
       12,    0,  105,    2, 0x0a /* Public */,
       13,    0,  106,    2, 0x0a /* Public */,
       14,    0,  107,    2, 0x0a /* Public */,
-      15,    0,  108,    2, 0x0a /* Public */,
-      16,    0,  109,    2, 0x0a /* Public */,
-      17,    0,  110,    2, 0x0a /* Public */,
-      18,    0,  111,    2, 0x0a /* Public */,
+      15,    1,  108,    2, 0x0a /* Public */,
+      17,    1,  111,    2, 0x0a /* Public */,
+      18,    0,  114,    2, 0x0a /* Public */,
+      19,    0,  115,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
@@ -103,8 +104,8 @@ static const uint qt_meta_data_BattleFrame[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,   16,
+    QMetaType::Void, QMetaType::Int,   16,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -121,15 +122,15 @@ void BattleFrame::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 1: _t->damageEntity((*reinterpret_cast< Sprite*(*)>(_a[1]))); break;
         case 2: _t->deleteEntity((*reinterpret_cast< Sprite*(*)>(_a[1]))); break;
         case 3: _t->attackEntity((*reinterpret_cast< Sprite*(*)>(_a[1]))); break;
-        case 4: _t->Attack(); break;
-        case 5: _t->Damage(); break;
-        case 6: _t->Kill(); break;
-        case 7: _t->nextTurn(); break;
-        case 8: _t->updateCurrentPlayer(); break;
-        case 9: _t->updateTurnInfo(); break;
-        case 10: _t->showSelection(); break;
-        case 11: _t->playMobTurn(); break;
-        case 12: _t->updateUI(); break;
+        case 4: _t->nextTurn(); break;
+        case 5: _t->updateCurrentPlayer(); break;
+        case 6: _t->updateTurnInfo(); break;
+        case 7: _t->showSelection(); break;
+        case 8: _t->playTurn(); break;
+        case 9: _t->updateUI(); break;
+        case 10: _t->callSkill(); break;
+        case 11: _t->choixEntity((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 12: _t->choixSkill((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 13: _t->showObjet(); break;
         case 14: _t->showSkill(); break;
         default: ;

@@ -131,7 +131,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     espacementBoutonH = (int((dialogWidth-boutonWidth*2)/3));
     espacementBoutonV = (int((dialogHeight-boutonHeight*2)/3));
 
-    QString styleBouton = "QPushButton {background-color: red;"
+    QString styleBouton = "QPushButton {background-color: cyan;"
                           "border-style: outset; border-width: 2px;"
                           "border-radius: 10px; border-color: beige;"
                           "font: bold 14px; min-width: 10em; padding: 6px;}"
@@ -158,7 +158,6 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     objet->setStyleSheet(styleBouton);
     fuite = new QPushButton("Fuir", game);
     fuite->setFixedSize(boutonWidth,boutonHeight);
-    //fuite->move(dialogSelection->x()+espacementBoutonH*2+boutonWidth,dialogSelection->y()+espacementBoutonV*2+boutonHeight);
     fuite->setStyleSheet(styleBouton);
 
     int tailleBouton(50);
@@ -179,13 +178,11 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     previous->show();
     previous->setStyleSheet(styleBoutonRond);
 
-    signalMapper = new QSignalMapper(this);
-    //QObject::connect(signalMapper, SIGNAL(mapped(int)), this, SLOT(choixSkill(int)));
-    //QObject::connect(signalMapper, SIGNAL(mapped(int)), this, SLOT(choixObjet(int)));
+    signalMapperSkill = new QSignalMapper(this);
+    QObject::connect(signalMapperSkill, SIGNAL(mapped(int)), this, SLOT(choixSkill(int)));
 
     QObject::connect(sorts, SIGNAL(clicked()), this, SLOT(showSkill()));
     QObject::connect(objet, SIGNAL(clicked()), this, SLOT(showObjet()));
-    QObject::connect(retour, SIGNAL(clicked()), this, SLOT(showSelection()));
     QObject::connect(fuite, SIGNAL(clicked()), game, SLOT(ShowFrame()));
     QObject::connect(fuite, SIGNAL(clicked()), music, SLOT(stop()));
 
@@ -201,6 +198,8 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
         selectionSkill[i] = new QPushButton("attaque",game);
         selectionSkill[i]->setFixedSize(boutonWidth,int(boutonHeight*0.5));
         selectionSkill[i]->setStyleSheet(styleBouton);
+        signalMapperSkill->setMapping(selectionSkill[i], i);
+        connect(selectionSkill[i], SIGNAL(clicked()), signalMapperSkill, SLOT(map()));
 
         if(i<4)
         {
@@ -214,41 +213,48 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
         }
     }
 
+    signalMapperEntity = new QSignalMapper(this);
+    QObject::connect(signalMapperEntity, SIGNAL(mapped(int)), this, SLOT(choixEntity(int)));
+
+    for (int i=0 ; i < Fight::nb_e ; i=i+1)
+    {
+        selectionEntity[i] = new QPushButton("Entity",game);
+        selectionEntity[i]->setFixedSize(boutonWidth,boutonHeight);
+        selectionEntity[i]->setStyleSheet(styleBouton);
+        signalMapperEntity->setMapping(selectionEntity[i], i);
+        connect(selectionEntity[i], SIGNAL(clicked()), signalMapperEntity, SLOT(map()));
+
+        if(i<2)
+        {
+            selectionEntity[i]->move(dialogSelection->x()+espacementBoutonH,dialogSelection->y()+espacementBoutonV*(i+1)+boutonHeight*i);
+        }
+        else
+        {
+            selectionEntity[i]->move(dialogSelection->x()+espacementBoutonH*2+boutonWidth,dialogSelection->y()+espacementBoutonV*(2-i+1)+boutonHeight*(2-i));
+        }
+    }
+
     ok = new QPushButton("Combattre !", game);
     ok->setFixedSize(boutonWidth,boutonHeight);
-    //ok->move(dialogSelection->x()+int(dialogWidth*0.5)-int(boutonWidth*0.5),dialogSelection->y()+int(dialogHeight*0.5)-int(boutonHeight*0.5));
     ok->setStyleSheet(styleBouton);
+    QObject::connect(ok, SIGNAL(clicked()), this, SLOT(nextTurn()));
 
     ok->move(dialogSelection->x()+int(dialogWidth*0.5)-int(boutonWidth*0.5),dialogSelection->y()+int(dialogHeight*0.25)-int(boutonHeight*0.5));
     fuite->move(dialogSelection->x()+int(dialogWidth*0.5)-int(boutonWidth*0.5),dialogSelection->y()+int(dialogHeight*0.75)-int(boutonHeight*0.5));
+
     ok->show();
     fuite->show();
 
-    QObject::connect(ok, SIGNAL(clicked()), this, SLOT(nextTurn()));
+    okObjet = new QPushButton("Utiliser !", game);
+    okObjet->setFixedSize(boutonWidth,boutonHeight);
+    okObjet->move(dialogSelection->x()+int(dialogWidth*0.5)-int(boutonWidth*0.5),dialogSelection->y()+int(dialogHeight*0.5)-int(boutonHeight*0.5));
+    okObjet->setStyleSheet(styleBouton);
 
-    /*QPushButton *pass = new QPushButton("pass", game);
-    pass->setFixedSize(100,100);
-    pass->move(90,100);
-    pass->show();
-    QPushButton *damage = new QPushButton("damage", game);
-    damage->setFixedSize(100,100);
-    damage->move(200,100);
-    damage->show();
-    QPushButton *kill = new QPushButton("kill", game);
-    kill->setFixedSize(100,100);
-    kill->move(300,100);
-    kill->show();
-    QPushButton *attack = new QPushButton("attack", game);
-    attack->setFixedSize(100,100);
-    attack->move(400,100);
-    attack->show();
-
-    QObject::connect(pass, SIGNAL(clicked()), game , SLOT(CreateGameFrame()));
-
-    QObject::connect(attack, SIGNAL(clicked()), this , SLOT(Attack()));
-    QObject::connect(damage, SIGNAL(clicked()), this , SLOT(Damage()));
-    QObject::connect(kill, SIGNAL(clicked()), this , SLOT(Kill()));
-    */
+    okSkill = new QPushButton("Sélectionner !", game);
+    okSkill->setFixedSize(boutonWidth,boutonHeight);
+    okSkill->move(dialogSelection->x()+int(dialogWidth*0.5)-int(boutonWidth*0.5),dialogSelection->y()+int(dialogHeight*0.5)-int(boutonHeight*0.5));
+    okSkill->setStyleSheet(styleBouton);
+    QObject::connect(okSkill, SIGNAL(clicked()), this, SLOT(callSkill()));
 }
 
 void::BattleFrame::nextTurn()
@@ -264,18 +270,23 @@ void::BattleFrame::nextTurn()
 
         updateCurrentPlayer();
 
+        for (int i=0 ; i < Fight::nb_e ; i=i+1)
+        {
+            selectionEntity[i]->hide();
+        }
+
         if(dynamic_cast<Mob*>(current) != NULL)
         {
+            QObject::disconnect(retour, SIGNAL(clicked()), this, SLOT(showSelection()));
             skillNumber = (dynamic_cast<Mob*>(current))->chooseMove();
             hited=fight->target(dynamic_cast<Mob*>(current), skillNumber);
-            playMobTurn();
-
+            playTurn();
         }
         else if(dynamic_cast<Hero*>(current) != NULL)
         {
-            //updateTurnInfo();
-            //showSelection();
-            nextTurn();
+            QObject::connect(retour, SIGNAL(clicked()), this, SLOT(showSelection()));
+            updateTurnInfo();
+            showSelection();
         }
         else
         {
@@ -310,11 +321,16 @@ void::BattleFrame::updateUI()
     }
 }
 
-void::BattleFrame::playMobTurn()
+void::BattleFrame::playTurn()
 {
     dialogInfo->setText(QString::fromStdString(current->getSkillSummary(skillNumber)));
     updateUI();
     attackEntity(current->getSprite());
+
+    for (int i=0 ; i < Fight::nb_e ; i=i+1)
+    {
+        selectionEntity[i]->hide();
+    }
 
     if(!current->hasSkillMiss(skillNumber))
     {
@@ -323,7 +339,6 @@ void::BattleFrame::playMobTurn()
             damageEntity(hited[i]->getSprite());
         }
     }
-
     ok->show();
 }
 
@@ -344,6 +359,13 @@ void BattleFrame::showSelection()
         selectionObjet[i]->hide();
         selectionSkill[i]->hide();
     }
+    for (int i=0 ; i < Fight::nb_e ; i=i+1)
+    {
+        selectionEntity[i]->hide();
+    }
+    okSkill->hide();
+
+    updateTurnInfo();
 
     attack->show();
     sorts->show();
@@ -366,36 +388,71 @@ void BattleFrame::showObjet()
 
 void BattleFrame::showSkill()
 {
+    dialogInfo->setText("Liste des sorts");
+
     attack->hide();
     sorts->hide();
     objet->hide();
     fuite->hide();
 
-    for (int i = 0; i < 8; i=i+1)
+    for (int i = 0; i < current->getSkillsSize() ; i=i+1)
     {
+        selectionSkill[i]->setText(QString::fromStdString(current->getMove(i)->getName()));
         selectionSkill[i]->show();
     }
 }
 
-void::BattleFrame::Attack()
+void BattleFrame::choixSkill(int i)
 {
-     QObject::disconnect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(damageEntity(Sprite*)));
-     QObject::disconnect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(killEntity(Sprite*)));
-     QObject::connect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(attackEntity(Sprite*)));
+    dialogInfo->setText(QString::fromStdString(current->getMove(i)->getText()));
+    okSkill->show();
+    skillNumber=i;
 }
 
-void::BattleFrame::Damage()
+void BattleFrame::callSkill()
 {
-     QObject::connect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(damageEntity(Sprite*)));
-     QObject::disconnect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(killEntity(Sprite*)));
-     QObject::disconnect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(attackEntity(Sprite*)));
+    dialogInfo->setText("Qui voulez vous cibler ?");
+    okSkill->hide();
+    for (int i = 0; i < 8; i=i+1)
+    {
+        selectionSkill[i]->hide();
+    }
+    if(current->getMove(skillNumber)->getRange()==one_ally)
+    {
+        for (int i=0 ; i < Fight::nb_e ; i=i+1)
+        {
+            allie=fight->getHeroes()[i];
+
+            if(allie != nullptr)
+            {
+                selectionEntity[i]->setText(QString::fromStdString(allie->getName()));
+                selectionEntity[i]->show();
+            }
+        }
+    }
+    else if(current->getMove(skillNumber)->getRange()==one_enemy)
+    {
+        for (int i=0 ; i < Fight::nb_e ; i=i+1)
+        {
+            mob=fight->getMobs()[i];
+
+            if(mob != nullptr)
+            {
+                selectionEntity[i]->setText(QString::fromStdString(mob->getName()));
+                selectionEntity[i]->show();
+            }
+        }
+    }
+    else
+    {
+        hited=fight->target(dynamic_cast<Hero*>(current), skillNumber);
+    }
 }
 
-void::BattleFrame::Kill()
+void BattleFrame::choixEntity(int i)
 {
-     QObject::disconnect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(damageEntity(Sprite*)));
-     QObject::connect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(killEntity(Sprite*)));
-     QObject::disconnect(sprite, SIGNAL(clicked(Sprite*)), this , SLOT(attackEntity(Sprite*)));
+    hited=fight->target(dynamic_cast<Hero*>(current), skillNumber, i);
+    playTurn();
 }
 
 void BattleFrame::killEntity(Sprite *s)

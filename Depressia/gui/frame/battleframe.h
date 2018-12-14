@@ -19,17 +19,16 @@ public slots :
     void damageEntity(Sprite *sprite);
     void deleteEntity(Sprite *sprite);
     void attackEntity(Sprite *sprite);
-    void Attack();
-    void Damage();
-    void Kill();
     void nextTurn();
     void updateCurrentPlayer();
     void updateTurnInfo();
     void showSelection();
-    void playMobTurn();
+    void playTurn();
     void updateUI();
+    void callSkill();
 
-    //void choixSkill(int i);
+    void choixEntity(int i);
+    void choixSkill(int i);
     //void choixObjet(int i);
 
     void showObjet();
@@ -73,10 +72,14 @@ public:
     QPushButton *next;
     QPushButton *previous;
     QPushButton *ok;
+    QPushButton *okSkill;
+    QPushButton *okObjet;
 
+    QPushButton *selectionEntity[8];
     QPushButton *selectionSkill[8];
     QPushButton *selectionObjet[8];
-    QSignalMapper *signalMapper;
+    QSignalMapper *signalMapperSkill;
+    QSignalMapper *signalMapperEntity;
 
     QGraphicsScene *scene;
     QGraphicsView *view;
