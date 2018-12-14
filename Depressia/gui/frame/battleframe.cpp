@@ -446,6 +446,7 @@ void BattleFrame::callSkill()
     else
     {
         hited=fight->target(dynamic_cast<Hero*>(current), skillNumber);
+        playTurn();
     }
 }
 
