@@ -191,7 +191,7 @@ bool Entity::hasSkillMiss(int skillNumber)
 
 bool Entity::isAlive()
 {
-    return (hp == 0);
+    return (hp > 0);
 }
 
 SpriteLoop* Entity::getSpriteNormal()

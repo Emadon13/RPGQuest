@@ -45,28 +45,20 @@ Entity** Fight::getAll()
 
 bool Fight::teamWin()
 {
-    int totalHp = 0;
     for(int i=0 ; i<nb_e ; i++)
-        if(mobs[i] != nullptr)
-            totalHp+=mobs[i]->getHp();
-
-    if(totalHp <= 0)
-        return true;
-
-    return false;
+        if(mobs[i]!=nullptr)
+            if(mobs[i]->isAlive())
+                return false;
+    return true;
 }
 
 bool Fight::mobsWin()
 {
-    int totalHp = 0;
     for(int i=0 ; i<nb_e ; i++)
-        if(heroes[i] != nullptr)
-            totalHp+=heroes[i]->getHp();
-
-    if(totalHp <= 0)
-        return true;
-
-    return false;
+        if(mobs[i]!=nullptr)
+            if(heroes[i]->isAlive())
+                return false;
+    return true;
 }
 
 bool Fight::isEnded()
@@ -81,7 +73,7 @@ Entity* Fight::nextPlayer()
 
     for (int i=0 ; i<2*nb_e ; i++)
         if (all[i] != nullptr)
-            if(all[i]->getHp() > 0)
+            if(all[i]->isAlive())
                 speedLimit += all[i]->getSpd();
 
     for (int i=0 ; i<2*nb_e ; i++)
@@ -90,7 +82,7 @@ Entity* Fight::nextPlayer()
 
     if(all[maxSpeed] != nullptr)
     {
-        if(all[maxSpeed]->getHp() > 0)
+        if(all[maxSpeed]->isAlive())
         {
             if(speeds[maxSpeed] >= speedLimit)
             {
@@ -104,7 +96,7 @@ Entity* Fight::nextPlayer()
     for (int i=0 ; i<2*nb_e ; i++)
     {
         if (all[i] != nullptr)
-            if(all[i]->getHp() > 0)
+            if(all[i]->isAlive())
                 speeds[i] += all[i]->getSpd();
     }
 
