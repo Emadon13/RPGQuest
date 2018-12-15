@@ -18,7 +18,11 @@ public:
          int b_att,
          int b_def,
          int b_spd,
-         std::string spr,
+         std::string sn,
+         std::string sd,
+         std::string sa,
+         std::string ss,
+         std::string sk,
          std::string bi,
          std::vector<Skill*> s,
          std::string stl[max_lvl]);
@@ -26,6 +30,9 @@ public:
     int getXp();
     int getNextLevel();
     bool addXp(int i);
+
+    SpriteLoop* getSpriteKilled();
+
 
 private:
     int xp;

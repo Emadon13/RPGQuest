@@ -20,6 +20,10 @@ Hero::Hero():
            int(base_spd*(lvl/max_lvl)),
            "",
            "",
+           "",
+           "",
+           "",
+           "",
            vector<Skill*>(0));
 
     calculateLevel();
@@ -33,12 +37,16 @@ Hero::Hero(string n,
            int b_att,
            int b_def,
            int b_spd,
-           string spr,
+           std::string sn,
+           std::string sd,
+           std::string sa,
+           std::string ss,
+           std::string sk,
            string bi,
            vector<Skill*> s,
            string stl[max_lvl]):
 
-    Entity(n, l, 1, 1, 1, 1, 1, spr, bi, vector<Skill*>(s)),
+    Entity(n, l, 1, 1, 1, 1, 1, sn, sd, sa, ss, sk, bi, vector<Skill*>(s)),
     xp(0),
     base_hp(b_hp),
     base_mp(b_mp),
@@ -61,6 +69,12 @@ int Hero::getNextLevel()
 {
     return next_level;
 }
+
+SpriteLoop* Hero::getSpriteKilled()
+{
+    return dynamic_cast<SpriteLoop*>(sprites[4]);
+}
+
 bool Hero::addXp(int i)
 {
     xp += i;

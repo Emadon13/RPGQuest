@@ -6,7 +6,7 @@ SpriteLoader::SpriteLoader()
 {
 
 }
-
+/*
 Sprite* SpriteLoader::generate()
 {
     return nullptr;
@@ -58,35 +58,34 @@ Sprite* SpriteLoader::generate(string path)
 
 
 }
-
-SpriteTemplate** SpriteLoader::generateNew(string path)
+*/
+SpriteTemplate* SpriteLoader::generate(string path)
 {
     ifstream file(path);
     string type, nb, w, h, s;
+    SpriteTemplate* sprite;
+    sprite = new SpriteTemplate();
 
     if(file)
     {
-        for(int i=0 ; i<4 ; i++)
+        getline(file,type);
+        getline(file, nb);
+        getline(file, w);
+        getline(file, h);
+        getline(file, s);
+        if(type=="unique")
         {
-            getline(file,type);
-            getline(file, nb);
-            getline(file, w);
-            getline(file, h);
-            getline(file, s);
-            if(type=="unique")
-            {
-                list[0] = new SpriteUnique(int(stoi(nb)), int(stoi(w)), int(stoi(h)), s);
-            }
-            else if(type=="loop")
-            {
-                list[0] = new SpriteLoop(int(stoi(nb)), int(stoi(w)), int(stoi(h)), s);
-            }
-            else
-            {
-                cout<<"Erreur de type sprite"<<endl;
-            }
+            sprite = new SpriteUnique(int(stoi(nb)), int(stoi(w)), int(stoi(h)), s);
         }
-        return list;
+        else if(type=="loop")
+        {
+            sprite = new SpriteLoop(int(stoi(nb)), int(stoi(w)), int(stoi(h)), s);
+        }
+        else
+        {
+            cout<<"Erreur de type sprite"<<endl;
+        }
+        return sprite;
     }
 
     else

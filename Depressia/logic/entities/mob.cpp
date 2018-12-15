@@ -15,7 +15,11 @@ Mob::Mob(string m_name,
          int m_att,
          int m_def,
          int m_spd,
-         string sprite,
+         string sn,
+         string sd,
+         string sa,
+         string ss,
+         string sk,
          string battleIcon,
          vector<Skill*>m_skills):
     Entity( m_name,
@@ -25,7 +29,11 @@ Mob::Mob(string m_name,
     m_att,
     m_def,
     m_spd,
-    sprite,
+    sn,
+    sd,
+    sa,
+    ss,
+    sk,
     battleIcon,
     m_skills)
 {
@@ -57,9 +65,14 @@ Entity* Mob::chooseEntity(Entity** entities)
 {
     vector<Entity*> attackable(0);
     for(unsigned i=0 ; i<Fight::nb_e ; i++)
-        if(entities[i] != NULL)
+        if(entities[i] != nullptr)
             if(entities[i]->getHp() >0)
                 attackable.push_back(entities[i]);
 
     return attackable.at(unsigned(rand()) % attackable.size());
+}
+
+SpriteUnique* Mob::getSpriteKilled()
+{
+    return dynamic_cast<SpriteUnique*>(sprites[4]);
 }

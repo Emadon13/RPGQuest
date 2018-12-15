@@ -24,7 +24,11 @@ public:
     int m_att,
     int m_def,
     int m_spd,
-    std::string sprite,
+    std::string sn,
+    std::string sd,
+    std::string sa,
+    std::string ss,
+    std::string sk,
     std::string battleIcon,
     std::vector<Skill*>m_skills);
     virtual ~Entity();
@@ -56,7 +60,12 @@ public:
 
     bool isAlive();
 
-    Sprite* getSprite();
+    SpriteLoop* getSpriteNormal();
+    SpriteUnique* getSpriteDamage();
+    SpriteUnique* getSpriteAttack();
+    SpriteUnique* getSpriteSkill();
+    SpriteTemplate* getSpriteKilled();
+
     QPixmap* getBattleIcon();
 
 
@@ -72,7 +81,7 @@ protected:
     int spd;
     std::vector<Skill*>skills;
     Skill* attack;
-    Sprite* sprite;
+    SpriteTemplate* sprites[5];
 
     std::string battleIcon;
 

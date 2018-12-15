@@ -17,13 +17,19 @@ public:
         int m_att,
         int m_def,
         int m_spd,
-        std::string sprite,
+        std::string sn,
+        std::string sd,
+        std::string sa,
+        std::string ss,
+        std::string sk,
         std::string battleIcon,
         std::vector<Skill*>m_skills);
 
     int chooseMove();
     Entity* chooseEntity(Entity** entities);
     //std::vector<Entity*> choseEntities(std::vector<Entity*>);
+
+    SpriteUnique* getSpriteKilled();
 
 private:
     int chooseSkill();
