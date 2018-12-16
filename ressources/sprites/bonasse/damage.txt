@@ -1,0 +1,5 @@
+unique
+4
+112
+192
+../ressources/images/sprites/sprite_seraphina_damage.png

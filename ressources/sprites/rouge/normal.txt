@@ -1,0 +1,5 @@
+loop
+6
+130
+200
+../ressources/images/sprites/sprite_rouge.png

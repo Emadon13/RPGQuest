@@ -1,0 +1,5 @@
+loop
+6
+120
+208
+../ressources/images/sprites/queen_blue.png

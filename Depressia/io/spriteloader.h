@@ -15,9 +15,7 @@ private:
     SpriteTemplate* list[5];
 public:
     SpriteLoader();
-    //Sprite* generate();
     static SpriteTemplate* generate(std::string path);
-    //static Sprite* generate(std::string path);
 };
 
 #endif // SPRITELOADER_H

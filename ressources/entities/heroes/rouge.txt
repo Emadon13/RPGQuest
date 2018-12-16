@@ -5,7 +5,11 @@ Rouge
 60
 60
 100
-../ressources/sprites/rouge.txt
+../ressources/sprites/rouge/normal.txt
+../ressources/sprites/rouge/damage.txt
+../ressources/sprites/rouge/attack.txt
+../ressources/sprites/rouge/skill.txt
+../ressources/sprites/rouge/killed.txt
 ../ressources/images/icons/rouge-icon.png
 ../ressources/skills/attacks/canicule.txt
 end_skill

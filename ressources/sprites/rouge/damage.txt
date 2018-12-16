@@ -1,0 +1,5 @@
+unique
+4
+112
+176
+../ressources/images/sprites/sprite_rouge_damage.png

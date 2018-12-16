@@ -1,0 +1,5 @@
+unique
+6
+112
+184
+../ressources/images/sprites/sprite_tata_skill.png

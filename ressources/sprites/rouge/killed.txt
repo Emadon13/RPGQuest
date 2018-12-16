@@ -1,0 +1,5 @@
+loop
+1
+152
+112
+../ressources/images/sprites/sprite_rouge_killed.png

@@ -1,0 +1,5 @@
+unique
+4
+128
+184
+../ressources/sprites/sprite_rozalin_attack.png

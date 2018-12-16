@@ -1,0 +1,5 @@
+unique
+4
+120
+176
+../ressources/images/sprites/sprite_rouge_skill.png

@@ -5,7 +5,11 @@ Grande Tata
 2
 4
 7
-../ressources/sprites/grande-tata.txt
+../ressources/sprites/grande-tata/normal.txt
+../ressources/sprites/grande-tata/damage.txt
+../ressources/sprites/grande-tata/attack.txt
+../ressources/sprites/grande-tata/skill.txt
+../ressources/sprites/grande-tata/killed.txt
 ../ressources/images/icons/tata-icon.png
 ../ressources/skills/attacks/canicule.txt
 ../ressources/skills/recovers/e-coque.txt

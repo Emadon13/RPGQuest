@@ -5,7 +5,11 @@ Poulpina
 2
 4
 6
-../ressources/sprites/blue-queen.txt
+../ressources/sprites/blue-queen/normal.txt
+../ressources/sprites/blue-queen/damage.txt
+../ressources/sprites/blue-queen/attack.txt
+../ressources/sprites/blue-queen/skill.txt
+../ressources/sprites/blue-queen/killed.txt
 ../ressources/images/icons/blue-queen-icon.png
 ../ressources/skills/recovers/e-coque.txt
 ../ressources/skills/attacks/mitra-poing.txt

@@ -1,0 +1,5 @@
+unique
+4
+112
+184
+../ressources/images/sprites/sprite_tata_damage.png

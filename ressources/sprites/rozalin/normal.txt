@@ -1,0 +1,5 @@
+loop
+6
+112
+192
+../ressources/images/sprites/sprite_rozalin.png

@@ -1,0 +1,5 @@
+unique
+4
+128
+184
+../ressources/images/sprites/sprite_rouge_attack.png

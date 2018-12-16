@@ -5,7 +5,11 @@ Bonasse
 30
 20
 50
-../ressources/sprites/bonasse.txt
+../ressources/sprites/bonasse/normal.txt
+../ressources/sprites/bonasse/damage.txt
+../ressources/sprites/bonasse/attack.txt
+../ressources/sprites/bonasse/skill.txt
+../ressources/sprites/bonasse/killed.txt
 ../ressources/images/icons/bonasse-icon.png
 ../ressources/skills/recovers/e-coque.txt
 ../ressources/skills/recovers/cajolerie.txt

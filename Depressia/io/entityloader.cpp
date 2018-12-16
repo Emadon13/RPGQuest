@@ -82,7 +82,11 @@ Entity* EntityLoader::generate(string path)
                            int(stoi(att)),
                            int(stoi(def)),
                            int(stoi(spd)),
-                           sprite,
+                           spriten,
+                           sprited,
+                           spritea,
+                           sprites,
+                           spritek,
                            icon,
                            skills);
     }
