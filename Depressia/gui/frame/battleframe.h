@@ -15,11 +15,11 @@ class BattleFrame : QObject
     Q_OBJECT
 
 public slots :
-    void killEntity(Sprite *sprite);
-    void damageEntity(Sprite *sprite);
-    void deleteEntity(Sprite *sprite);
-    void attackEntity(Sprite *sprite);
-    void skillEntity(Sprite *sprite);
+    void killEntity(Entity *sprite);
+    void damageEntity(Entity *sprite);
+    void deleteEntity(Entity *sprite);
+    void attackEntity(Entity *sprite);
+    void skillEntity(Entity *sprite);
     void nextTurn();
     void updateCurrentPlayer();
     void updateTurnInfo();
@@ -28,6 +28,7 @@ public slots :
     void updateUI();
     void callSkill();
     void playDamage();
+    void setCorrectSprite();
 
     void callAttack();
     void choixEntity(int i);
@@ -49,8 +50,8 @@ public:
 
     CharacterUI* teamUI[Fight::nb_e];
     EnemyUI* ennemyUI[Fight::nb_e];
-    Sprite* teamSprite[Fight::nb_e];
-    Sprite* ennemySprite[Fight::nb_e];
+    SpriteTemplate* teamSprite[Fight::nb_e][5];
+    SpriteTemplate* ennemySprite[Fight::nb_e][5];
 
     Hero *allie;
     Mob *mob;
