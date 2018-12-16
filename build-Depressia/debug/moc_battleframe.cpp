@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_BattleFrame_t {
-    QByteArrayData data[23];
-    char stringdata0[243];
+    QByteArrayData data[24];
+    char stringdata0[260];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,7 +34,7 @@ static const qt_meta_stringdata_BattleFrame_t qt_meta_stringdata_BattleFrame = {
 QT_MOC_LITERAL(0, 0, 11), // "BattleFrame"
 QT_MOC_LITERAL(1, 12, 10), // "killEntity"
 QT_MOC_LITERAL(2, 23, 0), // ""
-QT_MOC_LITERAL(3, 24, 7), // "Sprite*"
+QT_MOC_LITERAL(3, 24, 7), // "Entity*"
 QT_MOC_LITERAL(4, 32, 6), // "sprite"
 QT_MOC_LITERAL(5, 39, 12), // "damageEntity"
 QT_MOC_LITERAL(6, 52, 12), // "deleteEntity"
@@ -48,21 +48,22 @@ QT_MOC_LITERAL(13, 148, 8), // "playTurn"
 QT_MOC_LITERAL(14, 157, 8), // "updateUI"
 QT_MOC_LITERAL(15, 166, 9), // "callSkill"
 QT_MOC_LITERAL(16, 176, 10), // "playDamage"
-QT_MOC_LITERAL(17, 187, 10), // "callAttack"
-QT_MOC_LITERAL(18, 198, 11), // "choixEntity"
-QT_MOC_LITERAL(19, 210, 1), // "i"
-QT_MOC_LITERAL(20, 212, 10), // "choixSkill"
-QT_MOC_LITERAL(21, 223, 9), // "showObjet"
-QT_MOC_LITERAL(22, 233, 9) // "showSkill"
+QT_MOC_LITERAL(17, 187, 16), // "setCorrectSprite"
+QT_MOC_LITERAL(18, 204, 10), // "callAttack"
+QT_MOC_LITERAL(19, 215, 11), // "choixEntity"
+QT_MOC_LITERAL(20, 227, 1), // "i"
+QT_MOC_LITERAL(21, 229, 10), // "choixSkill"
+QT_MOC_LITERAL(22, 240, 9), // "showObjet"
+QT_MOC_LITERAL(23, 250, 9) // "showSkill"
 
     },
-    "BattleFrame\0killEntity\0\0Sprite*\0sprite\0"
+    "BattleFrame\0killEntity\0\0Entity*\0sprite\0"
     "damageEntity\0deleteEntity\0attackEntity\0"
     "skillEntity\0nextTurn\0updateCurrentPlayer\0"
     "updateTurnInfo\0showSelection\0playTurn\0"
-    "updateUI\0callSkill\0playDamage\0callAttack\0"
-    "choixEntity\0i\0choixSkill\0showObjet\0"
-    "showSkill"
+    "updateUI\0callSkill\0playDamage\0"
+    "setCorrectSprite\0callAttack\0choixEntity\0"
+    "i\0choixSkill\0showObjet\0showSkill"
 };
 #undef QT_MOC_LITERAL
 
@@ -72,7 +73,7 @@ static const uint qt_meta_data_BattleFrame[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      18,   14, // methods
+      19,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -80,24 +81,25 @@ static const uint qt_meta_data_BattleFrame[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,  104,    2, 0x0a /* Public */,
-       5,    1,  107,    2, 0x0a /* Public */,
-       6,    1,  110,    2, 0x0a /* Public */,
-       7,    1,  113,    2, 0x0a /* Public */,
-       8,    1,  116,    2, 0x0a /* Public */,
-       9,    0,  119,    2, 0x0a /* Public */,
-      10,    0,  120,    2, 0x0a /* Public */,
-      11,    0,  121,    2, 0x0a /* Public */,
-      12,    0,  122,    2, 0x0a /* Public */,
-      13,    0,  123,    2, 0x0a /* Public */,
-      14,    0,  124,    2, 0x0a /* Public */,
-      15,    0,  125,    2, 0x0a /* Public */,
-      16,    0,  126,    2, 0x0a /* Public */,
-      17,    0,  127,    2, 0x0a /* Public */,
-      18,    1,  128,    2, 0x0a /* Public */,
-      20,    1,  131,    2, 0x0a /* Public */,
-      21,    0,  134,    2, 0x0a /* Public */,
-      22,    0,  135,    2, 0x0a /* Public */,
+       1,    1,  109,    2, 0x0a /* Public */,
+       5,    1,  112,    2, 0x0a /* Public */,
+       6,    1,  115,    2, 0x0a /* Public */,
+       7,    1,  118,    2, 0x0a /* Public */,
+       8,    1,  121,    2, 0x0a /* Public */,
+       9,    0,  124,    2, 0x0a /* Public */,
+      10,    0,  125,    2, 0x0a /* Public */,
+      11,    0,  126,    2, 0x0a /* Public */,
+      12,    0,  127,    2, 0x0a /* Public */,
+      13,    0,  128,    2, 0x0a /* Public */,
+      14,    0,  129,    2, 0x0a /* Public */,
+      15,    0,  130,    2, 0x0a /* Public */,
+      16,    0,  131,    2, 0x0a /* Public */,
+      17,    0,  132,    2, 0x0a /* Public */,
+      18,    0,  133,    2, 0x0a /* Public */,
+      19,    1,  134,    2, 0x0a /* Public */,
+      21,    1,  137,    2, 0x0a /* Public */,
+      22,    0,  140,    2, 0x0a /* Public */,
+      23,    0,  141,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
@@ -114,8 +116,9 @@ static const uint qt_meta_data_BattleFrame[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   19,
-    QMetaType::Void, QMetaType::Int,   19,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,   20,
+    QMetaType::Void, QMetaType::Int,   20,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -128,11 +131,11 @@ void BattleFrame::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         BattleFrame *_t = static_cast<BattleFrame *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->killEntity((*reinterpret_cast< Sprite*(*)>(_a[1]))); break;
-        case 1: _t->damageEntity((*reinterpret_cast< Sprite*(*)>(_a[1]))); break;
-        case 2: _t->deleteEntity((*reinterpret_cast< Sprite*(*)>(_a[1]))); break;
-        case 3: _t->attackEntity((*reinterpret_cast< Sprite*(*)>(_a[1]))); break;
-        case 4: _t->skillEntity((*reinterpret_cast< Sprite*(*)>(_a[1]))); break;
+        case 0: _t->killEntity((*reinterpret_cast< Entity*(*)>(_a[1]))); break;
+        case 1: _t->damageEntity((*reinterpret_cast< Entity*(*)>(_a[1]))); break;
+        case 2: _t->deleteEntity((*reinterpret_cast< Entity*(*)>(_a[1]))); break;
+        case 3: _t->attackEntity((*reinterpret_cast< Entity*(*)>(_a[1]))); break;
+        case 4: _t->skillEntity((*reinterpret_cast< Entity*(*)>(_a[1]))); break;
         case 5: _t->nextTurn(); break;
         case 6: _t->updateCurrentPlayer(); break;
         case 7: _t->updateTurnInfo(); break;
@@ -141,51 +144,13 @@ void BattleFrame::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 10: _t->updateUI(); break;
         case 11: _t->callSkill(); break;
         case 12: _t->playDamage(); break;
-        case 13: _t->callAttack(); break;
-        case 14: _t->choixEntity((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 15: _t->choixSkill((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 16: _t->showObjet(); break;
-        case 17: _t->showSkill(); break;
+        case 13: _t->setCorrectSprite(); break;
+        case 14: _t->callAttack(); break;
+        case 15: _t->choixEntity((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 16: _t->choixSkill((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 17: _t->showObjet(); break;
+        case 18: _t->showSkill(); break;
         default: ;
-        }
-    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        switch (_id) {
-        default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-        case 0:
-            switch (*reinterpret_cast<int*>(_a[1])) {
-            default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-            case 0:
-                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< Sprite* >(); break;
-            }
-            break;
-        case 1:
-            switch (*reinterpret_cast<int*>(_a[1])) {
-            default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-            case 0:
-                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< Sprite* >(); break;
-            }
-            break;
-        case 2:
-            switch (*reinterpret_cast<int*>(_a[1])) {
-            default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-            case 0:
-                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< Sprite* >(); break;
-            }
-            break;
-        case 3:
-            switch (*reinterpret_cast<int*>(_a[1])) {
-            default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-            case 0:
-                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< Sprite* >(); break;
-            }
-            break;
-        case 4:
-            switch (*reinterpret_cast<int*>(_a[1])) {
-            default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-            case 0:
-                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< Sprite* >(); break;
-            }
-            break;
         }
     }
 }
@@ -215,13 +180,13 @@ int BattleFrame::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 18)
+        if (_id < 19)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 18;
+        _id -= 19;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 18)
-            qt_static_metacall(this, _c, _id, _a);
-        _id -= 18;
+        if (_id < 19)
+            *reinterpret_cast<int*>(_a[0]) = -1;
+        _id -= 19;
     }
     return _id;
 }
