@@ -37,7 +37,6 @@ Mob::Mob(string m_name,
     battleIcon,
     m_skills)
 {
-
 }
 
 int Mob::chooseMove()

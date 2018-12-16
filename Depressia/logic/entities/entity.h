@@ -64,7 +64,7 @@ public:
     SpriteUnique* getSpriteDamage();
     SpriteUnique* getSpriteAttack();
     SpriteUnique* getSpriteSkill();
-    SpriteTemplate* getSpriteKilled();
+    virtual SpriteTemplate* getSpriteKilled();
 
     QPixmap* getBattleIcon();
 
