@@ -17,4 +17,4 @@
 4
 112
 176
-../ressources/images/sprites/blue_queen_kill.png
+../ressources/images/sprites/killed.png
