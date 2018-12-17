@@ -178,7 +178,8 @@ std::vector<Entity*> Fight::vectorizeH()
     vector<Entity*> e;
     for(int i=0 ; i<nb_e ; i++)
         if(heroes[i] != nullptr)
-            e.push_back(heroes[i]);
+            if(heroes[i]->isAlive())
+                e.push_back(heroes[i]);
     return e;
 }
 
@@ -187,7 +188,8 @@ std::vector<Entity*> Fight::vectorizeM()
     vector<Entity*> e;
     for(int i=0 ; i<nb_e ; i++)
         if(mobs[i] != nullptr)
-            e.push_back(mobs[i]);
+            if(mobs[i]->isAlive())
+                e.push_back(mobs[i]);
     return e;
 }
 
@@ -196,6 +198,7 @@ std::vector<Entity*> Fight::vectoriezA()
     vector<Entity*> e;
     for(int i=0 ; i<nb_e*2 ; i++)
         if(all[i] != nullptr)
-            e.push_back(all[i]);
+            if(all[i]->isAlive())
+                e.push_back(all[i]);
     return e;
 }
