@@ -32,7 +32,7 @@ public:
 protected:
     std::string name;
     std::string text;
-    SpriteUnique* sprite;
+    std::string sprite;
     int mpCost;
     Range range;
     std::string summary;
