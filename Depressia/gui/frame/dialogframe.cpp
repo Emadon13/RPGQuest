@@ -25,6 +25,9 @@ DialogFrame::DialogFrame(GameWindow *g) : QObject()
     int DialogWidth(int(800/ratio));
     int DialogHeight(int(400/ratio));
 
+    int DialogNameWidth(int(300/ratio));
+    int DialogNameHeight(int(50/ratio));
+
     int ImageWidth(int(600/ratio));
     int ImageHeight(int(800/ratio));
 
@@ -34,13 +37,19 @@ DialogFrame::DialogFrame(GameWindow *g) : QObject()
     image->setAlignment(Qt::AlignCenter);
 
     dialogImage = new QLabel(game);
-    dialogImage->setPixmap(QPixmap("../ressources/images/hud/dialog.png").scaled(DialogWidth,DialogHeight));
+    dialogImage->setPixmap(QPixmap("../ressources/images/hud/dialog-box-2.png").scaled(DialogWidth,DialogHeight));
     dialogImage->setFixedSize(DialogWidth,DialogHeight);
 
     dialogText = new QLabel(game);
-    //dialogText->setText(QString::fromStdString((tableau.at(0).getElement(currentPhase).getName())+" : "+(tableau.at(0).getElement(currentPhase).getText())));
     dialogText->setFixedSize(DialogWidth,DialogHeight);
     dialogText->setAlignment(Qt::AlignCenter);
+    dialogText->setWordWrap(true);
+
+    dialogName = new QLabel(game);
+    dialogName->setFixedSize(DialogNameWidth,DialogNameHeight);
+    dialogName->setAlignment(Qt::AlignCenter);
+    dialogName->setWordWrap(true);
+    dialogName->setStyleSheet("QLabel{color:white;}");
 
     clicker = new ClickableLabel(game);
     clicker->setFixedSize(WindowWidth,WindowHeight);
@@ -77,6 +86,7 @@ void DialogFrame::UpdateDialog()
     int ImageHeight(int(800/ratio));
 
     int Espacement(int(100/ratio));
+    espacementName=(int(70/ratio));
 
     if((currentPhase) >= int(tableau.at(0).getSize())){
         game->CreateGameFrame();
@@ -84,7 +94,8 @@ void DialogFrame::UpdateDialog()
     else{
 
         image->setPixmap(QPixmap(QString::fromStdString(tableau.at(0).getElement(currentPhase).getImage())).scaled(ImageWidth,ImageHeight));
-        dialogText->setText(QString::fromStdString((tableau.at(0).getElement(currentPhase).getName())+" : "+(tableau.at(0).getElement(currentPhase).getText())));
+        dialogText->setText(QString::fromStdString(tableau.at(0).getElement(currentPhase).getText()));
+        dialogName->setText(QString::fromStdString(tableau.at(0).getElement(currentPhase).getName()));
 
         if((tableau.at(0).getElement(currentPhase).getDirection())==direction_right){
 
@@ -93,6 +104,8 @@ void DialogFrame::UpdateDialog()
 
             dialogImage->move(Espacement,WindowHeight-DialogHeight-Espacement);
             dialogImage->show();
+            dialogName->move(Espacement+espacementName,WindowHeight-DialogHeight-Espacement);
+            dialogName->show();
             dialogText->move(Espacement,WindowHeight-DialogHeight-Espacement);
             dialogText->show();
 
@@ -106,6 +119,8 @@ void DialogFrame::UpdateDialog()
 
             dialogImage->move(WindowWidth-DialogWidth-Espacement,WindowHeight-DialogHeight-Espacement);
             dialogImage->show();
+            dialogName->move(WindowWidth-DialogWidth-Espacement+espacementName,WindowHeight-DialogHeight-Espacement);
+            dialogName->show();
             dialogText->move(WindowWidth-DialogWidth-Espacement,WindowHeight-DialogHeight-Espacement);
             dialogText->show();
 

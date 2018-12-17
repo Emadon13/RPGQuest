@@ -38,7 +38,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     double ratio(game->GetGame()->getRatio());
 
     QLabel *back = new QLabel(game);
-    back->setPixmap(QPixmap("../ressources/images/hud/background-battle7.png").scaled(WindowWidth,WindowHeight));
+    back->setPixmap(QPixmap("../ressources/images/hud/background-battle9.png").scaled(WindowWidth,WindowHeight));
     back->setFixedSize(WindowWidth,WindowHeight);
     back->move(0,0);
     back->show();
@@ -160,43 +160,46 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     int dialogWidth(int(WindowWidth*0.4));
     int dialogHeight(int(WindowHeight*0.19));
 
+    dialogCurrent = new QLabel(game);
+    dialogInfo->setText("Combat !");
+    dialogCurrent->setFixedSize(int(dialogWidth*0.2),int(dialogHeight*0.2));
+    dialogCurrent->move(WindowWidth/2-dialogCurrent->width()/2,0);
+    dialogCurrent->setAlignment(Qt::AlignCenter);
+    dialogCurrent->setStyleSheet("QLabel{color:white;}");
+    dialogCurrent->show();
+
     dialogInfo = new QLabel(game);
-    dialogInfo->setPixmap(QPixmap("../ressources/images/hud/jaugeHP.png").scaled(dialogWidth,dialogHeight));
-    dialogInfo->setFixedSize(dialogWidth,dialogHeight);
-    dialogInfo->move(WindowWidth/2-dialogWidth/2,0);
+    dialogInfo->setFixedSize(dialogWidth,dialogHeight-dialogCurrent->height());
+    dialogInfo->move(WindowWidth/2-dialogWidth/2,dialogCurrent->height());
     dialogInfo->setWordWrap(true);
-    dialogInfo->setText("La Grande Tata et son esclave vous défient");
+    dialogInfo->setText("Des ennemies approchent !");
+    dialogInfo->setAlignment(Qt::AlignCenter);
     dialogInfo->show();
 
     dialogSelection = new QLabel(game);
-    dialogSelection->setPixmap(QPixmap("../ressources/images/hud/jaugeHP.png").scaled(dialogWidth,dialogHeight));
     dialogSelection->setFixedSize(dialogWidth,dialogHeight);
     dialogSelection->move(WindowWidth/2-dialogWidth/2,WindowHeight-dialogHeight);
     dialogSelection->show();
 
-    dialogCurrent = new QLabel(game);
-    dialogCurrent->setPixmap(QPixmap("../ressources/images/hud/jaugeMP.png").scaled(dialogWidth,dialogHeight));
-    dialogCurrent->setFixedSize(int(dialogWidth*0.2),int(dialogHeight*0.2));
-    dialogCurrent->move(WindowWidth/2-dialogWidth/2,0);
-    dialogCurrent->show();
+
 
     int boutonHeight(int(80/ratio));
     int boutonWidth(int(300/ratio));
     espacementBoutonH = (int((dialogWidth-boutonWidth*2)/3));
     espacementBoutonV = (int((dialogHeight-boutonHeight*2)/3));
 
-    QString styleBouton = "QPushButton {background-color: cyan;"
+    QString styleBouton = "QPushButton {color:white; background-color: #302514;"
                           "border-style: outset; border-width: 2px;"
                           "border-radius: 10px; border-color: beige;"
                           "font: bold 14px; min-width: 10em; padding: 6px;}"
-                          "QPushButton:pressed {background-color: rgb(224, 0, 0);"
+                          "QPushButton:pressed {color:white; background-color: #000000;"
                           "border-style: inset;}";
 
     QString styleBoutonRond =   "QPushButton { background-color: white;"
                                 "border-style: solid;"
                                 "border-width:1px;"
                                 "border-radius:25px;"
-                                "border-color: red;}";
+                                "border-color: black;}";
 
     attack = new QPushButton("Attaquer", game);
     attack->setFixedSize(boutonWidth,boutonHeight);
@@ -378,6 +381,8 @@ void::BattleFrame::updateUI()
 
 void::BattleFrame::playTurn()
 {
+    QObject::disconnect(retour, SIGNAL(clicked()), this, SLOT(showSelection()));
+
     dialogInfo->setText(QString::fromStdString(current->getSkillSummary(skillNumber)));
     updateUI();
     if(skillNumber==-1)
@@ -412,6 +417,9 @@ void BattleFrame::playDamage()
 
 void BattleFrame::callAttack()
 {
+    dialogInfo->setText("Qui voulez vous cibler ?");
+    dialogCurrent->setText("Attaque");
+
     attack->hide();
     sorts->hide();
     objet->hide();
@@ -448,6 +456,8 @@ void BattleFrame::updateTurnInfo()
 
 void BattleFrame::showSelection()
 {
+    updateTurnInfo();
+    updateCurrentPlayer();
     for (int i = 0; i < 8; i=i+1)
     {
         selectionObjet[i]->hide();
@@ -499,6 +509,7 @@ void BattleFrame::showSkill()
 void BattleFrame::choixSkill(int i)
 {
     dialogInfo->setText(QString::fromStdString(current->getMove(i)->getText()));
+    dialogCurrent->setText(QString::fromStdString(current->getMove(i)->getName()));
     okSkill->show();
     skillNumber=i;
 }

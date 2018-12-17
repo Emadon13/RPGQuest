@@ -22,11 +22,13 @@ public:
     GameWindow *game;
 
     int currentPhase;
+    int espacementName;
     vector<Dialog> tableau;
 
     QLabel *image;
     QLabel *dialogImage;
     QLabel *dialogText;
+    QLabel *dialogName;
     ClickableLabel *clicker;
 
     vector<Dialog> getDialog();

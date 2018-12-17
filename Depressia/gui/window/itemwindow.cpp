@@ -7,21 +7,27 @@
 ItemWindow::ItemWindow(GameWindow *game, QWidget *parent) :
     QMainWindow(parent)
 {
+    QString styleBouton = "QPushButton {color:white; background-color: #302514;"
+                          "border-style: outset; border-width: 2px;"
+                          "border-radius: 10px; border-color: beige;"
+                          "font: bold 14px; min-width: 10em; padding: 6px;}"
+                          "QPushButton:pressed {color:white; background-color: #000000;"
+                          "border-style: inset;}";
 
     this->map=game->GetMap();
     this->mapElement=map->getCurrentPosition();
 
-    int WindowWidth(640);
-    int WindowHeight(360);
+    int WindowWidth(800);
+    int WindowHeight(400);
 
     int BoutonWidth(100);
     int BoutonHeight(60);
 
-    int TitreWidth(300);
-    int TitreHeight(100);
+    int TitreWidth(400);
+    int TitreHeight(50);
 
-    int InfoWidth(300);
-    int InfoHeight(100);
+    int InfoWidth(460);
+    int InfoHeight(200);
 
     int ImageWidth(250);
     int ImageHeight(250);
@@ -39,7 +45,7 @@ ItemWindow::ItemWindow(GameWindow *game, QWidget *parent) :
     setAttribute(Qt::WA_TranslucentBackground);
 
     QLabel *background = new QLabel(this);
-    background->setPixmap(QPixmap("../ressources/images/hud/itemBackground.png"));
+    background->setPixmap(QPixmap("../ressources/images/hud/itemBackground-1.png").scaled(WindowWidth,WindowHeight));
     background->setFixedSize(WindowWidth,WindowHeight);
     background->move(0,0);
     background->show();
@@ -48,6 +54,7 @@ ItemWindow::ItemWindow(GameWindow *game, QWidget *parent) :
     ok->setFixedSize(BoutonWidth,BoutonHeight);
     ok->setCursor(QCursor(QPixmap("../ressources/images/hud/cursor.png"), 0, 0));
     ok->move((WindowWidth-BoutonWidth)/2,(WindowHeight-espacement-BoutonHeight));
+    ok->setStyleSheet(styleBouton);
     ok->show();
 
 
@@ -61,7 +68,9 @@ ItemWindow::ItemWindow(GameWindow *game, QWidget *parent) :
     titre->setText(QString::fromStdString(((dynamic_cast<ItemFound*>(mapElement.getEvent()))->getItem().getName())));
     titre->setFixedSize(TitreWidth,TitreHeight);
     titre->setAlignment(Qt::AlignCenter);
-    titre->move(espacement*2+ImageWidth,espacement);
+    titre->setWordWrap(true);
+    titre->move(WindowWidth/2-espacement*3,0);
+    titre->setStyleSheet("QLabel{color:white;}");
     titre->show();
 
     QLabel *info = new QLabel(this);
