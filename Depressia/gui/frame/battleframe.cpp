@@ -100,6 +100,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
             teamSprite[i][4]->hide();
 
             teamUI[i] = new CharacterUI(game,allie,game->GetGame()->getWindowWidth()-espacementUI-tailleUI,espacementUI*(i+1)+tailleUI*i,tailleUI,tailleUI);
+
         }
         else
         {
@@ -114,36 +115,37 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
         if(mob != nullptr)
         {
             ennemySprite[i][0] = mob->getSpriteNormal();
-            if(i%2==0) ennemySprite[i][0]->setPos(QPointF(int(((WindowWidth*0.5)+espacementSprite*(i)+espacementMilieu)),int((WindowHeight/2))));
-            else ennemySprite[i][0]->setPos(QPointF(int(((WindowWidth*0.5)+espacementSprite*(i)+espacementMilieu)),int((WindowHeight/2-espacementSprite))));
-            ennemySprite[i][0]->setToolTip(QString::fromStdString(allie->getName()));
+            if(i%2==1) ennemySprite[i][0]->setPos(QPointF(int(((WindowWidth*0.5)-espacementSprite*(i+1)-espacementMilieu)),int((WindowHeight/2))));
+            else ennemySprite[i][0]->setPos(QPointF(int(((WindowWidth*0.5)-espacementSprite*(i+1)-espacementMilieu)),int((WindowHeight/2-espacementSprite))));
+            ennemySprite[i][0]->setToolTip(QString::fromStdString(mob->getName()));
             scene->addItem(ennemySprite[i][0]);
 
             ennemySprite[i][1] = mob->getSpriteAttack();
-            if(i%2==0) ennemySprite[i][1]->setPos(QPointF(int(((WindowWidth*0.5)+espacementSprite*(i)+espacementMilieu)),int((WindowHeight/2))));
-            else ennemySprite[i][1]->setPos(QPointF(int(((WindowWidth*0.5)+espacementSprite*(i)+espacementMilieu)),int((WindowHeight/2-espacementSprite))));
-            ennemySprite[i][1]->setToolTip(QString::fromStdString(allie->getName()));
+            cout << mob->getSpriteAttack() << endl;
+            if(i%2==1) ennemySprite[i][1]->setPos(QPointF(int(((WindowWidth*0.5)-espacementSprite*(i+1)-espacementMilieu)),int((WindowHeight/2))));
+            else ennemySprite[i][1]->setPos(QPointF(int(((WindowWidth*0.5)-espacementSprite*(i+1)-espacementMilieu)),int((WindowHeight/2-espacementSprite))));
+            ennemySprite[i][1]->setToolTip(QString::fromStdString(mob->getName()));
             scene->addItem(ennemySprite[i][1]);
             ennemySprite[i][1]->hide();
 
             ennemySprite[i][2] = mob->getSpriteSkill();
-            if(i%2==0) ennemySprite[i][2]->setPos(QPointF(int(((WindowWidth*0.5)+espacementSprite*(i)+espacementMilieu)),int((WindowHeight/2))));
-            else ennemySprite[i][2]->setPos(QPointF(int(((WindowWidth*0.5)+espacementSprite*(i)+espacementMilieu)),int((WindowHeight/2-espacementSprite))));
-            ennemySprite[i][2]->setToolTip(QString::fromStdString(allie->getName()));
+            if(i%2==1) ennemySprite[i][2]->setPos(QPointF(int(((WindowWidth*0.5)-espacementSprite*(i+1)-espacementMilieu)),int((WindowHeight/2))));
+            else ennemySprite[i][2]->setPos(QPointF(int(((WindowWidth*0.5)-espacementSprite*(i+1)-espacementMilieu)),int((WindowHeight/2-espacementSprite))));
+            ennemySprite[i][2]->setToolTip(QString::fromStdString(mob->getName()));
             scene->addItem(ennemySprite[i][2]);
             ennemySprite[i][2]->hide();
 
             ennemySprite[i][3] = mob->getSpriteDamage();
-            if(i%2==0) ennemySprite[i][3]->setPos(QPointF(int(((WindowWidth*0.5)+espacementSprite*(i)+espacementMilieu)),int((WindowHeight/2))));
-            else ennemySprite[i][3]->setPos(QPointF(int(((WindowWidth*0.5)+espacementSprite*(i)+espacementMilieu)),int((WindowHeight/2-espacementSprite))));
-            ennemySprite[i][3]->setToolTip(QString::fromStdString(allie->getName()));
+            if(i%2==1) ennemySprite[i][3]->setPos(QPointF(int(((WindowWidth*0.5)-espacementSprite*(i+1)-espacementMilieu)),int((WindowHeight/2))));
+            else ennemySprite[i][3]->setPos(QPointF(int(((WindowWidth*0.5)-espacementSprite*(i+1)-espacementMilieu)),int((WindowHeight/2-espacementSprite))));
+            ennemySprite[i][3]->setToolTip(QString::fromStdString(mob->getName()));
             scene->addItem(ennemySprite[i][3]);
             ennemySprite[i][3]->hide();
 
             ennemySprite[i][4] = mob->getSpriteKilled();
-            if(i%2==0) ennemySprite[i][4]->setPos(QPointF(int(((WindowWidth*0.5)+espacementSprite*(i)+espacementMilieu)),int((WindowHeight/2))));
-            else ennemySprite[i][4]->setPos(QPointF(int(((WindowWidth*0.5)+espacementSprite*(i)+espacementMilieu)),int((WindowHeight/2-espacementSprite))));
-            ennemySprite[i][4]->setToolTip(QString::fromStdString(allie->getName()));
+            if(i%2==1) ennemySprite[i][4]->setPos(QPointF(int(((WindowWidth*0.5)-espacementSprite*(i+1)-espacementMilieu)),int((WindowHeight/2))));
+            else ennemySprite[i][4]->setPos(QPointF(int(((WindowWidth*0.5)-espacementSprite*(i+1)-espacementMilieu)),int((WindowHeight/2-espacementSprite))));
+            ennemySprite[i][4]->setToolTip(QString::fromStdString(mob->getName()));
             scene->addItem(ennemySprite[i][4]);
             ennemySprite[i][4]->hide();
 
@@ -154,15 +156,6 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
             ennemyUI[i]=nullptr;
         }
     }
-
-    SpriteLoop *test = new SpriteLoop(6,130,200,"../ressources/images/sprites/sprite_rouge.png");
-    test->setPos(QPointF(50,50));
-    scene->addItem(test);
-
-    SpriteUnique *test2 = new SpriteUnique(6,130,200,"../ressources/images/sprites/sprite_rouge.png");
-    test2->setPos(QPointF(500,50));
-    scene->addItem(test2);
-    test2->play();
 
     int dialogWidth(int(WindowWidth*0.4));
     int dialogHeight(int(WindowHeight*0.19));
