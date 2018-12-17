@@ -1362,9 +1362,6 @@ release\moc_mainwindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWind
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -1373,6 +1370,9 @@ release\moc_mainwindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWind
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -1516,9 +1516,6 @@ release\moc_gamewindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWind
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -1533,6 +1530,9 @@ release\moc_gamewindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWind
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -1679,9 +1679,6 @@ release\moc_gameframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -1696,6 +1693,9 @@ release\moc_gameframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -1842,9 +1842,6 @@ release\moc_dialogframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -1859,6 +1856,9 @@ release\moc_dialogframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -2120,9 +2120,6 @@ release\moc_battleframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -2137,6 +2134,9 @@ release\moc_battleframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -2313,9 +2313,6 @@ release\moc_videoframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -2330,6 +2327,9 @@ release\moc_videoframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -2617,9 +2617,6 @@ release\moc_itemframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -2634,6 +2631,9 @@ release\moc_itemframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -2766,9 +2766,6 @@ release\moc_itemwindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWind
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -2783,6 +2780,9 @@ release\moc_itemwindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWind
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -3433,9 +3433,6 @@ release\moc_optionframe.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -3444,6 +3441,9 @@ release\moc_optionframe.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -3588,9 +3588,6 @@ release\moc_finalframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -3605,6 +3602,9 @@ release\moc_finalframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -3857,9 +3857,6 @@ release\moc_characterui.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -3874,6 +3871,9 @@ release\moc_characterui.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -4022,9 +4022,6 @@ release\moc_enemyui.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -4039,6 +4036,9 @@ release\moc_enemyui.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -5017,9 +5017,6 @@ release\main.obj: ..\Depressia\main.cpp C:\Qt\5.11.2\msvc2017_64\include\QtWidge
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -5028,6 +5025,9 @@ release\main.obj: ..\Depressia\main.cpp C:\Qt\5.11.2\msvc2017_64\include\QtWidge
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -5129,7 +5129,6 @@ release\fight.obj: ..\Depressia\logic\events\fight.cpp ..\Depressia\logic\events
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -5157,6 +5156,7 @@ release\fight.obj: ..\Depressia\logic\events\fight.cpp ..\Depressia\logic\events
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\logic\entities\team.h \
 		..\Depressia\io\entityloader.h \
 		..\Depressia\logic\entities\hero.h \
@@ -5167,7 +5167,6 @@ release\fight.obj: ..\Depressia\logic\events\fight.cpp ..\Depressia\logic\events
 release\entity.obj: ..\Depressia\logic\entities\entity.cpp ..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -5273,12 +5272,10 @@ release\entity.obj: ..\Depressia\logic\entities\entity.cpp ..\Depressia\logic\en
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h
 
 release\skill.obj: ..\Depressia\logic\skills\skill.cpp ..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -5384,12 +5381,13 @@ release\skill.obj: ..\Depressia\logic\skills\skill.cpp ..\Depressia\logic\skills
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h
 
 release\recover.obj: ..\Depressia\logic\skills\recover.cpp ..\Depressia\logic\skills\recover.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\attack.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -5495,6 +5493,8 @@ release\recover.obj: ..\Depressia\logic\skills\recover.cpp ..\Depressia\logic\sk
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\attack.h \
 		..\Depressia\io\qpixmaploader.h
 
 release\stage.obj: ..\Depressia\gui\stage.cpp ..\Depressia\gui\stage.h
@@ -5667,9 +5667,6 @@ release\map.obj: ..\Depressia\logic\world\map.cpp ..\Depressia\logic\world\map.h
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -5725,6 +5722,9 @@ release\map.obj: ..\Depressia\logic\world\map.cpp ..\Depressia\logic\world\map.h
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -5746,9 +5746,6 @@ release\team.obj: ..\Depressia\logic\entities\team.cpp ..\Depressia\logic\entiti
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -5854,6 +5851,9 @@ release\team.obj: ..\Depressia\logic\entities\team.cpp ..\Depressia\logic\entiti
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -5868,9 +5868,6 @@ release\team.obj: ..\Depressia\logic\entities\team.cpp ..\Depressia\logic\entiti
 release\hero.obj: ..\Depressia\logic\entities\hero.cpp ..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -5976,6 +5973,9 @@ release\hero.obj: ..\Depressia\logic\entities\hero.cpp ..\Depressia\logic\entiti
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h
 
 release\mapelement.obj: ..\Depressia\logic\world\mapelement.cpp ..\Depressia\logic\world\mapelement.h \
@@ -6094,9 +6094,6 @@ release\game.obj: ..\Depressia\logic\game.cpp ..\Depressia\logic\game.h \
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -6152,6 +6149,9 @@ release\game.obj: ..\Depressia\logic\game.cpp ..\Depressia\logic\game.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -6167,9 +6167,6 @@ release\game.obj: ..\Depressia\logic\game.cpp ..\Depressia\logic\game.h \
 
 release\skillloader.obj: ..\Depressia\io\skillloader.cpp ..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -6275,6 +6272,9 @@ release\skillloader.obj: ..\Depressia\io\skillloader.cpp ..\Depressia\io\skilllo
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h
 
 release\loader.obj: ..\Depressia\io\loader.cpp ..\Depressia\io\loader.h \
@@ -6497,9 +6497,6 @@ release\maploader.obj: ..\Depressia\io\maploader.cpp ..\Depressia\io\maploader.h
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -6555,6 +6552,9 @@ release\maploader.obj: ..\Depressia\io\maploader.cpp ..\Depressia\io\maploader.h
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -7189,9 +7189,6 @@ release\mainwindow.obj: ..\Depressia\gui\window\mainwindow.cpp ..\Depressia\gui\
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -7200,6 +7197,9 @@ release\mainwindow.obj: ..\Depressia\gui\window\mainwindow.cpp ..\Depressia\gui\
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -7342,9 +7342,6 @@ release\gamewindow.obj: ..\Depressia\gui\window\gamewindow.cpp ..\Depressia\gui\
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -7359,6 +7356,9 @@ release\gamewindow.obj: ..\Depressia\gui\window\gamewindow.cpp ..\Depressia\gui\
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -8007,9 +8007,6 @@ release\gameframe.obj: ..\Depressia\gui\frame\gameframe.cpp ..\Depressia\gui\fra
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -8024,6 +8021,9 @@ release\gameframe.obj: ..\Depressia\gui\frame\gameframe.cpp ..\Depressia\gui\fra
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -8649,9 +8649,6 @@ release\dialogframe.obj: ..\Depressia\gui\frame\dialogframe.cpp ..\Depressia\gui
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -8666,6 +8663,9 @@ release\dialogframe.obj: ..\Depressia\gui\frame\dialogframe.cpp ..\Depressia\gui
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -9403,9 +9403,6 @@ release\battleframe.obj: ..\Depressia\gui\frame\battleframe.cpp ..\Depressia\gui
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -9420,6 +9417,9 @@ release\battleframe.obj: ..\Depressia\gui\frame\battleframe.cpp ..\Depressia\gui
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -10053,9 +10053,6 @@ release\videoframe.obj: ..\Depressia\gui\frame\videoframe.cpp ..\Depressia\gui\f
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -10070,6 +10067,9 @@ release\videoframe.obj: ..\Depressia\gui\frame\videoframe.cpp ..\Depressia\gui\f
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -10635,9 +10635,6 @@ release\mapelementloader.obj: ..\Depressia\io\mapelementloader.cpp ..\Depressia\
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -10693,6 +10690,9 @@ release\mapelementloader.obj: ..\Depressia\io\mapelementloader.cpp ..\Depressia\
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -10989,9 +10989,6 @@ release\itemframe.obj: ..\Depressia\gui\frame\itemframe.cpp ..\Depressia\gui\fra
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -11006,6 +11003,9 @@ release\itemframe.obj: ..\Depressia\gui\frame\itemframe.cpp ..\Depressia\gui\fra
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -11135,9 +11135,6 @@ release\itemwindow.obj: ..\Depressia\gui\window\itemwindow.cpp ..\Depressia\gui\
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -11152,6 +11149,9 @@ release\itemwindow.obj: ..\Depressia\gui\window\itemwindow.cpp ..\Depressia\gui\
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -11809,9 +11809,6 @@ release\optionframe.obj: ..\Depressia\gui\frame\optionframe.cpp ..\Depressia\gui
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -11820,6 +11817,9 @@ release\optionframe.obj: ..\Depressia\gui\frame\optionframe.cpp ..\Depressia\gui
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -11961,9 +11961,6 @@ release\finalframe.obj: ..\Depressia\gui\frame\finalframe.cpp ..\Depressia\gui\f
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -11978,6 +11975,9 @@ release\finalframe.obj: ..\Depressia\gui\frame\finalframe.cpp ..\Depressia\gui\f
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -12097,8 +12097,6 @@ release\recoil.obj: ..\Depressia\logic\skills\recoil.cpp ..\Depressia\logic\skil
 
 release\attack.obj: ..\Depressia\logic\skills\attack.cpp ..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -12204,6 +12202,8 @@ release\attack.obj: ..\Depressia\logic\skills\attack.cpp ..\Depressia\logic\skil
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h
 
 release\characterui.obj: ..\Depressia\gui\frame\characterui.cpp ..\Depressia\gui\frame\characterui.h \
@@ -12339,9 +12339,6 @@ release\characterui.obj: ..\Depressia\gui\frame\characterui.cpp ..\Depressia\gui
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -12356,6 +12353,9 @@ release\characterui.obj: ..\Depressia\gui\frame\characterui.cpp ..\Depressia\gui
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -12501,9 +12501,6 @@ release\enemyui.obj: ..\Depressia\gui\frame\enemyui.cpp ..\Depressia\gui\frame\e
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -12518,6 +12515,9 @@ release\enemyui.obj: ..\Depressia\gui\frame\enemyui.cpp ..\Depressia\gui\frame\e
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -12534,9 +12534,6 @@ release\entityloader.obj: ..\Depressia\io\entityloader.cpp ..\Depressia\io\entit
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -12642,6 +12639,9 @@ release\entityloader.obj: ..\Depressia\io\entityloader.cpp ..\Depressia\io\entit
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -12846,7 +12846,6 @@ release\mob.obj: ..\Depressia\logic\entities\mob.cpp ..\Depressia\logic\entities
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -12873,16 +12872,14 @@ release\mob.obj: ..\Depressia\logic\entities\mob.cpp ..\Depressia\logic\entities
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h
+		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\recover.h
 
 release\fightloader.obj: ..\Depressia\io\fightloader.cpp ..\Depressia\io\fightloader.h \
 		..\Depressia\io\entityloader.h \
 		..\Depressia\logic\entities\hero.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
-		..\Depressia\logic\skills\attack.h \
-		..\Depressia\logic\entities\entity.h \
-		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\gui\spriteloop.h \
 		..\Depressia\gui\spritetemplate.h \
@@ -12988,6 +12985,9 @@ release\fightloader.obj: ..\Depressia\io\fightloader.cpp ..\Depressia\io\fightlo
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
 		..\Depressia\gui\spriteunique.h \
+		..\Depressia\logic\skills\attack.h \
+		..\Depressia\logic\entities\entity.h \
+		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
