@@ -404,7 +404,7 @@ void BattleFrame::playDamage()
     {
         for (unsigned long long i=0 ; i < hited.size() ; i++)
         {
-            damageEntity(hited[i],int(i));
+            damageEntity(hited[i],i);
         }
     }
     ok->show();
@@ -425,8 +425,11 @@ void BattleFrame::callAttack()
 
         if(mob != nullptr)
         {
-            selectionEntity[i]->setText(QString::fromStdString(mob->getName()));
-            selectionEntity[i]->show();
+            if(mob->isAlive())
+            {
+                selectionEntity[i]->setText(QString::fromStdString(mob->getName()));
+                selectionEntity[i]->show();
+            }
         }
     }
 
@@ -516,8 +519,11 @@ void BattleFrame::callSkill()
 
             if(allie != nullptr)
             {
-                selectionEntity[i]->setText(QString::fromStdString(allie->getName()));
-                selectionEntity[i]->show();
+                if(allie->isAlive())
+                {
+                    selectionEntity[i]->setText(QString::fromStdString(allie->getName()));
+                    selectionEntity[i]->show();
+                }
             }
         }
     }
@@ -529,8 +535,11 @@ void BattleFrame::callSkill()
 
             if(mob != nullptr)
             {
-                selectionEntity[i]->setText(QString::fromStdString(mob->getName()));
-                selectionEntity[i]->show();
+                if(mob->isAlive())
+                {
+                    selectionEntity[i]->setText(QString::fromStdString(mob->getName()));
+                    selectionEntity[i]->show();
+                }
             }
         }
     }
@@ -564,7 +573,28 @@ void BattleFrame::damageEntity(Entity *s, unsigned long long i)
 void BattleFrame::resetHitedSprite(unsigned long long i)
 {
     hited[i]->getSpriteDamage()->hide();
-    hited[i]->getSpriteNormal()->show();
+    if(!hited[i]->isAlive()){
+        if(dynamic_cast<Hero*>(hited[i]) != nullptr)
+        {
+            dynamic_cast<Hero*>(hited[i])->getSpriteKilled()->show();
+        }
+        else
+        {
+            dynamic_cast<Mob*>(hited[i])->getSpriteKilled()->show();
+            dynamic_cast<Mob*>(hited[i])->getSpriteKilled()->play(i);
+            QObject::connect(dynamic_cast<Mob*>(hited[i])->getSpriteKilled(), SIGNAL(reset(unsigned long long)), this, SLOT(hideSprite(unsigned long long)));
+
+        }
+    }
+    else
+    {
+        hited[i]->getSpriteNormal()->show();
+    }
+}
+
+void BattleFrame::hideSprite(unsigned long long i)
+{
+    hited[i]->getSpriteKilled()->hide();
 }
 
 void BattleFrame::attackEntity(Entity *s)

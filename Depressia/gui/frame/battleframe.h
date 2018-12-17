@@ -30,6 +30,7 @@ public slots :
     void playDamage();
     void resetCurrentSprite();
     void resetHitedSprite(unsigned long long);
+    void hideSprite(unsigned long long);
 
     void callAttack();
     void choixEntity(int i);

@@ -1,5 +1,5 @@
 unique
-4
-112
-176
+6
+136
+128
 ../ressources/images/sprites/killed.png
