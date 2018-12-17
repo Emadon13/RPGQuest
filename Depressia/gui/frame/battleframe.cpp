@@ -121,7 +121,6 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
             scene->addItem(ennemySprite[i][0]);
 
             ennemySprite[i][1] = mob->getSpriteAttack();
-            cout << mob->getSpriteAttack() << endl;
             if(i%2==1) ennemySprite[i][1]->setPos(QPointF(int(((WindowWidth*0.5)-espacementSprite*(i+1)-espacementMilieu)),int((WindowHeight/2))));
             else ennemySprite[i][1]->setPos(QPointF(int(((WindowWidth*0.5)-espacementSprite*(i+1)-espacementMilieu)),int((WindowHeight/2-espacementSprite))));
             ennemySprite[i][1]->setToolTip(QString::fromStdString(mob->getName()));
@@ -392,6 +391,7 @@ void::BattleFrame::playTurn()
     else
     {
         skillEntity(current);
+        //playSkillEffect();
     }
 
     for (int i=0 ; i < Fight::nb_e ; i=i+1)
@@ -413,6 +413,17 @@ void BattleFrame::playDamage()
         }
     }
     ok->show();
+}
+
+void BattleFrame::playSkillEffect()
+{
+    if(!current->hasSkillMiss(skillNumber))
+    {
+        for (unsigned long long i=0 ; i < hited.size() ; i++)
+        {
+            effectEntity(hited[i],i);
+        }
+    }
 }
 
 void BattleFrame::callAttack()
@@ -579,6 +590,21 @@ void BattleFrame::damageEntity(Entity *s, unsigned long long i)
     s->getSpriteDamage()->show();
     s->getSpriteDamage()->play(i);
     QObject::connect(hited[i]->getSpriteDamage(), SIGNAL(reset(unsigned long long)), this, SLOT(resetHitedSprite(unsigned long long)));
+}
+
+void BattleFrame::effectEntity(Entity *s, unsigned long long i)
+{
+    spriteEffect[i]=current->getMove(skillNumber)->getSprite();
+    spriteEffect[i]->setPos(QPointF(s->getSpriteNormal()->x(),s->getSpriteNormal()->y()));
+    scene->addItem(spriteEffect[i]);
+    dynamic_cast<SpriteUnique*>(spriteEffect[i])->play(i);
+
+    QObject::connect(dynamic_cast<SpriteUnique*>(spriteEffect[i]), SIGNAL(reset(unsigned long long)), this, SLOT(stopEffect(unsigned long long)));
+}
+
+void BattleFrame::stopEffect(unsigned long long i)
+{
+    spriteEffect[int(i)]->hide();
 }
 
 void BattleFrame::resetHitedSprite(unsigned long long i)

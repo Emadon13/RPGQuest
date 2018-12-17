@@ -17,6 +17,7 @@ class BattleFrame : QObject
 public slots :
     void killEntity(Entity *sprite);
     void damageEntity(Entity *sprite, unsigned long long i);
+    void effectEntity(Entity *sprite, unsigned long long i);
     void deleteEntity(Entity *sprite);
     void attackEntity(Entity *sprite);
     void skillEntity(Entity *sprite);
@@ -28,9 +29,11 @@ public slots :
     void updateUI();
     void callSkill();
     void playDamage();
+    void playSkillEffect();
     void resetCurrentSprite();
     void resetHitedSprite(unsigned long long);
     void hideSprite(unsigned long long);
+    void stopEffect(unsigned long long i);
 
     void callAttack();
     void choixEntity(int i);
@@ -54,6 +57,7 @@ public:
     EnemyUI* ennemyUI[Fight::nb_e];
     SpriteTemplate* teamSprite[Fight::nb_e][5];
     SpriteTemplate* ennemySprite[Fight::nb_e][5];
+    SpriteTemplate* spriteEffect[Fight::nb_e*2];
 
     Hero *allie;
     Mob *mob;
