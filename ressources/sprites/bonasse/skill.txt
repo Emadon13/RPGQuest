@@ -1,5 +1,5 @@
 unique
-4
+7
 128
 184
-../ressources/images/sprites/sprite_seraphina_attack.png
+../ressources/images/sprites/sprite_seraphina_skill.png

@@ -30,14 +30,14 @@ SpriteTemplate* SpriteLoader::generate(string path)
         }
         else
         {
-            cout<<"Erreur de type sprite"<< path << endl;
+            cout<<"Erreur de type sprite : '"<< path << "'" << endl;
         }
         return nullptr;
     }
 
     else
     {
-        cout << "ERREUR : sprite " << path << "non trouvé";
+        cout << "ERREUR : sprite '" << path << "' non trouvé";
         return nullptr;
     }
 }

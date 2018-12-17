@@ -4,7 +4,7 @@ Bonasse
 50
 30
 20
-50
+10
 ../ressources/sprites/bonasse/normal.txt
 ../ressources/sprites/bonasse/damage.txt
 ../ressources/sprites/bonasse/attack.txt
