@@ -3,7 +3,7 @@
 using namespace std;
 
 Attack::Attack():
-    Skill("Attaque", "L'attaque de base", "",0, one_enemy),
+    Skill("Attaque", "L'attaque de base", "../ressources/sprites/skills/eclate-roc.txt",0, one_enemy),
     coef(1.0)
 {
 
