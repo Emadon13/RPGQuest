@@ -1,5 +1,5 @@
 unique
 15
-100
-136
+200
+272
 ../ressources/images/sprites/skills/cascade.png
