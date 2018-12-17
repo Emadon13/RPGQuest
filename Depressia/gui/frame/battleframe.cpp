@@ -393,18 +393,18 @@ void::BattleFrame::playTurn()
     {
         selectionEntity[i]->hide();
     }
-
     QObject::connect(current->getSpriteAttack(), SIGNAL(done()), this, SLOT(playDamage()));
     QObject::connect(current->getSpriteSkill(), SIGNAL(done()), this, SLOT(playDamage()));
 }
 
 void BattleFrame::playDamage()
 {
+    resetCurrentSprite();
     if(!current->hasSkillMiss(skillNumber))
     {
         for (unsigned long long i=0 ; i < hited.size() ; i++)
         {
-            damageEntity(hited[i]);
+            damageEntity(hited[i],int(i));
         }
     }
     ok->show();
@@ -550,28 +550,35 @@ void BattleFrame::choixEntity(int i)
 void BattleFrame::killEntity(Entity *s)
 {
     s->getSpriteNormal()->hide();
-    s->getSpriteKilled()->show();
+    dynamic_cast<Hero*>(s)->getSpriteKilled()->show();
 }
 
-void BattleFrame::damageEntity(Entity *s)
+void BattleFrame::damageEntity(Entity *s, unsigned long long i)
 {
     s->getSpriteNormal()->hide();
     s->getSpriteDamage()->show();
-    s->getSpriteDamage()->play();
+    s->getSpriteDamage()->play(i);
+    QObject::connect(hited[i]->getSpriteDamage(), SIGNAL(reset(unsigned long long)), this, SLOT(resetHitedSprite(unsigned long long)));
+}
+
+void BattleFrame::resetHitedSprite(unsigned long long i)
+{
+    hited[i]->getSpriteDamage()->hide();
+    hited[i]->getSpriteNormal()->show();
 }
 
 void BattleFrame::attackEntity(Entity *s)
 {
     s->getSpriteNormal()->hide();
     s->getSpriteAttack()->show();
-    s->getSpriteAttack()->play();
+    s->getSpriteAttack()->play(NULL);
 }
 
 void BattleFrame::skillEntity(Entity *s)
 {
-    s->getSpriteSkill()->hide();
+    s->getSpriteNormal()->hide();
     s->getSpriteSkill()->show();
-    s->getSpriteSkill()->play();
+    s->getSpriteSkill()->play(NULL);
 }
 
 void BattleFrame::deleteEntity(Entity *s)
@@ -579,9 +586,11 @@ void BattleFrame::deleteEntity(Entity *s)
 
 }
 
-void BattleFrame::setCorrectSprite()
+void BattleFrame::resetCurrentSprite()
 {
-
+    current->getSpriteAttack()->hide();
+    current->getSpriteSkill()->hide();
+    current->getSpriteNormal()->show();
 }
 
 

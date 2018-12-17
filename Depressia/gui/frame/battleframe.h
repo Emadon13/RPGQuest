@@ -16,7 +16,7 @@ class BattleFrame : QObject
 
 public slots :
     void killEntity(Entity *sprite);
-    void damageEntity(Entity *sprite);
+    void damageEntity(Entity *sprite, unsigned long long i);
     void deleteEntity(Entity *sprite);
     void attackEntity(Entity *sprite);
     void skillEntity(Entity *sprite);
@@ -28,7 +28,8 @@ public slots :
     void updateUI();
     void callSkill();
     void playDamage();
-    void setCorrectSprite();
+    void resetCurrentSprite();
+    void resetHitedSprite(unsigned long long);
 
     void callAttack();
     void choixEntity(int i);

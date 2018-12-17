@@ -12,11 +12,13 @@ void SpriteUnique::nextFrame()
         emit done();
         timer->stop();
         currentFrame = 0;
+        emit reset(entityNumber);
     }
     else this->update(0,0,width,height);
 }
 
-void SpriteUnique::play(){
+void SpriteUnique::play(unsigned long long e){
+    entityNumber=e;
     timer->start(100);
 }
 
