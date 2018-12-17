@@ -5,6 +5,7 @@ using namespace std;
 Recover::Recover():
     Skill("Soin",
           "Un sort de soin basique",
+          "",
           2,
           self),
     coef(1)
@@ -14,10 +15,11 @@ Recover::Recover():
 
 Recover::Recover(string n,
                  string t,
+                 string s,
                  int mp,
                  Range rng,
                  float c):
-    Skill(n,t,mp,rng),
+    Skill(n,t,s,mp,rng),
     coef(c)
 {
 

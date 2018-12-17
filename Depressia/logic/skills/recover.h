@@ -11,7 +11,7 @@ class Recover : public Skill
 {
 public:
     Recover();
-    Recover(std::string n, std::string t, int mp, Range rng, float c);
+    Recover(std::string n, std::string t, std::string s, int mp, Range rng, float c);
     ~Recover();
 
     virtual std::vector<int> call(Entity* user, std::vector<Entity*> targets);

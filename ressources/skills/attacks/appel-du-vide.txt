@@ -1,5 +1,6 @@
 Appel du Vide
 ???
+../ressources/sprites/skills/cascade.txt
 0
 all_entities
 attack

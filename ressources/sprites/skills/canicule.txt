@@ -1,0 +1,5 @@
+unique
+11
+40
+80
+../ressources/images/sprites/skills/canicule.png

@@ -6,6 +6,7 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include "io/spriteloader.h"
 
 enum HitEffect {miss, normal, critical};
 enum Range { self, one_ally, one_enemy, group_allies, group_enemies, all_entities, several };
@@ -15,11 +16,12 @@ class Skill
 {
 public:
     Skill();
-    Skill(std::string n, std::string t, int m_mpCost, Range);
+    Skill(std::string n, std::string t, std::string s, int m_mpCost, Range);
     virtual ~Skill();
 
     std::string getName();
     std::string getText();
+    SpriteUnique* getSprite();
     int getMpCost();
     std::string getSummary();
     Range getRange();
@@ -30,6 +32,7 @@ public:
 protected:
     std::string name;
     std::string text;
+    SpriteUnique* sprite;
     int mpCost;
     Range range;
     std::string summary;

@@ -1,5 +1,6 @@
 Canicule
 Une vague de chaleur qui frappe tous les ennemis.
+../ressources/sprites/skills/canicule.txt
 4
 group_enemies
 attack

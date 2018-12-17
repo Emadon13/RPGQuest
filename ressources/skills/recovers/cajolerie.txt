@@ -1,5 +1,6 @@
 Cajolerie
 Concentre son amour pour soigner un allié.
+../ressources/sprites/skills/cascade.txt
 3
 one_ally
 recover

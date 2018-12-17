@@ -1,5 +1,6 @@
 mitra-poing
 Un coup de poing particulièrement violent.
+../ressources/sprites/skills/eclate-roc.txt
 1
 one_enemy
 attack

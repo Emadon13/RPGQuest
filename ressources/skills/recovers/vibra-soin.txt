@@ -1,5 +1,6 @@
 Vibra-soin
 Une onde qui soigne un adversaire wtf
+../ressources/sprites/skills/canicule.txt
 10
 one_enemy
 recover

@@ -1,5 +1,6 @@
 Pluie d'Etoiles
 Une pluie d'etoiles dorees qui soignent toute l'equipe.
+../ressources/sprites/skills/canicule.txt
 5
 group_allies
 recover

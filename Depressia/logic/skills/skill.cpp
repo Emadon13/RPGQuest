@@ -11,6 +11,7 @@ Skill::Skill() :
 
 Skill::Skill(string n,
              string t,
+             string s,
              int m_mpCost,
              Range c):
     name(n),
@@ -18,7 +19,9 @@ Skill::Skill(string n,
     mpCost(m_mpCost),
     range(c),
     hitEffect(miss)
-{}
+{
+    sprite = dynamic_cast<SpriteUnique*>(SpriteLoader::generate(s));
+}
 
 
 Skill::~Skill()
@@ -33,6 +36,11 @@ string Skill::getName()
 string Skill::getText()
 {
     return text;
+}
+
+SpriteUnique* Skill::getSprite()
+{
+    return sprite;
 }
 
 int Skill::getMpCost()

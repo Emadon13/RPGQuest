@@ -1,5 +1,6 @@
 E-coque
 Un oeuf à la coque. C'est toujours réconfortant.
+../ressources/sprites/skills/eclate-roc.txt
 2
 self
 recover

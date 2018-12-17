@@ -15,12 +15,13 @@ Skill* SkillLoader::generate()
 Skill* SkillLoader::generate(string path)
 {
     ifstream file(path);
-    string name, text, mpc, skill, ra, co, rng;
+    string name, text, sprite, mpc, skill, ra, co, rng;
 
     if(file)
     {
         getline(file, name);
         getline(file, text);
+        getline(file, sprite);
         getline(file, mpc);
         getline(file,rng);
         getline(file, skill);
@@ -28,13 +29,13 @@ Skill* SkillLoader::generate(string path)
         if(skill == "attack")
         {
             getline(file, co);
-            return new Attack(name, text, int(stoi(mpc)), SkillLoader::compareRange(rng), float(stoi(co)));
+            return new Attack(name, text, sprite, int(stoi(mpc)), SkillLoader::compareRange(rng), float(stoi(co)));
         }
 
         else if(skill == "recover")
         {
             getline(file, co);
-            return new Recover(name, text, int(stoi(mpc)), SkillLoader::compareRange(rng), float(stoi(co)));
+            return new Recover(name, text, sprite, int(stoi(mpc)), SkillLoader::compareRange(rng), float(stoi(co)));
         }
 
         else

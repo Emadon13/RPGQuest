@@ -10,7 +10,7 @@ class Attack : public Skill
 {
 public:
     Attack();
-    Attack(std::string n, std::string t, int mp, Range rng, float c);
+    Attack(std::string n, std::string t, std::string s, int mp, Range rng, float c);
     ~Attack();
 
     virtual std::vector<int> call(Entity* user, std::vector<Entity*> targets);

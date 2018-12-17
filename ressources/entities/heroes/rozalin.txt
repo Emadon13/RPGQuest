@@ -2,9 +2,9 @@ Rozalin
 1
 150
 100
-400
 200
-400
+200
+100
 ../ressources/sprites/rozalin/normal.txt
 ../ressources/sprites/rozalin/damage.txt
 ../ressources/sprites/rozalin/attack.txt

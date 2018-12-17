@@ -3,7 +3,7 @@
 using namespace std;
 
 Attack::Attack():
-    Skill("Attaque", "L'attaque de base", 0, one_enemy),
+    Skill("Attaque", "L'attaque de base", "",0, one_enemy),
     coef(1.0)
 {
 
@@ -11,10 +11,11 @@ Attack::Attack():
 
 Attack::Attack(string n,
                string t,
+               string s,
                int mp,
                Range rng,
                float c):
-    Skill(n, t, mp, rng),
+    Skill(n, t, s, mp, rng),
     coef(c)
 
 {
