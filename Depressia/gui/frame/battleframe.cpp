@@ -160,7 +160,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     int dialogHeight(int(WindowHeight*0.19));
 
     dialogCurrent = new QLabel(game);
-    dialogInfo->setText("Combat !");
+    dialogCurrent->setText("Combat !");
     dialogCurrent->setFixedSize(int(dialogWidth*0.2),int(dialogHeight*0.2));
     dialogCurrent->move(WindowWidth/2-dialogCurrent->width()/2,0);
     dialogCurrent->setAlignment(Qt::AlignCenter);
@@ -179,8 +179,6 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     dialogSelection->setFixedSize(dialogWidth,dialogHeight);
     dialogSelection->move(WindowWidth/2-dialogWidth/2,WindowHeight-dialogHeight);
     dialogSelection->show();
-
-
 
     int boutonHeight(int(80/ratio));
     int boutonWidth(int(300/ratio));
@@ -332,14 +330,14 @@ void::BattleFrame::nextTurn()
             selectionEntity[i]->hide();
         }
 
-        if(dynamic_cast<Mob*>(current) != NULL)
+        if(dynamic_cast<Mob*>(current) != nullptr)
         {
             QObject::disconnect(retour, SIGNAL(clicked()), this, SLOT(showSelection()));
             skillNumber = (dynamic_cast<Mob*>(current))->chooseMove();
             hited=fight->target(dynamic_cast<Mob*>(current), skillNumber);
             playTurn();
         }
-        else if(dynamic_cast<Hero*>(current) != NULL)
+        else if(dynamic_cast<Hero*>(current) != nullptr)
         {
             QObject::connect(retour, SIGNAL(clicked()), this, SLOT(showSelection()));
             updateTurnInfo();
