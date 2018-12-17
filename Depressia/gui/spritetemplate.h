@@ -20,6 +20,9 @@ public:
 
     SpriteTemplate(int nb, int w, int h, std::string s);
 
+    int getWidth();
+    int getHeight();
+
 protected slots:
     virtual void nextFrame();
 

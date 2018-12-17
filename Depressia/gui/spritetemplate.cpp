@@ -39,6 +39,17 @@ void SpriteTemplate::nextFrame()
 
 }
 
+int SpriteTemplate::getWidth()
+{
+   return width;
+}
+
+int SpriteTemplate::getHeight()
+{
+    return height;
+}
+
+
 void SpriteTemplate::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     Q_UNUSED(event);

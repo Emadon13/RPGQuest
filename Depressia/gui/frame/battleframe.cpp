@@ -389,7 +389,7 @@ void::BattleFrame::playTurn()
     else
     {
         skillEntity(current);
-        //playSkillEffect();
+        playSkillEffect();
     }
 
     for (int i=0 ; i < Fight::nb_e ; i=i+1)
@@ -593,7 +593,7 @@ void BattleFrame::damageEntity(Entity *s, unsigned long long i)
 void BattleFrame::effectEntity(Entity *s, unsigned long long i)
 {
     spriteEffect[i]=current->getMove(skillNumber)->getSprite();
-    spriteEffect[i]->setPos(QPointF(s->getSpriteNormal()->x(),s->getSpriteNormal()->y()));
+    spriteEffect[i]->setPos(QPointF(s->getSpriteNormal()->x()+s->getSpriteNormal()->getWidth()/2-spriteEffect[i]->getWidth()/2,s->getSpriteNormal()->y()+s->getSpriteNormal()->getHeight()/2-spriteEffect[i]->getHeight()/2));
     scene->addItem(spriteEffect[i]);
     dynamic_cast<SpriteUnique*>(spriteEffect[i])->play(i);
 
