@@ -54,8 +54,10 @@ SOURCES += \
     gui/spritetemplate.cpp \
     gui/spriteloop.cpp \
     gui/spriteunique.cpp \
+    gui/window/settingswindow.cpp \
     logic/skills/buff.cpp \
-    gui/window/settingswindow.cpp
+    logic/entities/buffstats.cpp \
+    logic/entities/onebuffstat.cpp
 
 
 
@@ -113,4 +115,7 @@ HEADERS += \
     gui/spritetemplate.h \
     gui/spriteloop.h \
     gui/spriteunique.h \
-    gui/window/settingswindow.h
+    gui/window/settingswindow.h \
+    logic/skills/buff.h \
+    logic/entities/buffstats.h \
+    logic/entities/onebuffstat.h
