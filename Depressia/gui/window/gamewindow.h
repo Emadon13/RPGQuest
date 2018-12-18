@@ -39,6 +39,7 @@ public slots:
     void GoRight();
     void GoLeft();
     void afficheItem();
+    void afficheParametre();
     void resetFocus();
 
 private:

@@ -24,6 +24,12 @@ ItemFrame::ItemFrame(GameWindow *g)
     int TitleWidth(int(500/ratio));
     int TitleHeight(int(100/ratio));
 
+    QLabel *back = new QLabel(game);
+    back->setPixmap(QPixmap("../ressources/images/hud/background-game-3.png").scaled(WindowWidth,WindowHeight));
+    back->setFixedSize(WindowWidth,WindowHeight);
+    back->move(0,0);
+    back->show();
+
     ClickableLabel *item = new ClickableLabel(game);
     item->setPixmap(QPixmap("../ressources/images/hud/icone.png").scaled(ImageWidth,ImageWidth));
     item->setFixedSize(ImageWidth,ImageHeight);
@@ -87,36 +93,36 @@ ItemFrame::ItemFrame(GameWindow *g)
     }
 
     ClickableLabel *teamInfo = new ClickableLabel(game);
-    teamInfo->setPixmap(QPixmap("../ressources/images/hud/info-box.png").scaled(InfoWidth,InfoHeight));
     teamInfo->setFixedSize(InfoWidth,InfoHeight);
+    teamInfo->setText("Zone info-team");
     teamInfo->installEventFilter(game);
-    teamInfo->move(WindowWidth-InfoWidth,0);
+    teamInfo->move(WindowWidth-InfoWidth,WindowHeight-InfoHeight);
     teamInfo->setCursor(QCursor(QPixmap("../ressources/images/hud/cursor.png"), 0, 0));
+    teamInfo->setAlignment(Qt::AlignCenter);
     teamInfo->show();
 
-    QLabel *zoneInfoImage = new QLabel(game);
-    zoneInfoImage->setPixmap(QPixmap("../ressources/images/hud/info-box.png").scaled(InfoWidth,InfoHeight));
-    zoneInfoImage->setFixedSize(InfoWidth,InfoHeight);
-    zoneInfoImage->move(0,0);
-    zoneInfoImage->show();
     QLabel *zoneInfoText = new QLabel(game);
     zoneInfoText->setFixedSize(InfoWidth,InfoHeight);
     zoneInfoText->setText(QString::fromStdString(map->getCurrentPosition().getText()));
     zoneInfoText->setAlignment(Qt::AlignCenter);
-    zoneInfoText->move(0,0);
+    zoneInfoText->move(0,WindowHeight-InfoHeight);
+    zoneInfoText->setWordWrap(true);
     zoneInfoText->show();
 
-    QLabel *zoneTitleImage = new QLabel(game);
-    zoneTitleImage->setPixmap(QPixmap("../ressources/images/hud/dialog-box.png").scaled(TitleWidth,TitleHeight));
-    zoneTitleImage->setFixedSize(TitleWidth,TitleHeight);
-    zoneTitleImage->move(0,WindowHeight-TitleHeight);
-    zoneTitleImage->show();
     QLabel *zoneTitleText = new QLabel(game);
     zoneTitleText->setFixedSize(TitleWidth,TitleHeight);
     zoneTitleText->setText(QString::fromStdString(map->getCurrentPosition().getName()));
     zoneTitleText->setAlignment(Qt::AlignCenter);
-    zoneTitleText->move(0,WindowHeight-TitleHeight);
+    zoneTitleText->move(0,0);
+    zoneTitleText->setStyleSheet("QLabel{color:white;}");
+    zoneTitleText->setWordWrap(true);
     zoneTitleText->show();
 
+    QLabel *parametre = new QLabel(game);
+    parametre->setFixedSize(TitleWidth,TitleHeight);
+    parametre->setText("Zone parametre");
+    parametre->setAlignment(Qt::AlignCenter);
+    parametre->move(WindowWidth-TitleWidth,0);
+    parametre->show();
 }
 

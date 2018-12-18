@@ -192,11 +192,12 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
                           "QPushButton:pressed {color:white; background-color: #000000;"
                           "border-style: inset;}";
 
-    QString styleBoutonRond =   "QPushButton { background-color: white;"
-                                "border-style: solid;"
-                                "border-width:1px;"
-                                "border-radius:25px;"
-                                "border-color: black;}";
+    QString styleBoutonRond = "QPushButton {color:white; background-color: #302514;"
+                              "border-style: outset; border-width: 1px;"
+                              "border-radius: 25px; border-color: beige;"
+                              "font: bold 14px; padding: 6px;}"
+                              "QPushButton:pressed {color:white; background-color: #000000;"
+                              "border-style: inset;}";
 
     attack = new QPushButton("Attaquer", game);
     attack->setFixedSize(boutonWidth,boutonHeight);
@@ -379,6 +380,8 @@ void::BattleFrame::updateUI()
 void::BattleFrame::playTurn()
 {
     QObject::disconnect(retour, SIGNAL(clicked()), this, SLOT(showSelection()));
+
+    updateCurrentPlayer();
 
     dialogInfo->setText(QString::fromStdString(current->getSkillSummary(skillNumber)));
     updateUI();

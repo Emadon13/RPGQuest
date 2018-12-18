@@ -54,7 +54,8 @@ SOURCES += \
     gui/spritetemplate.cpp \
     gui/spriteloop.cpp \
     gui/spriteunique.cpp \
-    logic/skills/buff.cpp
+    logic/skills/buff.cpp \
+    gui/window/settingswindow.cpp
 
 
 
@@ -111,4 +112,5 @@ HEADERS += \
     io/fightloader.h \
     gui/spritetemplate.h \
     gui/spriteloop.h \
-    gui/spriteunique.h
+    gui/spriteunique.h \
+    gui/window/settingswindow.h

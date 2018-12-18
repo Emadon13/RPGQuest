@@ -13,6 +13,7 @@ public:
 
 private :
 
+    QPushButton *settings;
     Map *map;
     MapElement mapElement;
     GameWindow *game;

@@ -14,6 +14,7 @@
 #include <vector>
 #include "logic/world/map.h"
 #include "gui/window/itemwindow.h"
+#include "gui/window/settingswindow.h"
 #include "logic/events/itemfound.h"
 #include "logic/events/fight.h"
 #include "logic/events/video.h"
@@ -97,6 +98,14 @@ void GameWindow::afficheItem()
     ItemWindow *itemWindow=new ItemWindow(this);
     itemWindow->show();
     map->setEventHapp();
+    CreateGameFrame();
+    setDisabled(true);
+}
+
+void GameWindow::afficheParametre()
+{
+    SettingsWindow *settingsWindow=new SettingsWindow(this);
+    settingsWindow->show();
     CreateGameFrame();
     setDisabled(true);
 }
