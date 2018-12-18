@@ -15,7 +15,7 @@ Skill* SkillLoader::generate()
 Skill* SkillLoader::generate(string path)
 {
     ifstream file(path);
-    string name, text, sprite, mpc, skill, ra, co, rng;
+    string name, text, sprite, mpc, skill, ra, co, rng, od;
 
     if(file)
     {
@@ -35,7 +35,12 @@ Skill* SkillLoader::generate(string path)
         else if(skill == "recover")
         {
             getline(file, co);
-            return new Recover(name, text, sprite, int(stoi(mpc)), SkillLoader::compareRange(rng), float(stoi(co)));
+            getline(file, od);
+            if(od=="reborn")
+                return new Recover(name, text, sprite, int(stoi(mpc)), reborn, float(stoi(co)));
+
+            else
+                return new Recover(name, text, sprite, int(stoi(mpc)), SkillLoader::compareRange(rng), float(stoi(co)));
         }
 
         else

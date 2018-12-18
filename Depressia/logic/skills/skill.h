@@ -9,7 +9,7 @@
 #include "io/spriteloader.h"
 
 enum HitEffect {miss, normal, critical};
-enum Range { self, one_ally, one_enemy, group_allies, group_enemies, all_entities, several };
+enum Range { self, one_ally, one_enemy, group_allies, group_enemies, all_entities, several, reborn };
 
 class Entity;
 class Skill

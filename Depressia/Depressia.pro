@@ -53,7 +53,8 @@ SOURCES += \
     io/fightloader.cpp \
     gui/spritetemplate.cpp \
     gui/spriteloop.cpp \
-    gui/spriteunique.cpp
+    gui/spriteunique.cpp \
+    logic/skills/buff.cpp
 
 
 
