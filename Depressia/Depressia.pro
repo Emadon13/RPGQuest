@@ -6,8 +6,6 @@ SOURCES += \
     logic/entities/entity.cpp \
     logic/skills/skill.cpp \
     logic/skills/recover.cpp \
-    gui/stage.cpp \
-    gui/globalspec.cpp \
     logic/world/map.cpp \
     logic/events/event.cpp \
     logic/items/item.cpp \
@@ -41,7 +39,7 @@ SOURCES += \
     logic/events/finalscreen.cpp \
     gui/frame/optionframe.cpp \
     gui/frame/finalframe.cpp \
-    gui/sprite.cpp \
+    gui/sprite/sprite.cpp \
     logic/skills/drain.cpp \
     logic/skills/recoil.cpp \
     logic/skills/attack.cpp \
@@ -51,9 +49,9 @@ SOURCES += \
     io/spriteloader.cpp \
     logic/entities/mob.cpp \
     io/fightloader.cpp \
-    gui/spritetemplate.cpp \
-    gui/spriteloop.cpp \
-    gui/spriteunique.cpp \
+    gui/sprite/spritetemplate.cpp \
+    gui/sprite/spriteloop.cpp \
+    gui/sprite/spriteunique.cpp \
     gui/window/settingswindow.cpp \
     logic/skills/buff.cpp \
     logic/entities/buffstats.cpp \
@@ -68,8 +66,6 @@ HEADERS += \
     logic/entities/entity.h \
     logic/skills/skill.h \
     logic/skills/recover.h \
-    gui/stage.h \
-    gui/globalspec.h \
     logic/world/map.h \
     logic/events/event.h \
     logic/items/item.h \
@@ -103,7 +99,7 @@ HEADERS += \
     logic/events/finalscreen.h \
     gui/frame/optionframe.h \
     gui/frame/finalframe.h \
-    gui/sprite.h \
+    gui/sprite/sprite.h \
     logic/skills/drain.h \
     logic/skills/recoil.h \
     logic/skills/attack.h \
@@ -113,9 +109,9 @@ HEADERS += \
     io/spriteloader.h \
     logic/entities/mob.h \
     io/fightloader.h \
-    gui/spritetemplate.h \
-    gui/spriteloop.h \
-    gui/spriteunique.h \
+    gui/sprite/spritetemplate.h \
+    gui/sprite/spriteloop.h \
+    gui/sprite/spriteunique.h \
     gui/window/settingswindow.h \
     logic/skills/buff.h \
     logic/entities/buffstats.h \

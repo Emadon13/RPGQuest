@@ -4,8 +4,8 @@
 #define SPRITELOADER_H
 
 //#include "gui/sprite.h"
-#include "gui/spriteloop.h"
-#include "gui/spriteunique.h"
+#include "gui/sprite/spriteloop.h"
+#include "gui/sprite/spriteunique.h"
 #include <fstream>
 #include<iostream>
 

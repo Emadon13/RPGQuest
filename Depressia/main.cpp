@@ -1,10 +1,10 @@
 #include <QApplication>
 #include <QPushButton>
+#include <QTextCodec>
 #include <iostream>
 #include <iostream>
 #include <fstream>
 
-#include "gui/globalspec.h"
 #include "gui/window/mainwindow.h"
 #include "gui/window/gamewindow.h"
 #include "io/fightloader.h"
@@ -15,14 +15,13 @@
 
 using namespace std;
 
-GlobalSpec * globalSpec;
-
 int main(int argc, char *argv[])
 {
     // ------------TEST VINCENT ------------------
 
     // ------------TEST QUENTIN ------------------
     QApplication app(argc, argv);
+
     QApplication::setFont(QFont("Fixedsys"));
 
     Game game = Game();

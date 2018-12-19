@@ -10,12 +10,12 @@
 #include <QMediaPlayer>
 #include <QMediaPlaylist>
 #include <QVideoWidget>
-#include "gui/sprite.h"
+#include "gui/sprite/sprite.h"
 #include "gui/clickable/clickablelabel.h"
 #include "gui/frame/characterui.h"
 #include "gui/frame/enemyui.h"
-#include "gui/spriteloop.h"
-#include "gui/spriteunique.h"
+#include "gui/sprite/spriteloop.h"
+#include "gui/sprite/spriteunique.h"
 #include "io/spriteloader.h"
 
 BattleFrame::BattleFrame(GameWindow *g) : QObject()
@@ -408,9 +408,12 @@ void BattleFrame::playDamage()
     resetCurrentSprite();
     if(!current->hasSkillMiss(skillNumber))
     {
-        for (unsigned long long i=0 ; i < hited.size() ; i++)
+        if(dynamic_cast<Attack*>(current->getMove(skillNumber)) != NULL)
         {
-            damageEntity(hited[i],i);
+            for (unsigned long long i=0 ; i < hited.size() ; i++)
+            {
+                damageEntity(hited[i],i);
+            }
         }
     }
     ok->show();
@@ -520,10 +523,19 @@ void BattleFrame::showSkill()
 
 void BattleFrame::choixSkill(int i)
 {
-    dialogInfo->setText(QString::fromStdString(current->getMove(i)->getText()));
+    dialogInfo->setText(QString::fromStdString(current->getMove(i)->getText()+"<br> Cout : "+to_string(current->getMove(i)->getMpCost()))+" MP");
     dialogCurrent->setText(QString::fromStdString(current->getMove(i)->getName()));
-    okSkill->show();
     skillNumber=i;
+    if(current->getMp()>=current->getMove(skillNumber)->getMpCost())
+    {
+        okSkill->show();
+    }
+    else
+    {
+        okSkill->hide();
+        dialogInfo->setText(dialogInfo->text()+" ✖ <b>MP insuffisants !</b>");
+    }
+
 }
 
 void BattleFrame::callSkill()
@@ -606,6 +618,7 @@ void BattleFrame::effectEntity(Entity *s, unsigned long long i)
 void BattleFrame::stopEffect(unsigned long long i)
 {
     spriteEffect[int(i)]->hide();
+    cout << i << endl;
 }
 
 void BattleFrame::resetHitedSprite(unsigned long long i)

@@ -5,7 +5,7 @@
 #include <QMediaPlaylist>
 #include <QVideoWidget>
 #include <QSignalMapper>
-#include "gui/sprite.h"
+#include "gui/sprite/sprite.h"
 #include "gui/frame/characterui.h"
 #include "gui/frame/enemyui.h"
 #include "logic/events/fight.h"
