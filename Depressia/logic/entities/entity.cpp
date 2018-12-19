@@ -13,6 +13,7 @@ Entity::Entity() :
     att(1),
     def(1),
     spd(1),
+    buffs(new BuffStats()),
     skills(0),
     attack(new Attack()),
     battleIcon("")
@@ -47,6 +48,7 @@ Entity::Entity(string m_name,
     att(m_att),
     def(m_def),
     spd(m_spd),
+    buffs(new BuffStats()),
     skills(m_skills),
     attack(new Attack()),
     battleIcon(bi)
@@ -107,6 +109,11 @@ int Entity::getDef()
 int Entity::getSpd()
 {
     return spd;
+}
+
+BuffStats* Entity::getBuffs()
+{
+    return buffs;
 }
 
 Skill* Entity::getMove(int i)

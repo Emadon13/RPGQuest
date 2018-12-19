@@ -12,5 +12,6 @@ Rouge
 ../ressources/sprites/rouge/killed.txt
 ../ressources/images/icons/rouge-icon.png
 ../ressources/skills/attacks/canicule.txt
+../ressources/skills/buffs/tambour-battant.txt
 end_skill
 end

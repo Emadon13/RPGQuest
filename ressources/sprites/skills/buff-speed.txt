@@ -1,0 +1,5 @@
+unique
+9
+144
+136
+../ressources/images/sprites/skills/buff-speed.png

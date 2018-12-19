@@ -15,7 +15,7 @@ Skill* SkillLoader::generate()
 Skill* SkillLoader::generate(string path)
 {
     ifstream file(path);
-    string name, text, sprite, mpc, skill, ra, co, rng, od;
+    string name, text, sprite, mpc, skill, ra, co, rng, od, buffAtt, buffDef, buffSpd;
 
     if(file)
     {
@@ -43,9 +43,22 @@ Skill* SkillLoader::generate(string path)
                 return new Recover(name, text, sprite, int(stoi(mpc)), SkillLoader::compareRange(rng), float(stoi(co)));
         }
 
+        else if(skill == "buff")
+        {
+            getline(file, buffAtt);
+            getline(file, buffDef);
+            getline(file, buffSpd);
+
+            return new Buff(name, text, sprite, int(stoi(mpc)),
+                            SkillLoader::compareRange(rng),
+                            SkillLoader::compareWayToBuff(buffAtt),
+                            SkillLoader::compareWayToBuff(buffDef),
+                            SkillLoader::compareWayToBuff(buffSpd));
+        }
+
         else
         {
-            cout << "ERREUR : type de skill non reconnu" << endl;
+            cout << "ERREUR : type de skill '" << skill << "' non reconnu" << endl;
             return new Attack();
         }
     }
@@ -78,5 +91,21 @@ Range SkillLoader::compareRange(string range)
     {
         cout << "ERREUR : range inconnu" << endl;
         return one_enemy;
+    }
+}
+
+WayToBuff SkillLoader::compareWayToBuff(string wtb)
+{
+    if (wtb == "noBuff")
+        return noBuff;
+    else if (wtb == "buffUp")
+        return buffUp;
+    else if (wtb == "buffDown")
+        return buffDown;
+
+    else
+    {
+        cout << "ERREUR : wtb inconnu" << endl;
+        return noBuff;
     }
 }

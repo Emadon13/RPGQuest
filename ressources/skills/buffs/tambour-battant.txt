@@ -1,0 +1,9 @@
+Tambour Battant
+Entonne un cri de guerre pour augmenter l'attaque de toute l'équipe.
+../ressources/sprites/skills/buff-attack.txt
+5
+group_allies
+buff
+buffUp
+noBuff
+noBuff

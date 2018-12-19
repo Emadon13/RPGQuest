@@ -11,6 +11,7 @@
 #include "logic/skills/recover.h"
 #include "io/spriteloader.h"
 #include "io/qpixmaploader.h"
+#include "logic/entities/buffstats.h"
 
 class Sprite;
 class Entity
@@ -42,6 +43,7 @@ public:
     int getAtt();
     int getDef();
     int getSpd();
+    BuffStats* getBuffs();
 
     int static const max_lvl = 10;
 
@@ -79,6 +81,7 @@ protected:
     int att;
     int def;
     int spd;
+    BuffStats* buffs;
     std::vector<Skill*>skills;
     Skill* attack;
     SpriteTemplate* sprites[5];

@@ -64,23 +64,27 @@ vector <int> Attack::call(Entity* user, vector<Entity*> targets)
 
 int Attack::effect(Entity* user, Entity* target)
 {
-    int deg;
-    if (target->getDef() <= 0)
-    {
-        deg = int(user->getAtt()*user->getLvl()*coef*hitEffect);
-    }
+    int totalAtt, totalDef, deg;
+
+    if (hitEffect == 0)
+        return 0;
 
     else
     {
-        deg = int((user->getAtt()*user->getLvl()*coef*hitEffect) / (target->getDef()));
+        totalAtt = int(user->getAtt()*user->getLvl()*coef*user->getBuffs()->getCoef(buffAttack));
+        totalDef = int(target->getDef()*target->getBuffs()->getCoef(buffDefense));
+
+        if(totalDef <= 0)
+            deg = totalAtt;
+        else
+            deg = totalAtt/totalDef;
+
+        if (deg > target->getHp())
+            deg = target->getHp();
+
+        target->takeDamage(deg);
     }
-
-    if (deg > target->getHp()) deg = target->getHp();
-
-    target->takeDamage(deg);
-
     return deg;
-
 }
 
 void Attack::setSummary(string user, vector<string> targets, vector<int> degs)
