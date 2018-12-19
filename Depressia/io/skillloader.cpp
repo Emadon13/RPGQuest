@@ -105,7 +105,7 @@ WayToBuff SkillLoader::compareWayToBuff(string wtb)
 
     else
     {
-        cout << "ERREUR : wtb inconnu" << endl;
+        cout << "ERREUR : wtb inconnu" << wtb << endl;
         return noBuff;
     }
 }

@@ -4,7 +4,7 @@ Bonasse
 50
 30
 20
-10
+40
 ../ressources/sprites/bonasse/normal.txt
 ../ressources/sprites/bonasse/damage.txt
 ../ressources/sprites/bonasse/attack.txt
@@ -14,5 +14,6 @@ Bonasse
 ../ressources/skills/recovers/e-coque.txt
 ../ressources/skills/recovers/cajolerie.txt
 ../ressources/skills/recovers/vibra-soin.txt
+../ressources/skills/buffs/exuviation.txt
 end_skill
 end

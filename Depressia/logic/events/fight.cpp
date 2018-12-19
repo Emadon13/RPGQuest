@@ -74,7 +74,7 @@ Entity* Fight::nextPlayer()
     for (int i=0 ; i<2*nb_e ; i++)
         if (all[i] != nullptr)
             if(all[i]->isAlive())
-                speedLimit += int(all[i]->getSpd()*all[i]->getBuffs()->getCoef(buffSpeed));
+                speedLimit += int(all[i]->getSpd());
 
     for (int i=0 ; i<2*nb_e ; i++)
         if(speeds[i] > speeds[maxSpeed])
@@ -97,7 +97,7 @@ Entity* Fight::nextPlayer()
     {
         if (all[i] != nullptr)
             if(all[i]->isAlive())
-                speeds[i] += all[i]->getSpd();
+                speeds[i] += int(float(all[i]->getSpd())*float(all[i]->getBuffs()->getCoef(buffSpeed)));
     }
 
     return nextPlayer();

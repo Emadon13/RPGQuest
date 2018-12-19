@@ -66,7 +66,7 @@ Range Skill::getRange()
 bool Skill::hasMiss()
 {
     if(hitEffect == miss)
-        return true;
+        return false;
     else
         return false;
 }

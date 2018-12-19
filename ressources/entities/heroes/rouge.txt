@@ -4,7 +4,7 @@ Rouge
 10
 60
 10
-100
+70
 ../ressources/sprites/rouge/normal.txt
 ../ressources/sprites/rouge/damage.txt
 ../ressources/sprites/rouge/attack.txt

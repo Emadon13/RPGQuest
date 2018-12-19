@@ -57,7 +57,8 @@ SOURCES += \
     gui/window/settingswindow.cpp \
     logic/skills/buff.cpp \
     logic/entities/buffstats.cpp \
-    logic/entities/onebuffstat.cpp
+    logic/entities/onebuffstat.cpp \
+    logic/items/healitem.cpp
 
 
 
@@ -118,4 +119,5 @@ HEADERS += \
     gui/window/settingswindow.h \
     logic/skills/buff.h \
     logic/entities/buffstats.h \
-    logic/entities/onebuffstat.h
+    logic/entities/onebuffstat.h \
+    logic/items/healitem.h

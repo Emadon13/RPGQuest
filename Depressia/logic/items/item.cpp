@@ -33,7 +33,7 @@ string Item::getImage()
     return image;
 }
 
-void Item::use()
+std::string Item::use(Entity* target)
 {
-    cout << "vous venez d'utiliser un" << name <<"." << endl;
+    return "vous venez d'utiliser un objet";
 }

@@ -3,6 +3,7 @@
 
 #include<string>
 #include<iostream>
+#include "logic/entities/entity.h"
 
 class Item
 {
@@ -13,7 +14,7 @@ public:
     std::string getName();
     std::string getText();
     std::string getImage();
-    void use();
+    virtual std::string use(Entity* target);
 
 
 private:

@@ -1,0 +1,9 @@
+Exuviation
+Brise son armure pour aller plus vite et frapper plus fort.<br>Diminue la défense.
+../ressources/sprites/skills/buff-attack.txt
+5
+self
+buff
+buffUp
+buffDown
+buffUp

@@ -4,7 +4,7 @@ Poulpina
 10
 2
 4
-6
+5
 ../ressources/sprites/blue-queen/normal.txt
 ../ressources/sprites/blue-queen/damage.txt
 ../ressources/sprites/blue-queen/attack.txt
