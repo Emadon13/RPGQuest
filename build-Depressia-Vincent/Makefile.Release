@@ -50,8 +50,6 @@ SOURCES       = ..\Depressia\main.cpp \
 		..\Depressia\logic\entities\entity.cpp \
 		..\Depressia\logic\skills\skill.cpp \
 		..\Depressia\logic\skills\recover.cpp \
-		..\Depressia\gui\stage.cpp \
-		..\Depressia\gui\globalspec.cpp \
 		..\Depressia\logic\world\map.cpp \
 		..\Depressia\logic\events\event.cpp \
 		..\Depressia\logic\items\item.cpp \
@@ -85,7 +83,7 @@ SOURCES       = ..\Depressia\main.cpp \
 		..\Depressia\logic\events\finalscreen.cpp \
 		..\Depressia\gui\frame\optionframe.cpp \
 		..\Depressia\gui\frame\finalframe.cpp \
-		..\Depressia\gui\sprite.cpp \
+		..\Depressia\gui\sprite\sprite.cpp \
 		..\Depressia\logic\skills\drain.cpp \
 		..\Depressia\logic\skills\recoil.cpp \
 		..\Depressia\logic\skills\attack.cpp \
@@ -95,15 +93,15 @@ SOURCES       = ..\Depressia\main.cpp \
 		..\Depressia\io\spriteloader.cpp \
 		..\Depressia\logic\entities\mob.cpp \
 		..\Depressia\io\fightloader.cpp \
-		..\Depressia\gui\spritetemplate.cpp \
-		..\Depressia\gui\spriteloop.cpp \
-		..\Depressia\gui\spriteunique.cpp \
+		..\Depressia\gui\sprite\spritetemplate.cpp \
+		..\Depressia\gui\sprite\spriteloop.cpp \
+		..\Depressia\gui\sprite\spriteunique.cpp \
 		..\Depressia\gui\window\settingswindow.cpp \
 		..\Depressia\logic\skills\buff.cpp \
 		..\Depressia\logic\entities\buffstats.cpp \
 		..\Depressia\logic\entities\onebuffstat.cpp \
-		..\Depressia\logic\items\healitem.cpp release\moc_globalspec.cpp \
-		release\moc_mainwindow.cpp \
+		..\Depressia\logic\items\healitem.cpp \
+		..\Depressia\logic\items\restorempitem.cpp release\moc_mainwindow.cpp \
 		release\moc_gamewindow.cpp \
 		release\moc_gameframe.cpp \
 		release\moc_dialogframe.cpp \
@@ -127,8 +125,6 @@ OBJECTS       = release\main.obj \
 		release\entity.obj \
 		release\skill.obj \
 		release\recover.obj \
-		release\stage.obj \
-		release\globalspec.obj \
 		release\map.obj \
 		release\event.obj \
 		release\item.obj \
@@ -180,7 +176,7 @@ OBJECTS       = release\main.obj \
 		release\buffstats.obj \
 		release\onebuffstat.obj \
 		release\healitem.obj \
-		release\moc_globalspec.obj \
+		release\restorempitem.obj \
 		release\moc_mainwindow.obj \
 		release\moc_gamewindow.obj \
 		release\moc_gameframe.obj \
@@ -205,8 +201,6 @@ DIST          =  ..\Depressia\logic\events\fight.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\logic\skills\recover.h \
-		..\Depressia\gui\stage.h \
-		..\Depressia\gui\globalspec.h \
 		..\Depressia\logic\world\map.h \
 		..\Depressia\logic\events\event.h \
 		..\Depressia\logic\items\item.h \
@@ -240,7 +234,7 @@ DIST          =  ..\Depressia\logic\events\fight.h \
 		..\Depressia\logic\events\finalscreen.h \
 		..\Depressia\gui\frame\optionframe.h \
 		..\Depressia\gui\frame\finalframe.h \
-		..\Depressia\gui\sprite.h \
+		..\Depressia\gui\sprite\sprite.h \
 		..\Depressia\logic\skills\drain.h \
 		..\Depressia\logic\skills\recoil.h \
 		..\Depressia\logic\skills\attack.h \
@@ -250,20 +244,19 @@ DIST          =  ..\Depressia\logic\events\fight.h \
 		..\Depressia\io\spriteloader.h \
 		..\Depressia\logic\entities\mob.h \
 		..\Depressia\io\fightloader.h \
-		..\Depressia\gui\spritetemplate.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\gui\window\settingswindow.h \
 		..\Depressia\logic\skills\buff.h \
 		..\Depressia\logic\entities\buffstats.h \
 		..\Depressia\logic\entities\onebuffstat.h \
-		..\Depressia\logic\items\healitem.h ..\Depressia\main.cpp \
+		..\Depressia\logic\items\healitem.h \
+		..\Depressia\logic\items\restorempitem.h ..\Depressia\main.cpp \
 		..\Depressia\logic\events\fight.cpp \
 		..\Depressia\logic\entities\entity.cpp \
 		..\Depressia\logic\skills\skill.cpp \
 		..\Depressia\logic\skills\recover.cpp \
-		..\Depressia\gui\stage.cpp \
-		..\Depressia\gui\globalspec.cpp \
 		..\Depressia\logic\world\map.cpp \
 		..\Depressia\logic\events\event.cpp \
 		..\Depressia\logic\items\item.cpp \
@@ -297,7 +290,7 @@ DIST          =  ..\Depressia\logic\events\fight.h \
 		..\Depressia\logic\events\finalscreen.cpp \
 		..\Depressia\gui\frame\optionframe.cpp \
 		..\Depressia\gui\frame\finalframe.cpp \
-		..\Depressia\gui\sprite.cpp \
+		..\Depressia\gui\sprite\sprite.cpp \
 		..\Depressia\logic\skills\drain.cpp \
 		..\Depressia\logic\skills\recoil.cpp \
 		..\Depressia\logic\skills\attack.cpp \
@@ -307,14 +300,15 @@ DIST          =  ..\Depressia\logic\events\fight.h \
 		..\Depressia\io\spriteloader.cpp \
 		..\Depressia\logic\entities\mob.cpp \
 		..\Depressia\io\fightloader.cpp \
-		..\Depressia\gui\spritetemplate.cpp \
-		..\Depressia\gui\spriteloop.cpp \
-		..\Depressia\gui\spriteunique.cpp \
+		..\Depressia\gui\sprite\spritetemplate.cpp \
+		..\Depressia\gui\sprite\spriteloop.cpp \
+		..\Depressia\gui\sprite\spriteunique.cpp \
 		..\Depressia\gui\window\settingswindow.cpp \
 		..\Depressia\logic\skills\buff.cpp \
 		..\Depressia\logic\entities\buffstats.cpp \
 		..\Depressia\logic\entities\onebuffstat.cpp \
-		..\Depressia\logic\items\healitem.cpp
+		..\Depressia\logic\items\healitem.cpp \
+		..\Depressia\logic\items\restorempitem.cpp
 QMAKE_TARGET  = Depressia
 DESTDIR        = release\ #avoid trailing-slash linebreak
 TARGET         = Depressia.exe
@@ -360,6 +354,26 @@ DESTDIR_TARGET = release\Depressia.exe
 <<
 
 {..\Depressia\io}.c{release\}.obj::
+	$(CC) -c $(CFLAGS) $(INCPATH) -Forelease\ @<<
+	$<
+<<
+
+{..\Depressia\gui\sprite}.cpp{release\}.obj::
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Forelease\ @<<
+	$<
+<<
+
+{..\Depressia\gui\sprite}.cc{release\}.obj::
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Forelease\ @<<
+	$<
+<<
+
+{..\Depressia\gui\sprite}.cxx{release\}.obj::
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Forelease\ @<<
+	$<
+<<
+
+{..\Depressia\gui\sprite}.c{release\}.obj::
 	$(CC) -c $(CFLAGS) $(INCPATH) -Forelease\ @<<
 	$<
 <<
@@ -584,26 +598,6 @@ DESTDIR_TARGET = release\Depressia.exe
 	$<
 <<
 
-{..\Depressia\gui}.cpp{release\}.obj::
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Forelease\ @<<
-	$<
-<<
-
-{..\Depressia\gui}.cc{release\}.obj::
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Forelease\ @<<
-	$<
-<<
-
-{..\Depressia\gui}.cxx{release\}.obj::
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Forelease\ @<<
-	$<
-<<
-
-{..\Depressia\gui}.c{release\}.obj::
-	$(CC) -c $(CFLAGS) $(INCPATH) -Forelease\ @<<
-	$<
-<<
-
 ####### Build rules
 
 first: all
@@ -611,8 +605,8 @@ all: Makefile.Release  $(DESTDIR_TARGET)
 
 $(DESTDIR_TARGET):  $(OBJECTS) 
 	$(LINKER) $(LFLAGS) /MANIFEST:embed /OUT:$(DESTDIR_TARGET) @<<
-release\main.obj release\fight.obj release\entity.obj release\skill.obj release\recover.obj release\stage.obj release\globalspec.obj release\map.obj release\event.obj release\item.obj release\inventory.obj release\team.obj release\hero.obj release\mapelement.obj release\game.obj release\skillloader.obj release\loader.obj release\qpixmaploader.obj release\dialog.obj release\dialogelement.obj release\dialogloader.obj release\maploader.obj release\mainwindow.obj release\gamewindow.obj release\gameframe.obj release\dialogframe.obj release\clickablelabel.obj release\battleframe.obj release\videoframe.obj release\mapelementloader.obj release\clikablevideowidget.obj release\itemloader.obj release\itemfound.obj release\itemframe.obj release\itemwindow.obj release\video.obj release\save.obj release\finalscreen.obj release\optionframe.obj release\finalframe.obj release\sprite.obj release\drain.obj release\recoil.obj release\attack.obj release\characterui.obj release\enemyui.obj
-release\entityloader.obj release\spriteloader.obj release\mob.obj release\fightloader.obj release\spritetemplate.obj release\spriteloop.obj release\spriteunique.obj release\settingswindow.obj release\buff.obj release\buffstats.obj release\onebuffstat.obj release\healitem.obj release\moc_globalspec.obj release\moc_mainwindow.obj release\moc_gamewindow.obj release\moc_gameframe.obj release\moc_dialogframe.obj release\moc_clickablelabel.obj release\moc_battleframe.obj release\moc_videoframe.obj release\moc_clikablevideowidget.obj release\moc_itemframe.obj release\moc_itemwindow.obj release\moc_optionframe.obj release\moc_finalframe.obj release\moc_sprite.obj release\moc_characterui.obj release\moc_enemyui.obj release\moc_spritetemplate.obj release\moc_spriteloop.obj release\moc_spriteunique.obj release\moc_settingswindow.obj
+release\main.obj release\fight.obj release\entity.obj release\skill.obj release\recover.obj release\map.obj release\event.obj release\item.obj release\inventory.obj release\team.obj release\hero.obj release\mapelement.obj release\game.obj release\skillloader.obj release\loader.obj release\qpixmaploader.obj release\dialog.obj release\dialogelement.obj release\dialogloader.obj release\maploader.obj release\mainwindow.obj release\gamewindow.obj release\gameframe.obj release\dialogframe.obj release\clickablelabel.obj release\battleframe.obj release\videoframe.obj release\mapelementloader.obj release\clikablevideowidget.obj release\itemloader.obj release\itemfound.obj release\itemframe.obj release\itemwindow.obj release\video.obj release\save.obj release\finalscreen.obj release\optionframe.obj release\finalframe.obj release\sprite.obj release\drain.obj release\recoil.obj release\attack.obj release\characterui.obj release\enemyui.obj release\entityloader.obj release\spriteloader.obj
+release\mob.obj release\fightloader.obj release\spritetemplate.obj release\spriteloop.obj release\spriteunique.obj release\settingswindow.obj release\buff.obj release\buffstats.obj release\onebuffstat.obj release\healitem.obj release\restorempitem.obj release\moc_mainwindow.obj release\moc_gamewindow.obj release\moc_gameframe.obj release\moc_dialogframe.obj release\moc_clickablelabel.obj release\moc_battleframe.obj release\moc_videoframe.obj release\moc_clikablevideowidget.obj release\moc_itemframe.obj release\moc_itemwindow.obj release\moc_optionframe.obj release\moc_finalframe.obj release\moc_sprite.obj release\moc_characterui.obj release\moc_enemyui.obj release\moc_spritetemplate.obj release\moc_spriteloop.obj release\moc_spriteunique.obj release\moc_settingswindow.obj
 $(LIBS)
 <<
 
@@ -622,10 +616,10 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) Depressia.zip $(SOURCES) $(DIST) ..\Depressia\Depressia.pro C:\Qt\5.11.2\msvc2017_64\mkspecs\features\spec_pre.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\common\angle.conf C:\Qt\5.11.2\msvc2017_64\mkspecs\common\windows-vulkan.conf C:\Qt\5.11.2\msvc2017_64\mkspecs\common\msvc-desktop.conf C:\Qt\5.11.2\msvc2017_64\mkspecs\qconfig.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3danimation.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3danimation_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dcore.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dcore_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dextras.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dextras_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dinput.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dinput_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dlogic.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dlogic_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquick.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquick_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickanimation.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickextras.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickextras_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickinput.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickinput_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickrender.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickrender_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickscene2d.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3drender.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3drender_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_accessibility_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_axbase.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_axbase_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_axcontainer.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_axcontainer_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_axserver.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_axserver_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_bluetooth.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_bluetooth_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_bootstrap_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_core.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_core_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_dbus.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_dbus_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_designer.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_edid_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_egl_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_fb_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_gamepad.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_gamepad_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_gui.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_help.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_help_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_location.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_location_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_network.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_network_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_nfc.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_nfc_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_opengl.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_openglextensions.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_openglextensions_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_packetprotocol_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_positioning.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_positioning_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_positioningquick.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_positioningquick_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_qml.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_qmldebug_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_quick.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_quickcontrols2.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_scxml.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_scxml_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_sensors.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_sensors_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_serialbus.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_serialbus_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_serialport.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_serialport_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_sql.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_svg.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_testlib.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_texttospeech.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_texttospeech_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_theme_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_uiplugin.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_uitools.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_vulkan_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_webchannel.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_webchannel_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_websockets.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_websockets_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_webview.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_webview_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_widgets.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_winextras.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_winextras_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_xml.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_xmlpatterns.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_zlib_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\features\qt_functions.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\qt_config.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\win32-msvc\qmake.conf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\spec_post.prf .qmake.stash C:\Qt\5.11.2\msvc2017_64\mkspecs\features\exclusive_builds.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\common\msvc-version.conf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\toolchain.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\default_pre.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\win32\default_pre.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\resolve_config.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\exclusive_builds_post.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\default_post.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\build_pass.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\qml_debug.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\precompile_header.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\warn_on.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\qt.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\resources.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\moc.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\win32\opengl.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\uic.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\qmake_use.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\file_copies.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\win32\windows.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\testcase_targets.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\exceptions.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\yacc.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\lex.prf ..\Depressia\Depressia.pro C:\Qt\5.11.2\msvc2017_64\lib\qtmain.prl C:\Qt\5.11.2\msvc2017_64\lib\Qt5MultimediaWidgets.prl C:\Qt\5.11.2\msvc2017_64\lib\Qt5Widgets.prl C:\Qt\5.11.2\msvc2017_64\lib\Qt5Multimedia.prl C:\Qt\5.11.2\msvc2017_64\lib\Qt5Gui.prl C:\Qt\5.11.2\msvc2017_64\lib\Qt5Network.prl C:\Qt\5.11.2\msvc2017_64\lib\Qt5Core.prl    C:\Qt\5.11.2\msvc2017_64\mkspecs\features\data\dummy.cpp ..\Depressia\logic\events\fight.h ..\Depressia\logic\entities\entity.h ..\Depressia\logic\skills\skill.h ..\Depressia\logic\skills\recover.h ..\Depressia\gui\stage.h ..\Depressia\gui\globalspec.h ..\Depressia\logic\world\map.h ..\Depressia\logic\events\event.h ..\Depressia\logic\items\item.h ..\Depressia\logic\items\inventory.h ..\Depressia\logic\entities\team.h ..\Depressia\logic\entities\hero.h ..\Depressia\logic\world\mapelement.h ..\Depressia\logic\game.h ..\Depressia\io\skillloader.h ..\Depressia\io\loader.h ..\Depressia\io\qpixmaploader.h ..\Depressia\logic\events\dialog.h ..\Depressia\logic\events\dialogelement.h ..\Depressia\io\dialogloader.h ..\Depressia\io\maploader.h ..\Depressia\gui\window\mainwindow.h ..\Depressia\gui\window\gamewindow.h ..\Depressia\gui\frame\gameframe.h ..\Depressia\gui\frame\dialogframe.h ..\Depressia\gui\clickable\clickablelabel.h ..\Depressia\gui\frame\battleframe.h ..\Depressia\gui\frame\videoframe.h ..\Depressia\io\mapelementloader.h ..\Depressia\gui\clickable\clikablevideowidget.h ..\Depressia\io\itemloader.h ..\Depressia\logic\events\itemfound.h ..\Depressia\gui\frame\itemframe.h ..\Depressia\gui\window\itemwindow.h ..\Depressia\logic\events\video.h ..\Depressia\logic\events\save.h ..\Depressia\logic\events\finalscreen.h ..\Depressia\gui\frame\optionframe.h ..\Depressia\gui\frame\finalframe.h ..\Depressia\gui\sprite.h ..\Depressia\logic\skills\drain.h ..\Depressia\logic\skills\recoil.h ..\Depressia\logic\skills\attack.h ..\Depressia\gui\frame\characterui.h ..\Depressia\gui\frame\enemyui.h ..\Depressia\io\entityloader.h ..\Depressia\io\spriteloader.h ..\Depressia\logic\entities\mob.h ..\Depressia\io\fightloader.h ..\Depressia\gui\spritetemplate.h ..\Depressia\gui\spriteloop.h ..\Depressia\gui\spriteunique.h ..\Depressia\gui\window\settingswindow.h ..\Depressia\logic\skills\buff.h ..\Depressia\logic\entities\buffstats.h ..\Depressia\logic\entities\onebuffstat.h ..\Depressia\logic\items\healitem.h  ..\Depressia\main.cpp ..\Depressia\logic\events\fight.cpp ..\Depressia\logic\entities\entity.cpp ..\Depressia\logic\skills\skill.cpp ..\Depressia\logic\skills\recover.cpp ..\Depressia\gui\stage.cpp ..\Depressia\gui\globalspec.cpp ..\Depressia\logic\world\map.cpp ..\Depressia\logic\events\event.cpp ..\Depressia\logic\items\item.cpp ..\Depressia\logic\items\inventory.cpp ..\Depressia\logic\entities\team.cpp ..\Depressia\logic\entities\hero.cpp ..\Depressia\logic\world\mapelement.cpp ..\Depressia\logic\game.cpp ..\Depressia\io\skillloader.cpp ..\Depressia\io\loader.cpp ..\Depressia\io\qpixmaploader.cpp ..\Depressia\logic\events\dialog.cpp ..\Depressia\logic\events\dialogelement.cpp ..\Depressia\io\dialogloader.cpp ..\Depressia\io\maploader.cpp ..\Depressia\gui\window\mainwindow.cpp ..\Depressia\gui\window\gamewindow.cpp ..\Depressia\gui\frame\gameframe.cpp ..\Depressia\gui\frame\dialogframe.cpp ..\Depressia\gui\clickable\clickablelabel.cpp ..\Depressia\gui\frame\battleframe.cpp ..\Depressia\gui\frame\videoframe.cpp ..\Depressia\io\mapelementloader.cpp ..\Depressia\gui\clickable\clikablevideowidget.cpp ..\Depressia\io\itemloader.cpp ..\Depressia\logic\events\itemfound.cpp ..\Depressia\gui\frame\itemframe.cpp ..\Depressia\gui\window\itemwindow.cpp ..\Depressia\logic\events\video.cpp ..\Depressia\logic\events\save.cpp ..\Depressia\logic\events\finalscreen.cpp ..\Depressia\gui\frame\optionframe.cpp ..\Depressia\gui\frame\finalframe.cpp ..\Depressia\gui\sprite.cpp ..\Depressia\logic\skills\drain.cpp ..\Depressia\logic\skills\recoil.cpp ..\Depressia\logic\skills\attack.cpp ..\Depressia\gui\frame\characterui.cpp ..\Depressia\gui\frame\enemyui.cpp ..\Depressia\io\entityloader.cpp ..\Depressia\io\spriteloader.cpp ..\Depressia\logic\entities\mob.cpp ..\Depressia\io\fightloader.cpp ..\Depressia\gui\spritetemplate.cpp ..\Depressia\gui\spriteloop.cpp ..\Depressia\gui\spriteunique.cpp ..\Depressia\gui\window\settingswindow.cpp ..\Depressia\logic\skills\buff.cpp ..\Depressia\logic\entities\buffstats.cpp ..\Depressia\logic\entities\onebuffstat.cpp ..\Depressia\logic\items\healitem.cpp     
+	$(ZIP) Depressia.zip $(SOURCES) $(DIST) ..\Depressia\Depressia.pro C:\Qt\5.11.2\msvc2017_64\mkspecs\features\spec_pre.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\common\angle.conf C:\Qt\5.11.2\msvc2017_64\mkspecs\common\windows-vulkan.conf C:\Qt\5.11.2\msvc2017_64\mkspecs\common\msvc-desktop.conf C:\Qt\5.11.2\msvc2017_64\mkspecs\qconfig.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3danimation.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3danimation_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dcore.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dcore_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dextras.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dextras_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dinput.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dinput_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dlogic.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dlogic_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquick.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquick_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickanimation.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickextras.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickextras_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickinput.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickinput_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickrender.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickrender_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickscene2d.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3drender.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_3drender_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_accessibility_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_axbase.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_axbase_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_axcontainer.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_axcontainer_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_axserver.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_axserver_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_bluetooth.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_bluetooth_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_bootstrap_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_core.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_core_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_dbus.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_dbus_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_designer.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_edid_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_egl_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_fb_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_gamepad.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_gamepad_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_gui.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_help.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_help_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_location.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_location_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_network.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_network_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_nfc.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_nfc_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_opengl.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_openglextensions.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_openglextensions_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_packetprotocol_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_positioning.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_positioning_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_positioningquick.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_positioningquick_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_qml.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_qmldebug_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_quick.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_quickcontrols2.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_scxml.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_scxml_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_sensors.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_sensors_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_serialbus.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_serialbus_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_serialport.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_serialport_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_sql.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_svg.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_testlib.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_texttospeech.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_texttospeech_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_theme_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_uiplugin.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_uitools.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_vulkan_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_webchannel.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_webchannel_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_websockets.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_websockets_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_webview.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_webview_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_widgets.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_winextras.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_winextras_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_xml.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_xmlpatterns.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\modules\qt_lib_zlib_private.pri C:\Qt\5.11.2\msvc2017_64\mkspecs\features\qt_functions.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\qt_config.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\win32-msvc\qmake.conf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\spec_post.prf .qmake.stash C:\Qt\5.11.2\msvc2017_64\mkspecs\features\exclusive_builds.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\common\msvc-version.conf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\toolchain.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\default_pre.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\win32\default_pre.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\resolve_config.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\exclusive_builds_post.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\default_post.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\build_pass.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\qml_debug.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\precompile_header.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\warn_on.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\qt.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\resources.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\moc.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\win32\opengl.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\uic.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\qmake_use.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\file_copies.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\win32\windows.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\testcase_targets.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\exceptions.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\yacc.prf C:\Qt\5.11.2\msvc2017_64\mkspecs\features\lex.prf ..\Depressia\Depressia.pro C:\Qt\5.11.2\msvc2017_64\lib\qtmain.prl C:\Qt\5.11.2\msvc2017_64\lib\Qt5MultimediaWidgets.prl C:\Qt\5.11.2\msvc2017_64\lib\Qt5Widgets.prl C:\Qt\5.11.2\msvc2017_64\lib\Qt5Multimedia.prl C:\Qt\5.11.2\msvc2017_64\lib\Qt5Gui.prl C:\Qt\5.11.2\msvc2017_64\lib\Qt5Network.prl C:\Qt\5.11.2\msvc2017_64\lib\Qt5Core.prl    C:\Qt\5.11.2\msvc2017_64\mkspecs\features\data\dummy.cpp ..\Depressia\logic\events\fight.h ..\Depressia\logic\entities\entity.h ..\Depressia\logic\skills\skill.h ..\Depressia\logic\skills\recover.h ..\Depressia\logic\world\map.h ..\Depressia\logic\events\event.h ..\Depressia\logic\items\item.h ..\Depressia\logic\items\inventory.h ..\Depressia\logic\entities\team.h ..\Depressia\logic\entities\hero.h ..\Depressia\logic\world\mapelement.h ..\Depressia\logic\game.h ..\Depressia\io\skillloader.h ..\Depressia\io\loader.h ..\Depressia\io\qpixmaploader.h ..\Depressia\logic\events\dialog.h ..\Depressia\logic\events\dialogelement.h ..\Depressia\io\dialogloader.h ..\Depressia\io\maploader.h ..\Depressia\gui\window\mainwindow.h ..\Depressia\gui\window\gamewindow.h ..\Depressia\gui\frame\gameframe.h ..\Depressia\gui\frame\dialogframe.h ..\Depressia\gui\clickable\clickablelabel.h ..\Depressia\gui\frame\battleframe.h ..\Depressia\gui\frame\videoframe.h ..\Depressia\io\mapelementloader.h ..\Depressia\gui\clickable\clikablevideowidget.h ..\Depressia\io\itemloader.h ..\Depressia\logic\events\itemfound.h ..\Depressia\gui\frame\itemframe.h ..\Depressia\gui\window\itemwindow.h ..\Depressia\logic\events\video.h ..\Depressia\logic\events\save.h ..\Depressia\logic\events\finalscreen.h ..\Depressia\gui\frame\optionframe.h ..\Depressia\gui\frame\finalframe.h ..\Depressia\gui\sprite\sprite.h ..\Depressia\logic\skills\drain.h ..\Depressia\logic\skills\recoil.h ..\Depressia\logic\skills\attack.h ..\Depressia\gui\frame\characterui.h ..\Depressia\gui\frame\enemyui.h ..\Depressia\io\entityloader.h ..\Depressia\io\spriteloader.h ..\Depressia\logic\entities\mob.h ..\Depressia\io\fightloader.h ..\Depressia\gui\sprite\spritetemplate.h ..\Depressia\gui\sprite\spriteloop.h ..\Depressia\gui\sprite\spriteunique.h ..\Depressia\gui\window\settingswindow.h ..\Depressia\logic\skills\buff.h ..\Depressia\logic\entities\buffstats.h ..\Depressia\logic\entities\onebuffstat.h ..\Depressia\logic\items\healitem.h ..\Depressia\logic\items\restorempitem.h  ..\Depressia\main.cpp ..\Depressia\logic\events\fight.cpp ..\Depressia\logic\entities\entity.cpp ..\Depressia\logic\skills\skill.cpp ..\Depressia\logic\skills\recover.cpp ..\Depressia\logic\world\map.cpp ..\Depressia\logic\events\event.cpp ..\Depressia\logic\items\item.cpp ..\Depressia\logic\items\inventory.cpp ..\Depressia\logic\entities\team.cpp ..\Depressia\logic\entities\hero.cpp ..\Depressia\logic\world\mapelement.cpp ..\Depressia\logic\game.cpp ..\Depressia\io\skillloader.cpp ..\Depressia\io\loader.cpp ..\Depressia\io\qpixmaploader.cpp ..\Depressia\logic\events\dialog.cpp ..\Depressia\logic\events\dialogelement.cpp ..\Depressia\io\dialogloader.cpp ..\Depressia\io\maploader.cpp ..\Depressia\gui\window\mainwindow.cpp ..\Depressia\gui\window\gamewindow.cpp ..\Depressia\gui\frame\gameframe.cpp ..\Depressia\gui\frame\dialogframe.cpp ..\Depressia\gui\clickable\clickablelabel.cpp ..\Depressia\gui\frame\battleframe.cpp ..\Depressia\gui\frame\videoframe.cpp ..\Depressia\io\mapelementloader.cpp ..\Depressia\gui\clickable\clikablevideowidget.cpp ..\Depressia\io\itemloader.cpp ..\Depressia\logic\events\itemfound.cpp ..\Depressia\gui\frame\itemframe.cpp ..\Depressia\gui\window\itemwindow.cpp ..\Depressia\logic\events\video.cpp ..\Depressia\logic\events\save.cpp ..\Depressia\logic\events\finalscreen.cpp ..\Depressia\gui\frame\optionframe.cpp ..\Depressia\gui\frame\finalframe.cpp ..\Depressia\gui\sprite\sprite.cpp ..\Depressia\logic\skills\drain.cpp ..\Depressia\logic\skills\recoil.cpp ..\Depressia\logic\skills\attack.cpp ..\Depressia\gui\frame\characterui.cpp ..\Depressia\gui\frame\enemyui.cpp ..\Depressia\io\entityloader.cpp ..\Depressia\io\spriteloader.cpp ..\Depressia\logic\entities\mob.cpp ..\Depressia\io\fightloader.cpp ..\Depressia\gui\sprite\spritetemplate.cpp ..\Depressia\gui\sprite\spriteloop.cpp ..\Depressia\gui\sprite\spriteunique.cpp ..\Depressia\gui\window\settingswindow.cpp ..\Depressia\logic\skills\buff.cpp ..\Depressia\logic\entities\buffstats.cpp ..\Depressia\logic\entities\onebuffstat.cpp ..\Depressia\logic\items\healitem.cpp ..\Depressia\logic\items\restorempitem.cpp     
 
 clean: compiler_clean 
-	-$(DEL_FILE) release\main.obj release\fight.obj release\entity.obj release\skill.obj release\recover.obj release\stage.obj release\globalspec.obj release\map.obj release\event.obj release\item.obj release\inventory.obj release\team.obj release\hero.obj release\mapelement.obj release\game.obj release\skillloader.obj release\loader.obj release\qpixmaploader.obj release\dialog.obj release\dialogelement.obj release\dialogloader.obj release\maploader.obj release\mainwindow.obj release\gamewindow.obj release\gameframe.obj release\dialogframe.obj release\clickablelabel.obj release\battleframe.obj release\videoframe.obj release\mapelementloader.obj release\clikablevideowidget.obj release\itemloader.obj release\itemfound.obj release\itemframe.obj release\itemwindow.obj release\video.obj release\save.obj release\finalscreen.obj release\optionframe.obj release\finalframe.obj release\sprite.obj release\drain.obj release\recoil.obj release\attack.obj release\characterui.obj release\enemyui.obj release\entityloader.obj release\spriteloader.obj release\mob.obj release\fightloader.obj release\spritetemplate.obj release\spriteloop.obj release\spriteunique.obj release\settingswindow.obj release\buff.obj release\buffstats.obj release\onebuffstat.obj release\healitem.obj release\moc_globalspec.obj release\moc_mainwindow.obj release\moc_gamewindow.obj release\moc_gameframe.obj release\moc_dialogframe.obj release\moc_clickablelabel.obj release\moc_battleframe.obj release\moc_videoframe.obj release\moc_clikablevideowidget.obj release\moc_itemframe.obj release\moc_itemwindow.obj release\moc_optionframe.obj release\moc_finalframe.obj release\moc_sprite.obj release\moc_characterui.obj release\moc_enemyui.obj release\moc_spritetemplate.obj release\moc_spriteloop.obj release\moc_spriteunique.obj release\moc_settingswindow.obj
+	-$(DEL_FILE) release\main.obj release\fight.obj release\entity.obj release\skill.obj release\recover.obj release\map.obj release\event.obj release\item.obj release\inventory.obj release\team.obj release\hero.obj release\mapelement.obj release\game.obj release\skillloader.obj release\loader.obj release\qpixmaploader.obj release\dialog.obj release\dialogelement.obj release\dialogloader.obj release\maploader.obj release\mainwindow.obj release\gamewindow.obj release\gameframe.obj release\dialogframe.obj release\clickablelabel.obj release\battleframe.obj release\videoframe.obj release\mapelementloader.obj release\clikablevideowidget.obj release\itemloader.obj release\itemfound.obj release\itemframe.obj release\itemwindow.obj release\video.obj release\save.obj release\finalscreen.obj release\optionframe.obj release\finalframe.obj release\sprite.obj release\drain.obj release\recoil.obj release\attack.obj release\characterui.obj release\enemyui.obj release\entityloader.obj release\spriteloader.obj release\mob.obj release\fightloader.obj release\spritetemplate.obj release\spriteloop.obj release\spriteunique.obj release\settingswindow.obj release\buff.obj release\buffstats.obj release\onebuffstat.obj release\healitem.obj release\restorempitem.obj release\moc_mainwindow.obj release\moc_gamewindow.obj release\moc_gameframe.obj release\moc_dialogframe.obj release\moc_clickablelabel.obj release\moc_battleframe.obj release\moc_videoframe.obj release\moc_clikablevideowidget.obj release\moc_itemframe.obj release\moc_itemwindow.obj release\moc_optionframe.obj release\moc_finalframe.obj release\moc_sprite.obj release\moc_characterui.obj release\moc_enemyui.obj release\moc_spritetemplate.obj release\moc_spriteloop.obj release\moc_spriteunique.obj release\moc_settingswindow.obj
 	-$(DEL_FILE) release\Depressia.exp
 
 distclean: clean 
@@ -651,118 +645,9 @@ compiler_moc_predefs_clean:
 release\moc_predefs.h: C:\Qt\5.11.2\msvc2017_64\mkspecs\features\data\dummy.cpp
 	cl -BxC:\Qt\5.11.2\msvc2017_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\Qt\5.11.2\msvc2017_64\mkspecs\features\data\dummy.cpp 2>NUL >release\moc_predefs.h
 
-compiler_moc_header_make_all: release\moc_globalspec.cpp release\moc_mainwindow.cpp release\moc_gamewindow.cpp release\moc_gameframe.cpp release\moc_dialogframe.cpp release\moc_clickablelabel.cpp release\moc_battleframe.cpp release\moc_videoframe.cpp release\moc_clikablevideowidget.cpp release\moc_itemframe.cpp release\moc_itemwindow.cpp release\moc_optionframe.cpp release\moc_finalframe.cpp release\moc_sprite.cpp release\moc_characterui.cpp release\moc_enemyui.cpp release\moc_spritetemplate.cpp release\moc_spriteloop.cpp release\moc_spriteunique.cpp release\moc_settingswindow.cpp
+compiler_moc_header_make_all: release\moc_mainwindow.cpp release\moc_gamewindow.cpp release\moc_gameframe.cpp release\moc_dialogframe.cpp release\moc_clickablelabel.cpp release\moc_battleframe.cpp release\moc_videoframe.cpp release\moc_clikablevideowidget.cpp release\moc_itemframe.cpp release\moc_itemwindow.cpp release\moc_optionframe.cpp release\moc_finalframe.cpp release\moc_sprite.cpp release\moc_characterui.cpp release\moc_enemyui.cpp release\moc_spritetemplate.cpp release\moc_spriteloop.cpp release\moc_spriteunique.cpp release\moc_settingswindow.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) release\moc_globalspec.cpp release\moc_mainwindow.cpp release\moc_gamewindow.cpp release\moc_gameframe.cpp release\moc_dialogframe.cpp release\moc_clickablelabel.cpp release\moc_battleframe.cpp release\moc_videoframe.cpp release\moc_clikablevideowidget.cpp release\moc_itemframe.cpp release\moc_itemwindow.cpp release\moc_optionframe.cpp release\moc_finalframe.cpp release\moc_sprite.cpp release\moc_characterui.cpp release\moc_enemyui.cpp release\moc_spritetemplate.cpp release\moc_spriteloop.cpp release\moc_spriteunique.cpp release\moc_settingswindow.cpp
-release\moc_globalspec.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtcore-config.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsystemdetection.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qprocessordetection.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcompilerdetection.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtypeinfo.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsysinfo.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlogging.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qflags.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qatomic.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbasicatomic.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qatomic_bootstrap.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qgenericatomic.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qatomic_cxx11.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qatomic_msvc.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qglobalstatic.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmutex.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnumeric.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qversiontagging.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstring.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qchar.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearray.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringliteral.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringalgorithms.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringview.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringbuilder.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpair.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearraylist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qregexp.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringmatcher.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcoreevent.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qscopedpointer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmetatype.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject_impl.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QWidget \
-		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qwidget.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpalette.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qbrush.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qsizepolicy.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcursor.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qkeysequence.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qevent.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvariant.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmap.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdebug.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtextstream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlocale.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qset.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qurl.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qurlquery.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qfile.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qfiledevice.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qvector2d.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtouchdevice.h \
-		..\Depressia\gui\globalspec.h \
-		release\moc_predefs.h \
-		C:\Qt\5.11.2\msvc2017_64\bin\moc.exe
-	C:\Qt\5.11.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Vincent/Documents/dev/C++/RPGQuest/build-Depressia-Vincent/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/Vincent/Documents/dev/C++/RPGQuest/Depressia -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimedia -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\Depressia\gui\globalspec.h -o release\moc_globalspec.cpp
-
+	-$(DEL_FILE) release\moc_mainwindow.cpp release\moc_gamewindow.cpp release\moc_gameframe.cpp release\moc_dialogframe.cpp release\moc_clickablelabel.cpp release\moc_battleframe.cpp release\moc_videoframe.cpp release\moc_clikablevideowidget.cpp release\moc_itemframe.cpp release\moc_itemwindow.cpp release\moc_optionframe.cpp release\moc_finalframe.cpp release\moc_sprite.cpp release\moc_characterui.cpp release\moc_enemyui.cpp release\moc_spritetemplate.cpp release\moc_spriteloop.cpp release\moc_spriteunique.cpp release\moc_settingswindow.cpp
 release\moc_mainwindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWindow \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qmainwindow.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
@@ -1385,13 +1270,13 @@ release\moc_mainwindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWind
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -1542,8 +1427,8 @@ release\moc_gamewindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWind
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -1554,7 +1439,7 @@ release\moc_gamewindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWind
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -1708,8 +1593,8 @@ release\moc_gameframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -1720,7 +1605,7 @@ release\moc_gameframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -1874,8 +1759,8 @@ release\moc_dialogframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -1886,7 +1771,7 @@ release\moc_dialogframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -2155,8 +2040,8 @@ release\moc_battleframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -2167,7 +2052,7 @@ release\moc_battleframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -2208,7 +2093,7 @@ release\moc_battleframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtMultimediaWidgets\qtmultimediawidgetdefs.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QSignalMapper \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsignalmapper.h \
-		..\Depressia\gui\sprite.h \
+		..\Depressia\gui\sprite\sprite.h \
 		..\Depressia\gui\frame\characterui.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QProgressBar \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qprogressbar.h \
@@ -2351,8 +2236,8 @@ release\moc_videoframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -2363,7 +2248,7 @@ release\moc_videoframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -2658,8 +2543,8 @@ release\moc_itemframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -2670,7 +2555,7 @@ release\moc_itemframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -2810,8 +2695,8 @@ release\moc_itemwindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWind
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -2822,7 +2707,7 @@ release\moc_itemwindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWind
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -3480,13 +3365,13 @@ release\moc_optionframe.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -3638,8 +3523,8 @@ release\moc_finalframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -3650,7 +3535,7 @@ release\moc_finalframe.cpp: ..\Depressia\gui\window\gamewindow.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -3772,10 +3657,10 @@ release\moc_sprite.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\sprite.h \
+		..\Depressia\gui\sprite\sprite.h \
 		release\moc_predefs.h \
 		C:\Qt\5.11.2\msvc2017_64\bin\moc.exe
-	C:\Qt\5.11.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Vincent/Documents/dev/C++/RPGQuest/build-Depressia-Vincent/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/Vincent/Documents/dev/C++/RPGQuest/Depressia -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimedia -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\Depressia\gui\sprite.h -o release\moc_sprite.cpp
+	C:\Qt\5.11.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Vincent/Documents/dev/C++/RPGQuest/build-Depressia-Vincent/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/Vincent/Documents/dev/C++/RPGQuest/Depressia -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimedia -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\Depressia\gui\sprite\sprite.h -o release\moc_sprite.cpp
 
 release\moc_characterui.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
@@ -3910,8 +3795,8 @@ release\moc_characterui.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -3922,7 +3807,7 @@ release\moc_characterui.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -4078,8 +3963,8 @@ release\moc_enemyui.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -4090,7 +3975,7 @@ release\moc_enemyui.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -4214,12 +4099,12 @@ release\moc_spritetemplate.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject 
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		release\moc_predefs.h \
 		C:\Qt\5.11.2\msvc2017_64\bin\moc.exe
-	C:\Qt\5.11.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Vincent/Documents/dev/C++/RPGQuest/build-Depressia-Vincent/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/Vincent/Documents/dev/C++/RPGQuest/Depressia -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimedia -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\Depressia\gui\spritetemplate.h -o release\moc_spritetemplate.cpp
+	C:\Qt\5.11.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Vincent/Documents/dev/C++/RPGQuest/build-Depressia-Vincent/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/Vincent/Documents/dev/C++/RPGQuest/Depressia -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimedia -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\Depressia\gui\sprite\spritetemplate.h -o release\moc_spritetemplate.cpp
 
-release\moc_spriteloop.cpp: ..\Depressia\gui\spritetemplate.h \
+release\moc_spriteloop.cpp: ..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -4321,12 +4206,12 @@ release\moc_spriteloop.cpp: ..\Depressia\gui\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteloop.h \
+		..\Depressia\gui\sprite\spriteloop.h \
 		release\moc_predefs.h \
 		C:\Qt\5.11.2\msvc2017_64\bin\moc.exe
-	C:\Qt\5.11.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Vincent/Documents/dev/C++/RPGQuest/build-Depressia-Vincent/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/Vincent/Documents/dev/C++/RPGQuest/Depressia -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimedia -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\Depressia\gui\spriteloop.h -o release\moc_spriteloop.cpp
+	C:\Qt\5.11.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Vincent/Documents/dev/C++/RPGQuest/build-Depressia-Vincent/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/Vincent/Documents/dev/C++/RPGQuest/Depressia -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimedia -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\Depressia\gui\sprite\spriteloop.h -o release\moc_spriteloop.cpp
 
-release\moc_spriteunique.cpp: ..\Depressia\gui\spritetemplate.h \
+release\moc_spriteunique.cpp: ..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -4428,10 +4313,10 @@ release\moc_spriteunique.cpp: ..\Depressia\gui\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		release\moc_predefs.h \
 		C:\Qt\5.11.2\msvc2017_64\bin\moc.exe
-	C:\Qt\5.11.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Vincent/Documents/dev/C++/RPGQuest/build-Depressia-Vincent/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/Vincent/Documents/dev/C++/RPGQuest/Depressia -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimedia -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\Depressia\gui\spriteunique.h -o release\moc_spriteunique.cpp
+	C:\Qt\5.11.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Vincent/Documents/dev/C++/RPGQuest/build-Depressia-Vincent/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/Vincent/Documents/dev/C++/RPGQuest/Depressia -IC:/Qt/5.11.2/msvc2017_64/include -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtWidgets -IC:/Qt/5.11.2/msvc2017_64/include/QtMultimedia -IC:/Qt/5.11.2/msvc2017_64/include/QtGui -IC:/Qt/5.11.2/msvc2017_64/include/QtANGLE -IC:/Qt/5.11.2/msvc2017_64/include/QtNetwork -IC:/Qt/5.11.2/msvc2017_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\Depressia\gui\sprite\spriteunique.h -o release\moc_spriteunique.cpp
 
 release\moc_settingswindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWindow \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qmainwindow.h \
@@ -4552,8 +4437,8 @@ release\moc_settingswindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMain
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -4564,7 +4449,7 @@ release\moc_settingswindow.cpp: C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMain
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -4730,9 +4615,8 @@ release\main.obj: ..\Depressia\main.cpp C:\Qt\5.11.2\msvc2017_64\include\QtWidge
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qicon.h \
-		..\Depressia\gui\globalspec.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QWidget \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTextCodec \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtextcodec.h \
 		..\Depressia\gui\window\mainwindow.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QMainWindow \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qmainwindow.h \
@@ -4780,6 +4664,7 @@ release\main.obj: ..\Depressia\main.cpp C:\Qt\5.11.2\msvc2017_64\include\QtWidge
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qexception.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qfactoryinterface.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qfileselector.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QStringList \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qfilesystemwatcher.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qfinalstate.h \
@@ -4844,7 +4729,6 @@ release\main.obj: ..\Depressia\main.cpp C:\Qt\5.11.2\msvc2017_64\include\QtWidge
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtemporarydir.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtemporaryfile.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtextboundaryfinder.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtextcodec.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qthread.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qthreadpool.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qthreadstorage.h \
@@ -5180,6 +5064,7 @@ release\main.obj: ..\Depressia\main.cpp C:\Qt\5.11.2\msvc2017_64\include\QtWidge
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qmouseeventtransition.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qopenglwidget.h \
+		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QWidget \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qplaintextedit.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtextedit.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qprogressbar.h \
@@ -5242,13 +5127,13 @@ release\main.obj: ..\Depressia\main.cpp C:\Qt\5.11.2\msvc2017_64\include\QtWidge
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -5357,8 +5242,8 @@ release\fight.obj: ..\Depressia\logic\events\fight.cpp ..\Depressia\logic\events
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
@@ -5382,7 +5267,7 @@ release\fight.obj: ..\Depressia\logic\events\fight.cpp ..\Depressia\logic\events
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\recover.h \
 		..\Depressia\logic\entities\buffstats.h \
 		..\Depressia\logic\entities\onebuffstat.h \
@@ -5398,8 +5283,8 @@ release\entity.obj: ..\Depressia\logic\entities\entity.cpp ..\Depressia\logic\en
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -5501,7 +5386,7 @@ release\entity.obj: ..\Depressia\logic\entities\entity.cpp ..\Depressia\logic\en
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\buffstats.h \
@@ -5509,8 +5394,8 @@ release\entity.obj: ..\Depressia\logic\entities\entity.cpp ..\Depressia\logic\en
 
 release\skill.obj: ..\Depressia\logic\skills\skill.cpp ..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -5612,7 +5497,7 @@ release\skill.obj: ..\Depressia\logic\skills\skill.cpp ..\Depressia\logic\skills
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\recover.h \
@@ -5623,8 +5508,8 @@ release\skill.obj: ..\Depressia\logic\skills\skill.cpp ..\Depressia\logic\skills
 release\recover.obj: ..\Depressia\logic\skills\recover.cpp ..\Depressia\logic\skills\recover.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -5726,121 +5611,12 @@ release\recover.obj: ..\Depressia\logic\skills\recover.cpp ..\Depressia\logic\sk
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\buffstats.h \
 		..\Depressia\logic\entities\onebuffstat.h
-
-release\stage.obj: ..\Depressia\gui\stage.cpp ..\Depressia\gui\stage.h
-
-release\globalspec.obj: ..\Depressia\gui\globalspec.cpp ..\Depressia\gui\globalspec.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnamespace.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qconfig.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtcore-config.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsystemdetection.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qprocessordetection.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcompilerdetection.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtypeinfo.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsysinfo.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlogging.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qflags.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qatomic.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbasicatomic.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qatomic_bootstrap.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qgenericatomic.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qatomic_cxx11.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qatomic_msvc.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qglobalstatic.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmutex.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qnumeric.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qversiontagging.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstring.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qchar.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearray.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrefcount.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qarraydata.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringliteral.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringalgorithms.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringview.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringbuilder.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qalgorithms.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiterator.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhashfunctions.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpair.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qbytearraylist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringlist.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qregexp.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qstringmatcher.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcoreevent.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qscopedpointer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmetatype.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject_impl.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QWidget \
-		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qwidget.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtguiglobal.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtgui-config.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmargins.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpaintdevice.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qrect.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsize.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qpoint.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpalette.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcolor.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgb.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qrgba64.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qbrush.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvector.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qmatrix.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpolygon.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qregion.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdatastream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qiodevice.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qline.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtransform.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainterpath.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qimage.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixelformat.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpixmap.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qshareddata.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qhash.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qsizepolicy.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qcursor.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qkeysequence.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qevent.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qvariant.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qmap.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qdebug.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qtextstream.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qlocale.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qset.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qurl.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qurlquery.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qfile.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qfiledevice.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qvector2d.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtouchdevice.h \
-		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QString
 
 release\map.obj: ..\Depressia\logic\world\map.cpp ..\Depressia\logic\world\map.h \
 		..\Depressia\logic\world\mapelement.h \
@@ -5904,8 +5680,8 @@ release\map.obj: ..\Depressia\logic\world\map.cpp ..\Depressia\logic\world\map.h
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
@@ -5957,7 +5733,7 @@ release\map.obj: ..\Depressia\logic\world\map.cpp ..\Depressia\logic\world\map.h
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -5980,8 +5756,8 @@ release\item.obj: ..\Depressia\logic\items\item.cpp ..\Depressia\logic\items\ite
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -6083,7 +5859,7 @@ release\item.obj: ..\Depressia\logic\items\item.cpp ..\Depressia\logic\items\ite
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\buffstats.h \
@@ -6095,8 +5871,8 @@ release\inventory.obj: ..\Depressia\logic\items\inventory.cpp ..\Depressia\logic
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -6198,7 +5974,7 @@ release\inventory.obj: ..\Depressia\logic\items\inventory.cpp ..\Depressia\logic
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\buffstats.h \
@@ -6210,8 +5986,8 @@ release\team.obj: ..\Depressia\logic\entities\team.cpp ..\Depressia\logic\entiti
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -6313,7 +6089,7 @@ release\team.obj: ..\Depressia\logic\entities\team.cpp ..\Depressia\logic\entiti
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -6335,8 +6111,8 @@ release\hero.obj: ..\Depressia\logic\entities\hero.cpp ..\Depressia\logic\entiti
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -6438,7 +6214,7 @@ release\hero.obj: ..\Depressia\logic\entities\hero.cpp ..\Depressia\logic\entiti
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -6564,8 +6340,8 @@ release\game.obj: ..\Depressia\logic\game.cpp ..\Depressia\logic\game.h \
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
@@ -6617,7 +6393,7 @@ release\game.obj: ..\Depressia\logic\game.cpp ..\Depressia\logic\game.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -6640,8 +6416,8 @@ release\game.obj: ..\Depressia\logic\game.cpp ..\Depressia\logic\game.h \
 release\skillloader.obj: ..\Depressia\io\skillloader.cpp ..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -6743,7 +6519,7 @@ release\skillloader.obj: ..\Depressia\io\skillloader.cpp ..\Depressia\io\skilllo
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -6973,8 +6749,8 @@ release\maploader.obj: ..\Depressia\io\maploader.cpp ..\Depressia\io\maploader.h
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
@@ -7026,7 +6802,7 @@ release\maploader.obj: ..\Depressia\io\maploader.cpp ..\Depressia\io\maploader.h
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -7668,13 +7444,13 @@ release\mainwindow.obj: ..\Depressia\gui\window\mainwindow.cpp ..\Depressia\gui\
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -7824,8 +7600,8 @@ release\gamewindow.obj: ..\Depressia\gui\window\gamewindow.cpp ..\Depressia\gui\
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -7836,7 +7612,7 @@ release\gamewindow.obj: ..\Depressia\gui\window\gamewindow.cpp ..\Depressia\gui\
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -7885,7 +7661,7 @@ release\gamewindow.obj: ..\Depressia\gui\window\gamewindow.cpp ..\Depressia\gui\
 		..\Depressia\gui\frame\battleframe.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QSignalMapper \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsignalmapper.h \
-		..\Depressia\gui\sprite.h \
+		..\Depressia\gui\sprite\sprite.h \
 		..\Depressia\gui\frame\characterui.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QProgressBar \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qprogressbar.h \
@@ -8493,8 +8269,8 @@ release\gameframe.obj: ..\Depressia\gui\frame\gameframe.cpp ..\Depressia\gui\fra
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -8505,7 +8281,7 @@ release\gameframe.obj: ..\Depressia\gui\frame\gameframe.cpp ..\Depressia\gui\fra
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -9138,8 +8914,8 @@ release\dialogframe.obj: ..\Depressia\gui\frame\dialogframe.cpp ..\Depressia\gui
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -9150,7 +8926,7 @@ release\dialogframe.obj: ..\Depressia\gui\frame\dialogframe.cpp ..\Depressia\gui
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -9895,8 +9671,8 @@ release\battleframe.obj: ..\Depressia\gui\frame\battleframe.cpp ..\Depressia\gui
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -9907,7 +9683,7 @@ release\battleframe.obj: ..\Depressia\gui\frame\battleframe.cpp ..\Depressia\gui
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -9948,7 +9724,7 @@ release\battleframe.obj: ..\Depressia\gui\frame\battleframe.cpp ..\Depressia\gui
 		C:\Qt\5.11.2\msvc2017_64\include\QtMultimediaWidgets\qtmultimediawidgetdefs.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QSignalMapper \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qsignalmapper.h \
-		..\Depressia\gui\sprite.h \
+		..\Depressia\gui\sprite\sprite.h \
 		..\Depressia\gui\frame\characterui.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QProgressBar \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qprogressbar.h \
@@ -10548,8 +10324,8 @@ release\videoframe.obj: ..\Depressia\gui\frame\videoframe.cpp ..\Depressia\gui\f
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -10560,7 +10336,7 @@ release\videoframe.obj: ..\Depressia\gui\frame\videoframe.cpp ..\Depressia\gui\f
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -11127,8 +10903,8 @@ release\mapelementloader.obj: ..\Depressia\io\mapelementloader.cpp ..\Depressia\
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
@@ -11180,7 +10956,7 @@ release\mapelementloader.obj: ..\Depressia\io\mapelementloader.cpp ..\Depressia\
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\buffstats.h \
@@ -11322,8 +11098,8 @@ release\itemloader.obj: ..\Depressia\io\itemloader.cpp ..\Depressia\io\itemloade
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -11425,7 +11201,7 @@ release\itemloader.obj: ..\Depressia\io\itemloader.cpp ..\Depressia\io\itemloade
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\buffstats.h \
@@ -11439,8 +11215,8 @@ release\itemfound.obj: ..\Depressia\logic\events\itemfound.cpp ..\Depressia\logi
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -11542,7 +11318,7 @@ release\itemfound.obj: ..\Depressia\logic\events\itemfound.cpp ..\Depressia\logi
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\buffstats.h \
@@ -11683,8 +11459,8 @@ release\itemframe.obj: ..\Depressia\gui\frame\itemframe.cpp ..\Depressia\gui\fra
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -11695,7 +11471,7 @@ release\itemframe.obj: ..\Depressia\gui\frame\itemframe.cpp ..\Depressia\gui\fra
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -11832,8 +11608,8 @@ release\itemwindow.obj: ..\Depressia\gui\window\itemwindow.cpp ..\Depressia\gui\
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -11844,7 +11620,7 @@ release\itemwindow.obj: ..\Depressia\gui\window\itemwindow.cpp ..\Depressia\gui\
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -12509,13 +12285,13 @@ release\optionframe.obj: ..\Depressia\gui\frame\optionframe.cpp ..\Depressia\gui
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPixmap \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\QPainter \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -12664,8 +12440,8 @@ release\finalframe.obj: ..\Depressia\gui\frame\finalframe.cpp ..\Depressia\gui\f
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -12676,7 +12452,7 @@ release\finalframe.obj: ..\Depressia\gui\frame\finalframe.cpp ..\Depressia\gui\f
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -12693,7 +12469,7 @@ release\finalframe.obj: ..\Depressia\gui\frame\finalframe.cpp ..\Depressia\gui\f
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QWidget \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\Qt
 
-release\sprite.obj: ..\Depressia\gui\sprite.cpp ..\Depressia\gui\sprite.h \
+release\sprite.obj: ..\Depressia\gui\sprite\sprite.cpp ..\Depressia\gui\sprite\sprite.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -12803,8 +12579,8 @@ release\recoil.obj: ..\Depressia\logic\skills\recoil.cpp ..\Depressia\logic\skil
 release\attack.obj: ..\Depressia\logic\skills\attack.cpp ..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -12906,7 +12682,7 @@ release\attack.obj: ..\Depressia\logic\skills\attack.cpp ..\Depressia\logic\skil
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
@@ -13047,8 +12823,8 @@ release\characterui.obj: ..\Depressia\gui\frame\characterui.cpp ..\Depressia\gui
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -13059,7 +12835,7 @@ release\characterui.obj: ..\Depressia\gui\frame\characterui.cpp ..\Depressia\gui
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -13212,8 +12988,8 @@ release\enemyui.obj: ..\Depressia\gui\frame\enemyui.cpp ..\Depressia\gui\frame\e
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -13224,7 +13000,7 @@ release\enemyui.obj: ..\Depressia\gui\frame\enemyui.cpp ..\Depressia\gui\frame\e
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -13248,8 +13024,8 @@ release\entityloader.obj: ..\Depressia\io\entityloader.cpp ..\Depressia\io\entit
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -13351,7 +13127,7 @@ release\entityloader.obj: ..\Depressia\io\entityloader.cpp ..\Depressia\io\entit
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -13368,8 +13144,8 @@ release\entityloader.obj: ..\Depressia\io\entityloader.cpp ..\Depressia\io\entit
 		..\Depressia\logic\events\event.h
 
 release\spriteloader.obj: ..\Depressia\io\spriteloader.cpp ..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -13471,7 +13247,7 @@ release\spriteloader.obj: ..\Depressia\io\spriteloader.cpp ..\Depressia\io\sprit
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h
+		..\Depressia\gui\sprite\spriteunique.h
 
 release\mob.obj: ..\Depressia\logic\entities\mob.cpp ..\Depressia\logic\entities\mob.h \
 		..\Depressia\logic\events\fight.h \
@@ -13563,8 +13339,8 @@ release\mob.obj: ..\Depressia\logic\entities\mob.cpp ..\Depressia\logic\entities
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
@@ -13588,7 +13364,7 @@ release\mob.obj: ..\Depressia\logic\entities\mob.cpp ..\Depressia\logic\entities
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\recover.h \
 		..\Depressia\logic\entities\buffstats.h \
 		..\Depressia\logic\entities\onebuffstat.h
@@ -13599,8 +13375,8 @@ release\fightloader.obj: ..\Depressia\io\fightloader.cpp ..\Depressia\io\fightlo
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -13702,7 +13478,7 @@ release\fightloader.obj: ..\Depressia\io\fightloader.cpp ..\Depressia\io\fightlo
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -13721,7 +13497,7 @@ release\fightloader.obj: ..\Depressia\io\fightloader.cpp ..\Depressia\io\fightlo
 		..\Depressia\logic\items\inventory.h \
 		..\Depressia\logic\items\item.h
 
-release\spritetemplate.obj: ..\Depressia\gui\spritetemplate.cpp ..\Depressia\gui\spritetemplate.h \
+release\spritetemplate.obj: ..\Depressia\gui\sprite\spritetemplate.cpp ..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -13824,8 +13600,8 @@ release\spritetemplate.obj: ..\Depressia\gui\spritetemplate.cpp ..\Depressia\gui
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h
 
-release\spriteloop.obj: ..\Depressia\gui\spriteloop.cpp ..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+release\spriteloop.obj: ..\Depressia\gui\sprite\spriteloop.cpp ..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -13928,8 +13704,8 @@ release\spriteloop.obj: ..\Depressia\gui\spriteloop.cpp ..\Depressia\gui\spritel
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h
 
-release\spriteunique.obj: ..\Depressia\gui\spriteunique.cpp ..\Depressia\gui\spriteunique.h \
-		..\Depressia\gui\spritetemplate.h \
+release\spriteunique.obj: ..\Depressia\gui\sprite\spriteunique.cpp ..\Depressia\gui\sprite\spriteunique.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -14152,8 +13928,8 @@ release\settingswindow.obj: ..\Depressia\gui\window\settingswindow.cpp ..\Depres
 		..\Depressia\io\skillloader.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\QGraphicsItem \
 		C:\Qt\5.11.2\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QTimer \
@@ -14164,7 +13940,7 @@ release\settingswindow.obj: ..\Depressia\gui\window\settingswindow.cpp ..\Depres
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpainter.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qpen.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\recover.h \
@@ -14199,8 +13975,8 @@ release\settingswindow.obj: ..\Depressia\gui\window\settingswindow.cpp ..\Depres
 release\buff.obj: ..\Depressia\logic\skills\buff.cpp ..\Depressia\logic\skills\buff.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -14302,7 +14078,7 @@ release\buff.obj: ..\Depressia\logic\skills\buff.cpp ..\Depressia\logic\skills\b
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\entities\entity.h \
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\recover.h \
@@ -14321,8 +14097,8 @@ release\healitem.obj: ..\Depressia\logic\items\healitem.cpp ..\Depressia\logic\i
 		..\Depressia\logic\skills\attack.h \
 		..\Depressia\logic\skills\skill.h \
 		..\Depressia\io\spriteloader.h \
-		..\Depressia\gui\spriteloop.h \
-		..\Depressia\gui\spritetemplate.h \
+		..\Depressia\gui\sprite\spriteloop.h \
+		..\Depressia\gui\sprite\spritetemplate.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobject.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtCore\qobjectdefs.h \
@@ -14424,13 +14200,13 @@ release\healitem.obj: ..\Depressia\logic\items\healitem.cpp ..\Depressia\logic\i
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfont.h \
 		C:\Qt\5.11.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\Depressia\gui\spriteunique.h \
+		..\Depressia\gui\sprite\spriteunique.h \
 		..\Depressia\logic\skills\recover.h \
 		..\Depressia\io\qpixmaploader.h \
 		..\Depressia\logic\entities\buffstats.h \
 		..\Depressia\logic\entities\onebuffstat.h
 
-release\moc_globalspec.obj: release\moc_globalspec.cpp 
+release\restorempitem.obj: ..\Depressia\logic\items\restorempitem.cpp ..\Depressia\logic\items\restorempitem.h
 
 release\moc_mainwindow.obj: release\moc_mainwindow.cpp 
 

@@ -4,4 +4,4 @@ Un coup de poing particulièrement violent.
 1
 one_enemy
 attack
-2
+20.0

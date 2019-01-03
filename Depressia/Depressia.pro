@@ -56,7 +56,8 @@ SOURCES += \
     logic/skills/buff.cpp \
     logic/entities/buffstats.cpp \
     logic/entities/onebuffstat.cpp \
-    logic/items/healitem.cpp
+    logic/items/healitem.cpp \
+    logic/items/restorempitem.cpp
 
 
 
@@ -116,4 +117,5 @@ HEADERS += \
     logic/skills/buff.h \
     logic/entities/buffstats.h \
     logic/entities/onebuffstat.h \
-    logic/items/healitem.h
+    logic/items/healitem.h \
+    logic/items/restorempitem.h

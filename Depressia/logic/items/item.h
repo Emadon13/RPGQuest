@@ -4,6 +4,8 @@
 #include<string>
 #include<iostream>
 #include "logic/entities/entity.h"
+#include <sstream>
+
 
 class Item
 {

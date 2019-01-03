@@ -1,5 +1,7 @@
 #include "healitem.h"
 
+using namespace std;
+
 HealItem::HealItem():
     Item(),
     hpHeal(10)
@@ -18,10 +20,12 @@ HealItem::~HealItem()
 {
 
 }
-/*
-std::string HealItem::use(Entity* user, Entity* target)
+
+std::string HealItem::use(Entity* target)
 {
-    target->restaureHp(hpHeal);
-    return
+     stringstream sstr;
+     sstr << Item::use(target) << "<br> target recupere " << hpHeal << " pvs ! ";
+     target->restaureHp(hpHeal);
+    return sstr.str();
 }
-*/
+

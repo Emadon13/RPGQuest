@@ -1,10 +1,10 @@
 Bonasse
 1
-200
-50
-30
-20
-40
+500
+500
+80
+80
+90
 ../ressources/sprites/bonasse/normal.txt
 ../ressources/sprites/bonasse/damage.txt
 ../ressources/sprites/bonasse/attack.txt

@@ -4,4 +4,4 @@ Une vague de chaleur qui frappe tous les ennemis.
 4
 group_enemies
 attack
-2.5
+25.0
