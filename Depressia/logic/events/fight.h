@@ -9,6 +9,7 @@
 #include <QString>
 #include "io/qpixmaploader.h"
 #include "logic/events/event.h"
+#include "logic/items/item.h"
 
 class Mob;
 class Team;
@@ -37,6 +38,7 @@ public:
     std::vector<Entity*> target(Mob* user, int skill);
     std::vector<Entity*> target(Hero* user, int skill);
     std::vector<Entity*> target(Hero* user, int skill, int target);
+    std::string useItem(Entity* entity, Item item);
 
     QPixmap* getImage();
     QUrl* getMusic();

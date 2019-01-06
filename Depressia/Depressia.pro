@@ -57,7 +57,9 @@ SOURCES += \
     logic/entities/buffstats.cpp \
     logic/entities/onebuffstat.cpp \
     logic/items/healitem.cpp \
-    logic/items/restorempitem.cpp
+    logic/items/restorempitem.cpp \
+    logic/items/reviveitem.cpp \
+    logic/items/debuffcancelitem.cpp
 
 
 
@@ -118,4 +120,6 @@ HEADERS += \
     logic/entities/buffstats.h \
     logic/entities/onebuffstat.h \
     logic/items/healitem.h \
-    logic/items/restorempitem.h
+    logic/items/restorempitem.h \
+    logic/items/reviveitem.h \
+    logic/items/debuffcancelitem.h
