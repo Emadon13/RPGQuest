@@ -1,12 +1,14 @@
 #include "itemfound.h"
 
+using namespace std;
+
 ItemFound::ItemFound():
     item()
 {
 
 }
 
-ItemFound::ItemFound(Item i):
+ItemFound::ItemFound(string i):
     item(i)
 {
 
@@ -14,5 +16,12 @@ ItemFound::ItemFound(Item i):
 
 Item ItemFound :: getItem()
 {
-    return item;
+    return ItemLoader::generate(item);
 }
+
+void ItemFound::addToInventory(Team* team)
+{
+    team->putInTheBag(item);
+}
+
+

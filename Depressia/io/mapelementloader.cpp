@@ -59,7 +59,7 @@ MapElement MapElementLoader::generate(Team* t, string path)
         else if(et == "item_found")
         {
             getline(file, e);
-            return MapElement(name, text, image, new ItemFound(ItemLoader::generate(e)));
+            return MapElement(name, text, image, new ItemFound(e));
         }
 
         else if(et == "final_screen")

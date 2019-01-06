@@ -38,6 +38,10 @@ Item Team::getInventoryItem(int i)
     return bag.getItem(i);
 }
 
+void Team::putInTheBag(string item)
+{
+    bag+item;
+}
 string Team::useItem(Entity* e, int i)
 {
     return bag.useItem(e, i);

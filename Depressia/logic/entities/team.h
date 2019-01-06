@@ -15,6 +15,7 @@ public:
     Hero* getHero(int i);
     Hero** getHeroes();
     Item getInventoryItem(int i);
+    void putInTheBag(std::string);
     std::string useItem(Entity* e, int i);
 
 

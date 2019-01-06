@@ -21,7 +21,7 @@ Item Inventory::getItem(int i)
         return ItemLoader::generate(content.at(unsigned (i)));
     }
 }
-
+/*
 void Inventory::putItem(string item)
 {
     if(int(content.size()) >= max_size)
@@ -30,7 +30,7 @@ void Inventory::putItem(string item)
     else
         content.push_back(item);
 }
-
+*/
 bool Inventory::isEmpty()
 {
     return content.empty();
@@ -53,4 +53,13 @@ string Inventory::useItem(Entity* e, int i)
     }
 
     return result;
+}
+
+void Inventory::operator+(string item)
+{
+    if(int(content.size()) >= max_size)
+        cout << "ERREUR : inventaire plein";
+
+    else
+        content.push_back(item);
 }

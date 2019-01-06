@@ -11,10 +11,11 @@ public:
     Inventory();
 
     Item getItem(int i);
-    void putItem(std::string item);
+    //void putItem(std::string item);
     bool isEmpty();
     bool isFull();
     std::string useItem(Entity* e, int i);
+    void operator+(std::string item);
 
 
 private:
