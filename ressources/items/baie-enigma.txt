@@ -1,0 +1,5 @@
+Aubergine Legendaire
+Une legumineuse antique qu'on croyait aujourd'hui disparue.<br>Redonne 500 pvs.
+../ressources/images/items/baie-enigma.png
+hpHeal
+500

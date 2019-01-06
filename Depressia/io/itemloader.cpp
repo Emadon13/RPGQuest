@@ -14,7 +14,7 @@ Item ItemLoader::generate()
 
 Item ItemLoader::generate(string path)
 {
-    string n, t, i;
+    string n, t, i, type, val;
     ifstream file(path);
 
     if(file)
@@ -22,6 +22,26 @@ Item ItemLoader::generate(string path)
         getline(file,n);
         getline(file,t);
         getline(file,i);
+
+        getline(file, type);
+
+        if(type == "hpHeal")
+        {
+           getline(file, val);
+           return HealItem(n, t, i, stoi(val));
+        }
+
+        else if(type == "mpHeal")
+        {
+           getline(file, val);
+           return RestoreMpItem(n, t, i, stoi(val));
+        }
+
+        else if(type=="revive")
+        {
+            getline(file, val);
+            return ReviveItem(n, t, i, stoi(val));
+        }
 
         return Item(n,t,i);
     }

@@ -1,0 +1,5 @@
+Fruit des Etoiles
+Un fruit tres amere, dont on dit qu'il vient d'une etoile. Redonne 100 pvs.
+../ressources/images/items/baie-frista.png
+hpHeal
+100

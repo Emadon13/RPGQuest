@@ -1,0 +1,5 @@
+Plume d'Archange
+La vraie relique d'un vrai Saint.<br>Ressucite avec 500 pv.
+../ressources/images/items/plume-archange.png
+revive
+500

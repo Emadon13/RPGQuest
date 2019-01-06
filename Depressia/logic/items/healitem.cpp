@@ -24,8 +24,16 @@ HealItem::~HealItem()
 std::string HealItem::use(Entity* target)
 {
      stringstream sstr;
-     sstr << Item::use(target) << "<br> target recupere " << hpHeal << " pvs ! ";
-     target->restaureHp(hpHeal);
+
+     if(!target->isAlive())
+     {
+         sstr << Item::use(target) << "<br>" << target->getName() << " est de retour parmi nous !";
+         target->restaureHp(hpHeal);
+     }
+
+     else
+         sstr << "Mais " << target->getName() << " est toujours en vie...";
+
     return sstr.str();
 }
 

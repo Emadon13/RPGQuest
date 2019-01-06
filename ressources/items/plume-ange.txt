@@ -1,0 +1,5 @@
+Plume de Cherubin
+Une belle plume d'ange irisee.<br>Ressucite avec 50 pv.
+../ressources/images/items/plume-ange.png
+revive
+50

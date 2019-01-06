@@ -1,0 +1,5 @@
+Pierre Miraculeuse
+Une orbe scintillante qui exauce les voeux.<br>Redonne 30 pms.
+../ressources/images/items/pierre-magique.png
+mpHeal
+30

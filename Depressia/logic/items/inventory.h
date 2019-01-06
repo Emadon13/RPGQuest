@@ -3,7 +3,7 @@
 
 #include<iostream>
 #include<vector>
-#include"logic/items/item.h"
+#include<io/itemloader.h>
 
 class Inventory
 {
@@ -11,7 +11,7 @@ public:
     Inventory();
 
     Item getItem(int i);
-    void putItem(Item item);
+    void putItem(std::string item);
     bool isEmpty();
     bool isFull();
     std::string useItem(Entity* e, int i);
@@ -19,7 +19,7 @@ public:
 
 private:
     static const int max_size = 8;
-    std::vector<Item> content;
+    std::vector<std::string> content;
 
 };
 

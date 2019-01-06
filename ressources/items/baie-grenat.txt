@@ -1,0 +1,5 @@
+Fruit Exotique
+Un fruit rouge et assidulé, plein de tonus. Redonne 50 pvs.
+../ressources/images/items/baie-grenat.png
+hpHeal
+50

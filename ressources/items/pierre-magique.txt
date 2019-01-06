@@ -1,0 +1,5 @@
+Pierre Magique
+Une pierre chargee d'energie cosmique.<br>Redonne 10 pms.
+../ressources/images/items/pierre-magique.png
+mpHeal
+10

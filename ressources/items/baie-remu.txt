@@ -1,0 +1,5 @@
+Baie Noire
+Une baie tendre et savoureuse qui redonne 10 pvs.
+../ressources/images/items/baie-remu.png
+hpHeal
+10

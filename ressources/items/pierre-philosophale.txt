@@ -1,0 +1,5 @@
+Pierre Philosophale
+Un artefact divin contenant les secrets de l'univers.<br>Redonne 50 pms.
+../ressources/images/items/pierre-philosophale.png
+mpHeal
+50

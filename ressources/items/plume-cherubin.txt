@@ -1,0 +1,5 @@
+Plume de Cherubin
+Une petite plume duveteuse.<br>Ressucite avec 1 pv.
+../ressources/images/items/plume-cherubin.png
+revive
+1

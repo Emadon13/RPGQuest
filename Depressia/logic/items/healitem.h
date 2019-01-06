@@ -12,8 +12,6 @@ public:
 
     std::string  use(Entity*);
 
-//    std::string use(Entity*);
-
 private:
     int hpHeal;
 };
