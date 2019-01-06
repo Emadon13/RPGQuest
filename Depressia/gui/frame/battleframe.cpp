@@ -414,7 +414,17 @@ void::BattleFrame::nextTurn()
         }
     }
     else{
-        dialogCurrent->setText("");
+        if(fight->mobsWin())
+        {
+            dialogCurrent->setText("Defaite");
+            QObject::disconnect(fuite, SIGNAL(clicked()), game, SLOT(ShowFrame()));
+            QObject::connect(fuite, SIGNAL(clicked()), game, SLOT(CreateGameOverFrame()));
+        }
+        else
+        {
+            dialogCurrent->setText("Victoire");
+            QObject::connect(fuite, SIGNAL(clicked()), game, SLOT(ShowFrame()));
+        }
         dialogInfo->setText("C'est très la fin !");
         ok->hide();
         fuite->setText("Fin");

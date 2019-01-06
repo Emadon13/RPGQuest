@@ -115,6 +115,13 @@ void GameWindow::afficheItem()
     setDisabled(true);
 }
 
+void GameWindow::openCharacterWindow(Hero *allie)
+{
+    ItemWindow *itemWindow=new ItemWindow(this);
+    itemWindow->show();
+    setDisabled(true);
+}
+
 void GameWindow::afficheParametre()
 {
     SettingsWindow *settingsWindow=new SettingsWindow(this);
@@ -164,7 +171,7 @@ void GameWindow::CreateGameOverFrame()
     ClearWidget();
 
     QPalette p( palette() );
-    p.setBrush(QPalette::Window, QBrush(QPixmap("")));
+    p.setBrush(QPalette::Window, QBrush(QPixmap("../ressources/images/backgrounds/gameover_screen.jpg")));
     setPalette(p);
 
     GameOverFrame gof(this);

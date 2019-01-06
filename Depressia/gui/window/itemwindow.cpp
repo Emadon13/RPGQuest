@@ -96,4 +96,5 @@ ItemWindow::ItemWindow(GameWindow *game, QWidget *parent) :
     QObject::connect(ok, SIGNAL(clicked()), this, SLOT(close()));
     QObject::connect(ok, SIGNAL(clicked()), game, SLOT(resetFocus()));
 
+
 }

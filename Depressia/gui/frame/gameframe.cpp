@@ -110,10 +110,8 @@ GameFrame::GameFrame(GameWindow *g)
 
     ClickableLabel *teamInfo = new ClickableLabel(game);
     teamInfo->setFixedSize(InfoWidth,InfoHeight);
-    teamInfo->setText("Zone info-team");
     teamInfo->installEventFilter(game);
     teamInfo->move(WindowWidth-InfoWidth,WindowHeight-InfoHeight);
-    teamInfo->setCursor(QCursor(QPixmap("../ressources/images/hud/cursor.png"), 0, 0));
     teamInfo->setAlignment(Qt::AlignCenter);
     teamInfo->show();
 
@@ -150,5 +148,21 @@ GameFrame::GameFrame(GameWindow *g)
 
     QObject::connect(settings, SIGNAL(clicked()), game, SLOT(afficheParametre()));
 
+    int espacementUI(5);
+    int tailleUI((teamInfo->width()/4)-espacementUI*5);
+
+    for (int i=0 ; i < Fight::nb_e ; i=i+1)
+    {
+        allie=game->GetGame()->getTeam()->getHeroes()[i];
+
+        if(allie != nullptr)
+        {
+            teamUI[i] = new TeamUI(game,allie,teamInfo->x()+espacementUI*(i+1)+tailleUI*i,teamInfo->y()+teamInfo->height()/2-tailleUI/2,tailleUI,tailleUI);
+        }
+        else
+        {
+            teamUI[i]=nullptr;
+        }
+    }
 }
 
