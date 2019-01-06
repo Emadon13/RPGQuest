@@ -1,6 +1,18 @@
 #include "characterui.h"
 #include <QProgressBar>
 
+////////////////////////////////////////////////////////
+///                                                  ///
+///                   CharacterUI                    ///
+///                                                  ///
+////////////////////////////////////////////////////////
+
+/*!
+    \class CharacterUI
+
+    Cette classe
+*/
+
 CharacterUI::CharacterUI(GameWindow *g, Hero *e, int x, int y, int width, int height) : QObject()
 {
     game=g;

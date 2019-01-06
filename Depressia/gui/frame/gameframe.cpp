@@ -10,6 +10,18 @@
 #include <iostream>
 #include <vector>
 
+////////////////////////////////////////////////////////
+///                                                  ///
+///                   GameFrame                      ///
+///                                                  ///
+////////////////////////////////////////////////////////
+
+/*!
+    \class GameFrame
+
+    Cette classe
+*/
+
 GameFrame::GameFrame(GameWindow *g)
 {
     game=g;

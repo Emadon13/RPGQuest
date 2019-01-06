@@ -1,5 +1,17 @@
 #include "spriteunique.h"
 
+////////////////////////////////////////////////////////
+///                                                  ///
+///                   SpriteUnique                   ///
+///                                                  ///
+////////////////////////////////////////////////////////
+
+/*!
+    \class SpriteUnique
+
+    Cette classe
+*/
+
 SpriteUnique::SpriteUnique(int nb, int w, int h, std::string s) : SpriteTemplate (nb, w, h, s)
 {
     connect(timer, SIGNAL(timeout()), this, SLOT(nextFrame()));

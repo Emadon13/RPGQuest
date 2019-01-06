@@ -24,6 +24,18 @@
 
 using namespace std;
 
+////////////////////////////////////////////////////////
+///                                                  ///
+///                   GameWindow                     ///
+///                                                  ///
+////////////////////////////////////////////////////////
+
+/*!
+    \class GameWindow
+
+    Cette classe
+*/
+
 GameWindow::GameWindow(Game *g,QWidget *parent) :
     QMainWindow (parent)
 {
@@ -54,29 +66,29 @@ void GameWindow::ShowFrame()
 
     if(!map->isEventHapp())
     {
-        if(dynamic_cast<Dialog*>(event) != NULL)
+        if(dynamic_cast<Dialog*>(event) != nullptr)
         {
             CreateDialogFrame();
             map->setEventHapp();
         }
-        else if(dynamic_cast<ItemFound*>(event) != NULL)
+        else if(dynamic_cast<ItemFound*>(event) != nullptr)
         {
             CreateItemFrame();
         }
-        else if(dynamic_cast<Save*>(event) != NULL)
+        else if(dynamic_cast<Save*>(event) != nullptr)
         {
             CreateGameFrame();
         }
-        else if(dynamic_cast<FinalScreen*>(event) != NULL)
+        else if(dynamic_cast<FinalScreen*>(event) != nullptr)
         {
             CreateFinalFrame();
         }
-        else if(dynamic_cast<Video*>(event) != NULL)
+        else if(dynamic_cast<Video*>(event) != nullptr)
         {
             CreateVideoFrame();
             map->setEventHapp();
         }
-        else if(dynamic_cast<Fight*>(event) != NULL)
+        else if(dynamic_cast<Fight*>(event) != nullptr)
         {
             CreateBattleFrame();
             map->setEventHapp();
@@ -167,6 +179,7 @@ void GameWindow::CreateBattleFrame()
     setPalette(p);
 
     BattleFrame *bf = new BattleFrame(this);
+    Q_UNUSED(bf);
 }
 
 void GameWindow::CreateDialogFrame()
@@ -178,6 +191,7 @@ void GameWindow::CreateDialogFrame()
     setPalette(p);
 
     DialogFrame *df = new DialogFrame(this);
+    Q_UNUSED(df);
 }
 
 void GameWindow::CreateVideoFrame()
@@ -185,6 +199,7 @@ void GameWindow::CreateVideoFrame()
     ClearWidget();
 
     VideoFrame *vf = new VideoFrame(this);
+    Q_UNUSED(vf);
 }
 
 Map* GameWindow::GetMap()

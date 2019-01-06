@@ -1,6 +1,18 @@
 #include "spriteloop.h"
 #include <iostream>
 
+////////////////////////////////////////////////////////
+///                                                  ///
+///                   SpriteLoop                     ///
+///                                                  ///
+////////////////////////////////////////////////////////
+
+/*!
+    \class SpriteLoop
+
+    Cette classe
+*/
+
 SpriteLoop::SpriteLoop(int nb, int w, int h, std::string s) : SpriteTemplate (nb, w, h, s)
 {
     timer->start(100);

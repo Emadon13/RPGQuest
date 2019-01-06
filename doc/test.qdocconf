@@ -1,0 +1,5 @@
+outputdir = html
+headerdirs = ../Depressia/
+sourcedirs = ../Depressia/
+extensions = *.cpp
+headers.fileextensions = *.h

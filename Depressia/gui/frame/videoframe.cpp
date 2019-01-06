@@ -5,6 +5,18 @@
 #include "gui/window/gamewindow.h"
 #include "gui/window/mainwindow.h"
 
+////////////////////////////////////////////////////////
+///                                                  ///
+///                   VideoFrame                     ///
+///                                                  ///
+////////////////////////////////////////////////////////
+
+/*!
+    \class VideoFrame
+
+    Cette classe
+*/
+
 VideoFrame::VideoFrame(GameWindow *g) : QObject()
 {
 

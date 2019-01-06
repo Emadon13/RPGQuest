@@ -1,5 +1,17 @@
 #include "finalframe.h"
 
+////////////////////////////////////////////////////////
+///                                                  ///
+///                   FinalFrame                     ///
+///                                                  ///
+////////////////////////////////////////////////////////
+
+/*!
+    \class FinalFrame
+
+    Cette classe
+*/
+
 FinalFrame::FinalFrame(GameWindow *g) : QObject()
 {
 

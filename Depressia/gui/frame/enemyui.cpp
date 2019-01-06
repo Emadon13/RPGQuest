@@ -1,6 +1,18 @@
 #include "enemyui.h"
 #include <QProgressBar>
 
+////////////////////////////////////////////////////////
+///                                                  ///
+///                   EnemyUI                        ///
+///                                                  ///
+////////////////////////////////////////////////////////
+
+/*!
+    \class EnemyUI
+
+    Cette classe
+*/
+
 EnemyUI::EnemyUI(GameWindow *g, Mob *e, int x, int y, int width, int height) : QObject()
 {
     game=g;

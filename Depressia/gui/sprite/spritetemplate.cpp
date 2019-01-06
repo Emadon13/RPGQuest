@@ -1,6 +1,18 @@
 #include "spritetemplate.h"
 #include "iostream"
 
+////////////////////////////////////////////////////////
+///                                                  ///
+///                   SpriteTemplate                 ///
+///                                                  ///
+////////////////////////////////////////////////////////
+
+/*!
+    \class SpriteTemplate
+
+    Cette classe
+*/
+
 SpriteTemplate::SpriteTemplate(int nb, int w, int h, std::string s)
                : QObject(), QGraphicsItem()
 {
