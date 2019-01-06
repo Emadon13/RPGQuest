@@ -50,7 +50,6 @@ ItemWindow::ItemWindow(GameWindow *game, QWidget *parent) :
     setWindowIcon(QIcon("../ressources/images/hud/icone.png"));
     setFixedSize(WindowWidth,WindowHeight);
 
-
     setCursor(Qt::CrossCursor);
 
     setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
@@ -68,7 +67,6 @@ ItemWindow::ItemWindow(GameWindow *game, QWidget *parent) :
     ok->move((WindowWidth-BoutonWidth)/2,(WindowHeight-espacement-BoutonHeight));
     ok->setStyleSheet(styleBouton);
     ok->show();
-
 
     QLabel *image = new QLabel(this);
     image->setPixmap(QPixmap(QString::fromStdString(((dynamic_cast<ItemFound*>(mapElement.getEvent()))->getItem().getImage()))).scaled(ImageWidth,ImageHeight));

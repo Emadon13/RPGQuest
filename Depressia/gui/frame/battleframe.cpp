@@ -55,6 +55,8 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
     fight=((dynamic_cast<Fight*>(game->GetGame()->getMap()->getCurrentPosition().getEvent())));
 
+    inventory=game->GetGame()->getTeam()
+
     ///Lancement de la musique
     playlist = new QMediaPlaylist();
     playlist->addMedia(*fight->getMusic());
@@ -275,6 +277,8 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     ///Utilisation d'un QSignalMapper pour connecter un signal sans paramètre à un slot avec paramètre.
     signalMapperSkill = new QSignalMapper(this);
     QObject::connect(signalMapperSkill, SIGNAL(mapped(int)), this, SLOT(choixSkill(int)));
+    signalMapperObjet = new QSignalMapper(this);
+    QObject::connect(signalMapperObjet, SIGNAL(mapped(int)), this, SLOT(choixObjet(int)));
 
     QObject::connect(attack, SIGNAL(clicked()), this, SLOT(callAttack()));
     QObject::connect(sorts, SIGNAL(clicked()), this, SLOT(showSkill()));
@@ -289,7 +293,8 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
         selectionObjet[i] = new QPushButton("objet",game);
         selectionObjet[i]->setFixedSize(boutonWidth,int(boutonHeight*0.5));
         selectionObjet[i]->setStyleSheet(styleBouton);
-
+        signalMapperObjet->setMapping(selectionObjet[i], i);
+        connect(selectionObjet[i], SIGNAL(clicked()), signalMapperObjet, SLOT(map()));
 
         selectionSkill[i] = new QPushButton("attaque",game);
         selectionSkill[i]->setFixedSize(boutonWidth,int(boutonHeight*0.5));
@@ -621,6 +626,7 @@ void BattleFrame::showObjet()
 
     for (int i = 0; i < 8; i=i+1)
     {
+        selectionObjet[i]->setText(QString::fromStdString(current->getMove(i)->getName()));
         selectionObjet[i]->show();
     }
 }
@@ -665,7 +671,27 @@ void BattleFrame::choixSkill(int i)
         okSkill->hide();
         dialogInfo->setText(dialogInfo->text()+" ✖ <b>MP insuffisants !</b>");
     }
+}
 
+/*!
+    \fn void BattleFrame::updateTurnInfo()
+
+    Fonction qui affiche un texte particulier.
+*/
+void BattleFrame::choixObjet(int i)
+{
+    dialogInfo->setText(QString::fromStdString(current->getMove(i)->getText()+"<br> Cout : "+to_string(current->getMove(i)->getMpCost()))+" MP");
+    dialogCurrent->setText(QString::fromStdString(current->getMove(i)->getName()));
+    skillNumber=i;
+    if(current->getMp()>=current->getMove(skillNumber)->getMpCost())
+    {
+        okSkill->show();
+    }
+    else
+    {
+        okSkill->hide();
+        dialogInfo->setText(dialogInfo->text()+" ✖ <b>MP insuffisants !</b>");
+    }
 }
 
 /*!

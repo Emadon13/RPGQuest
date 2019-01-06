@@ -15,6 +15,7 @@
 #include <vector>
 #include "logic/world/map.h"
 #include "gui/window/itemwindow.h"
+#include "gui/window/characterwindow.h"
 #include "gui/window/settingswindow.h"
 #include "logic/events/itemfound.h"
 #include "logic/events/fight.h"
@@ -117,8 +118,8 @@ void GameWindow::afficheItem()
 
 void GameWindow::openCharacterWindow(Hero *allie)
 {
-    ItemWindow *itemWindow=new ItemWindow(this);
-    itemWindow->show();
+    CharacterWindow *characterWindow=new CharacterWindow(this,allie);
+    characterWindow->show();
     setDisabled(true);
 }
 
@@ -152,7 +153,8 @@ void GameWindow::CreateGameFrame()
     p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage())).scaled(WindowWidth,WindowHeight)));
     setPalette(p);
 
-    GameFrame gf(this);
+    GameFrame *gf = new GameFrame(this);
+    Q_UNUSED(gf);
 }
 
 void GameWindow::CreateFinalFrame()

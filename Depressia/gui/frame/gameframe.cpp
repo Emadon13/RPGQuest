@@ -113,7 +113,6 @@ GameFrame::GameFrame(GameWindow *g)
     teamInfo->installEventFilter(game);
     teamInfo->move(WindowWidth-InfoWidth,WindowHeight-InfoHeight);
     teamInfo->setAlignment(Qt::AlignCenter);
-    teamInfo->show();
 
     QLabel *zoneInfoText = new QLabel(game);
     zoneInfoText->setFixedSize(InfoWidth,InfoHeight);

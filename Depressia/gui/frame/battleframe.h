@@ -38,7 +38,7 @@ public slots :
     void callAttack();
     void choixEntity(int i);
     void choixSkill(int i);
-    //void choixObjet(int i);
+    void choixObjet(int i);
 
     void showObjet();
     void showSkill();
@@ -49,6 +49,7 @@ public:
     GameWindow *game;
 
     Fight* fight;
+    Inventory* inventory;
 
     QMediaPlaylist *playlist;
     QMediaPlayer *music;
@@ -67,8 +68,6 @@ public:
 
     CharacterUI *character;
     EnemyUI *enemy;
-
-    Sprite *sprite;
 
     QLabel *dialogInfo;
     QLabel *dialogSelection;
@@ -89,6 +88,7 @@ public:
     QPushButton *selectionSkill[8];
     QPushButton *selectionObjet[8];
     QSignalMapper *signalMapperSkill;
+    QSignalMapper *signalMapperObjet;
     QSignalMapper *signalMapperEntity;
 
     QGraphicsScene *scene;

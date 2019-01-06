@@ -3,6 +3,7 @@
 
 #include "gui/window/gamewindow.h"
 #include "logic/world/mapelement.h"
+#include "gui/frame/teamui.h"
 
 class ItemFrame : QObject
 {
@@ -16,6 +17,10 @@ private :
     Map *map;
     MapElement mapElement;
     GameWindow *game;
+
+    TeamUI* teamUI[Fight::nb_e];
+    QPushButton *settings;
+    Hero *allie;
 
 };
 
