@@ -33,6 +33,7 @@ public slots:
     void CreateDialogFrame();
     void CreateVideoFrame();
     void CreateFinalFrame();
+    void CreateGameOverFrame();
     void CreateItemFrame();
     void GoUp();
     void GoDown();
@@ -41,6 +42,7 @@ public slots:
     void afficheItem();
     void afficheParametre();
     void resetFocus();
+    void setPositionAfterLoose();
 
 private:
     int WindowWidth;

@@ -1,6 +1,18 @@
 #include "optionframe.h"
 #include "gui/window/mainwindow.h"
 
+////////////////////////////////////////////////////////
+///                                                  ///
+///                   OptionFrame                    ///
+///                                                  ///
+////////////////////////////////////////////////////////
+
+/*!
+    \class OptionFrame
+
+    Cette classe
+*/
+
 OptionFrame::OptionFrame(MainWindow *m) : QObject()
 {
 

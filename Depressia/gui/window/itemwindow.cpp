@@ -4,6 +4,18 @@
 #include <QLabel>
 #include "logic/events/itemfound.h"
 
+////////////////////////////////////////////////////////
+///                                                  ///
+///                   ItemWindow                     ///
+///                                                  ///
+////////////////////////////////////////////////////////
+
+/*!
+    \class ItemWindow
+
+    Cette classe
+*/
+
 ItemWindow::ItemWindow(GameWindow *game, QWidget *parent) :
     QMainWindow(parent)
 {

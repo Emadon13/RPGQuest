@@ -18,12 +18,44 @@
 #include "gui/sprite/spriteunique.h"
 #include "io/spriteloader.h"
 
+////////////////////////////////////////////////////////
+///                                                  ///
+///                   BattleFrame                    ///
+///                                                  ///
+////////////////////////////////////////////////////////
+
+/*!
+    \class BattleFrame
+
+    Cette classe gère l'affichage de la bataille sur la GameWindow.
+*/
+
+////////////////////////////////////////////////////////
+///                                                  ///
+///                   Constructeur                   ///
+///                                                  ///
+////////////////////////////////////////////////////////
+
+/*!
+    \fn BattleFrame::BattleFrame(GameWindow *g) : QObject()
+
+    Construit une BattleFrame sur la GameWindow passée en parametre en fonction d'un objet fight :
+
+        - Initialise tous les sprites de toutes les entités (sprite normal, de dommage, d'attaque, de sort, de mort)
+        - Initialise les UI de toutes les entités (enneyUI et heroUI)
+        - Initialise tous les boutons qui serviront pour l'interaction de l'utilisateur
+        - Lance une musique
+        - Initialise les différentes zones qui serviront pour l'affichage de certaines informations
+        - Initialise le background, le curseur, la police, etc, ...
+
+*/
 BattleFrame::BattleFrame(GameWindow *g) : QObject()
 {
     game=g;
 
     fight=((dynamic_cast<Fight*>(game->GetGame()->getMap()->getCurrentPosition().getEvent())));
 
+    ///Lancement de la musique
     playlist = new QMediaPlaylist();
     playlist->addMedia(*fight->getMusic());
     playlist->setPlaybackMode(QMediaPlaylist::Loop);
@@ -37,12 +69,14 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
     double ratio(game->GetGame()->getRatio());
 
+    ///Affichage de l'image qui sert de décors pour l'interface.
     QLabel *back = new QLabel(game);
     back->setPixmap(QPixmap("../ressources/images/hud/background-battle9.png").scaled(WindowWidth,WindowHeight));
     back->setFixedSize(WindowWidth,WindowHeight);
     back->move(0,0);
     back->show();
 
+    ///Création de la scene qui contiendra les différents sprites
     scene = new QGraphicsScene(game);
     scene->setSceneRect(0, 0, WindowWidth, WindowHeight);
 
@@ -59,6 +93,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     int espacementSprite=int(150/ratio);
     int espacementMilieu=int(50/ratio);
 
+    ///Création des Sprites et des UI pour les heros
     for (int i=0 ; i < Fight::nb_e ; i=i+1)
     {
         allie=fight->getHeroes()[i];
@@ -108,6 +143,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
         }
     }
 
+    ///Création des Sprites et des UI pour les mobs
     for (int i=0 ; i < Fight::nb_e ; i=i+1)
     {
         mob=fight->getMobs()[i];
@@ -156,6 +192,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
         }
     }
 
+    ///Initialisation des différents Label qui contiendront les textes.
     int dialogWidth(int(WindowWidth*0.4));
     int dialogHeight(int(WindowHeight*0.19));
 
@@ -185,6 +222,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     espacementBoutonH = (int((dialogWidth-boutonWidth*2)/3));
     espacementBoutonV = (int((dialogHeight-boutonHeight*2)/3));
 
+    ///Création d'un style pour les boutons.
     QString styleBouton = "QPushButton {color:white; background-color: #302514;"
                           "border-style: outset; border-width: 2px;"
                           "border-radius: 10px; border-color: beige;"
@@ -199,6 +237,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
                               "QPushButton:pressed {color:white; background-color: #000000;"
                               "border-style: inset;}";
 
+    ///Création des 7 boutons de base pour l'interface.
     attack = new QPushButton("Attaquer", game);
     attack->setFixedSize(boutonWidth,boutonHeight);
     attack->move(dialogSelection->x()+espacementBoutonH,dialogSelection->y()+espacementBoutonV);
@@ -233,6 +272,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     previous->show();
     previous->setStyleSheet(styleBoutonRond);
 
+    ///Utilisation d'un QSignalMapper pour connecter un signal sans paramètre à un slot avec paramètre.
     signalMapperSkill = new QSignalMapper(this);
     QObject::connect(signalMapperSkill, SIGNAL(mapped(int)), this, SLOT(choixSkill(int)));
 
@@ -313,6 +353,30 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     QObject::connect(okSkill, SIGNAL(clicked()), this, SLOT(callSkill()));
 }
 
+////////////////////////////////////////////////////////
+///                                                  ///
+///                   Fonctions                      ///
+///                                                  ///
+////////////////////////////////////////////////////////
+
+/*!
+    \fn void::BattleFrame::nextTurn()
+
+    Fonction appelée à chaque nouveau tour, elle gère le tour de la manière suivante :
+
+        1) Regarde le combat est terminé
+            - Si oui, affiche un texte de fin et le bouton pour quitter le combat.
+            - Si non, passe au 2)
+
+        2) Appel de différentes méthodes pour mettre à jours certaines informations.
+
+        3) Regarde si l'entité qui est en train de jouer est un Mob ou un Héro.
+            - Si Mob, affiche le bouton pour jouer automatiquement le tour du Mob (via l'IA).
+            - Si Héro, passe au 4)
+
+        4) Appel de la méthode ShowSelection() qui va afficher les différentes options d'action proposées au joueur.
+
+*/
 void::BattleFrame::nextTurn()
 {
     if(!fight->isEnded())
@@ -360,6 +424,11 @@ void::BattleFrame::nextTurn()
 
 }
 
+/*!
+    \fn void::BattleFrame::updateUI()
+
+    Fonction qui met à jours tous les UI de toutes les entités.
+*/
 void::BattleFrame::updateUI()
 {
     ok->setText("OK");
@@ -377,6 +446,11 @@ void::BattleFrame::updateUI()
     }
 }
 
+/*!
+    \fn void::BattleFrame::playTurn()
+
+    Fonction qui joue le tour de l'entité en fonction de l'action choisie par le joueur ou l'IA.
+*/
 void::BattleFrame::playTurn()
 {
     QObject::disconnect(retour, SIGNAL(clicked()), this, SLOT(showSelection()));
@@ -403,12 +477,17 @@ void::BattleFrame::playTurn()
     QObject::connect(current->getSpriteSkill(), SIGNAL(done()), this, SLOT(playDamage()));
 }
 
+/*!
+    \fn void BattleFrame::playDamage()
+
+    Fonction qui permet d'appeler une méthode pour afficher le sprite de dégât pour chaque entité qui a subie des dommages.
+*/
 void BattleFrame::playDamage()
 {
     resetCurrentSprite();
     if(!current->hasSkillMiss(skillNumber))
     {
-        if(dynamic_cast<Attack*>(current->getMove(skillNumber)) != NULL)
+        if(dynamic_cast<Attack*>(current->getMove(skillNumber)) != nullptr)
         {
             for (unsigned long long i=0 ; i < hited.size() ; i++)
             {
@@ -419,6 +498,11 @@ void BattleFrame::playDamage()
     ok->show();
 }
 
+/*!
+    \fn void BattleFrame::playSkillEffect()
+
+    Fonction qui permet d'appeler une méthode pour afficher le sprite de sort sur chaque entité qui a subie les effets de ce sort.
+*/
 void BattleFrame::playSkillEffect()
 {
     if(!current->hasSkillMiss(skillNumber))
@@ -430,6 +514,12 @@ void BattleFrame::playSkillEffect()
     }
 }
 
+/*!
+    \fn BattleFrame::callAttack()
+
+    Fonction qui se déclenche lorsque le joueur souhaite attaquer, elle affiche les différentes entités que le joueur peut cibler avec
+    cette attaque.
+*/
 void BattleFrame::callAttack()
 {
     dialogInfo->setText("Qui voulez vous cibler ?");
@@ -459,16 +549,31 @@ void BattleFrame::callAttack()
 
 }
 
-void::BattleFrame::updateCurrentPlayer()
+/*!
+    \fn void BattleFrame::updateCurrentPlayer()
+
+    Fonction qui met à jour et affiche le nom de l'entité en train de jouer.
+*/
+void BattleFrame::updateCurrentPlayer()
 {
     dialogCurrent->setText(QString::fromStdString(current->getName()));
 }
 
+/*!
+    \fn void BattleFrame::updateTurnInfo()
+
+    Fonction qui affiche un texte particulier.
+*/
 void BattleFrame::updateTurnInfo()
 {
     dialogInfo->setText("Que voulez vous faire ?");
 }
 
+/*!
+    \fn void BattleFrame::updateTurnInfo()
+
+    Fonction qui affiche un texte particulier.
+*/
 void BattleFrame::showSelection()
 {
     updateTurnInfo();
@@ -492,6 +597,11 @@ void BattleFrame::showSelection()
     fuite->show();
 }
 
+/*!
+    \fn void BattleFrame::updateTurnInfo()
+
+    Fonction qui affiche un texte particulier.
+*/
 void BattleFrame::showObjet()
 {
     attack->hide();
@@ -505,6 +615,11 @@ void BattleFrame::showObjet()
     }
 }
 
+/*!
+    \fn void BattleFrame::updateTurnInfo()
+
+    Fonction qui affiche un texte particulier.
+*/
 void BattleFrame::showSkill()
 {
     dialogInfo->setText("Liste des sorts");
@@ -521,6 +636,11 @@ void BattleFrame::showSkill()
     }
 }
 
+/*!
+    \fn void BattleFrame::updateTurnInfo()
+
+    Fonction qui affiche un texte particulier.
+*/
 void BattleFrame::choixSkill(int i)
 {
     dialogInfo->setText(QString::fromStdString(current->getMove(i)->getText()+"<br> Cout : "+to_string(current->getMove(i)->getMpCost()))+" MP");
@@ -538,6 +658,11 @@ void BattleFrame::choixSkill(int i)
 
 }
 
+/*!
+    \fn void BattleFrame::updateTurnInfo()
+
+    Fonction qui affiche un texte particulier.
+*/
 void BattleFrame::callSkill()
 {
     dialogInfo->setText("Qui voulez vous cibler ?");
@@ -585,18 +710,33 @@ void BattleFrame::callSkill()
     }
 }
 
+/*!
+    \fn void BattleFrame::updateTurnInfo()
+
+    Fonction qui affiche un texte particulier.
+*/
 void BattleFrame::choixEntity(int i)
 {
     hited=fight->target(dynamic_cast<Hero*>(current), skillNumber, i);
     playTurn();
 }
 
+/*!
+    \fn void BattleFrame::updateTurnInfo()
+
+    Fonction qui affiche un texte particulier.
+*/
 void BattleFrame::killEntity(Entity *s)
 {
     s->getSpriteNormal()->hide();
     dynamic_cast<Hero*>(s)->getSpriteKilled()->show();
 }
 
+/*!
+    \fn void BattleFrame::updateTurnInfo()
+
+    Fonction qui affiche un texte particulier.
+*/
 void BattleFrame::damageEntity(Entity *s, unsigned long long i)
 {
     s->getSpriteNormal()->hide();
@@ -605,6 +745,11 @@ void BattleFrame::damageEntity(Entity *s, unsigned long long i)
     QObject::connect(hited[i]->getSpriteDamage(), SIGNAL(reset(unsigned long long)), this, SLOT(resetHitedSprite(unsigned long long)));
 }
 
+/*!
+    \fn void BattleFrame::updateTurnInfo()
+
+    Fonction qui affiche un texte particulier.
+*/
 void BattleFrame::effectEntity(Entity *s, unsigned long long i)
 {
     spriteEffect[i]=current->getMove(skillNumber)->getSprite();
@@ -615,12 +760,22 @@ void BattleFrame::effectEntity(Entity *s, unsigned long long i)
     QObject::connect(dynamic_cast<SpriteUnique*>(spriteEffect[i]), SIGNAL(reset(unsigned long long)), this, SLOT(stopEffect(unsigned long long)));
 }
 
+/*!
+    \fn void BattleFrame::updateTurnInfo()
+
+    Fonction qui affiche un texte particulier.
+*/
 void BattleFrame::stopEffect(unsigned long long i)
 {
     spriteEffect[int(i)]->hide();
     cout << i << endl;
 }
 
+/*!
+    \fn void BattleFrame::updateTurnInfo()
+
+    Fonction qui affiche un texte particulier.
+*/
 void BattleFrame::resetHitedSprite(unsigned long long i)
 {
     hited[i]->getSpriteDamage()->hide();
@@ -643,11 +798,21 @@ void BattleFrame::resetHitedSprite(unsigned long long i)
     }
 }
 
+/*!
+    \fn void BattleFrame::updateTurnInfo()
+
+    Fonction qui affiche un texte particulier.
+*/
 void BattleFrame::hideSprite(unsigned long long i)
 {
     hited[i]->getSpriteKilled()->hide();
 }
 
+/*!
+    \fn void BattleFrame::updateTurnInfo()
+
+    Fonction qui affiche un texte particulier.
+*/
 void BattleFrame::attackEntity(Entity *s)
 {
     s->getSpriteNormal()->hide();
@@ -655,6 +820,11 @@ void BattleFrame::attackEntity(Entity *s)
     s->getSpriteAttack()->play(NULL);
 }
 
+/*!
+    \fn void BattleFrame::updateTurnInfo()
+
+    Fonction qui affiche un texte particulier.
+*/
 void BattleFrame::skillEntity(Entity *s)
 {
     s->getSpriteNormal()->hide();
@@ -662,11 +832,21 @@ void BattleFrame::skillEntity(Entity *s)
     s->getSpriteSkill()->play(NULL);
 }
 
+/*!
+    \fn void BattleFrame::updateTurnInfo()
+
+    Fonction qui affiche un texte particulier.
+*/
 void BattleFrame::deleteEntity(Entity *s)
 {
-
+    Q_UNUSED(s);
 }
 
+/*!
+    \fn void BattleFrame::updateTurnInfo()
+
+    Fonction qui affiche un texte particulier.
+*/
 void BattleFrame::resetCurrentSprite()
 {
     current->getSpriteAttack()->hide();

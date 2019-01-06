@@ -59,7 +59,9 @@ SOURCES += \
     logic/items/healitem.cpp \
     logic/items/restorempitem.cpp \
     logic/items/reviveitem.cpp \
-    logic/items/debuffcancelitem.cpp
+    logic/items/debuffcancelitem.cpp \
+    gui/frame/gameoverframe.cpp \
+    gui/frame/teamui.cpp
 
 
 
@@ -122,4 +124,6 @@ HEADERS += \
     logic/items/healitem.h \
     logic/items/restorempitem.h \
     logic/items/reviveitem.h \
-    logic/items/debuffcancelitem.h
+    logic/items/debuffcancelitem.h \
+    gui/frame/gameoverframe.h \
+    gui/frame/teamui.h

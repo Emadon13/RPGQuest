@@ -1,6 +1,18 @@
 #include "itemframe.h"
 #include "gui/clickable/clickablelabel.h"
 
+////////////////////////////////////////////////////////
+///                                                  ///
+///                   ItemFrame                      ///
+///                                                  ///
+////////////////////////////////////////////////////////
+
+/*!
+    \class ItemFrame
+
+    Cette classe
+*/
+
 ItemFrame::ItemFrame(GameWindow *g)
 {
     game=g;

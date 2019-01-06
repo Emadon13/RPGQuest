@@ -9,6 +9,18 @@
 #include "logic/world/map.h"
 #include "gui/frame/optionframe.h"
 
+////////////////////////////////////////////////////////
+///                                                  ///
+///                   MainWindow                     ///
+///                                                  ///
+////////////////////////////////////////////////////////
+
+/*!
+    \class MainWindow
+
+    Cette classe
+*/
+
 MainWindow::MainWindow(Game *g, QWidget *parent) :
     QMainWindow(parent)
 {
@@ -51,7 +63,7 @@ void MainWindow::ClearWidget()
     QList<QWidget*> list = findChildren<QWidget*>();
     for (int i = 0; i < list.size(); ++i)
     {
-        if((dynamic_cast<QMediaPlayer*>(list[i])==NULL) && (dynamic_cast<QMediaPlaylist*>(list[i])==NULL)){
+        if((dynamic_cast<QMediaPlayer*>(list[i])==nullptr) && (dynamic_cast<QMediaPlaylist*>(list[i])==nullptr)){
             list[i]->deleteLater();
         }
     }

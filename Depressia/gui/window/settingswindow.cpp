@@ -5,6 +5,18 @@
 #include <QLabel>
 #include "logic/events/itemfound.h"
 
+////////////////////////////////////////////////////////
+///                                                  ///
+///                   SettingsWindow                     ///
+///                                                  ///
+////////////////////////////////////////////////////////
+
+/*!
+    \class SettingsWindow
+
+    Cette classe
+*/
+
 SettingsWindow::SettingsWindow(GameWindow *game, QWidget *parent) :
     QMainWindow(parent)
 {

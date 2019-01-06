@@ -10,6 +10,18 @@
 #include <iostream>
 #include <vector>
 
+////////////////////////////////////////////////////////
+///                                                  ///
+///                   DialogFrame                    ///
+///                                                  ///
+////////////////////////////////////////////////////////
+
+/*!
+    \class DialogFrame
+
+    Cette classe
+*/
+
 DialogFrame::DialogFrame(GameWindow *g) : QObject()
 {
     game=g;
