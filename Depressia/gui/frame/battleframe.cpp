@@ -335,6 +335,27 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
         }
     }
 
+    signalMapperEntityObjet = new QSignalMapper(this);
+    QObject::connect(signalMapperEntityObjet, SIGNAL(mapped(int)), this, SLOT(choixEntityObjet(int)));
+
+    for (int i=0 ; i < Fight::nb_e ; i=i+1)
+    {
+        selectionEntityObject[i] = new QPushButton("Entity",game);
+        selectionEntityObject[i]->setFixedSize(boutonWidth,boutonHeight);
+        selectionEntityObject[i]->setStyleSheet(styleBouton);
+        signalMapperEntityObjet->setMapping(selectionEntityObject[i], i);
+        connect(selectionEntityObject[i], SIGNAL(clicked()), signalMapperEntityObjet, SLOT(map()));
+
+        if(i<2)
+        {
+            selectionEntityObject[i]->move(dialogSelection->x()+espacementBoutonH,dialogSelection->y()+espacementBoutonV*(i+1)+boutonHeight*i);
+        }
+        else
+        {
+            selectionEntityObject[i]->move(dialogSelection->x()+espacementBoutonH*2+boutonWidth,dialogSelection->y()+espacementBoutonV*(2-i+1)+boutonHeight*(2-i));
+        }
+    }
+
     ok = new QPushButton("Combattre !", game);
     ok->setFixedSize(boutonWidth,boutonHeight);
     ok->setStyleSheet(styleBouton);
@@ -350,6 +371,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
     okObjet->setFixedSize(boutonWidth,boutonHeight);
     okObjet->move(dialogSelection->x()+int(dialogWidth*0.5)-int(boutonWidth*0.5),dialogSelection->y()+int(dialogHeight*0.5)-int(boutonHeight*0.5));
     okObjet->setStyleSheet(styleBouton);
+    QObject::connect(okObjet, SIGNAL(clicked()), this, SLOT(useObjet()));
 
     okSkill = new QPushButton("Sélectionner !", game);
     okSkill->setFixedSize(boutonWidth,boutonHeight);
@@ -478,7 +500,7 @@ void::BattleFrame::playTurn()
     {
         attackEntity(current);
     }
-    else
+    else if(skillNumber>=0)
     {
         skillEntity(current);
         playSkillEffect();
@@ -490,6 +512,21 @@ void::BattleFrame::playTurn()
     }
     QObject::connect(current->getSpriteAttack(), SIGNAL(done()), this, SLOT(playDamage()));
     QObject::connect(current->getSpriteSkill(), SIGNAL(done()), this, SLOT(playDamage()));
+}
+
+void::BattleFrame::playTurnObject(QString summary)
+{
+    QObject::disconnect(retour, SIGNAL(clicked()), this, SLOT(showSelection()));
+
+    updateCurrentPlayer();
+
+    dialogInfo->setText(summary);
+    updateUI();
+
+    for (int i=0 ; i < Fight::nb_e ; i=i+1)
+    {
+        selectionEntityObject[i]->hide();
+    }
 }
 
 /*!
@@ -601,8 +638,10 @@ void BattleFrame::showSelection()
     for (int i=0 ; i < Fight::nb_e ; i=i+1)
     {
         selectionEntity[i]->hide();
+        selectionEntityObject[i]->hide();
     }
     okSkill->hide();
+    okObjet->hide();
 
     updateTurnInfo();
 
@@ -683,9 +722,35 @@ void BattleFrame::choixObjet(int i)
 {
     dialogInfo->setText(QString::fromStdString(inventory->getItem(i).getText()));
     dialogCurrent->setText(QString::fromStdString(inventory->getItem(i).getName()));
-    skillNumber=i;
-    //okObject->show();
+    objectNumber=i;
+    okObjet->show();
 }
+
+/*!
+    \fn void BattleFrame::updateTurnInfo()
+
+    Fonction qui affiche un texte particulier.
+*/
+void BattleFrame::useObjet()
+{
+    dialogInfo->setText("Qui voulez vous cibler ?");
+    okObjet->hide();
+    for (int i = 0; i < 8; i=i+1)
+    {
+        selectionObjet[i]->hide();
+    }
+    for (int i=0 ; i < Fight::nb_e ; i=i+1)
+    {
+        allie=fight->getHeroes()[i];
+
+        if(allie != nullptr)
+        {
+            selectionEntityObject[i]->setText(QString::fromStdString(allie->getName()));
+            selectionEntityObject[i]->show();
+        }
+    }
+}
+
 
 /*!
     \fn void BattleFrame::updateTurnInfo()
@@ -737,6 +802,17 @@ void BattleFrame::callSkill()
         hited=fight->target(dynamic_cast<Hero*>(current), skillNumber);
         playTurn();
     }
+}
+
+/*!
+    \fn void BattleFrame::updateTurnInfo()
+
+    Fonction qui affiche un texte particulier.
+*/
+void BattleFrame::choixEntityObjet(int i)
+{
+    ok->show();
+    playTurnObject(QString::fromStdString(fight->useItem(fight->getHeroes()[i],objectNumber)));
 }
 
 /*!

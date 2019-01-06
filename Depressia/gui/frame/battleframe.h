@@ -26,6 +26,7 @@ public slots :
     void updateTurnInfo();
     void showSelection();
     void playTurn();
+    void playTurnObject(QString summary);
     void updateUI();
     void callSkill();
     void playDamage();
@@ -35,8 +36,10 @@ public slots :
     void hideSprite(unsigned long long);
     void stopEffect(unsigned long long i);
 
+    void useObjet();
     void callAttack();
     void choixEntity(int i);
+    void choixEntityObjet(int i);
     void choixSkill(int i);
     void choixObjet(int i);
 
@@ -64,6 +67,7 @@ public:
     Mob *mob;
     Entity *current;
     int skillNumber;
+    int objectNumber;
     vector<Entity*> hited;
 
     CharacterUI *character;
@@ -85,11 +89,13 @@ public:
     QPushButton *okObjet;
 
     QPushButton *selectionEntity[8];
+    QPushButton *selectionEntityObject[8];
     QPushButton *selectionSkill[8];
     QPushButton *selectionObjet[8];
     QSignalMapper *signalMapperSkill;
     QSignalMapper *signalMapperObjet;
     QSignalMapper *signalMapperEntity;
+    QSignalMapper *signalMapperEntityObjet;
 
     QGraphicsScene *scene;
     QGraphicsView *view;
