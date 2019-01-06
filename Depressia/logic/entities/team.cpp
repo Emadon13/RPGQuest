@@ -6,7 +6,7 @@ Team::Team():
     bag(Inventory())
 {
     hero[0] = dynamic_cast<Hero*>(EntityLoader::generate("../ressources/entities/heroes/bonasse.txt"));
-    hero[1] = dynamic_cast<Hero*>(EntityLoader::generate("../ressources/entities/heroes/rouge.txt"));
+    hero[1] = nullptr;//dynamic_cast<Hero*>(EntityLoader::generate("../ressources/entities/heroes/rouge.txt"));
     hero[2] = nullptr;//dynamic_cast<Hero*>(EntityLoader::generate("../ressources/entities/heroes/rozalin.txt"));
     hero[3] = nullptr;
 }

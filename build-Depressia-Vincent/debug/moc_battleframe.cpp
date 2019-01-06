@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_BattleFrame_t {
-    QByteArrayData data[29];
-    char stringdata0[330];
+    QByteArrayData data[30];
+    char stringdata0[341];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -58,8 +58,9 @@ QT_MOC_LITERAL(23, 265, 10), // "stopEffect"
 QT_MOC_LITERAL(24, 276, 10), // "callAttack"
 QT_MOC_LITERAL(25, 287, 11), // "choixEntity"
 QT_MOC_LITERAL(26, 299, 10), // "choixSkill"
-QT_MOC_LITERAL(27, 310, 9), // "showObjet"
-QT_MOC_LITERAL(28, 320, 9) // "showSkill"
+QT_MOC_LITERAL(27, 310, 10), // "choixObjet"
+QT_MOC_LITERAL(28, 321, 9), // "showObjet"
+QT_MOC_LITERAL(29, 331, 9) // "showSkill"
 
     },
     "BattleFrame\0killEntity\0\0Entity*\0sprite\0"
@@ -70,8 +71,8 @@ QT_MOC_LITERAL(28, 320, 9) // "showSkill"
     "callSkill\0playDamage\0playSkillEffect\0"
     "resetCurrentSprite\0resetHitedSprite\0"
     "hideSprite\0stopEffect\0callAttack\0"
-    "choixEntity\0choixSkill\0showObjet\0"
-    "showSkill"
+    "choixEntity\0choixSkill\0choixObjet\0"
+    "showObjet\0showSkill"
 };
 #undef QT_MOC_LITERAL
 
@@ -81,7 +82,7 @@ static const uint qt_meta_data_BattleFrame[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      24,   14, // methods
+      25,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -89,30 +90,31 @@ static const uint qt_meta_data_BattleFrame[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,  134,    2, 0x0a /* Public */,
-       5,    2,  137,    2, 0x0a /* Public */,
-       7,    2,  142,    2, 0x0a /* Public */,
-       8,    1,  147,    2, 0x0a /* Public */,
-       9,    1,  150,    2, 0x0a /* Public */,
-      10,    1,  153,    2, 0x0a /* Public */,
-      11,    0,  156,    2, 0x0a /* Public */,
-      12,    0,  157,    2, 0x0a /* Public */,
-      13,    0,  158,    2, 0x0a /* Public */,
-      14,    0,  159,    2, 0x0a /* Public */,
-      15,    0,  160,    2, 0x0a /* Public */,
-      16,    0,  161,    2, 0x0a /* Public */,
-      17,    0,  162,    2, 0x0a /* Public */,
-      18,    0,  163,    2, 0x0a /* Public */,
-      19,    0,  164,    2, 0x0a /* Public */,
-      20,    0,  165,    2, 0x0a /* Public */,
-      21,    1,  166,    2, 0x0a /* Public */,
-      22,    1,  169,    2, 0x0a /* Public */,
-      23,    1,  172,    2, 0x0a /* Public */,
-      24,    0,  175,    2, 0x0a /* Public */,
-      25,    1,  176,    2, 0x0a /* Public */,
-      26,    1,  179,    2, 0x0a /* Public */,
-      27,    0,  182,    2, 0x0a /* Public */,
-      28,    0,  183,    2, 0x0a /* Public */,
+       1,    1,  139,    2, 0x0a /* Public */,
+       5,    2,  142,    2, 0x0a /* Public */,
+       7,    2,  147,    2, 0x0a /* Public */,
+       8,    1,  152,    2, 0x0a /* Public */,
+       9,    1,  155,    2, 0x0a /* Public */,
+      10,    1,  158,    2, 0x0a /* Public */,
+      11,    0,  161,    2, 0x0a /* Public */,
+      12,    0,  162,    2, 0x0a /* Public */,
+      13,    0,  163,    2, 0x0a /* Public */,
+      14,    0,  164,    2, 0x0a /* Public */,
+      15,    0,  165,    2, 0x0a /* Public */,
+      16,    0,  166,    2, 0x0a /* Public */,
+      17,    0,  167,    2, 0x0a /* Public */,
+      18,    0,  168,    2, 0x0a /* Public */,
+      19,    0,  169,    2, 0x0a /* Public */,
+      20,    0,  170,    2, 0x0a /* Public */,
+      21,    1,  171,    2, 0x0a /* Public */,
+      22,    1,  174,    2, 0x0a /* Public */,
+      23,    1,  177,    2, 0x0a /* Public */,
+      24,    0,  180,    2, 0x0a /* Public */,
+      25,    1,  181,    2, 0x0a /* Public */,
+      26,    1,  184,    2, 0x0a /* Public */,
+      27,    1,  187,    2, 0x0a /* Public */,
+      28,    0,  190,    2, 0x0a /* Public */,
+      29,    0,  191,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
@@ -135,6 +137,7 @@ static const uint qt_meta_data_BattleFrame[] = {
     QMetaType::Void, QMetaType::ULongLong,    2,
     QMetaType::Void, QMetaType::ULongLong,    6,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,    6,
     QMetaType::Void, QMetaType::Int,    6,
     QMetaType::Void, QMetaType::Int,    6,
     QMetaType::Void,
@@ -171,8 +174,9 @@ void BattleFrame::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 19: _t->callAttack(); break;
         case 20: _t->choixEntity((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 21: _t->choixSkill((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 22: _t->showObjet(); break;
-        case 23: _t->showSkill(); break;
+        case 22: _t->choixObjet((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 23: _t->showObjet(); break;
+        case 24: _t->showSkill(); break;
         default: ;
         }
     }
@@ -203,13 +207,13 @@ int BattleFrame::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 24)
+        if (_id < 25)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 24;
+        _id -= 25;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 24)
+        if (_id < 25)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 24;
+        _id -= 25;
     }
     return _id;
 }

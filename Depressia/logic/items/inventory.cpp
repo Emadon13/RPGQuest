@@ -54,7 +54,7 @@ string Inventory::useItem(Entity* e, int i)
     {
         ItemLoader::generate(content.at(unsigned(i))).use(e);
         result = ItemLoader::generate(content.at(unsigned(i))).getText();
-        //content.erase(content.begin() + i);
+        content.erase(content.begin() + i);
     }
 
     return result;
