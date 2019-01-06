@@ -4,12 +4,14 @@
 
 using namespace std;
 
-Fight::Fight()
+Fight::Fight():
+    Event()
 {
 
 }
 
 Fight::Fight(Team* t, Mob* m[nb_e], string img, string mus):
+    Event(),
     music(mus),
     image(img)
 {

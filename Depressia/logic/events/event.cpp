@@ -2,7 +2,8 @@
 
 using namespace std;
 
-Event::Event()
+Event::Event():
+    redo(false)
 {
 
 }
@@ -11,4 +12,9 @@ Event::Event()
 Event::~Event()
 {
 
+}
+
+bool Event::mustRedo()
+{
+    return redo;
 }

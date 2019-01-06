@@ -3,15 +3,17 @@
 using namespace std;
 
 ItemFound::ItemFound():
+    Event(),
     item()
 {
-
+    redo = true;
 }
 
 ItemFound::ItemFound(string i):
+    Event(),
     item(i)
 {
-
+    redo = true;
 }
 
 Item* ItemFound::getItem()
@@ -21,7 +23,11 @@ Item* ItemFound::getItem()
 
 void ItemFound::addToInventory(Team* team)
 {
-    team->putInTheBag(item);
+    if(!team->getInventory()->isFull())
+    {
+        team->putInTheBag(item);
+        redo = false;
+    }
 }
 
 

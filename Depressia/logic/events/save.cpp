@@ -1,6 +1,7 @@
 #include "save.h"
 
-Save::Save()
+Save::Save():
+    Event()
 {
-
+    redo = true;
 }

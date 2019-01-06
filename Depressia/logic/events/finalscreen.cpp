@@ -1,6 +1,7 @@
 #include "finalscreen.h"
 
-FinalScreen::FinalScreen()
+FinalScreen::FinalScreen():
+    Event()
 {
 
 }

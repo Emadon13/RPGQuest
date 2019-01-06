@@ -8,6 +8,10 @@ class Event
 public:
     Event();
     virtual ~Event();
+    bool mustRedo();
+
+protected:
+    bool redo;
 
 };
 

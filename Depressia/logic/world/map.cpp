@@ -1,4 +1,4 @@
-#include "map.h"
+ #include "map.h"
 #include <iostream>
 
 
@@ -42,7 +42,10 @@ Map::Map(Team* t, vector<string> wm, vector<unsigned int> r, vector<unsigned int
     }
 
     else
+    {
         currentPosition = 0;
+        updateCurrentElement();
+    }
 
 }
 
@@ -50,7 +53,7 @@ Map::Map(Team* t, vector<string> wm, vector<unsigned int> r, vector<unsigned int
 MapElement Map::getCurrentPosition()
 {
     if(currentPosition < elements.size())
-        return MapElementLoader::generate(team, elements.at(currentPosition));
+        return currentElement;
     else
         cout << "ERREUR : currentPosition a dépasser la taille d'elements" << endl;
         return MapElement();
@@ -64,25 +67,29 @@ int Map::getNbElements()
 MapElement Map::goRight()
 {
     currentPosition = rights.at(currentPosition);
-    return MapElementLoader::generate(team, elements.at(currentPosition));
+    updateCurrentElement();
+    return currentElement;
 }
 
 MapElement Map::goUp()
 {
     currentPosition = ups.at(currentPosition);
-    return MapElementLoader::generate(team, elements.at(currentPosition));
+    updateCurrentElement();
+    return currentElement;
 }
 
 MapElement Map::goLeft()
 {
     currentPosition = lefts.at(currentPosition);
-    return MapElementLoader::generate(team, elements.at(currentPosition));
+    updateCurrentElement();
+    return currentElement;
 }
 
 MapElement Map::goDown()
 {
     currentPosition = downs.at(currentPosition);
-    return MapElementLoader::generate(team,  elements.at(currentPosition));
+    updateCurrentElement();
+    return currentElement;
 }
 
 bool Map::existRight()
@@ -112,5 +119,11 @@ bool Map::isEventHapp()
 
 void Map::setEventHapp()
 {
-    eventHapp.at(currentPosition) = true;
+    if(!currentElement.getEvent()->mustRedo())
+        eventHapp.at(currentPosition) = true;
+}
+
+void Map::updateCurrentElement()
+{
+    currentElement = MapElementLoader::generate(team, elements.at(currentPosition));
 }

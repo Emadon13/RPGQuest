@@ -31,6 +31,9 @@ public:
     unsigned int currentPosition;
 private:
 
+    MapElement currentElement;
+    void updateCurrentElement();
+
     Team* team;
     std::vector<bool> eventHapp;
     std::vector<std::string> elements;

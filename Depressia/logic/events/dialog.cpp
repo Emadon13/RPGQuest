@@ -3,6 +3,7 @@
 using namespace std;
 
 Dialog::Dialog():
+    Event(),
     elements(0)
 {
     DialogElement de;
@@ -10,6 +11,7 @@ Dialog::Dialog():
 }
 
 Dialog::Dialog(vector<DialogElement> de):
+    Event(),
     elements(de)
 {
 }
