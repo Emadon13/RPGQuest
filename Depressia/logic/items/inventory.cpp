@@ -41,6 +41,11 @@ bool Inventory::isFull()
     return(content.size()>=max_size);
 }
 
+int Inventory::getSize()
+{
+    return int(content.size());
+}
+
 string Inventory::useItem(Entity* e, int i)
 {
     string result = "L'index n'est pas bon !";
