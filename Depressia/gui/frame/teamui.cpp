@@ -22,11 +22,6 @@ TeamUI::TeamUI(GameWindow *g, Hero *e, int x, int y, int width, int height) : QO
     this->height=height;
     this->width=width;
 
-    clicker = new ClickableLabel(game);
-    clicker->setFixedSize(width,height);
-    clicker->move(0,0);
-    clicker->show();
-
     int imageWidht=int(width*0.8);
     int imageHeight=int(height*0.8);
 
@@ -71,9 +66,12 @@ TeamUI::TeamUI(GameWindow *g, Hero *e, int x, int y, int width, int height) : QO
     jaugeMP->setStyleSheet(styleMP);
     jaugeMP->setFormat("");
 
-    QObject::connect(clicker,SIGNAL(clicked()),this,SLOT(openCharacterInfo()));
+    clicker = new ClickableLabel(game);
+    clicker->setFixedSize(width,height);
+    clicker->move(x,y);
+    clicker->show();
 
-
+    QObject::connect(clicker, SIGNAL(clicked()),this,SLOT(openCharacterInfo()));
 }
 
 void TeamUI::Update()

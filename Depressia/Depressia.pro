@@ -61,7 +61,8 @@ SOURCES += \
     logic/items/reviveitem.cpp \
     logic/items/debuffcancelitem.cpp \
     gui/frame/gameoverframe.cpp \
-    gui/frame/teamui.cpp
+    gui/frame/teamui.cpp \
+    gui/window/characterwindow.cpp
 
 
 
@@ -126,4 +127,5 @@ HEADERS += \
     logic/items/reviveitem.h \
     logic/items/debuffcancelitem.h \
     gui/frame/gameoverframe.h \
-    gui/frame/teamui.h
+    gui/frame/teamui.h \
+    gui/window/characterwindow.h

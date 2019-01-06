@@ -106,10 +106,8 @@ ItemFrame::ItemFrame(GameWindow *g)
 
     ClickableLabel *teamInfo = new ClickableLabel(game);
     teamInfo->setFixedSize(InfoWidth,InfoHeight);
-    teamInfo->setText("Zone info-team");
     teamInfo->installEventFilter(game);
     teamInfo->move(WindowWidth-InfoWidth,WindowHeight-InfoHeight);
-    teamInfo->setCursor(QCursor(QPixmap("../ressources/images/hud/cursor.png"), 0, 0));
     teamInfo->setAlignment(Qt::AlignCenter);
     teamInfo->show();
 
@@ -132,9 +130,42 @@ ItemFrame::ItemFrame(GameWindow *g)
 
     QLabel *parametre = new QLabel(game);
     parametre->setFixedSize(TitleWidth,TitleHeight);
-    parametre->setText("Zone parametre");
     parametre->setAlignment(Qt::AlignCenter);
     parametre->move(WindowWidth-TitleWidth,0);
     parametre->show();
+
+    QString styleBoutonRond = "QPushButton {color:white; background-color: #302514;"
+                              "border-style: outset; border-width: 1px;"
+                              "border-radius: 25px; border-color: beige;"
+                              "font: bold 14px; padding: 6px;}"
+                              "QPushButton:pressed {color:white; background-color: #000000;"
+                              "border-style: inset;}";
+
+    int tailleBouton(50);
+
+    settings = new QPushButton("P", game);
+    settings->setFixedSize(tailleBouton,tailleBouton);
+    settings->move(WindowWidth-TitleWidth/2,20);
+    settings->show();
+    settings->setStyleSheet(styleBoutonRond);
+
+    QObject::connect(settings, SIGNAL(clicked()), game, SLOT(afficheParametre()));
+
+    int espacementUI(5);
+    int tailleUI((teamInfo->width()/4)-espacementUI*5);
+
+    for (int i=0 ; i < Fight::nb_e ; i=i+1)
+    {
+        allie=game->GetGame()->getTeam()->getHeroes()[i];
+
+        if(allie != nullptr)
+        {
+            teamUI[i] = new TeamUI(game,allie,teamInfo->x()+espacementUI*(i+1)+tailleUI*i,teamInfo->y()+teamInfo->height()/2-tailleUI/2,tailleUI,tailleUI);
+        }
+        else
+        {
+            teamUI[i]=nullptr;
+        }
+    }
 }
 
