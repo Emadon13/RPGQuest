@@ -65,7 +65,14 @@ CharacterWindow::CharacterWindow(GameWindow *game,Hero *allie, QWidget *parent) 
     view->setFrameStyle(QFrame::NoFrame);
     view->setFixedSize(WindowWidth,WindowHeight);
 
-    sprite=allie->getSpriteNormal();
+    if(allie->isAlive())
+    {
+        sprite=allie->getSpriteNormal();
+    }
+    else
+    {
+        sprite=allie->getSpriteKilled();
+    }
     sprite->setPos(QPointF(espacement,(WindowHeight-ImageHeight)/2));
     sprite->show();
     scene->addItem(sprite);
@@ -94,7 +101,7 @@ CharacterWindow::CharacterWindow(GameWindow *game,Hero *allie, QWidget *parent) 
     QLabel *info = new QLabel(this);
     info->setText(QString::fromStdString(+"NOM : "+allie->getName()+
                                          "\nNIV : "+std::to_string(allie->getLvl())+
-                                         "\nEXP : "+std::to_string(allie->getXp())+
+                                         "\nEXP : "+std::to_string(allie->getXp())+"/"+std::to_string(allie->getNextLevel()+allie->getXp())+
                                          "\nPV : "+std::to_string(allie->getHp())+"/"+std::to_string(allie->getHpMax())+
                                          "\nPM : "+std::to_string(allie->getMp())+"/"+std::to_string(allie->getMpMax())+
                                          "\nATK : "+std::to_string(allie->getAtt())+

@@ -173,7 +173,7 @@ void GameWindow::CreateGameOverFrame()
     ClearWidget();
 
     QPalette p( palette() );
-    p.setBrush(QPalette::Window, QBrush(QPixmap("../ressources/images/backgrounds/gameover_screen.jpg")));
+    p.setBrush(QPalette::Window, QBrush(QPixmap("../ressources/images/backgrounds/gameover_screen.jpg").scaled(WindowWidth,WindowHeight)));
     setPalette(p);
 
     GameOverFrame gof(this);
