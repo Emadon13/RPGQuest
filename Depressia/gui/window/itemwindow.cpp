@@ -19,6 +19,8 @@
 ItemWindow::ItemWindow(GameWindow *game, QWidget *parent) :
     QMainWindow(parent)
 {
+    this->game=game->GetGame();
+
     QString styleBouton = "QPushButton {color:white; background-color: #302514;"
                           "border-style: outset; border-width: 2px;"
                           "border-radius: 10px; border-color: beige;"
@@ -93,6 +95,10 @@ ItemWindow::ItemWindow(GameWindow *game, QWidget *parent) :
 
     QObject::connect(ok, SIGNAL(clicked()), this, SLOT(close()));
     QObject::connect(ok, SIGNAL(clicked()), game, SLOT(resetFocus()));
+    QObject::connect(ok, SIGNAL(clicked()), this, SLOT(addItem()));
+}
 
-
+void ItemWindow::addItem()
+{
+    dynamic_cast<ItemFound*>(mapElement.getEvent())->addToInventory(game->getTeam());
 }

@@ -55,7 +55,7 @@ BattleFrame::BattleFrame(GameWindow *g) : QObject()
 
     fight=((dynamic_cast<Fight*>(game->GetGame()->getMap()->getCurrentPosition().getEvent())));
 
-    inventory=game->GetGame()->getTeam()
+    inventory=game->GetGame()->getTeam()->getInventory();
 
     ///Lancement de la musique
     playlist = new QMediaPlaylist();
@@ -624,9 +624,10 @@ void BattleFrame::showObjet()
     objet->hide();
     fuite->hide();
 
-    for (int i = 0; i < 8; i=i+1)
+    for (int i = 0; i<inventory->getSize(); i=i+1)
     {
-        selectionObjet[i]->setText(QString::fromStdString(current->getMove(i)->getName()));
+        std::cout<<i<<endl;
+        selectionObjet[i]->setText(QString::fromStdString(inventory->getItem(i).getName()));
         selectionObjet[i]->show();
     }
 }
@@ -680,18 +681,10 @@ void BattleFrame::choixSkill(int i)
 */
 void BattleFrame::choixObjet(int i)
 {
-    dialogInfo->setText(QString::fromStdString(current->getMove(i)->getText()+"<br> Cout : "+to_string(current->getMove(i)->getMpCost()))+" MP");
-    dialogCurrent->setText(QString::fromStdString(current->getMove(i)->getName()));
+    dialogInfo->setText(QString::fromStdString(inventory->getItem(i).getText()));
+    dialogCurrent->setText(QString::fromStdString(inventory->getItem(i).getName()));
     skillNumber=i;
-    if(current->getMp()>=current->getMove(skillNumber)->getMpCost())
-    {
-        okSkill->show();
-    }
-    else
-    {
-        okSkill->hide();
-        dialogInfo->setText(dialogInfo->text()+" ✖ <b>MP insuffisants !</b>");
-    }
+    //okObject->show();
 }
 
 /*!

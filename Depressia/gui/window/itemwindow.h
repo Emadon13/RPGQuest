@@ -10,10 +10,15 @@ class ItemWindow : public QMainWindow
 {
     Q_OBJECT
 
+public slots:
+    void addItem();
+
 public:
     ItemWindow(GameWindow *g, QWidget *parent = nullptr);
 
 private:
+    Game *game;
+
     QPalette *p;
     MapElement mapElement;
     Map *map;
