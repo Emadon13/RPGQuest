@@ -23,6 +23,7 @@
 #include "logic/events/finalscreen.h"
 #include "gui/frame/finalframe.h"
 #include "logic/events/save.h"
+#include "gui/window/itemchoicewindow.h"
 
 using namespace std;
 
@@ -127,6 +128,14 @@ void GameWindow::afficheParametre()
 {
     SettingsWindow *settingsWindow=new SettingsWindow(this);
     settingsWindow->show();
+    CreateGameFrame();
+    setDisabled(true);
+}
+
+void GameWindow::afficheItemList()
+{
+    ItemChoiceWindow *inventoyWindow=new ItemChoiceWindow(this);
+    inventoyWindow->show();
     CreateGameFrame();
     setDisabled(true);
 }

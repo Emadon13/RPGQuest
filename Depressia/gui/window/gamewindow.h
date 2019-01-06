@@ -42,6 +42,7 @@ public slots:
     void GoRight();
     void GoLeft();
     void afficheItem();
+    void afficheItemList();
     void afficheParametre();
     void resetFocus();
     void setPositionAfterLoose();

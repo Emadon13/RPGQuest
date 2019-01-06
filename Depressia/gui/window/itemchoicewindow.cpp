@@ -16,7 +16,7 @@
 ItemChoiceWindow::ItemChoiceWindow(GameWindow *game, QWidget *parent) :
     QMainWindow(parent)
 {
-
+    gameWindow=game;
     this->game=game->GetGame();
     inventory=this->game->getTeam()->getInventory();
 
@@ -39,8 +39,8 @@ ItemChoiceWindow::ItemChoiceWindow(GameWindow *game, QWidget *parent) :
     int InfoWidth(460);
     int InfoHeight(200);
 
-    int ImageWidth(250);
-    int ImageHeight(250);
+    ImageWidth=250;
+    ImageHeight=250;
 
     int espacement(30);
 
@@ -62,63 +62,62 @@ ItemChoiceWindow::ItemChoiceWindow(GameWindow *game, QWidget *parent) :
     ok = new QPushButton("Utiliser", this);
     ok->setFixedSize(BoutonWidth,BoutonHeight);
     ok->setCursor(QCursor(QPixmap("../ressources/images/hud/cursor.png"), 0, 0));
-    ok->move((WindowWidth-BoutonWidth)/2,(WindowHeight-espacement-BoutonHeight));
+    ok->move((WindowWidth-BoutonWidth)/2+espacement+BoutonWidth,(WindowHeight-espacement-BoutonHeight));
     ok->setStyleSheet(styleBouton);
     ok->hide();
 
-    retour = new QPushButton("retour", this);
+    retour = new QPushButton("Retour", this);
     retour->setFixedSize(BoutonWidth,BoutonHeight);
     retour->setCursor(QCursor(QPixmap("../ressources/images/hud/cursor.png"), 0, 0));
     retour->move((WindowWidth-BoutonWidth)/2,(WindowHeight-espacement-BoutonHeight));
     retour->setStyleSheet(styleBouton);
     retour->hide();
 
-    QLabel *image = new QLabel(this);
+    image = new QLabel(this);
     image->setFixedSize(ImageWidth,ImageHeight);
     image->move(espacement,(WindowHeight-ImageHeight)/2);
     image->hide();
 
-    QLabel *titre = new QLabel(this);
+    titre = new QLabel(this);
     titre->setFixedSize(TitreWidth,TitreHeight);
     titre->setAlignment(Qt::AlignCenter);
     titre->setWordWrap(true);
+    titre->setText("Objets");
     titre->move(WindowWidth/2-espacement*3,0);
     titre->setStyleSheet("QLabel{color:white;}");
-    titre->hide();
+    titre->show();
 
-    QLabel *info = new QLabel(this);
+    info = new QLabel(this);
     info->setFixedSize(InfoWidth,InfoHeight);
     info->setAlignment(Qt::AlignCenter);
     info->move(espacement*2+ImageWidth,espacement+TitreHeight);
     info->setWordWrap(true);
     info->hide();
 
-    QObject::connect(retour, SIGNAL(clicked()), this, SLOT(close()));
-    QObject::connect(retour, SIGNAL(clicked()), game, SLOT(resetFocus()));
-    QObject::connect(ok, SIGNAL(clicked()), this, SLOT(useItem()));
-
     signalMapperObjet = new QSignalMapper(this);
     QObject::connect(signalMapperObjet, SIGNAL(mapped(int)), this, SLOT(choixObjet(int)));
 
     int espacementBouton(50);
-    int boutonObjetWidth((WindowWidth-espacement*3)/2);
-    int boutonObjetHeight((WindowWidth-espacement*5)/4);
-/*
+    int boutonObjetWidth(100);
+    int boutonObjetHeight((WindowHeight-espacementBouton*5)/4);
+
     for (int i = 0; i < 8; i=i+1)
     {
-        selectionObjet[i] = new QPushButton("objet",game);
-        selectionObjet[i]->setFixedSize(BoutonWidth,int(BoutonHeight));
+        selectionObjet[i] = new QPushButton("objet",this);
+        selectionObjet[i]->setFixedSize(boutonObjetWidth,boutonObjetHeight);
         selectionObjet[i]->setStyleSheet(styleBouton);
         signalMapperObjet->setMapping(selectionObjet[i], i);
         connect(selectionObjet[i], SIGNAL(clicked()), signalMapperObjet, SLOT(map()));
 
         if(i<4)
         {
-            selectionObjet[i]->move();
+            selectionObjet[i]->move(WindowWidth/4-espacementBouton-boutonObjetWidth/2,espacementBouton*(i+1)+boutonObjetHeight*i);
+            selectionObjet[i]->hide();
         }
         else
         {
-            selectionObjet[i]->move();
+            selectionObjet[i]->move((WindowWidth/2+espacementBouton),espacementBouton*(i-4+1)+boutonObjetHeight*(i-4));
+            selectionObjet[i]->hide();
         }
     }
 
@@ -127,25 +126,98 @@ ItemChoiceWindow::ItemChoiceWindow(GameWindow *game, QWidget *parent) :
 
     for (int i=0 ; i < 4 ; i=i+1)
     {
-        selectionEntity[i] = new QPushButton("Entity",game);
-        selectionEntity[i]->setFixedSize(boutonWidth,boutonHeight);
+        selectionEntity[i] = new QPushButton("Entity",this);
+        selectionEntity[i]->setFixedSize(boutonObjetWidth,boutonObjetHeight);
         selectionEntity[i]->setStyleSheet(styleBouton);
         signalMapperEntity->setMapping(selectionEntity[i], i);
         connect(selectionEntity[i], SIGNAL(clicked()), signalMapperEntity, SLOT(map()));
 
         if(i<2)
         {
-            selectionEntity[i]->move(dialogSelection->x()+espacementBoutonH,dialogSelection->y()+espacementBoutonV*(i+1)+boutonHeight*i);
+            selectionEntity[i]->move(WindowWidth/4-espacementBouton-boutonObjetWidth/2,((i+1)*3)*WindowHeight/4-boutonObjetHeight/4);
         }
         else
         {
-            selectionEntity[i]->move(dialogSelection->x()+espacementBoutonH*2+boutonWidth,dialogSelection->y()+espacementBoutonV*(2-i+1)+boutonHeight*(2-i));
+            selectionEntity[i]->move((WindowWidth/2+espacementBouton),((i-2+1)*3)*WindowHeight/4-boutonObjetHeight/4);
         }
     }
-*/
+
+    showItemList();
+}
+
+void ItemChoiceWindow::showItemList()
+{
     for (int i = 0; i<inventory->getSize(); i=i+1)
     {
-        selectionObjet[i]->setText(QString::fromStdString(inventory->getItem(i).getName()));
+        selectionObjet[i]->setText(QString::fromStdString(inventory->getItem(i)->getName()));
         selectionObjet[i]->show();
     }
+
+    image->hide();
+    info->hide();
+
+    for (int i = 0; i<4; i=i+1)
+    {
+        selectionEntity[i]->hide();
+    }
+
+    ok->hide();
+    retour->show();
+    QObject::connect(retour, SIGNAL(clicked()), this, SLOT(close()));
+    QObject::connect(retour, SIGNAL(clicked()), gameWindow, SLOT(resetFocus()));
+}
+
+void ItemChoiceWindow::choixObjet(int i)
+{
+    for (int i = 0; i<inventory->getSize(); i=i+1)
+    {
+        selectionObjet[i]->hide();
+    }
+
+    itemNumber=i;
+
+    image->setPixmap(QPixmap(QString::fromStdString(inventory->getItem(i)->getImage())).scaled(ImageWidth,ImageHeight));
+    image->show();
+    titre->setText(QString::fromStdString(inventory->getItem(i)->getName()));
+    info->setText(QString::fromStdString(inventory->getItem(i)->getText()));
+    info->show();
+
+    ok->show();
+    QObject::connect(ok, SIGNAL(clicked()), this, SLOT(showEntityList()));
+    QObject::connect(retour, SIGNAL(clicked()), this, SLOT(showItemList()));
+    QObject::disconnect(retour, SIGNAL(clicked()), this, SLOT(close()));
+    QObject::disconnect(retour, SIGNAL(clicked()), gameWindow, SLOT(resetFocus()));
+}
+
+void ItemChoiceWindow::showEntityList()
+{
+    for (int i = 0; i<4; i=i+1)
+    {
+        if(game->getTeam()->getHero(i)!=nullptr)
+        {
+            selectionEntity[i]->setText(QString::fromStdString(game->getTeam()->getHero(i)->getName()));
+            selectionEntity[i]->show();
+        }
+    }
+
+    image->hide();
+    info->hide();
+
+    for (int i = 0; i<8; i=i+1)
+    {
+        selectionObjet[i]->hide();
+    }
+
+    ok->hide();
+    retour->show();
+}
+
+void ItemChoiceWindow::choixEntity(int i)
+{
+    for (int i = 0; i<4; i=i+1)
+    {
+        selectionEntity[i]->hide();
+    }
+    info->setText(QString::fromStdString(inventory->useItem(game->getTeam()->getHero(i),itemNumber)));
+    info->show();
 }

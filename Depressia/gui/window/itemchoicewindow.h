@@ -12,13 +12,26 @@ class ItemChoiceWindow : public QMainWindow
     Q_OBJECT
 
 public slots:
-    void useItem();
+    void showItemList();
+    void showEntityList();
+    void choixObjet(int i);
+    void choixEntity(int i);
 
 public:
     ItemChoiceWindow(GameWindow *g, QWidget *parent = nullptr);
 
 private:
     Game *game;
+    GameWindow *gameWindow;
+
+    QLabel *image;
+    QLabel *titre;
+    QLabel *info;
+
+    int ImageWidth;
+    int ImageHeight;
+
+    int itemNumber;
 
     QPalette *p;
 

@@ -14,6 +14,7 @@ public:
 private :
 
     QPushButton *settings;
+    QPushButton * inventory;
     Map *map;
     MapElement mapElement;
     GameWindow *game;

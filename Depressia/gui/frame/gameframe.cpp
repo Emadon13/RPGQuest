@@ -145,6 +145,13 @@ GameFrame::GameFrame(GameWindow *g)
     settings->show();
     settings->setStyleSheet(styleBoutonRond);
 
+    inventory = new QPushButton("I", game);
+    inventory->setFixedSize(tailleBouton,tailleBouton);
+    inventory->move(WindowWidth-TitleWidth/2-50,20);
+    inventory->show();
+    inventory->setStyleSheet(styleBoutonRond);
+
+    QObject::connect(inventory, SIGNAL(clicked()), game, SLOT(afficheItemList()));
     QObject::connect(settings, SIGNAL(clicked()), game, SLOT(afficheParametre()));
 
     int espacementUI(5);
