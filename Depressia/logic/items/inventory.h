@@ -14,6 +14,7 @@ public:
     //void putItem(std::string item);
     bool isEmpty();
     bool isFull();
+    int getSize();
     std::string useItem(Entity* e, int i);
     void operator+(std::string item);
 
