@@ -71,13 +71,13 @@ ItemWindow::ItemWindow(GameWindow *game, QWidget *parent) :
     ok->show();
 
     QLabel *image = new QLabel(this);
-    image->setPixmap(QPixmap(QString::fromStdString(((dynamic_cast<ItemFound*>(mapElement.getEvent()))->getItem().getImage()))).scaled(ImageWidth,ImageHeight));
+    image->setPixmap(QPixmap(QString::fromStdString(((dynamic_cast<ItemFound*>(mapElement.getEvent()))->getItem()->getImage()))).scaled(ImageWidth,ImageHeight));
     image->setFixedSize(ImageWidth,ImageHeight);
     image->move(espacement,(WindowHeight-ImageHeight)/2);
     image->show();
 
     QLabel *titre = new QLabel(this);
-    titre->setText(QString::fromStdString(((dynamic_cast<ItemFound*>(mapElement.getEvent()))->getItem().getName())));
+    titre->setText(QString::fromStdString(((dynamic_cast<ItemFound*>(mapElement.getEvent()))->getItem()->getName())));
     titre->setFixedSize(TitreWidth,TitreHeight);
     titre->setAlignment(Qt::AlignCenter);
     titre->setWordWrap(true);
@@ -86,7 +86,7 @@ ItemWindow::ItemWindow(GameWindow *game, QWidget *parent) :
     titre->show();
 
     QLabel *info = new QLabel(this);
-    info->setText(QString::fromStdString(((dynamic_cast<ItemFound*>(mapElement.getEvent()))->getItem().getText())));
+    info->setText(QString::fromStdString(((dynamic_cast<ItemFound*>(mapElement.getEvent()))->getItem()->getText())));
     info->setFixedSize(InfoWidth,InfoHeight);
     info->setAlignment(Qt::AlignCenter);
     info->move(espacement*2+ImageWidth,espacement+TitreHeight);

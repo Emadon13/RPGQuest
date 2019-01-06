@@ -27,7 +27,7 @@ private:
     QSignalMapper *signalMapperObjet;
     QSignalMapper *signalMapperEntity;
     QPushButton *selectionObjet[8];
-    QPushButton *selectionEntity[8];
+    QPushButton *selectionEntity[4];
     Inventory *inventory;
 };
 
