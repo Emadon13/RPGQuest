@@ -62,7 +62,8 @@ SOURCES += \
     logic/items/debuffcancelitem.cpp \
     gui/frame/gameoverframe.cpp \
     gui/frame/teamui.cpp \
-    gui/window/characterwindow.cpp
+    gui/window/characterwindow.cpp \
+    gui/window/itemchoicewindow.cpp
 
 
 
@@ -128,4 +129,5 @@ HEADERS += \
     logic/items/debuffcancelitem.h \
     gui/frame/gameoverframe.h \
     gui/frame/teamui.h \
-    gui/window/characterwindow.h
+    gui/window/characterwindow.h \
+    gui/window/itemchoicewindow.h

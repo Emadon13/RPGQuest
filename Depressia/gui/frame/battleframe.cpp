@@ -665,8 +665,7 @@ void BattleFrame::showObjet()
 
     for (int i = 0; i<inventory->getSize(); i=i+1)
     {
-        std::cout<<i<<endl;
-        selectionObjet[i]->setText(QString::fromStdString(inventory->getItem(i).getName()));
+        selectionObjet[i]->setText(QString::fromStdString(inventory->getItem(i)->getName()));
         selectionObjet[i]->show();
     }
 }
@@ -720,8 +719,8 @@ void BattleFrame::choixSkill(int i)
 */
 void BattleFrame::choixObjet(int i)
 {
-    dialogInfo->setText(QString::fromStdString(inventory->getItem(i).getText()));
-    dialogCurrent->setText(QString::fromStdString(inventory->getItem(i).getName()));
+    dialogInfo->setText(QString::fromStdString(inventory->getItem(i)->getText()));
+    dialogCurrent->setText(QString::fromStdString(inventory->getItem(i)->getName()));
     objectNumber=i;
     okObjet->show();
 }
@@ -873,7 +872,6 @@ void BattleFrame::effectEntity(Entity *s, unsigned long long i)
 void BattleFrame::stopEffect(unsigned long long i)
 {
     spriteEffect[int(i)]->hide();
-    cout << i << endl;
 }
 
 /*!
