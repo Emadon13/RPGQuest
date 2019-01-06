@@ -43,7 +43,6 @@ ItemChoiceWindow::ItemChoiceWindow(GameWindow *game, QWidget *parent) :
     int ImageHeight(250);
 
     int espacement(30);
-    int espacementBouton(50);
 
     setWindowTitle("Use Item");
     setWindowIcon(QIcon("../ressources/images/hud/icone.png"));
@@ -101,28 +100,32 @@ ItemChoiceWindow::ItemChoiceWindow(GameWindow *game, QWidget *parent) :
     signalMapperObjet = new QSignalMapper(this);
     QObject::connect(signalMapperObjet, SIGNAL(mapped(int)), this, SLOT(choixObjet(int)));
 
-    /*for (int i = 0; i < 8; i=i+1)
+    int espacementBouton(50);
+    int boutonObjetWidth((WindowWidth-espacement*3)/2);
+    int boutonObjetHeight((WindowWidth-espacement*5)/4);
+/*
+    for (int i = 0; i < 8; i=i+1)
     {
         selectionObjet[i] = new QPushButton("objet",game);
-        selectionObjet[i]->setFixedSize(boutonWidth,int(boutonHeight*0.5));
+        selectionObjet[i]->setFixedSize(BoutonWidth,int(BoutonHeight));
         selectionObjet[i]->setStyleSheet(styleBouton);
         signalMapperObjet->setMapping(selectionObjet[i], i);
         connect(selectionObjet[i], SIGNAL(clicked()), signalMapperObjet, SLOT(map()));
 
         if(i<4)
         {
-            selectionObjet[i]->move(dialogSelection->x()+espacementBoutonH,dialogSelection->y()+espacementBoutonVChoix*(i+1)+int(boutonHeight*0.5*i));
+            selectionObjet[i]->move();
         }
         else
         {
-            selectionObjet[i]->move(dialogSelection->x()+espacementBoutonH*2+boutonWidth,dialogSelection->y()+espacementBoutonVChoix*(i-4+1)+int(boutonHeight*0.5*(i-4)));
+            selectionObjet[i]->move();
         }
     }
 
     signalMapperEntity = new QSignalMapper(this);
     QObject::connect(signalMapperEntity, SIGNAL(mapped(int)), this, SLOT(choixEntity(int)));
 
-    for (int i=0 ; i < Fight::nb_e ; i=i+1)
+    for (int i=0 ; i < 4 ; i=i+1)
     {
         selectionEntity[i] = new QPushButton("Entity",game);
         selectionEntity[i]->setFixedSize(boutonWidth,boutonHeight);
@@ -138,8 +141,8 @@ ItemChoiceWindow::ItemChoiceWindow(GameWindow *game, QWidget *parent) :
         {
             selectionEntity[i]->move(dialogSelection->x()+espacementBoutonH*2+boutonWidth,dialogSelection->y()+espacementBoutonV*(2-i+1)+boutonHeight*(2-i));
         }
-    }*/
-
+    }
+*/
     for (int i = 0; i<inventory->getSize(); i=i+1)
     {
         selectionObjet[i]->setText(QString::fromStdString(inventory->getItem(i).getName()));
