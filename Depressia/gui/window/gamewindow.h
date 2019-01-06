@@ -26,6 +26,8 @@ public:
     Map* GetMap();
     Game* GetGame();
 
+    void openCharacterWindow(Hero *allie);
+
 public slots:
     void ShowFrame();
     void CreateBattleFrame();
