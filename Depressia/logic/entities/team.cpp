@@ -33,9 +33,9 @@ Hero** Team::getHeroes()
     return hero;
 }
 
-Inventory Team::getInventory()
+Inventory* Team::getInventory()
 {
-    return bag;
+    return &bag;
 }
 
 void Team::putInTheBag(string item)
