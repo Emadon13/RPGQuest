@@ -10,7 +10,7 @@ class ItemFound : public Event
 public:
     ItemFound();
     ItemFound(std::string i);
-    Item getItem();
+    Item* getItem();
     void addToInventory(Team* team);
 
 private:

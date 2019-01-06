@@ -18,6 +18,10 @@ Item::Item(string n, string d, string i):
 
 }
 
+Item::~Item()
+{
+}
+
 string Item::getName()
 {
     return name;

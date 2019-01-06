@@ -12,6 +12,7 @@ class Item
 public:
     Item();
     Item(std::string n, std::string d, std::string i);
+    virtual ~Item();
 
     std::string getName();
     std::string getText();

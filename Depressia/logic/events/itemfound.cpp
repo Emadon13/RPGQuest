@@ -14,7 +14,7 @@ ItemFound::ItemFound(string i):
 
 }
 
-Item ItemFound :: getItem()
+Item* ItemFound::getItem()
 {
     return ItemLoader::generate(item);
 }

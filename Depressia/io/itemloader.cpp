@@ -7,12 +7,12 @@ ItemLoader::ItemLoader()
 
 }
 
-Item ItemLoader::generate()
+Item* ItemLoader::generate()
 {
-    return Item();
+    return new Item();
 }
 
-Item ItemLoader::generate(string path)
+Item* ItemLoader::generate(string path)
 {
     string n, t, i, type, val;
     ifstream file(path);
@@ -28,27 +28,27 @@ Item ItemLoader::generate(string path)
         if(type == "hpHeal")
         {
            getline(file, val);
-           return HealItem(n, t, i, stoi(val));
+           return new HealItem(n, t, i, stoi(val));
         }
 
         else if(type == "mpHeal")
         {
            getline(file, val);
-           return RestoreMpItem(n, t, i, stoi(val));
+           return new RestoreMpItem(n, t, i, stoi(val));
         }
 
         else if(type=="revive")
         {
             getline(file, val);
-            return ReviveItem(n, t, i, stoi(val));
+            return new ReviveItem(n, t, i, stoi(val));
         }
 
-        return Item(n,t,i);
+        return new Item(n,t,i);
     }
 
     else
     {
         cout << "ERREUR : item path introuvable : " << path << endl;
-        return Item();
+        return new Item();
     }
 }

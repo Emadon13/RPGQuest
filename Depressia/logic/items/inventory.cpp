@@ -20,7 +20,7 @@ Item* Inventory::getItem(int i)
 
     else
     {
-        return new Item(ItemLoader::generate(content.at(unsigned (i))));
+        return ItemLoader::generate(content.at(unsigned (i)));
     }
 }
 /*

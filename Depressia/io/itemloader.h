@@ -13,8 +13,8 @@ class ItemLoader : public Loader
 public:
     ItemLoader();
 
-    static Item generate();
-    static Item generate(std::string path);
+    static Item* generate();
+    static Item* generate(std::string path);
 };
 
 #endif // ITEMLOADER_H
