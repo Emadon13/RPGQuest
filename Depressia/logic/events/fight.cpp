@@ -55,7 +55,7 @@ bool Fight::teamWin()
 bool Fight::mobsWin()
 {
     for(int i=0 ; i<nb_e ; i++)
-        if(mobs[i]!=nullptr)
+        if(heroes[i]!=nullptr)
             if(heroes[i]->isAlive())
                 return false;
     return true;
