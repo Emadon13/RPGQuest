@@ -70,7 +70,8 @@ Entity* EntityLoader::generate(string path)
                           spritek,
                           icon,
                           skills,
-                          stl);
+                          stl,
+                          path);
             return hero;
         }
 

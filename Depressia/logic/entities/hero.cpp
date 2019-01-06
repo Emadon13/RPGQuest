@@ -44,7 +44,8 @@ Hero::Hero(string n,
            std::string sk,
            string bi,
            vector<Skill*> s,
-           string stl[max_lvl]):
+           string stl[max_lvl],
+           string path):
 
     Entity(n, l, 1, 1, 1, 1, 1, sn, sd, sa, ss, sk, bi, vector<Skill*>(s)),
     xp(0),
@@ -52,7 +53,8 @@ Hero::Hero(string n,
     base_mp(b_mp),
     base_att(b_att),
     base_def(b_def),
-    base_spd(b_spd)
+    base_spd(b_spd),
+    saveLink(path)
 {
     for(int i=0 ; i<max_lvl ; i++)
         skillsToLearn[i] = stl[i];
@@ -75,20 +77,23 @@ SpriteLoop* Hero::getSpriteKilled()
     return dynamic_cast<SpriteLoop*>(sprites[4]);
 }
 
+string Hero::getSaveLink()
+{
+    return saveLink;
+}
+
 bool Hero::addXp(int i)
 {
+    bool hasEvolve = false;
     xp += i;
-
-
-
-    if(xp>=next_level)
+    while(xp>=next_level)
     {
         lvl++;
         calculateLevel();
-        return true;
+        hasEvolve = true;
     }
 
-    return false;
+    return hasEvolve;
 }
 
 

@@ -63,7 +63,8 @@ SOURCES += \
     gui/frame/gameoverframe.cpp \
     gui/frame/teamui.cpp \
     gui/window/characterwindow.cpp \
-    gui/window/itemchoicewindow.cpp
+    gui/window/itemchoicewindow.cpp \
+    io/gameloader.cpp
 
 
 
@@ -130,4 +131,5 @@ HEADERS += \
     gui/frame/gameoverframe.h \
     gui/frame/teamui.h \
     gui/window/characterwindow.h \
-    gui/window/itemchoicewindow.h
+    gui/window/itemchoicewindow.h \
+    io/gameloader.h

@@ -25,11 +25,14 @@ public:
          std::string sk,
          std::string bi,
          std::vector<Skill*> s,
-         std::string stl[max_lvl]);
+         std::string stl[max_lvl],
+         std::string svelnk);
 
     int getXp();
     int getNextLevel();
     bool addXp(int i);
+
+    std::string getSaveLink();
 
     SpriteLoop* getSpriteKilled();
 
@@ -43,6 +46,8 @@ private:
     int base_att;
     int base_def;
     int base_spd;
+
+    std::string saveLink;
 
     std::string skillsToLearn[max_lvl];
 

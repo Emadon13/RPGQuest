@@ -17,6 +17,7 @@ public:
     int getSize();
     void deleteItem(int i);
     void operator+(std::string item);
+    std::string useItem(Entity* e, int i);
 
 
 private:

@@ -53,21 +53,20 @@ int Inventory::getSize()
 {
     return int(content.size());
 }
-/*
+
 string Inventory::useItem(Entity* e, int i)
 {
     string result = "L'index n'est pas bon !";
 
     if(i<max_size && i>=0)
     {
-        Item* itm = new Item(ItemLoader::generate(content.at(unsigned(i))));
-        result = itm->use(e);
+        result = ItemLoader::generate(content.at(unsigned(i)))->use(e);
         content.erase(content.begin() + i);
     }
 
     return result;
 }
-*/
+
 void Inventory::operator+(string item)
 {
     if(int(content.size()) >= max_size)
