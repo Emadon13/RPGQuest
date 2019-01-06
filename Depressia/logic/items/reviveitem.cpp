@@ -23,22 +23,16 @@ ReviveItem::~ReviveItem()
 
 std::string ReviveItem::use(Entity* target)
 {
-     stringstream sstr;
+    stringstream sstr;
 
-     if(target->isAlive())
-     {
-         if(target->getHp()>=target->getHpMax())
-             sstr << "Mais " << target->getName() << "a deja tous ses pvs...";
+    if(!target->isAlive())
+    {
+        sstr << Item::use(target) << "<br>" << target->getName() << " est de retour parmi nous !";
+        target->restaureHp(hpHeal);
+    }
 
-         else
-         {
-             sstr << Item::use(target) << "<br>" << target->getName() << " recupere " << hpHeal << " pvs ! ";
-             target->restaureHp(hpHeal);
-         }
-     }
+    else
+        sstr << "Mais " << target->getName() << " est toujours en vie...";
 
-     else if(!target->isAlive())
-         sstr << "Mais " << target->getName() << " est KO...";
-
-    return sstr.str();
+   return sstr.str();
 }

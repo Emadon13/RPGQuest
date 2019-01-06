@@ -35,5 +35,7 @@ string Item::getImage()
 
 std::string Item::use(Entity* target)
 {
-    return "vous venez d'utiliser un objet";
+    stringstream s;
+    s << name << " a été utilisé(e) sur " << target->getName() << " !<br>";
+    return s.str();
 }

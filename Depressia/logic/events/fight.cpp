@@ -165,7 +165,10 @@ vector<Entity*> Fight::target(Hero* user, int skill, int target)
 
 string Fight::useItem(Entity* entity, int item)
 {
-    return team->useItem(entity, item);
+    string s = team->getInventory()->getItem(item)->use(entity);
+    team->getInventory()->deleteItem(item);
+
+    return s;
 }
 
 QPixmap* Fight::getImage()
