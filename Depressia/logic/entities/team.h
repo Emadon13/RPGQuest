@@ -14,6 +14,9 @@ public:
     int getTeamSize();
     Hero* getHero(int i);
     Hero** getHeroes();
+    Item getInventoryItem(int i);
+    std::string useItem(Entity* e, int i);
+
 
 private:
     Inventory bag;

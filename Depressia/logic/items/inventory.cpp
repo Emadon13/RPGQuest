@@ -30,3 +30,27 @@ void Inventory::putItem(Item item)
     else
         content.push_back(item);
 }
+
+bool Inventory::isEmpty()
+{
+    return content.empty();
+}
+
+bool Inventory::isFull()
+{
+    return(content.size()>=max_size);
+}
+
+string Inventory::useItem(Entity* e, int i)
+{
+    string result = "L'index n'est pas bon !";
+
+    if(i<max_size && i>=0)
+    {
+        content.at(unsigned(i)).use(e);
+        result = content.at(unsigned(i)).getText();
+        content.erase(content.begin() + i);
+    }
+
+    return result;
+}

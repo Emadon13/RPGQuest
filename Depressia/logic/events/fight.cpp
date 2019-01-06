@@ -163,6 +163,11 @@ vector<Entity*> Fight::target(Hero* user, int skill, int target)
     return v;
 }
 
+string Fight::useItem(Entity* entity, int item)
+{
+    return team->useItem(entity, item);
+}
+
 QPixmap* Fight::getImage()
 {
     return new QPixmap(QPixmapLoader::generate(image));
