@@ -4,6 +4,7 @@
 #include "gui/frame/videoframe.h"
 #include "gui/frame/battleframe.h"
 #include "gui/frame/itemframe.h"
+#include "gui/frame/gameoverframe.h"
 #include "mainwindow.h"
 #include "gui/clickable/clickablelabel.h"
 #include <QPushButton>
@@ -156,7 +157,17 @@ void GameWindow::CreateFinalFrame()
     setPalette(p);
 
     FinalFrame ff(this);
+}
 
+void GameWindow::CreateGameOverFrame()
+{
+    ClearWidget();
+
+    QPalette p( palette() );
+    p.setBrush(QPalette::Window, QBrush(QPixmap("")));
+    setPalette(p);
+
+    GameOverFrame gof(this);
 }
 
 void GameWindow::CreateItemFrame()
@@ -234,6 +245,11 @@ void GameWindow::GoLeft()
 void GameWindow::GoDown()
 {
     mapElement = map->goDown();
+    ShowFrame();
+}
+
+void GameWindow::setPositionAfterLoose()
+{
     ShowFrame();
 }
 

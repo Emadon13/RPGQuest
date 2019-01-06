@@ -1,20 +1,19 @@
-#include "finalframe.h"
+#include "gameoverframe.h"
 
 ////////////////////////////////////////////////////////
 ///                                                  ///
-///                   FinalFrame                     ///
+///                   GameOverFrame                  ///
 ///                                                  ///
 ////////////////////////////////////////////////////////
 
 /*!
-    \class FinalFrame
+    \class GameOverFrame
 
     Cette classe
 */
 
-FinalFrame::FinalFrame(GameWindow *g) : QObject()
+GameOverFrame::GameOverFrame(GameWindow *g) : QObject()
 {
-
     game=g;
 
     clicker = new ClickableLabel(game);
@@ -22,6 +21,6 @@ FinalFrame::FinalFrame(GameWindow *g) : QObject()
     clicker->move(0,0);
     clicker->show();
 
-    QObject::connect(clicker, SIGNAL(clicked()), game, SLOT(close()));
+    QObject::connect(clicker, SIGNAL(clicked()), game, SLOT(setPositionAfterLoose()));
 
 }
