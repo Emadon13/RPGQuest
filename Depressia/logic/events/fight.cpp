@@ -236,23 +236,12 @@ std::vector<Entity*> Fight::vectoriezA()
 
 std::string Fight::postFight()
 {
-    int xp, nbEnemies;
-    for(int i=0 ; i<4 ; i++)
-    {
-        if(mobs[i]!=nullptr)
-        {
-            xp += mobs[i]->getLvl();
-            nbEnemies++;
-        }
-    }
-
-    xp = xp+nbEnemies*2;
     for(int i=0 ; i<4 ; i++)
     {
         if(heroes[i]!=nullptr)
         {
-            heroes[i]->addXp(xp);
-            heroes[i]->getBuffs()->reset();
+            heroes[i]->addXp(10*heroes[i]->getLvl());
+
         }
     }
 
