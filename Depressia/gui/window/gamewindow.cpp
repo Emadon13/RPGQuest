@@ -118,6 +118,7 @@ void GameWindow::ShowFrame()
 
 void GameWindow::afficheItem()
 {
+    map->setEventHapp();
     ItemWindow *itemWindow=new ItemWindow(this);
     itemWindow->show();
     map->setEventHapp();

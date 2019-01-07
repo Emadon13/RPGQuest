@@ -6,14 +6,14 @@ ItemFound::ItemFound():
     Event(),
     item()
 {
-    redo = true;
+    redo = false;
 }
 
 ItemFound::ItemFound(string i):
     Event(),
     item(i)
 {
-    redo = true;
+    redo = false;
 }
 
 Item* ItemFound::getItem()

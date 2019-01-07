@@ -443,6 +443,7 @@ void::BattleFrame::nextTurn()
         if(fight->mobsWin())
         {
             dialogCurrent->setText("Defaite");
+            dialogInfo->setText("C'est très la fin !");
             QObject::disconnect(fuite, SIGNAL(clicked()), game, SLOT(ShowFrame()));
             QObject::connect(fuite, SIGNAL(clicked()), game, SLOT(CreateGameOverFrame()));
         }
@@ -450,8 +451,8 @@ void::BattleFrame::nextTurn()
         {
             dialogCurrent->setText("Victoire");
             QObject::connect(fuite, SIGNAL(clicked()), game, SLOT(ShowFrame()));
+            dialogInfo->setText(QString::fromStdString(fight->postFight()));
         }
-        dialogInfo->setText("C'est très la fin !");
         ok->hide();
         fuite->setText("Fin");
         fuite->move(dialogSelection->x()+int(dialogSelection->width()*0.5)-int(fuite->width()*0.5),dialogSelection->y()+int(dialogSelection->height()*0.5)-int(fuite->height()*0.5));
