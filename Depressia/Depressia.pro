@@ -39,7 +39,6 @@ SOURCES += \
     logic/events/finalscreen.cpp \
     gui/frame/optionframe.cpp \
     gui/frame/finalframe.cpp \
-    gui/sprite/sprite.cpp \
     logic/skills/drain.cpp \
     logic/skills/recoil.cpp \
     logic/skills/attack.cpp \
@@ -64,7 +63,9 @@ SOURCES += \
     gui/frame/teamui.cpp \
     gui/window/characterwindow.cpp \
     gui/window/itemchoicewindow.cpp \
-    io/gameloader.cpp
+    io/gameloader.cpp \
+    gui/frame/saveframe.cpp \
+    gui/frame/addheroframe.cpp
 
 
 
@@ -107,7 +108,6 @@ HEADERS += \
     logic/events/finalscreen.h \
     gui/frame/optionframe.h \
     gui/frame/finalframe.h \
-    gui/sprite/sprite.h \
     logic/skills/drain.h \
     logic/skills/recoil.h \
     logic/skills/attack.h \
@@ -132,4 +132,6 @@ HEADERS += \
     gui/frame/teamui.h \
     gui/window/characterwindow.h \
     gui/window/itemchoicewindow.h \
-    io/gameloader.h
+    io/gameloader.h \
+    gui/frame/saveframe.h \
+    gui/frame/addheroframe.h
