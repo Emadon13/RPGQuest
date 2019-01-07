@@ -1,5 +1,5 @@
 ../ressources/entities/heroes/bonasse.txt
-10
+0
 0
 0
 ../ressources/entities/heroes/rouge.txt
@@ -12,8 +12,7 @@
 0
 none
 ../ressources/items/baie-frista.txt
-../ressources/items/plume-archange.txt
 end_inventory
-2
+0
 ../ressources/maps/map.txt
 end_eventHapp

@@ -4,6 +4,7 @@
 #include <QVideoWidget>
 #include "gui/window/gamewindow.h"
 #include "gui/window/mainwindow.h"
+#include "logic/events/video.h"
 
 ////////////////////////////////////////////////////////
 ///                                                  ///
@@ -28,7 +29,7 @@ VideoFrame::VideoFrame(GameWindow *g) : QObject()
 
     player = new QMediaPlayer(game);
 
-    player->setMedia(QUrl(QUrl::fromLocalFile("../ressources/videos/trailer.wmv")));
+    player->setMedia(QUrl(QUrl::fromLocalFile(QString::fromStdString(dynamic_cast<Video*> (g->GetGame()->getMap()->getCurrentPosition().getEvent())->getVideo()))));
 
     videoWidget = new ClikableVideoWidget(game);
     player->setVideoOutput(videoWidget);
