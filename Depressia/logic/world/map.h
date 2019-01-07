@@ -26,6 +26,7 @@ public:
     bool existDown();
 
     bool isEventHapp();
+    bool isEventHapp(int i);
     void setEventHapp();
     void setEventHapp(int i);
 

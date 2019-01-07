@@ -54,6 +54,10 @@ int Inventory::getSize()
     return int(content.size());
 }
 
+string Inventory::getItemPath(int i)
+{
+    return content.at(unsigned(i));
+}
 string Inventory::useItem(Entity* e, int i)
 {
     string result = "L'index n'est pas bon !";

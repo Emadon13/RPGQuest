@@ -15,6 +15,7 @@ Fight::Fight(Team* t, Mob* m[nb_e], string img, string mus):
     music(mus),
     image(img)
 {
+
     for(int i=0 ; i<nb_e ; i++)
     {
         heroes[i] = t->getHero(i);
@@ -27,7 +28,6 @@ Fight::Fight(Team* t, Mob* m[nb_e], string img, string mus):
         speeds[i+nb_e] = 0;
         team = t;
     }
-
 }
 
 Hero** Fight::getHeroes()

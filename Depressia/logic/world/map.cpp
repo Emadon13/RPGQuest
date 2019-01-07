@@ -46,7 +46,6 @@ Map::Map(Team* t, vector<string> wm, vector<unsigned int> r, vector<unsigned int
         currentPosition = 0;
         updateCurrentElement();
     }
-
 }
 
 
@@ -115,6 +114,11 @@ bool Map::existDown()
 bool Map::isEventHapp()
 {
     return eventHapp.at(currentPosition);
+}
+
+bool Map::isEventHapp(int i)
+{
+    return eventHapp.at(unsigned(i));
 }
 
 void Map::setEventHapp()

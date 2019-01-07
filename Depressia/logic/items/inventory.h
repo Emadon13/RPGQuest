@@ -15,6 +15,7 @@ public:
     bool isEmpty();
     bool isFull();
     int getSize();
+    std::string getItemPath(int i);
     void deleteItem(int i);
     void operator+(std::string item);
     std::string useItem(Entity* e, int i);

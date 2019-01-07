@@ -14,7 +14,7 @@ Game GameLoader::generate(string path)
     Inventory invt;
     Map map;
 
-    Team team;
+    Team* team;
 
     for(int i=0 ; i<4 ; i++)
     {
@@ -43,11 +43,11 @@ Game GameLoader::generate(string path)
     }
 
 
-    team = Team(heroes[0], heroes[1], heroes[2], heroes[3], invt);
+    team = new Team(heroes[0], heroes[1], heroes[2], heroes[3], invt);
     getline(file, pos);
     getline(file, mp);
 
-    map = MapLoader::generate(&team, mp);
+    map = MapLoader::generate(team, mp);
 
     map.setCurrentPosition(stoi(pos));
 
@@ -61,4 +61,38 @@ Game GameLoader::generate(string path)
 
 
     return Game(map, team);
+}
+
+void GameLoader::save(Game game)
+{
+    string path = "../ressources/images/save.vincent";
+    ofstream file(path);
+
+    for(int i=0 ; i<4 ; i++)
+    {
+        if(game.getTeam()->getHero(i)==nullptr)
+            file << "none" << endl;
+
+        else
+        {
+            file << game.getTeam()->getHero(i)->getSaveLink() << endl;
+            file << game.getTeam()->getHero(i)->getXp() << endl;
+            file << (game.getTeam()->getHero(i)->getHpMax() - game.getTeam()->getHero(i)->getHp()) << endl;
+            file << (game.getTeam()->getHero(i)->getMpMax() - game.getTeam()->getHero(i)->getMp()) << endl;
+        }
+
+    }
+
+    for(int i=0 ; i<game.getTeam()->getInventory()->getSize() ; i++)
+        file << game.getTeam()->getInventory()->getItemPath(i) << endl;
+
+    file << "end_inventory" << endl;
+    file << game.getMap()->currentPosition << endl;
+    file << "../ressources/maps/map.txt" << endl;
+
+    for(int i=0 ; i<game.getMap()->getNbElements() ; i++)
+        if(game.getMap()->isEventHapp(i))
+            file << i << endl;
+
+    file << "end_eventHapp";
 }

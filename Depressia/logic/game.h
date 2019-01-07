@@ -10,7 +10,7 @@ class Game
 {
 public:
     Game();
-    Game(Map map, Team team);
+    Game(Map map, Team* team);
     Map* getMap();
 
     int getWindowHeight();
@@ -25,7 +25,7 @@ public:
     void load();
 
     Team* getTeam();
-    Team team;
+    Team* team;
 
 
 private:

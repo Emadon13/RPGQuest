@@ -3,6 +3,7 @@
 #include <QDebug>
 #include <QString>
 #include <time.h>
+#include <iostream>
 
 using namespace std;
 
@@ -12,12 +13,12 @@ Game::Game():
     ratio(1.0),
     savePath("../ressources/save/save.vincent")
 {
-    team = Team();
-    map = MapLoader::generate(&team, "../ressources/maps/map.txt");
+    team = new Team();
+    map = MapLoader::generate(team, "../ressources/maps/map.txt");
     srand (unsigned(time(nullptr)));
 }
 
-Game::Game(Map m, Team t):
+Game::Game(Map m, Team* t):
     team(t),
     map(m),
     windowHeight(1080),
@@ -87,6 +88,7 @@ void Game::load()
 
 Team* Game::getTeam()
 {
-    return &team;
+    return team;
+
 }
 

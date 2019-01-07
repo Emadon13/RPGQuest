@@ -8,8 +8,8 @@ class GameLoader
 {
 public:
     GameLoader();
-    static Game generate();
     static Game generate(std::string path);
+    static void save(Game game);
 };
 
 #endif // GAMELOADER_H

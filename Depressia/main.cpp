@@ -25,6 +25,8 @@ int main(int argc, char *argv[])
     QApplication::setFont(QFont("Fixedsys"));
 
     Game game = GameLoader::generate("../ressources/save/save.vincent");
+    GameLoader::save(game);
+
 
     /*
     player = fight->nextPlayer();
