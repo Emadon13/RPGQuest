@@ -2,4 +2,4 @@ Centre Ville
 Ce quartier est très agité !
 ../ressources/images/backgrounds/village-bonbon.png
 fight
-../ressources/fights/f2.txt
+../ressources/fights/f1.txt

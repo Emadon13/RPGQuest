@@ -2,4 +2,4 @@ Foret
 Cette foret n'est pas si paisible au final...
 ../ressources/images/backgrounds/village-champignon.png
 fight
-../ressources/fights/f3.txt
+../ressources/fights/f2.txt
