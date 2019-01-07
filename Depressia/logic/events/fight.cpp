@@ -241,12 +241,12 @@ std::string Fight::postFight()
     {
         if(mobs[i]!=nullptr)
         {
-            xp +=mobs[i]->getLvl();
+            xp += mobs[i]->getLvl();
             nbEnemies++;
         }
     }
 
-    xp = xp*nbEnemies;
+    xp = xp+nbEnemies*2;
     for(int i=0 ; i<4 ; i++)
     {
         if(heroes[i]!=nullptr)
