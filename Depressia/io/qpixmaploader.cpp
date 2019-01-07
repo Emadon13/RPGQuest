@@ -14,7 +14,7 @@ QPixmap QPixmapLoader::generate(string path)
         return QPixmap(QString::fromStdString(path));
     else
     {
-        cout << "ERREUR : l'image souhaitée n'existe pas" << endl;
         return QPixmap();
+        throw runtime_error("ERREUR : l'image souhaitée n'existe pas");
     }
 }
