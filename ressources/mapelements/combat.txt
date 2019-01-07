@@ -1,5 +1,4 @@
 Combat !
 Nan je dec c'est pas encore implemente mdr
 ../ressources/images/backgrounds/background.png
-item_found
-../ressources/items/plume-cherubin.txt
+save

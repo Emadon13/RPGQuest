@@ -10,7 +10,6 @@
 #include <QMediaPlayer>
 #include <QMediaPlaylist>
 #include <QVideoWidget>
-#include "gui/sprite/sprite.h"
 #include "gui/clickable/clickablelabel.h"
 #include "gui/frame/characterui.h"
 #include "gui/frame/enemyui.h"

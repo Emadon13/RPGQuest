@@ -24,6 +24,9 @@
 #include "gui/frame/finalframe.h"
 #include "logic/events/save.h"
 #include "gui/window/itemchoicewindow.h"
+#include "gui/frame/saveframe.h"
+#include "gui/frame/addheroframe.h"
+#include "gui/window/savewindow.h"
 
 using namespace std;
 
@@ -65,7 +68,7 @@ GameWindow::GameWindow(Game *g,QWidget *parent) :
 
 void GameWindow::ShowFrame()
 {
-    Event *event = mapElement.getEvent();
+    event = mapElement.getEvent();
 
     if(!map->isEventHapp())
     {
@@ -80,8 +83,13 @@ void GameWindow::ShowFrame()
         }
         else if(dynamic_cast<Save*>(event) != nullptr)
         {
-            CreateGameFrame();
+            CreateSaveFrame();
         }
+        /*else if(dynamic_cast<newAlly*>(event) != nullptr)
+        {
+            CreateAddHeroFrame();
+            map->setEventHapp();
+        }*/
         else if(dynamic_cast<FinalScreen*>(event) != nullptr)
         {
             CreateFinalFrame();
@@ -128,15 +136,30 @@ void GameWindow::afficheParametre()
 {
     SettingsWindow *settingsWindow=new SettingsWindow(this);
     settingsWindow->show();
-    CreateGameFrame();
     setDisabled(true);
+}
+
+void GameWindow::afficheSave()
+{
+    SaveWindow *saveWindow=new SaveWindow(this);
+    saveWindow->show();
+    setDisabled(true);
+}
+
+void GameWindow::makeSave()
+{
+    dynamic_cast<Save*>(event)->save(this->GetGame());
+}
+
+void GameWindow::healTeam()
+{
+    dynamic_cast<Save*>(event)->heal(this->GetGame()->getTeam());
 }
 
 void GameWindow::afficheItemList()
 {
     ItemChoiceWindow *inventoyWindow=new ItemChoiceWindow(this);
     inventoyWindow->show();
-    CreateGameFrame();
     setDisabled(true);
 }
 
@@ -221,6 +244,30 @@ void GameWindow::CreateDialogFrame()
 
     DialogFrame *df = new DialogFrame(this);
     Q_UNUSED(df);
+}
+
+void GameWindow::CreateAddHeroFrame()
+{/*
+    ClearWidget();
+
+    QPalette p( palette() );
+    p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage())).scaled(WindowWidth,WindowHeight)));
+    setPalette(p);
+
+    AddHeroFrame *ahf = new AddHeroFrame(this);
+    Q_UNUSED(ahf);*/
+}
+
+void GameWindow::CreateSaveFrame()
+{
+    ClearWidget();
+
+    QPalette p( palette() );
+    p.setBrush(QPalette::Window, QBrush(QPixmap(QString::fromStdString(map->getCurrentPosition().getImage())).scaled(WindowWidth,WindowHeight)));
+    setPalette(p);
+
+    SaveFrame *sf = new SaveFrame(this);
+    Q_UNUSED(sf);
 }
 
 void GameWindow::CreateVideoFrame()

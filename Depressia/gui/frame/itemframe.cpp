@@ -43,7 +43,7 @@ ItemFrame::ItemFrame(GameWindow *g)
     back->show();
 
     ClickableLabel *item = new ClickableLabel(game);
-    item->setPixmap(QPixmap("../ressources/images/hud/icone.png").scaled(ImageWidth,ImageWidth));
+    item->setPixmap(QPixmap("../ressources/images/hud/coffre.png").scaled(ImageWidth,ImageWidth));
     item->setFixedSize(ImageWidth,ImageHeight);
     item->installEventFilter(game);
     item->move((WindowWidth-ImageWidth)/2,(WindowHeight-ImageHeight)/2);
@@ -148,6 +148,14 @@ ItemFrame::ItemFrame(GameWindow *g)
     settings->move(WindowWidth-TitleWidth/2,20);
     settings->show();
     settings->setStyleSheet(styleBoutonRond);
+
+    inventory = new QPushButton("I", game);
+    inventory->setFixedSize(tailleBouton,tailleBouton);
+    inventory->move(WindowWidth-TitleWidth/2-50,20);
+    inventory->show();
+    inventory->setStyleSheet(styleBoutonRond);
+
+    QObject::connect(inventory, SIGNAL(clicked()), game, SLOT(afficheItemList()));
 
     QObject::connect(settings, SIGNAL(clicked()), game, SLOT(afficheParametre()));
 

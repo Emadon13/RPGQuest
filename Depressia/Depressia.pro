@@ -65,7 +65,8 @@ SOURCES += \
     gui/window/itemchoicewindow.cpp \
     io/gameloader.cpp \
     gui/frame/saveframe.cpp \
-    gui/frame/addheroframe.cpp
+    gui/frame/addheroframe.cpp \
+    gui/window/savewindow.cpp
 
 
 
@@ -134,4 +135,5 @@ HEADERS += \
     gui/window/itemchoicewindow.h \
     io/gameloader.h \
     gui/frame/saveframe.h \
-    gui/frame/addheroframe.h
+    gui/frame/addheroframe.h \
+    gui/window/savewindow.h

@@ -1,13 +1,14 @@
 ../ressources/entities/heroes/bonasse.txt
 10
-1
-1
+0
+0
 none
 none
 none
 ../ressources/items/plume-archange.txt
 end_inventory
-0
+2
 ../ressources/maps/map.txt
 0
+1
 end_eventHapp

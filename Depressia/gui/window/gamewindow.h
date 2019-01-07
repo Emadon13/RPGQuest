@@ -35,23 +35,30 @@ public slots:
     void CreateDialogFrame();
     void CreateVideoFrame();
     void CreateFinalFrame();
+    void CreateAddHeroFrame();
+    void CreateSaveFrame();
     void CreateGameOverFrame();
     void CreateItemFrame();
     void GoUp();
     void GoDown();
     void GoRight();
     void GoLeft();
+    void afficheSave();
     void afficheItem();
     void afficheItemList();
     void afficheParametre();
     void resetFocus();
     void setPositionAfterLoose();
+    void makeSave();
+    void healTeam();
 
 private:
     int WindowWidth;
     int WindowHeight;
 
     Game *game;
+
+    Event *event;
 
     Map *map;
 

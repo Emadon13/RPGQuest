@@ -20,6 +20,7 @@ private :
 
     TeamUI* teamUI[Fight::nb_e];
     QPushButton *settings;
+    QPushButton * inventory;
     Hero *allie;
 
 };
