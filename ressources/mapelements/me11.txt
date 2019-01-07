@@ -1,5 +1,5 @@
 Mont Noir
 Cet endroit me glace le sang
-../ressources/images/backgrounds/village-bonbon.png
-item_found
-../ressources/items/plume-archange.txt
+../ressources/images/backgrounds/dark.png
+fight
+../ressources/fights/f3.txt
