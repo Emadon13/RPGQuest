@@ -1,6 +1,6 @@
 none
 ../ressources/entities/mobs/blue-queen.txt
-none
+../ressources/entities/mobs/grande-tata.txt
 none
 ../ressources/images/backgrounds/battle_background.png
 ../ressources/musics/cynthia.mp3
