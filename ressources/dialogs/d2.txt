@@ -1,0 +1,21 @@
+left
+MECHANT
+C'est MOI le grand mechant de cette histoire !!
+../ressources/images/dialogs/mechant-attaque-reverse.png
+right
+Grande Tata
+Allons, mon ami, calmez-vous. Vous serez dans le prochain DLC
+../ressources/images/dialogs/tata.png
+left
+Rouge
+GRANDE TATA !! TU VAS SUBIR MON COURROUX 
+../ressources/images/dialogs/rouge-colere.png
+right
+Seraphina
+Tu es prise au piège !!
+../ressources/images/dialogs/fille-colere.png
+right
+Grande Tata
+Bon, les enfants. La fin du jeu, c'est à droite. Sauvegardez et entrainez-vous. La bise.
+end
+../ressources/images/dialogs/tata.png
