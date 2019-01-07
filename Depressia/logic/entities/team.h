@@ -10,6 +10,7 @@ class Team
 {
 public:
     Team();
+    Team(Hero* e1, Hero* e2, Hero* e3, Hero* e4, Inventory b);
 
     int getTeamSize();
     Hero* getHero(int i);

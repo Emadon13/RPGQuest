@@ -123,6 +123,21 @@ void Map::setEventHapp()
         eventHapp.at(currentPosition) = true;
 }
 
+void Map::setCurrentPosition(int i)
+{
+    if(unsigned(i)<elements.size())
+    {
+        currentPosition = unsigned(i);
+        updateCurrentElement();
+    }
+}
+
+void Map::setEventHapp(int i)
+{
+    if(unsigned(i) < eventHapp.size())
+        eventHapp.at(unsigned(i)) = true;
+}
+
 void Map::updateCurrentElement()
 {
     currentElement = MapElementLoader::generate(team, elements.at(currentPosition));

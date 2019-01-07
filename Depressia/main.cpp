@@ -10,7 +10,7 @@
 #include "io/fightloader.h"
 #include "logic/world/map.h"
 #include"io/dialogloader.h"
-#include"logic/game.h"
+#include "io/gameloader.h"
 #include "logic/skills/recover.h"
 
 using namespace std;
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
     QApplication::setFont(QFont("Fixedsys"));
 
-    Game game = Game();
+    Game game = GameLoader::generate("../ressources/save/save.vincent");
 
     /*
     player = fight->nextPlayer();

@@ -1,4 +1,4 @@
-#include "game.h"
+ #include "game.h"
 #include <QFile>
 #include <QDebug>
 #include <QString>
@@ -14,6 +14,17 @@ Game::Game():
 {
     team = Team();
     map = MapLoader::generate(&team, "../ressources/maps/map.txt");
+    srand (unsigned(time(nullptr)));
+}
+
+Game::Game(Map m, Team t):
+    team(t),
+    map(m),
+    windowHeight(1080),
+    windowWidth(1920),
+    ratio(1.0),
+    savePath("../ressources/save/save.vincent")
+{
     srand (unsigned(time(nullptr)));
 }
 

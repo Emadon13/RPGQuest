@@ -10,6 +10,7 @@ class Game
 {
 public:
     Game();
+    Game(Map map, Team team);
     Map* getMap();
 
     int getWindowHeight();

@@ -27,8 +27,11 @@ public:
 
     bool isEventHapp();
     void setEventHapp();
+    void setEventHapp(int i);
 
     unsigned int currentPosition;
+    void setCurrentPosition(int i);
+
 private:
 
     MapElement currentElement;

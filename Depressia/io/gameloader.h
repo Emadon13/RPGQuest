@@ -2,6 +2,7 @@
 #define GAMELOADER_H
 
 #include "logic/game.h"
+#include "io/entityloader.h"
 
 class GameLoader
 {

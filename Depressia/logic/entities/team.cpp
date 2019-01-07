@@ -11,6 +11,16 @@ Team::Team():
     hero[3] = nullptr;
 }
 
+Team::Team(Hero* e1, Hero* e2, Hero* e3, Hero* e4, Inventory b):
+    bag(b)
+{
+    hero[0] = e1;
+    hero[1] = e2;
+    hero[2] = e3;
+    hero[3] = e4;
+}
+
+
 int Team::getTeamSize()
 {
     return teamSize;
