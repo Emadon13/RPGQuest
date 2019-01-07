@@ -65,7 +65,7 @@ Game GameLoader::generate(string path)
 
 void GameLoader::save(Game game)
 {
-    string path = "../ressources/images/save.vincent";
+    string path = "../ressources/save/save.vincent";
     ofstream file(path);
 
     for(int i=0 ; i<4 ; i++)
