@@ -9,8 +9,8 @@ class Save : public Event
 public:
     Save();
 
-    void heal(Team team);
-    void save(Game game);
+    void heal(Team* team);
+    void save(Game* game);
 };
 
 #endif // SAVE_H
