@@ -1,0 +1,5 @@
+Banlieue
+C'est-LA-zone
+../ressources/images/backgrounds/prairie-chateau.png
+item_found
+../ressources/items/plume-cherubin.txt

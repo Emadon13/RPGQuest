@@ -1,0 +1,17 @@
+right
+Seraphina
+Nous devons a tout prix empecher la Grande Tata d'envahir le monde ! 
+../ressources/images/dialogs/fille-normale.png
+left
+Rouge
+Quoi ? Mais, c'est pas une gentille la Grande Tata dans l'histoire ?
+../ressources/images/dialogs/rouge-colere.png
+right
+Seraphina
+Ha ha ! Oui mais comment dire... Ca c'est dans la version payante... La c'est une demo...
+../ressources/images/dialogs/fille-rire.png
+left
+Rouge
+Bon, allons-y !
+../ressources/images/dialogs/rouge-wtf.png
+end

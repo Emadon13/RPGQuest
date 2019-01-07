@@ -1,0 +1,5 @@
+Centre Ville
+Tout est calme aujourd'hui
+../ressources/images/backgrounds/village-bonbon.png
+item_found
+../ressources/items/baie-remu.txt

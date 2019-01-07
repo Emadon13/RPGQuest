@@ -1,9 +1,9 @@
-Bonasse
+Seraphina
 1
-500
-500
-80
-80
+300
+140
+70
+100
 90
 ../ressources/sprites/bonasse/normal.txt
 ../ressources/sprites/bonasse/damage.txt
@@ -13,7 +13,7 @@ Bonasse
 ../ressources/images/icons/bonasse-icon.png
 ../ressources/skills/recovers/e-coque.txt
 ../ressources/skills/recovers/cajolerie.txt
-../ressources/skills/recovers/vibra-soin.txt
-../ressources/skills/buffs/exuviation.txt
 end_skill
+3
+../ressources/skills/recovers/pluie-etoile.txt
 end

@@ -1,0 +1,5 @@
+Mont Noir
+La fin est proche !
+../ressources/images/backgrounds/dark.png
+fight
+../ressources/fights/f4.txt

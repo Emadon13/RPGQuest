@@ -13,5 +13,10 @@ Rozalin
 ../ressources/images/icons/rozalin-icon.png
 ../ressources/skills/recovers/e-coque.txt
 ../ressources/skills/attacks/mitra-poing.txt
+../ressources/skills/attacks/canicule.txt
 end_skill
+2
+../ressources/skills/buff/exuviation.txt
+3
+../ressources/skills/attacks/appel-du-vide.txt
 end

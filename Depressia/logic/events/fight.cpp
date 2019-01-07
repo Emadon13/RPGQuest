@@ -209,3 +209,29 @@ std::vector<Entity*> Fight::vectoriezA()
                 e.push_back(all[i]);
     return e;
 }
+
+std::string Fight::postFight()
+{
+    int xp, nbEnemies;
+    for(int i=0 ; i<4 ; i++)
+    {
+        if(mobs[i]!=nullptr)
+        {
+            xp +=mobs[i]->getLvl();
+            nbEnemies++;
+        }
+    }
+
+    xp = xp*nbEnemies;
+    for(int i=0 ; i<4 ; i++)
+    {
+        if(heroes[i]!=nullptr)
+        {
+            heroes[i]->addXp(xp);
+            heroes[i]->getBuffs()->reset();
+        }
+    }
+
+    return "L'équipe gagne de l'expérience !";
+
+}

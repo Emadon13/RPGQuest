@@ -1,6 +1,6 @@
 Poulpina
 1
-50
+10
 10
 10
 10
@@ -12,7 +12,5 @@ Poulpina
 ../ressources/sprites/blue-queen/killed.txt
 ../ressources/images/icons/blue-queen-icon.png
 ../ressources/skills/recovers/e-coque.txt
-../ressources/skills/attacks/mitra-poing.txt
-../ressources/skills/recovers/vibra-soin.txt
 end_skill
 end

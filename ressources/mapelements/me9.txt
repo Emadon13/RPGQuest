@@ -1,0 +1,5 @@
+Foret
+C'est une clairiere ?
+../ressources/images/backgrounds/dark.png
+item_found
+../ressources/items/baie-enigma.txt

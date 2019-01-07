@@ -1,0 +1,4 @@
+Foret
+Une source d'eau claire ! Je peux me soigner !
+../ressources/images/backgrounds/village-champignon.png
+save

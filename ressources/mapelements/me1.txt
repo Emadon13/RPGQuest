@@ -1,0 +1,5 @@
+Maison de Seraphina - 1er etage
+Cette maison est très cossue.
+../ressources/images/backgrounds/maison-interieur.png
+video
+../ressources/videos/Trailer_DEPRESSIA.wmv

@@ -1,0 +1,6 @@
+../ressources/entities/mobs/blue-queen2.txt
+../ressources/entities/mobs/blue-queen2.txt
+../ressources/entities/mobs/grande-tata.txt
+../ressources/entities/mobs/blue-queen2.txt
+../ressources/images/backgrounds/japon-rouge.png
+../ressources/musics/cynthia.mp3

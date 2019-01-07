@@ -1,0 +1,5 @@
+Maison de Seraphina - rdc
+Cette maison est très cossue.
+../ressources/images/backgrounds/maison-interieur.png
+dialog
+../ressources/dialogs/d1.txt

@@ -34,6 +34,8 @@ public:
     bool isEnded();
     Entity* nextPlayer();
 
+    std::string postFight();
+
     std::vector<Entity*> target(Mob* user, int skill);
     std::vector<Entity*> target(Hero* user, int skill);
     std::vector<Entity*> target(Hero* user, int skill, int target);

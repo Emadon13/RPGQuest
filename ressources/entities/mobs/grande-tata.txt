@@ -1,10 +1,10 @@
 Grande Tata
-1
-60
-50
-11
-11
-12
+3
+100
+30
+30
+30
+30
 ../ressources/sprites/grande-tata/normal.txt
 ../ressources/sprites/grande-tata/damage.txt
 ../ressources/sprites/grande-tata/attack.txt

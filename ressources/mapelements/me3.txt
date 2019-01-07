@@ -1,0 +1,5 @@
+Banlieue
+Tout est calme aujourd'hui
+../ressources/images/backgrounds/prairie-chateau.png
+item_found
+../ressources/items/pierre-magique.txt
