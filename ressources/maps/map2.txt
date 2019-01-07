@@ -1,0 +1,11 @@
+6
+../ressources/mapelements/mt.txt
+../ressources/mapelements/windowsxp.txt
+../ressources/mapelements/combat.txt
+../ressources/mapelements/cheval.txt
+../ressources/mapelements/omaewa.txt
+../ressources/mapelements/fin.txt
+0 2 3 3 4 5
+1 1 4 2 5 5 
+0 1 1 2 4 5
+0 0 3 3 2 5
