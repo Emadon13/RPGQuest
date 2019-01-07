@@ -2,6 +2,30 @@
 #include "logic/entities/mob.h"
 #include "logic/entities/team.h"
 
+////////////////////////////////////////////////////////
+///                                                  ///
+///                   Fight                          ///
+///                                                  ///
+////////////////////////////////////////////////////////
+
+/*!
+    \class Fight
+
+    Cette classe représente un type d'envent particulier, le combat qui se caractérise par :
+        - une team de heros
+        - des ennemis
+        - une musique
+        - une image de fond
+
+     Ses différentes méthodes sont :
+        - des getters : pour savoir si le combat est finit, la musique, ...
+        - nextPlayer() : au debut de chaque nouveau tour dans le combta, cette méthode est appelée et définie qui est l'entité qui va jouer ce tour
+        ci (en fonction de sa stat de vitesse et des autres joueurs qui ont joués avant)
+        - useItem() : qui permet à une entite d'untiliser un item (un effet sera appliqué et l'item retiré de l'inventaire
+        - target() : permet de lancer un sort ou une attaque sur une entite, en fonction de la puissance de l'entite qui attaque, de celle qui defend, des differents boosts appliqués,
+        du type de sort(soin, degat, ...). ! un sort peut échouer
+*/
+
 using namespace std;
 
 Fight::Fight():

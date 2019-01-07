@@ -1,6 +1,36 @@
 #include "entity.h"
 #include <string>
 
+////////////////////////////////////////////////////////
+///                                                  ///
+///                   Entity                         ///
+///                                                  ///
+////////////////////////////////////////////////////////
+
+/*!
+    \class Entity
+
+    Cette classe représente les entités qui seront présentes dans le jeux :
+        - les mobs
+        - les boss
+        - les heros
+
+    Elles sont définies par :
+        - un niveau
+        - des HP
+        - des MP
+        - une stat d'attaque
+        - une stat de defense
+        - une stat de speed
+        - des skills
+        - une liste de sprites
+        - une icone
+
+     Ses différentes méthodes sont :
+        - des getters
+        - des setters
+*/
+
 using namespace std;
 
 Entity::Entity() :
